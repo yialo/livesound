@@ -12,11 +12,11 @@ html(lang='ru')
         link(rel="preload" href="fonts/arial-bold.woff2" as="font")
         link(rel="stylesheet" href="css/style.min.css")
 
-    body
-      block header
+    body(class="page")
+      include ../modules/page-header.pug
 
       block main
 
-      block footer
+      include ../modules/page-footer.pug
 
       script(src="js/picturefill.js")

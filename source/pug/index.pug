@@ -3,4 +3,7 @@ extends scaffolding/page-layout.pug
 block title
   | Главная | Live Sound Agency
 
-
+block main
+  main(class="page-main page__main")
+    include modules/advantages.pug
+    include modules/directions.pug
