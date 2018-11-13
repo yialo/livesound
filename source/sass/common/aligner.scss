@@ -1,0 +1,4 @@
+.aligner {
+  width: $min-mobile-width;
+  @include margin-hor;
+}
