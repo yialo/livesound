@@ -3,10 +3,13 @@
 @import "scaffolding/normalize.scss";
 @import "scaffolding/fonts.scss";
 @import "scaffolding/global.scss";
+
 @import "common/aligner.scss";
 @import "common/button-fix.scss";
-@import "common/visually-hidden.scss";
+// @import "common/visually-hidden.scss";
 
+@import "blocks/direction-card.scss";
+@import "blocks/directions.scss";
 @import "blocks/page.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";

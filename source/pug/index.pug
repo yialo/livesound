@@ -1,9 +1,20 @@
-extends scaffolding/page-layout.pug
+extends templates/page-template.pug
 
 block title
   | Главная | Live Sound Agency
 
 block main
   main(class="page-main page__main")
-    include modules/advantages.pug
-    include modules/directions.pug
+    h1(class="visually-hidden") Сайт компании Live Sound Agency
+    include modules/c-promo.pug
+    include modules/c-advantages.pug
+    include modules/c-directions.pug
+    section(class="partners page__partners page__partners--1")
+      div(class="partners__inner aligner")
+        h2(class="partners__heading") Оборудование от компаний-лидеров мирового рынка
+        include modules/e-partners__list.pug
+    include modules/c-about.pug
+    section(class="partners page__partners page__partners--2")
+      div(class="partners__inner aligner")
+        h2(class="partners__heading") Партнеры
+        include modules/e-partners__list.pug
