@@ -1,0 +1,17 @@
+.logo__link {
+  display: block;
+}
+
+.logo__image {
+  display: block;
+
+  &--header {
+    width: 173px;
+    height: 94px;
+  }
+
+  &--footer {
+    width: 133px;
+    height: 83px;
+  }
+}

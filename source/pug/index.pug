@@ -6,9 +6,12 @@ block title
 block main
   main(class="page-main page__main")
     h1(class="visually-hidden") Сайт компании Live Sound Agency
-    include modules/b-promo.pug
-    include modules/b-advantages.pug
-    include modules/b-directions.pug
+    div(class="page-main__promo")
+      include modules/b-promo.pug
+    div(class="page-main__advantages")
+      include modules/b-advantages.pug
+    div(class="page-main__directions")
+      include modules/b-directions.pug
     section(class="partners page__partners page__partners--1")
       div(class="partners__inner aligner")
         h2(class="partners__heading") Оборудование от компаний-лидеров мирового рынка

@@ -1,0 +1,32 @@
+.socials__list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.socials__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--instagram {
+    background-image: url("../img/socials-instagram.png");
+  }
+
+  &--youtube {
+    background-image: url("../img/socials-youtube.png");
+  }
+
+  &--facebook {
+    background-image: url("../img/socials-facebook.png");
+  }
+}

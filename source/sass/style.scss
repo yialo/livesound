@@ -6,10 +6,17 @@
 
 @import "common/aligner.scss";
 @import "common/button-fix.scss";
-// @import "common/visually-hidden.scss";
+@import "common/visually-hidden.scss";
 
+@import "blocks/connection.scss";
 @import "blocks/direction-card.scss";
 @import "blocks/directions.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-navigation.scss";
+@import "blocks/menu-controls.scss";
 @import "blocks/page.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";
+@import "blocks/promo.scss";
+@import "blocks/promo-slide.scss";
+@import "blocks/socials.scss";

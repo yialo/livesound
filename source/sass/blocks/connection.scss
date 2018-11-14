@@ -1,0 +1,7 @@
+.connection__tel {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font(400, 24px, 36px);
+  color: white;
+}
