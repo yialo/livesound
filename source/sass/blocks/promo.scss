@@ -1,3 +1,11 @@
+.promo {
+  position: relative;
+}
+
+.promo__slider {
+  overflow: hidden;
+}
+
 .promo__list {
   display: flex;
   width: 400%;
@@ -8,4 +16,11 @@
 
 .promo__item {
   width: calc(100% / 4);
+}
+
+.promo__slider-controls {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
 }
