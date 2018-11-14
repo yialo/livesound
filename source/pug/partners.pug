@@ -1,0 +1,22 @@
+extends templates/page-template.pug
+
+block title
+  | Клиенты/Партнеры | Live Sound Agency
+
+block main
+  main(class="page-main page__main")
+    header(class="intro page-main__intro")
+      div(class="intro__inner aligner")
+        h1(class="intro__heading") Клиенты/Партнеры
+
+    section(class="partners page__partners page__partners--1")
+      div(class="partners__inner aligner")
+        h2(class="partners__heading") Наши партнеры
+        include modules/m-partners-list--complete.pug
+
+    include modules/b-acknowledgements.pug
+
+    section(class="partners page__partners page__partners--2")
+      div(class="partners__inner aligner")
+        h2(class="partners__heading") Нам доверяют
+        include modules/m-partners-list--complete.pug
