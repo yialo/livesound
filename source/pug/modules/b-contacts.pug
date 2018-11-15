@@ -1,15 +1,19 @@
-section(class="contacts page-main__contacts")
-  div(class="contacts__inner aligner")
-    h2(class="visually-hidden") Контактная информация
-    div(class="contacts__layout")
-      div(class="contacts__column-1")
+mixin contacts__tel(telNumberEnd, telNumberEndText)
+  li.contacts__tel
+    a.contacts__tel-link(href='tel:+7499256' + telNumberEnd)= '+7(499)256-' + telNumberEndText
+
+section.contacts
+  div.contacts__inner.aligner
+    h2.visually-hidden Контактная информация
+    div.contacts__layout
+      div.contacts__column-1
         div.contacts__address
           include b-address.pug
-        ul(class="contacts__tels")
-          li(class="contacts__tel") +7(499)256-57-04
-          li(class="contacts__tel") +7(499)256-85-40
-          li(class="contacts__tel") +7(499)256-62-98
-        div(class="contacts__socials")
+        ul.contacts__tels
+          +contacts__tel('5704', '57-04')
+          +contacts__tel('8540', '85-40')
+          +contacts__tel('6298', '62-98')
+        div.contacts__socials
           include b-socials.pug
-      div(class="contacts__column-2")
-        div(class="contacts__map" id="map")
+      div.contacts__column-2
+        div.contacts__map#map

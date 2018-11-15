@@ -4,8 +4,8 @@ block title
   | Контакты | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
-    header(class="intro page-main__intro")
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") Контакты
-    include modules/b-contacts.pug
+  main.page-main.page__main
+    div.page-main__intro
+      +intro('Контакты')
+    div.page-main__contacts
+      include modules/b-contacts.pug
