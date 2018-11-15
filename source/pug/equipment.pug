@@ -4,8 +4,8 @@ block title
   | Оборудование | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
-    header(class="intro page-main__intro")
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") Оборудование
-    include modules/b-catalog.pug
+  main.page-main.page__main
+    div.page-main__intro
+      +intro('Оборудование')
+    div.page-main__catalog
+      include modules/b-catalog.pug

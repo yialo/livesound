@@ -1,23 +1,21 @@
-section(class="catalog  page-main__catalog")
-  div(class="catalog__inner aligner")
-    h2(class="visually-hidden") Каталог доступного оборудования
-    ul(class="catalog__volume-list")
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Акустические системы линейного массива
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Активные акустические системы
+mixin catalog__volume(catalogGroupCaption)
+  li.catalog__volume-item
+    h3.catalog__volume-caption= catalogGroupCaption
+    div.catalog__volume-content
+
+section.catalog
+  div.catalog__inner.aligner
+    h2.visually-hidden
+    ul.catalog__volume-list
+      +catalog__volume('Акустические системы линейного массива')
+      +catalog__volume('Активные акустические системы')
         include e-catalog-group__list.pug
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Пассивные акустические системы
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Мониторы сценические
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Усилители
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Цифровые микшерные пульты
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Аналоговые микшерные пульты
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Радиосистемы
-      li(class="catalog-group catalog__volume")
-        h3(class="catalog-group__caption") Системы мониторинга In-Ear
+      +catalog__volume('Пассивные акустические системы')
+      +catalog__volume('Мониторы сценические')
+      +catalog__volume('Усилители')
+      +catalog__volume('Цифровые микшерные пульты')
+      +catalog__volume('Аналоговые микшерные пульты')
+      +catalog__volume('Радиосистемы')
+      +catalog__volume('Системы мониторинга In-Ear')
+
+//- TODO: подумать над границами BEM-блоков
