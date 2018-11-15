@@ -48,7 +48,11 @@ block main
               'Выполняем райдер любого артиста (от российской сцены до мировой звезды)'
             )
     div.page-main__directions
-      include modules/b-directions.pug
+      section.directions
+        div.directions__inner.aligner
+          h2.directions__heading Основные направления
+          div.directions__content
+            include modules/b-project-cards.pug
     div.page-main__partners.page-main__partners
       +partners('small', 'Оборудование от компаний-лидеров мирового рынка')
         +partners__item('lacoustics', 'L-Acoustics')

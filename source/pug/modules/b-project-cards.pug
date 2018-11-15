@@ -1,0 +1,15 @@
+mixin project-cards__item(projectCardNumber, projectGroupName)
+  li.project-card.project-cards__item
+    a.project-card__link
+      img.project-card__image(class='project-card__image--' + projectCardNumber, src='img/direction-' + projectCardNumber + '.jpg' alt=projectGroupName)
+      h3.project-card__caption
+        span.project-card__caption-text= projectGroupName
+
+div.project-cards
+  ul.project-cards__list
+    +project-cards__item(1, 'Концерты')
+    +project-cards__item(2, 'Телепроекты')
+    +project-cards__item(3, 'Фестивали')
+    +project-cards__item(4, 'Официальные мероприятия')
+    +project-cards__item(5, 'Спортивные мероприятия')
+    +project-cards__item(6, 'Корпоративные мероприятия')
