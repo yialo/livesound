@@ -7,53 +7,16 @@ block main
   main.page-main.page__main
     h1.visually-hidden Сайт компании Live Sound Agency
     div.page-main__promo
-      section.promo
-        h2.visually-hidden Промо-блок
-        div.promo__slider
-          ul.promo__list
-            +promo__item(1, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
-            +promo__item(2, 'Текст слайда №2', 'Подпись слайда №2')
-            +promo__item(3, 'Текст слайда №3', 'Подпись слайда №3')
-            +promo__item(4, 'Текст слайда №4', 'Подпись слайда №4')
-        div(class="promo__slider-controls")
-          div.slider-controls
-            ul.slider-controls__list.aligner
-              +slider-controls__item('Слайд №1')
-              +slider-controls__item('Слайд №2', 'is-current')
-              +slider-controls__item('Слайд №3')
-              +slider-controls__item('Слайд №4')
+      include modules/b-promo.pug
     div.page-main__advantages
-      section.advantages
-        div.advantages__inner.aligner
-          h2.advantages__heading Преимущества
-          ul.advantages__list
-            +advantages__item(
-              1,
-              'Опыт',
-              'Лидирующая звуковая компания России с 1990 года'
-            )
-            +advantages__item(
-              2,
-              'Профессионализм',
-              'Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала'
-            )
-            +advantages__item(
-              3,
-              'Качество',
-              'Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, <span class="advantages__string">Shure</span>)'
-            )
-            +advantages__item(
-              4,
-              'Надежность',
-              'Выполняем райдер любого артиста (от российской сцены до мировой звезды)'
-            )
+      include modules/b-advantages.pug
     div.page-main__directions
       section.directions
         div.directions__inner.aligner
           h2.directions__heading Основные направления
           div.directions__content
             include modules/b-project-cards.pug
-    div.page-main__partners.page-main__partners
+    div.page-main__partners
       +partners('small', 'Оборудование от компаний-лидеров мирового рынка')
         +partners__item('lacoustics', 'L-Acoustics')
         +partners__item('yamaha', 'Yamaha')
@@ -63,7 +26,7 @@ block main
         +partners__item('shure', 'SHURE')
     div.page-main__about
       include modules/b-about.pug
-    div.page-main__partners.page-main__partners
+    div.page-main__partners
       +partners('small', 'Партнеры')
         +partners__item('lacoustics', 'L-Acoustics')
         +partners__item('yamaha', 'Yamaha')

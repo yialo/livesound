@@ -4,10 +4,10 @@ block title
   | О компании | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
-    header(class="intro page-main__intro")
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") О компании
-
-    include modules/b-history.pug
-    include modules/b-mission.pug
+  main.page-main.page__main
+    div.page-main__intro
+      +intro('О компании')
+    div.page-main__history
+      include modules/b-history.pug
+    div.page-main__mission
+      include modules/b-mission.pug

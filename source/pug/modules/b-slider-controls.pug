@@ -1,0 +1,14 @@
+mixin slider-controls__item(buttonText, isCurrent)
+  - var currentStateFlag = '';
+  if isCurrent
+    - var currentStateFlag = 'is-current';
+  li.slider-controls__item
+    button.slider-controls__button(type='button', class=currentStateFlag)
+      span.visually-hidden= buttonText
+
+div.slider-controls
+  ul.slider-controls__list.aligner
+    +slider-controls__item('Слайд №1')
+    +slider-controls__item('Слайд №2', true)
+    +slider-controls__item('Слайд №3')
+    +slider-controls__item('Слайд №4')
