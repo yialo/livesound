@@ -4,16 +4,16 @@
 
 .page-header__inner {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .page-header__menu-controls {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   z-index: 2;
 }
 
@@ -27,4 +27,10 @@
 
 .page-header__connection {
   margin-top: 20px;
+}
+
+.page-header__language-toggle {
+  position: absolute;
+  top: 100px;
+  right: 40px;
 }

@@ -1,16 +1,29 @@
-section(class="advantages")
-  div(class="advantages__inner aligner")
-    h2(class="advantages__heading") Преимущества
-    ul(class="advantages__list")
-      li(class="advantages__item")
-        h3(class="advantages__caption") Опыт
-        p(class="advantages__description") Лидирующая звуковая компания России с 1990 года
-      li(class="advantages__item")
-        h3(class="advantages__caption") Профессионализм
-        p(class="advantages__description") Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала
-      li(class="advantages__item")
-        h3(class="advantages__caption") Качество
-        p(class="advantages__description") Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, <span class="advantages__string">Shure</span>)
-      li(class="advantages__item")
-        h3(class="advantages__caption") Надежность
-        p(class="advantages__description") Выполняем райдер любого артиста (от российской сцены до мировой звезды)
+mixin list-item(number, heading, description)
+  li(class='advantages__item advantages__item--' + number)
+    h3.advantages__caption= heading
+    p.advantages__description!= description
+
+section.advantages
+  div.advantages__inner.aligner
+    h2.advantages__heading Преимущества
+    ul.advantages__list
+      +list-item(
+        1,
+        'Опыт',
+        'Лидирующая звуковая компания России с 1990 года'
+      )
+      +list-item(
+        2,
+        'Профессионализм',
+        'Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала'
+      )
+      +list-item(
+        3,
+        'Качество',
+        'Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, <span class="advantages__string">Shure</span>)'
+      )
+      +list-item(
+        4,
+        'Надежность',
+        'Выполняем райдер любого артиста (от российской сцены до мировой звезды)'
+      )

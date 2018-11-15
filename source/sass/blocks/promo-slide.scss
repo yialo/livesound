@@ -4,10 +4,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  --promo-slide-padding-top: 265px;
 }
 
 .promo-slide__inner {
-  padding-top: 250px;
+  padding-top: calc(var(--promo-slide-padding-top) + 15px);
   padding-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;

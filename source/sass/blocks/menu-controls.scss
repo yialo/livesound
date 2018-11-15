@@ -1,22 +1,25 @@
 .menu-controls__button {
   display: none;
   background-color: transparent;
-  width: 50px;
-  height: 50px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top left;
   border-style: none;
+  cursor: pointer;
 
   &.is-visible {
     display: block;
   }
 
   &--open {
+    width: 60px;
+    height: 30px;
     background-image: url("../img/menu-controls__button--open.svg");
-    background-size: contain;
+    background-size: cover;
   }
 
   &--close {
+    width: 40px;
+    height: 40px;
     background-image: url("../img/menu-controls__button--close.svg");
     background-size: 80%;
   }
