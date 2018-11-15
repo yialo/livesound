@@ -4,19 +4,33 @@ block title
   | Клиенты/Партнеры | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
-    header(class="intro page-main__intro")
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") Клиенты/Партнеры
-
-    section(class="partners page__partners page__partners--1")
-      div(class="partners__inner aligner")
-        h2(class="partners__heading") Наши партнеры
-        include modules/b-partners-list--complete.pug
-
-    include modules/b-acknowledgements.pug
-
-    section(class="partners page__partners page__partners--2")
-      div(class="partners__inner aligner")
-        h2(class="partners__heading") Нам доверяют
-        include modules/b-partners-list--complete.pug
+  main.page-main.page__main
+    header.intro.page-main__intro
+      div.intro__inner.aligner
+        h1.intro__heading Клиенты/Партнеры
+    div.page-main__partners
+      +partners('large', 'Наши партнеры')
+        +partners__item('yamaha', 'Yamaha')
+        +partners__item('lacoustics', 'L-Acoustics')
+        +partners__item('yamaha', 'Yamaha')
+        +partners__item('brandday', 'День Бренда')
+        +partners__item('shure', 'SHURE')
+        +partners__item('mango', 'Mango')
+        +partners__item('lacoustics', 'L-Acoustics')
+        +partners__item('omega', 'Omega')
+        +partners__item('shure', 'SHURE')
+        +partners__item('shure', 'SHURE')
+    div.page-main__acknowledgements
+      include modules/b-acknowledgements.pug
+    div.page-main__partners
+      +partners('large', 'Нам доверяют')
+        +partners__item('yamaha', 'Yamaha')
+        +partners__item('lacoustics', 'L-Acoustics')
+        +partners__item('yamaha', 'Yamaha')
+        +partners__item('brandday', 'День Бренда')
+        +partners__item('shure', 'SHURE')
+        +partners__item('mango', 'Mango')
+        +partners__item('lacoustics', 'L-Acoustics')
+        +partners__item('omega', 'Omega')
+        +partners__item('shure', 'SHURE')
+        +partners__item('shure', 'SHURE')

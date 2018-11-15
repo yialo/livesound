@@ -1,0 +1,20 @@
+include mixins-b-partners.pug
+
+mixin partners__item(parnterImageName, partnerName)
+  li.partners__item
+    img.partners__logo(src='img/partners-' + parnterImageName + '.png' alt=partnerName)
+
+mixin partners--small(heading)
+  section.partners.partners--small
+    div.partners__inner.aligner
+      h2.partners__heading= heading
+        ul.partners__list
+          block
+
++partners--small('Оборудование от компаний-лидеров мирового рынка')
+  +partners__item('lacoustics', 'L-Acoustics')
+  +partners__item('yamaha', 'Yamaha')
+  +partners__item('shure', 'SHURE')
+  +partners__item('lacoustics', 'L-Acoustics')
+  +partners__item('yamaha', 'Yamaha')
+  +partners__item('shure', 'SHURE')
