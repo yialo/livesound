@@ -1,5 +1,5 @@
-mixin advantages__item(number, heading, description)
-  li.advantages__item(class='advantages__item--' + number)
+mixin advantages__item(heading, description)
+  li.advantages__item(class='advantages__item--' + n++)
     h3.advantages__caption= heading
     p.advantages__description!= description
 
@@ -7,23 +7,20 @@ section.advantages
   div.advantages__inner.aligner
     h2.advantages__heading Преимущества
     ul.advantages__list
+      - var n = 1;
       +advantages__item(
-        1,
         'Опыт',
         'Лидирующая звуковая компания России с 1990 года'
       )
       +advantages__item(
-        2,
         'Профессионализм',
         'Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала'
       )
       +advantages__item(
-        3,
         'Качество',
         'Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, <span class="advantages__string">Shure</span>)'
       )
       +advantages__item(
-        4,
         'Надежность',
         'Выполняем райдер любого артиста (от российской сцены до мировой звезды)'
       )

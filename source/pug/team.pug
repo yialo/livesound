@@ -4,9 +4,10 @@ block title
   | Команда | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
-    header(class="intro page-main__intro")
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") Команда
-    include modules/b-experience.pug
-    include modules/b-team-gallery.pug
+  main.page-main.page__main
+    div.page-main__intro
+      +intro('Команда')
+    div.page-main__experience
+      include modules/b-experience.pug
+    div.page-main__team-gallery
+      include modules/b-team-gallery.pug

@@ -4,15 +4,14 @@ block title
   | Проекты | Live Sound Agency
 
 block main
-  main(class="page-main page__main")
+  main.page-main.page__main
     div.page-main__intro
-    header.intro
-      div(class="intro__inner aligner")
-        h1(class="intro__heading") Проекты
+      +intro('Проекты')
     div.page-main__projects
       section.projects
         div.projects__inner.aligner
           h2.projects__heading Реализованные проекты
           div.projects__content
             include modules/b-project-cards.pug
-    include modules/b-supremacy.pug
+    div.page-main__supremacy
+      include modules/b-supremacy.pug
