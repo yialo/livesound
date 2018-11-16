@@ -7,7 +7,7 @@ mixin page-header(pageName)
       div.page-header__menu-controls
         include ../modules/b-menu-controls.pug
       div.page-header__logo
-        +logo('header')
+        +logo('header', pageName)
       div.page-header__navigation
         +main-navigation(pageName, 'header')
       div.page-header__language-toggle

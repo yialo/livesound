@@ -1,4 +1,12 @@
-mixin logo(logoPosition)
-  div.logo(class='logo--' + logoPosition)
+mixin logo__link(pageName)
+  if pageName === 'index'
+    a.logo__link
+      block
+  else
     a.logo__link(href="index.html")
+      block
+
+mixin logo(logoPosition, pageName)
+  div.logo(class='logo--' + logoPosition)
+    +logo__link(pageName)
       img.logo__image(src='img/logo-' + logoPosition + '.png' alt='Live Sound Agency')

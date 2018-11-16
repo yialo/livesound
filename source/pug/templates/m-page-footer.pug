@@ -8,7 +8,7 @@ mixin page-footer(pageName)
         div.page-footer__address
           include ../modules/b-address.pug
         div.page-footer__logo
-          +logo('footer')
+          +logo('footer', pageName)
         p(class="copyright page-footer__copyright") © 2016 <span class="copyright__string">Live-sound agency</span>
       div.page-footer__column-2
         div.page-footer__navigation
