@@ -1,4 +1,4 @@
-extends templates/page-template.pug
+extends templates/template-page.pug
 
 block title
   | Оборудование | Live Sound Agency
@@ -12,6 +12,8 @@ block footer
 block main
   main.page-main.page__main
     div.page-main__intro
+      include modules/m-intro.pug
       +intro('Оборудование')
     div.page-main__catalog
-      include modules/b-catalog.pug
+      include modules/m-catalog.pug
+      +catalog()

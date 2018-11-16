@@ -1,0 +1,24 @@
+mixin page-footer(pageName)
+  footer.page-footer
+    div.page-footer__inner.aligner
+      div.page-footer__column-1
+        div.page-footer__address
+          include m-address.pug
+          +address()
+        div.page-footer__logo
+          include m-logo.pug
+          +logo('footer', pageName)
+        div.page-footer__copyright
+          include m-copyright.pug
+          +copyright()
+      div.page-footer__column-2
+        div.page-footer__navigation
+          include m-main-navigation.pug
+          +main-navigation(pageName, 'footer')
+      div.page-footer__column-3
+        div.page-footer__connection
+          include m-connection.pug
+          +connection()
+        div.page-footer__creator
+          include m-creator.pug
+          +creator()

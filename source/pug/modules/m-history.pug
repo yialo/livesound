@@ -1,0 +1,22 @@
+mixin history()
+  section.history
+    div.history__inner.aligner
+      h2.visually-hidden История компании
+      div.history__slider-controls
+        //- TODO: добавить компонент через jQuery
+      div.history__slider
+        ul.history__list
+          mixin history__item(paragraphText, isCurrent)
+            - var currentItemFlag = '';
+            if isCurrent
+              - var currentItemFlag = 'history__item--current';
+            li.history__item(class=currentItemFlag)
+              p.history__content= paragraphText
+          +history__item('История компании: 2018 год')
+          +history__item('История компании: 2016 год')
+          +history__item(
+            'Компания была основана в Москве в 1990 году в ДК Московского Авиационного Института. С самого начала компания работала в нескольких направлениях звукового рынка: стадионные концерты «рок-н-ролльщиков» (ДДТ, Наутилус, Аквариум), эстрада (Алла Пугачева, Лайма Вайкуле, Валерий Леонтьев, Олег Газманов), дискотеки и элитные ночные клубы (Арлекино, Пентхаус).',
+            true
+          )
+          +history__item('История компании: 2012 год')
+          +history__item('История компании: 2010 год')

@@ -6,7 +6,10 @@ mixin logo__link(pageName)
     a.logo__link(href="index.html")
       block
 
+//- TODO: отрефакторить предыдущий миксин
+
 mixin logo(logoPosition, pageName)
   div.logo(class='logo--' + logoPosition)
     +logo__link(pageName)
       img.logo__image(src='img/logo-' + logoPosition + '.png' alt='Live Sound Agency')
+

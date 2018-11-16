@@ -1,4 +1,4 @@
-extends templates/page-template.pug
+extends templates/template-page.pug
 
 block title
   | Контакты | Live Sound Agency
@@ -12,6 +12,8 @@ block footer
 block main
   main.page-main.page__main
     div.page-main__intro
+      include modules/m-intro.pug
       +intro('Контакты')
     div.page-main__contacts
-      include modules/b-contacts.pug
+      include modules/m-contacts.pug
+      +contacts()

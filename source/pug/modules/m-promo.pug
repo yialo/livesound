@@ -1,0 +1,20 @@
+mixin promo()
+  section.promo
+    h2.visually-hidden Промо-блок
+    div.promo__slider
+      ul.promo__list
+        mixin promo__item(promoItemNumber, promoSlideTitle, promoSlideSubitle)
+          li.promo__item
+            div.promo-slide(class='promo-slide--' + promoItemNumber)
+              div.promo-slide__inner.aligner
+                h3.promo-slide__title= promoSlideTitle
+                p.promo-slide__subtitle= promoSlideSubitle
+                a.promo-slide__more-link(href="#")
+                  span.visually-hidden Читать далее
+        +promo__item(1, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
+        +promo__item(2, 'Текст слайда №2', 'Подпись слайда №2')
+        +promo__item(3, 'Текст слайда №3', 'Подпись слайда №3')
+        +promo__item(4, 'Текст слайда №4', 'Подпись слайда №4')
+    div(class="promo__slider-controls")
+      include m-slider-controls.pug
+      +slider-controls()

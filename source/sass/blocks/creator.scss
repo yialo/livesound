@@ -1,0 +1,7 @@
+.creator {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font(400, 9px, 15px);
+  text-transform: uppercase;
+}

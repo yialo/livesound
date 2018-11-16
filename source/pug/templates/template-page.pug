@@ -1,8 +1,3 @@
-include m-intro.pug
-include m-page-header.pug
-include m-page-footer.pug
-include m-partners.pug
-
 doctype html
 html(lang='ru')
   head
@@ -19,12 +14,14 @@ html(lang='ru')
 
   body.page
     div.page__header
+      include ../modules/m-page-header.pug
       block header
 
     div.page__main
       block main
 
     div.page__footer
+      include ../modules/m-page-footer.pug
       block footer
 
     script(src="js/picturefill.js")

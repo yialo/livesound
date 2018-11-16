@@ -1,4 +1,4 @@
-extends templates/page-template.pug
+extends templates/template-page.pug
 
 block title
   | Проекты | Live Sound Agency
@@ -12,12 +12,11 @@ block footer
 block main
   main.page-main.page__main
     div.page-main__intro
+      include modules/m-intro.pug
       +intro('Проекты')
     div.page-main__projects
-      section.projects
-        div.projects__inner.aligner
-          h2.projects__heading Реализованные проекты
-          div.projects__content
-            include modules/b-project-cards.pug
+      include modules/m-projects.pug
+      +projects()
     div.page-main__supremacy
-      include modules/b-supremacy.pug
+      include modules/m-supremacy.pug
+      +supremacy()

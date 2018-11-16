@@ -1,4 +1,4 @@
-extends templates/page-template.pug
+extends templates/template-page.pug
 
 block title
   | Клиенты/Партнеры | Live Sound Agency
@@ -11,12 +11,15 @@ block footer
 
 block main
   main.page-main.page__main
-    header.intro.page-main__intro
-      div.intro__inner.aligner
-        h1.intro__heading Клиенты/Партнеры
+    div.page-main__intro
+      include modules/m-intro.pug
+      +intro('Клиенты/Партнеры')
     div.page-main__partners
+      include modules/m-partners.pug
       +partners('long', 'Наши партнеры')
     div.page-main__acknowledgements
-      include modules/b-acknowledgements.pug
+      include modules/m-acknowledgements.pug
+      +acknowledgements()
     div.page-main__partners
+      include modules/m-partners.pug
       +partners('long', 'Нам доверяют')

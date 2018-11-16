@@ -1,0 +1,11 @@
+mixin team-gallery()
+  section.team-gallery
+    div.team-gallery__inner.aligner
+      h2.visually-hidden Фотографии наших сотрудников
+      ul.team-gallery__list
+        mixin team-gallery__item(itemNumber)
+          li.team-gallery__item
+            img.team-gallery__photo(class='team-gallery__photo--' + itemNumber src='team-photo-' + itemNumber + '.jpg' alt='Наша команда, фото ' + itemNumber)
+        - var i = 1;
+        while i <= 6
+          +team-gallery__item(i++)
