@@ -1,10 +1,26 @@
-mixin partners__item(parnterImageName, partnerName)
-  li.partners__item
-    img.partners__logo(src='img/partners-' + parnterImageName + '.png' alt=partnerName)
-
 mixin partners(listSize, heading)
   section.partners(class='partners--' + listSize)
     div.partners__inner.aligner
       h2.partners__heading= heading
         ul.partners__list
-          block
+          mixin partners__item(parnterImageName, partnerName)
+            li.partners__item
+              img.partners__logo(src='img/partners-' + parnterImageName + '.png' alt=partnerName)
+          if listSize === 'short'
+            +partners__item('lacoustics', 'L-Acoustics')
+            +partners__item('yamaha', 'Yamaha')
+            +partners__item('shure', 'SHURE')
+            +partners__item('lacoustics', 'L-Acoustics')
+            +partners__item('yamaha', 'Yamaha')
+            +partners__item('shure', 'SHURE')
+          if listSize === 'long'
+            +partners__item('yamaha', 'Yamaha')
+            +partners__item('lacoustics', 'L-Acoustics')
+            +partners__item('yamaha', 'Yamaha')
+            +partners__item('brandday', 'День Бренда')
+            +partners__item('shure', 'SHURE')
+            +partners__item('mango', 'Mango')
+            +partners__item('lacoustics', 'L-Acoustics')
+            +partners__item('omega', 'Omega')
+            +partners__item('shure', 'SHURE')
+            +partners__item('shure', 'SHURE')
