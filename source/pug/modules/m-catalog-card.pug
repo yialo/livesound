@@ -1,0 +1,16 @@
+mixin catalog-card__name(propertyKey)
+  dt.catalog-card__name= propertyKey
+mixin catalog-card__value(propertyValue)
+  dd.catalog-card__value= propertyValue
+
+mixin catalog-card(itemNumber, itemTitle)
+  div.catalog-card
+    div.catalog-card__column-1
+      img.catalog-card__image(
+        src='img/catalog-item-' + itemNumber + '.png'
+        alt='Активная акустическая система №' + itemNumber
+      )
+    div.catalog-card__column-2
+      h4.catalog-card__title= itemTitle
+      dl.catalog-card__list
+        block
