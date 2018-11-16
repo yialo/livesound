@@ -1,4 +1,4 @@
-extends templates/template-page.pug
+extends common/template-page.pug
 
 block title
   | О компании | Live Sound Agency
@@ -10,13 +10,15 @@ block footer
   +page-footer('about')
 
 block main
-  main.page-main.page__main
+  main.page-main
     div.page-main__intro
-      include modules/m-intro.pug
       +intro('О компании')
     div.page-main__history
-      include modules/m-history.pug
       +history()
     div.page-main__mission
-      include modules/m-mission.pug
       +mission()
+
+
+
+
+

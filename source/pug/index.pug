@@ -1,4 +1,4 @@
-extends templates/template-page.pug
+extends common/template-page.pug
 
 block title
   | Главная | Live Sound Agency
@@ -10,24 +10,18 @@ block footer
   +page-footer('index')
 
 block main
-  main.page-main.page__main
+  main.page-main
     h1.visually-hidden Сайт компании Live Sound Agency
     div.page-main__promo
-      include modules/m-promo.pug
       +promo()
     div.page-main__advantages
-      include modules/m-advantages.pug
       +advantages()
     div.page-main__directions
-      include modules/m-directions.pug
       +directions()
     div.page-main__partners
-      include modules/m-partners.pug
       +partners('short', 'Оборудование от компаний-лидеров мирового рынка')
     div.page-main__about
-      include modules/m-about.pug
       +about()
     div.page-main__partners
-      include modules/m-partners.pug
       +partners('short', 'Партнеры')
 

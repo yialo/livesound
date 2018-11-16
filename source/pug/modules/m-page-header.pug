@@ -2,14 +2,10 @@ mixin page-header(pageName)
   header.page-header
     div.page-header__inner.aligner
       div.page-header__menu-controls
-        include m-menu-controls.pug
         +menu-controls()
       div.page-header__logo
-        include m-logo.pug
         +logo('header', pageName)
       div.page-header__navigation
-        include m-main-navigation.pug
         +main-navigation(pageName, 'header')
       div.page-header__language-toggle
-        include m-language-toggle.pug
         +language-toggle()

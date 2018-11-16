@@ -5,7 +5,6 @@ mixin contacts()
       div.contacts__layout
         div.contacts__column-1
           div.contacts__address
-            include m-address.pug
             +address()
           ul.contacts__tels
             mixin contacts__tel(telNumberEnd, telNumberEndText)
@@ -15,7 +14,6 @@ mixin contacts()
             +contacts__tel('8540', '85-40')
             +contacts__tel('6298', '62-98')
           div.contacts__socials
-            include m-socials.pug
             +socials()
         div.contacts__column-2
           div.contacts__map#map

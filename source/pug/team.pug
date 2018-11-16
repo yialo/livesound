@@ -1,4 +1,4 @@
-extends templates/template-page.pug
+extends common/template-page.pug
 
 block title
   | Команда | Live Sound Agency
@@ -10,13 +10,10 @@ block footer
   +page-footer('team')
 
 block main
-  main.page-main.page__main
+  main.page-main
     div.page-main__intro
-      include modules/m-intro.pug
       +intro('Команда')
     div.page-main__experience
-      include modules/m-experience.pug
       +experience()
     div.page-main__team-gallery
-      include modules/m-team-gallery.pug
       +team-gallery()
