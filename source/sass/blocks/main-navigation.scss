@@ -6,5 +6,8 @@
 
 .main-navigation__link {
   @include font(400, 24px, 36px);
-  color: white;
+
+  .main-navigation--header & {
+    color: white;
+  }
 }

@@ -3,6 +3,12 @@ extends templates/page-template.pug
 block title
   | Главная | Live Sound Agency
 
+block header
+  +page-header('index')
+
+block footer
+  +page-footer('index')
+
 block main
   main.page-main.page__main
     h1.visually-hidden Сайт компании Live Sound Agency
