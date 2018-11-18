@@ -4,7 +4,7 @@ mixin project-cards()
       mixin project-cards__item(projectCardNumber, projectGroupName)
         li.project-card.project-cards__item
           a.project-card__link
-            img.project-card__image(class='project-card__image--' + projectCardNumber src='img/direction-' + projectCardNumber + '.jpg' alt=projectGroupName)
+            img.project-card__image(class='project-card__image--' + projectCardNumber src='img/project-card__image--' + projectCardNumber + '.jpg' alt=projectGroupName)
             h3.project-card__caption
               span.project-card__caption-text= projectGroupName
       +project-cards__item(1, 'Концерты')
