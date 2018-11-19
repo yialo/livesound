@@ -4,13 +4,8 @@ mixin promo()
     div.promo__slider
       ul.promo__list
         mixin promo__item(promoItemNumber, promoSlideTitle, promoSlideSubitle)
-          li.promo__item
-            div.promo-slide(class='promo-slide--' + promoItemNumber)
-              div.promo-slide__inner.aligner
-                h3.promo-slide__title= promoSlideTitle
-                p.promo-slide__subtitle= promoSlideSubitle
-                a.promo-slide__more-link(href="#")
-                  span.visually-hidden Читать далее
+          li.promo__item(class='promo__item--' + promoItemNumber)
+            +promo-slide(promoItemNumber, promoSlideTitle, promoSlideSubitle)
         +promo__item(1, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
         +promo__item(2, 'Текст слайда №2', 'Подпись слайда №2')
         +promo__item(3, 'Текст слайда №3', 'Подпись слайда №3')
