@@ -3,7 +3,7 @@ mixin page-footer(pageName)
     div.page-footer__inner.aligner
       div.page-footer__column-1
         div.page-footer__address
-          +address()
+          +address('footer')
         div.page-footer__logo
           +logo('footer', pageName)
         div.page-footer__copyright
@@ -14,5 +14,5 @@ mixin page-footer(pageName)
       div.page-footer__column-3
         div.page-footer__connection
           +connection()
-        div.page-footer__creator
-          +creator()
+      div.page-footer__creator
+        +creator()

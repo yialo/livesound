@@ -5,7 +5,7 @@ mixin contacts()
       div.contacts__layout
         div.contacts__column-1
           div.contacts__address
-            +address()
+            +address('contacts')
           ul.contacts__tels
             mixin contacts__tel(telNumberEnd, telNumberEndText)
               li.contacts__tel

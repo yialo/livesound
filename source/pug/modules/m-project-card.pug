@@ -1,0 +1,12 @@
+- var projectCardImagePathPrefix = 'img/project-card__image--';
+
+mixin project-card(projectCardNumber, projectGroupName)
+  div.project-card
+    a.project-card__link(href="#")
+      picture
+        source(media=mediaMinDesktopWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-desktop.jpg')
+        source(media=mediaMinLaptopWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-laptop.jpg')
+        source(media=mediaMinTabletWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-tablet.jpg')
+        img.project-card__image(class='project-card__image--' + projectCardNumber src=projectCardImagePathPrefix + projectCardNumber + '-mobile.jpg' alt=projectGroupName)
+      h3.project-card__caption
+        span.project-card__caption-text= projectGroupName

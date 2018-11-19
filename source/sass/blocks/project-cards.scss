@@ -1,0 +1,11 @@
+.project-cards {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.project-cards__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

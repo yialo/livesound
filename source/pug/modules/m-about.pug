@@ -4,8 +4,10 @@ mixin about()
       h2.about__heading
       div.about__layout
         div.about__column-1
-          a.about__video-link
-          img.about__image(src="img/about-video.jpg" alt="Видео о нашей компании")
+          a.about__video-link(href="#")
+            picture
+              source(media=mediaMinDesktopWidth scrset='img/about-video-desktop.png')
+              img.about__image(src="img/about-video-mobile.png" alt="Видео о нашей компании")
         div.about__column-2
           p.about__description Live Sound Agency одна из немногих компаний, которые стояли у истоков создания современного «звукового» бизнеса в России. За 25-летнюю историю мы никогда не отказывались от самой сложной и ответственной работы.
           p.about__description Год за годом набирали бесценный практический опыт, соверш енствовали технологии, обучали персонал. И сегодня у нас есть, что предложить Вам.

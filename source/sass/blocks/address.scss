@@ -1,0 +1,22 @@
+.address {
+  color: $light-gray;
+
+  &--footer {
+    text-align: center;
+  }
+}
+
+.address__legend {
+  .address--contacts & {
+    display: block;
+  }
+
+  .address--footer & {
+    display: none;
+  }
+}
+
+.address__content {
+  margin-top: 0;
+  margin-bottom: 0;
+}

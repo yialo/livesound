@@ -1,0 +1,12 @@
+.directions__inner {
+  padding: 30px 20px;
+}
+
+.directions__heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include font(400, 28px, 42px);
+  text-align: center;
+  text-transform: uppercase;
+}

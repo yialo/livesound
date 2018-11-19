@@ -1,5 +1,5 @@
-mixin address()
-  div.address
+mixin address(blockDestination)
+  div.address(class='address--' + blockDestination)
     span.address__legend Наш адрес:
     p.address__content= '123290 Москва,'
       br

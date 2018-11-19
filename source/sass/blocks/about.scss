@@ -1,0 +1,30 @@
+.about__inner {
+  padding: 20px 20px 30px;
+}
+
+.about__column-1 {
+  margin-bottom: 30px;
+}
+
+.about__video-link {
+  display: block;
+}
+
+.about__image {
+  display: block;
+}
+
+.about__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include font(400, 18px, 30px);
+}
+
+.about__more-link {
+  display: block;
+
+  @include font(400, 18px, 52px);
+  text-decoration: underline;
+  color: $azure;
+}
