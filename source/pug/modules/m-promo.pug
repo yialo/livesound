@@ -2,13 +2,13 @@ mixin promo()
   section.promo
     h2.visually-hidden Промо-блок
     div.promo__slider
-      ul.promo__list
+      ul.promo__list.js-slide-2
         mixin promo__item(promoItemNumber, promoSlideTitle, promoSlideSubitle)
-          li.promo__item(class='promo__item--' + promoItemNumber)
+          li.promo__item
             +promo-slide(promoItemNumber, promoSlideTitle, promoSlideSubitle)
-        +promo__item(1, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
-        +promo__item(2, 'Текст слайда №2', 'Подпись слайда №2')
-        +promo__item(3, 'Текст слайда №3', 'Подпись слайда №3')
-        +promo__item(4, 'Текст слайда №4', 'Подпись слайда №4')
+        +promo__item(1, 'Текст слайда №1', 'Подпись слайда №1')
+        +promo__item(2, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
+        +promo__item(3, 'Текст слайда №3', 'Подпись слайда №3. Здесь текста в подписи больше, чем на двух первых слайдах, вместе взятых')
+        +promo__item(4, 'Текст слайда №4', 'Подпись слайда №4. На данном слайде текста в подписи ещё больше. Существенное количество самого разного текста, специально для проверки высоты всего блока-слайдера: она равна высоте самого длинного слайда из четёрых имеющихся. Чтобы при переключении слайдов не было скачков по высоте.')
     div(class="promo__slider-controls")
       +slider-controls()

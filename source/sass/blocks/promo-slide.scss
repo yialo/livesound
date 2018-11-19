@@ -1,11 +1,27 @@
 .promo-slide {
+  display: flex;
+  width: 100%;
   background-color: #1a1a2b;
-  background-image: url("../img/promo-slide-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   --promo-slide-padding-top: 265px;
+
+  &--1 {
+    background-image: url("../img/promo-slide--1-background.jpg");
+  }
+
+  &--2 {
+    background-image: url("../img/promo-slide--2-background.jpg");
+  }
+
+  &--3 {
+    background-image: url("../img/promo-slide--3-background.jpg");
+  }
+
+  &--4 {
+    background-image: url("../img/promo-slide--4-background.jpg");
+  }
 
   @media (min-width: $min-tablet-width) {
     --promo-slide-padding-top: 225px;
@@ -13,6 +29,8 @@
 }
 
 .promo-slide__inner {
+  display: flex;
+  flex-direction: column;
   padding-top: calc(var(--promo-slide-padding-top) + 15px);
   padding-bottom: 100px;
   padding-left: 20px;
@@ -23,23 +41,31 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  @include font(700, 24px, 36px);
-  text-align: center;
+  @include font(700, 22px, 32px);
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: $min-tablet-width) {
+    @include font(700, 28px, 42px);
+    text-align: center;
+  }
 }
 
 .promo-slide__subtitle {
   margin-top: 0;
   margin-bottom: 20px;
 
-  @include font(400, 18px, 24px);
-  text-align: center;
+  @include font(400, 20px, 28px);
   color: white;
+
+  @media (min-width: $min-tablet-width) {
+    text-align: center;
+  }
 }
 
 .promo-slide__more-link {
   display: block;
+  margin-top: auto;
 
   @include margin-hor;
   width: 75px;

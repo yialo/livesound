@@ -12,9 +12,26 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+
+  &.js-slide-1 {
+    transform: translateX(0);
+  }
+
+  &.js-slide-2 {
+    transform: translateX(-25%);
+  }
+
+  &.js-slide-3 {
+    transform: translateX(-50%);
+  }
+
+  &.js-slide-4 {
+    transform: translateX(-75%);
+  }
 }
 
 .promo__item {
+  display: flex;
   width: calc(100% / 4);
 }
 
