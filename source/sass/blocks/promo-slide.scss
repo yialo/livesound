@@ -5,11 +5,7 @@
   background-position: center;
   background-size: cover;
 
-  --promo-slide-padding-top: 170px;
-
-  @media (min-width: $min-laptop-width) {
-    --promo-slide-padding-top: 265px;
-  }
+  --promo-slide-padding-top: 265px;
 }
 
 .promo-slide__inner {

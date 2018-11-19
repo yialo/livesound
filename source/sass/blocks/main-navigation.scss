@@ -35,4 +35,10 @@
     @include font(400, 14px, 21px);
     color: $light-gray;
   }
+
+  @media (min-width: $min-tablet-width) {
+    .main-navigation--header & {
+      @include font(400, 20px, 30px);
+    }
+  }
 }

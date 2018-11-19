@@ -7,5 +7,7 @@ mixin page-header(pageName)
         +logo('header', pageName)
       div.page-header__navigation
         +main-navigation(pageName, 'header')
+      div.page-header__connection
+        +connection()
       div.page-header__language-toggle
         +language-toggle()

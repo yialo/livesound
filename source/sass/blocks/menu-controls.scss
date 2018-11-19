@@ -24,4 +24,10 @@
     background-image: url("../img/menu-controls__button--close.svg");
     background-position-x: right;
   }
+
+  @media (min-width: $min-tablet-width) {
+    &--close {
+      margin-left: 10px;
+    }
+  }
 }
