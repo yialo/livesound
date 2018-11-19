@@ -26,6 +26,10 @@
   @media (min-width: $min-tablet-width) {
     --promo-slide-padding-top: 225px;
   }
+
+  @media (min-width: $min-laptop-width) {
+    --promo-slide-padding-top: 275px;
+  }
 }
 
 .promo-slide__inner {
@@ -49,6 +53,15 @@
   @media (min-width: $min-tablet-width) {
     @include font(700, 28px, 42px);
   }
+
+  @media (min-width: $min-laptop-width) {
+    margin-bottom: 10px;
+    padding-left: 160px;
+    padding-right: 80px;
+
+    @include font(700, 42px, 63px);
+    text-align: left;
+  }
 }
 
 .promo-slide__subtitle {
@@ -61,6 +74,14 @@
 
   @media (min-width: $min-tablet-width) {
     @include font(400, 20px, 28px);
+  }
+
+  @media (min-width: $min-laptop-width) {
+    padding-left: 160px;
+    padding-right: 60px;
+
+    @include font(400, 42px, 63px);
+    text-align: left;
   }
 }
 
