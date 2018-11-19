@@ -30,4 +30,10 @@
       margin-left: 10px;
     }
   }
+
+  @media (min-width: $min-laptop-width) {
+    &.is-visible {
+      display: none;
+    }
+  }
 }

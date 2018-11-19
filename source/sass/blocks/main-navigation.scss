@@ -13,12 +13,27 @@
   @media (min-width: $min-tablet-width) {
     grid-column-gap: 20px;
   }
+
+  @media (min-width: $min-laptop-width) {
+    .main-navigation--header & {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .main-navigation__item {
   .main-navigation--header & {
     &:not(:last-child) {
       border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  @media (min-width: $min-laptop-width) {
+    .main-navigation--header & {
+      &:not(:last-child) {
+        border-bottom-style: none;
+      }
     }
   }
 }
@@ -43,6 +58,17 @@
   @media (min-width: $min-tablet-width) {
     .main-navigation--header & {
       @include font(400, 20px, 30px);
+    }
+  }
+
+  @media (min-width: $min-laptop-width) {
+    .main-navigation--header & {
+      display: inline;
+      padding: 0;
+
+      @include font(400, 20px, 30px);
+      text-transform: none;
+      background-color: transparent;
     }
   }
 }
