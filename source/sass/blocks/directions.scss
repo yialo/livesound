@@ -9,4 +9,10 @@
   @include font(400, 28px, 42px);
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $min-tablet-width) {
+    margin-bottom: 40px;
+
+    @include font(400, 36px, 52px);
+  }
 }
