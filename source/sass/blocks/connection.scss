@@ -4,7 +4,13 @@
   align-items: center;
 
   @media (min-width: $min-tablet-width) {
-    flex-direction: row;
+    &--header {
+      flex-direction: row;
+    }
+
+    &--footer {
+      align-items: flex-end;
+    }
   }
 }
 
@@ -16,9 +22,11 @@
   color: white;
 
   @media (min-width: $min-tablet-width) {
-    margin-bottom: 0;
-    margin-right: 40px;
+    .connection--header & {
+      margin-bottom: 0;
+      margin-right: 40px;
 
-    @include font(400, 32px, 48px);
+      @include font(400, 32px, 48px);
+    }
   }
 }

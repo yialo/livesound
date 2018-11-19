@@ -1,5 +1,4 @@
 .project-cards {
-  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -10,7 +9,18 @@
 }
 
 .project-cards__item {
+  box-shadow: 0 0 3px 0 black;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $min-tablet-width) {
     width: 50%;
+    box-shadow: none;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

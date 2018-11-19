@@ -5,9 +5,13 @@
 
   .main-navigation--footer & {
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: auto auto;
     grid-template-rows: repeat(4, auto);
-    grid-column-gap: 10%;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    grid-column-gap: 20px;
   }
 }
 
