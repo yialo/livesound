@@ -10,15 +10,7 @@
 }
 
 .project-cards__item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
   @media (min-width: $min-tablet-width) {
     width: 50%;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
   }
 }

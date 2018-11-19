@@ -1,5 +1,5 @@
-mixin partners(listSize, heading)
-  section.partners(class='partners--' + listSize)
+mixin partners(listSize, heading, specialModifier)
+  section.partners(class='partners--' + listSize + ' ' + specialModifier)
     div.partners__inner.aligner
       h2.partners__heading= heading
       ul.partners__list

@@ -9,6 +9,12 @@
   @include font(400, 28px, 42px);
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $min-tablet-width) {
+    margin-bottom: 50px;
+
+    @include font(400, 32px, 48px);
+  }
 }
 
 .about__column-1 {
@@ -45,7 +51,7 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  @include font(400, 18px, 30px);
+  @include font(400, 16px, 28px);
 
   @media (min-width: $min-tablet-width) {
     @include font(400, 20px, 30px);
