@@ -49,6 +49,16 @@
     margin-bottom: 0;
   }
 
+  .page-main--team & {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    .page-main--team & {
+      margin-bottom: 90px;
+    }
+  }
+
   @media (min-width: $large-min-width) {
     margin-bottom: 125px;
 
@@ -72,4 +82,8 @@
   @media (min-width: $large-min-width) {
     margin-bottom: 120px;
   }
+}
+
+.page-main__experience {
+  margin-bottom: 70px;
 }
