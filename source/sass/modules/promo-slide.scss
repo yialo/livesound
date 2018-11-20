@@ -42,7 +42,8 @@
   color: white;
 
   @media (min-width: $medium-min-width) {
-    @include font(700, 28px, 42px);
+    @include font(700, 40px, 50px);
+    word-spacing: 10px;
   }
 
   @media (min-width: $large-min-width) {
@@ -50,7 +51,8 @@
     padding-left: 160px;
     padding-right: 80px;
 
-    @include font(700, 42px, 63px);
+    @include font(700, 60px, 72px);
+    word-spacing: 20px;
     text-align: left;
   }
 }
@@ -64,14 +66,16 @@
   color: white;
 
   @media (min-width: $medium-min-width) {
-    @include font(400, 20px, 28px);
+    @include font(400, 36px, 42px);
+    word-spacing: 5px;
   }
 
   @media (min-width: $large-min-width) {
     padding-left: 160px;
     padding-right: 60px;
 
-    @include font(400, 42px, 63px);
+    @include font(400, 50px, 60px);
+    word-spacing: 10px;
     text-align: left;
   }
 }
