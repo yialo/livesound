@@ -23,4 +23,8 @@
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: $large-min-width) {
+    width: 393px;
+  }
 }

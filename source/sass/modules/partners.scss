@@ -22,6 +22,10 @@
 
     @include font(400, 32px, 48px);
   }
+
+  @media (min-width: $large-min-width) {
+    @include font(400, 36px, 52px);
+  }
 }
 
 .partners__list {
@@ -33,6 +37,10 @@
   @media (min-width: $medium-min-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-template-columns: repeat(3, auto);
   }
 }
 
@@ -66,10 +74,31 @@
       border-right: 1px solid #e4e4e4;
     }
   }
+
+  @media (min-width: $large-min-width) {
+    &:nth-child(3n) {
+      justify-content: flex-end;
+      padding-left: 60px;
+    }
+
+    &:nth-child(3n+2) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    &:nth-child(3n+1) {
+      justify-content: flex-start;
+      padding-right: 60px;
+    }
+  }
 }
 
 .partners__logo {
   display: block;
 
   @include margin-hor;
+
+  @media (min-width: $medium-min-width) {
+    @include margin-hor(0);
+  }
 }

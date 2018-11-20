@@ -1,6 +1,6 @@
-mixin projects()
+mixin projects(heading)
   section.projects
     div.projects__inner.aligner
-      h2.projects__heading Реализованные проекты
+      h2.projects__heading= heading
       div.projects__content
         +project-cards()

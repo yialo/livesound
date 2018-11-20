@@ -1,13 +1,25 @@
 .page-main__promo {
   margin-bottom: 50px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 110px;
+  }
 }
 
 .page-main__advantages {
   margin-bottom: 60px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
 }
 
 .page-main__directions {
   margin-bottom: 60px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 100px;
+  }
 }
 
 .page-main__partners {
@@ -16,8 +28,16 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 135px;
+  }
 }
 
 .page-main__about {
   margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
 }

@@ -16,6 +16,16 @@
 
     @include font(400, 32px, 48px);
   }
+
+  @media (min-width: $large-min-width) {
+    @include font(400, 36px, 52px);
+  }
+}
+
+.about__layout {
+  @media (min-width: $large-min-width) {
+    display: flex;
+  }
 }
 
 .about__column-1 {
@@ -25,6 +35,13 @@
     float: right;
     margin-bottom: 20px;
     margin-left: 20px;
+  }
+
+  @media (min-width: $large-min-width) {
+    float: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 45px;
   }
 }
 
@@ -57,12 +74,29 @@
   @media (min-width: $medium-min-width) {
     @include font(400, 20px, 30px);
   }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
 }
 
 .about__more-link {
   display: block;
 
-  @include font(400, 18px, 52px);
+  @include font(400, 16px, 28px);
   text-decoration: underline;
   color: $azure;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (min-width: $medium-min-width) {
+    @include font(400, 20px, 30px);
+  }
+
+  @media (min-width: $large-min-width)  {
+    font-size: 16px;
+  }
 }

@@ -25,6 +25,10 @@
     max-height: 205px;
     padding-left: 50px;
   }
+
+  @media (min-width: $large-min-width) {
+    padding-right: 150px;
+  }
 }
 
 .project-card__caption-text {

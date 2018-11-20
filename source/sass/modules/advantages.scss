@@ -18,6 +18,8 @@
   }
 
   @media (min-width: $large-min-width) {
+    margin-bottom: 100px;
+
     @include font(400, 36px, 52px);
   }
 }
@@ -31,6 +33,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
   }
 }
 
@@ -68,6 +74,12 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 255px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
