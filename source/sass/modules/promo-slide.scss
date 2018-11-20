@@ -5,7 +5,6 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: 1920px 1080px;
-  --promo-slide-padding-top: 265px;
 
   &--1 {
     background-image: url("../img/promo-slide--1-background.jpg");
@@ -22,20 +21,12 @@
   &--4 {
     background-image: url("../img/promo-slide--4-background.jpg");
   }
-
-  @media (min-width: $medium-min-width) {
-    --promo-slide-padding-top: 225px;
-  }
-
-  @media (min-width: $large-min-width) {
-    --promo-slide-padding-top: 275px;
-  }
 }
 
 .promo-slide__inner {
   display: flex;
   flex-direction: column;
-  padding-top: calc(var(--promo-slide-padding-top) + 15px);
+  padding-top: calc(var(--page-header-bypass) + 15px);
   padding-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;

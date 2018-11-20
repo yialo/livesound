@@ -1,3 +1,15 @@
+:root {
+  --page-header-bypass: 265px;
+
+  @media (min-width: $medium-min-width) {
+    --page-header-bypass: 225px;
+  }
+
+  @media (min-width: $large-min-width) {
+    --page-header-bypass: 275px;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
