@@ -3,27 +3,26 @@ extends common/template-page.pug
 block title
   | Главная | Live Sound Agency
 
-block header
-  +page-header('index')
-
-block footer
-  +page-footer('index')
-
-block main
-  main.page-main
-    h1.visually-hidden Сайт компании Live Sound Agency
-    div.page-main__promo
-      +promo()
-    div.page-main__advantages
-      +advantages()
-    div.page-main__directions
-      +projects('Основные направления')
-    div.page-main__partners
-      +partners('short', 'Оборудование от компаний-лидеров мирового рынка', '')
-    div.page-main__about
-      +about()
-    div.page-main__partners
-      +partners('short', 'Партнеры', 'partners--large-heading')
-
-block particular-scripts
-  script(src="js/promo-slider.js")
+block body
+  body.page.page--index
+    div.page__header
+      +page-header('index')
+    div.page__main
+      main.page-main
+        h1.visually-hidden Сайт компании Live Sound Agency
+        div.page-main__promo
+          +promo()
+        div.page-main__advantages
+          +advantages()
+        div.page-main__directions
+          +projects('Основные направления')
+        div.page-main__partners
+          +partners('short', 'Оборудование от компаний-лидеров мирового рынка', '')
+        div.page-main__about
+          +about()
+        div.page-main__partners
+          +partners('short', 'Партнеры', 'partners--large-heading')
+    div.page__footer
+      +page-footer('index')
+    script(src="js/promo-slider.js")
+    include common/common-scripts.pug

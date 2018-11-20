@@ -15,15 +15,4 @@ html(lang="ru")
     link(rel="preload" href="fonts/arial-bold.woff2" as="font")
     link(rel="stylesheet" href="css/main.min.css")
 
-  body.page
-    div.page__header
-      block header
-    div.page__main
-      block main
-    div.page__footer
-      block footer
-    script(src="js/picturefill.js")
-    script(src="js/main-navigation--header.js")
-    block particular-scripts
-
-
+  block body

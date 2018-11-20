@@ -5,9 +5,13 @@
 }
 
 .page__main {
-  margin-bottom: 50px;
+  .page--index & {
+    margin-bottom: 50px;
+  }
 
   @media (min-width: $large-min-width) {
-    margin-bottom: 135px;
+    .page--index & {
+      margin-bottom: 135px;
+    }
   }
 }

@@ -3,22 +3,18 @@ extends common/template-page.pug
 block title
   | О компании | Live Sound Agency
 
-block header
-  +page-header('about')
-
-block footer
-  +page-footer('about')
-
-block main
-  main.page-main
-    div.page-main__intro
-      +intro('about', 'О компании')
-    div.page-main__history
-      +history()
-    div.page-main__mission
-      +mission()
-
-
-
-
-
+block body
+  body.page.page--about
+    div.page__header
+      +page-header('about')
+    div.page__main
+      main.page-main
+        div.page-main__intro
+          +intro('about', 'О компании')
+        div.page-main__history
+          +history()
+        div.page-main__mission
+          +mission()
+    div.page__footer
+      +page-footer('about')
+    include common/common-scripts.pug

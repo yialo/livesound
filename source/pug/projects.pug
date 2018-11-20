@@ -3,17 +3,18 @@ extends common/template-page.pug
 block title
   | Проекты | Live Sound Agency
 
-block header
-  +page-header('projects')
-
-block footer
-  +page-footer('projects')
-
-block main
-  main.page-main
-    div.page-main__intro
-      +intro('Проекты')
-    div.page-main__projects
-      +projects('Реализованные проекты')
-    div.page-main__supremacy
-      +supremacy()
+block body
+  body.page.page--projects
+    div.page__header
+      +page-header('projects')
+    div.page__main
+      main.page-main
+        div.page-main__intro
+          +intro('Проекты')
+        div.page-main__projects
+          +projects('Реализованные проекты')
+        div.page-main__supremacy
+          +supremacy()
+    div.page__footer
+      +page-footer('projects')
+    include common/common-scripts.pug

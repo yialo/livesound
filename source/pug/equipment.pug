@@ -3,15 +3,16 @@ extends common/template-page.pug
 block title
   | Оборудование | Live Sound Agency
 
-block header
-  +page-header('equipment')
-
-block footer
-  +page-footer('equipment')
-
-block main
-  main.page-main
-    div.page-main__intro
-      +intro('Оборудование')
-    div.page-main__catalog
-      +catalog()
+block body
+  body.page.page--equipment
+    div.page__header
+      +page-header('equipment')
+    div.page__main
+      main.page-main
+        div.page-main__intro
+          +intro('Оборудование')
+        div.page-main__catalog
+          +catalog()
+    div.page__footer
+      +page-footer('equipment')
+    include common/common-scripts.pug

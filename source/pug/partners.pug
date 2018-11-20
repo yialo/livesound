@@ -3,19 +3,20 @@ extends common/template-page.pug
 block title
   | Клиенты/Партнеры | Live Sound Agency
 
-block header
-  +page-header('partners')
-
-block footer
-  +page-footer('partners')
-
-block main
-  main.page-main
-    div.page-main__intro
-      +intro('Клиенты/Партнеры')
-    div.page-main__partners
-      +partners('long', 'Наши партнеры', '')
-    div.page-main__acknowledgements
-      +acknowledgements()
-    div.page-main__partners
-      +partners('long', 'Нам доверяют', '')
+block body
+  body.page.page--partners
+    div.page__header
+      +page-header('partners')
+    div.page__main
+      main.page-main
+        div.page-main__intro
+          +intro('Клиенты/Партнеры')
+        div.page-main__partners
+          +partners('long', 'Наши партнеры', '')
+        div.page-main__acknowledgements
+          +acknowledgements()
+        div.page-main__partners
+          +partners('long', 'Нам доверяют', '')
+    div.page__footer
+      +page-footer('partners')
+    include common/common-scripts.pug

@@ -3,15 +3,16 @@ extends common/template-page.pug
 block title
   | Контакты | Live Sound Agency
 
-block header
-  +page-header('contacts')
-
-block footer
-  +page-footer('contacts')
-
-block main
-  main.page-main
-    div.page-main__intro
-      +intro('Контакты')
-    div.page-main__contacts
-      +contacts()
+block body
+  body.page.page--contacts
+    div.page__header
+      +page-header('contacts')
+    div.page__main
+      main.page-main
+        div.page-main__intro
+          +intro('Контакты')
+        div.page-main__contacts
+          +contacts()
+    div.page__footer
+      +page-footer('contacts')
+    include common/common-scripts.pug
