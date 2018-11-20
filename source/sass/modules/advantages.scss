@@ -1,6 +1,4 @@
 .advantages__inner {
-  padding-top: 30px;
-  padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -17,6 +15,10 @@
     margin-bottom: 60px;
 
     @include font(400, 32px, 48px);
+  }
+
+  @media (min-width: $large-min-width) {
+    @include font(400, 36px, 52px);
   }
 }
 
