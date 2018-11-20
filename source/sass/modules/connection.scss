@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     &--header {
       flex-direction: row;
     }
@@ -21,7 +21,7 @@
   @include font(400, 24px, 36px);
   color: white;
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     .connection--header & {
       margin-bottom: 0;
       margin-right: 40px;

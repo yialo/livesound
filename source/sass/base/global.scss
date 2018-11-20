@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  min-width: $min-mobile-width;
+  min-width: $small-min-width;
   margin: 0;
 
   @include font;

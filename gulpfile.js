@@ -17,6 +17,7 @@ var postcss = require('gulp-postcss');
 var pug = require('gulp-pug');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var sassglob = require('gulp-sass-glob');
 var zopfli = require('imagemin-zopfli');
 
 // Task functions
@@ -128,15 +129,16 @@ var scripts = function () {
 }
 
 var style = function () {
-  return gulp.src('./source/sass/style.scss')
+  return gulp.src('./source/sass/main.scss')
     .pipe(plumber())
+    .pipe(sassglob())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest('./build/css/'))
     .pipe(mincss())
-    .pipe(rename('style.min.css'))
+    .pipe(rename('main.min.css'))
     .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
 }

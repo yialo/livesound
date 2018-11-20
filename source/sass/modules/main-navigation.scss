@@ -10,11 +10,11 @@
     justify-content: space-around;
   }
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     grid-column-gap: 20px;
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     .main-navigation--header & {
       display: flex;
       justify-content: space-between;
@@ -29,7 +29,7 @@
     }
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     .main-navigation--header & {
       &:not(:last-child) {
         border-bottom-style: none;
@@ -55,13 +55,13 @@
     color: $light-gray;
   }
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     .main-navigation--header & {
       @include font(400, 20px, 30px);
     }
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     .main-navigation--header & {
       display: inline;
       padding: 0;

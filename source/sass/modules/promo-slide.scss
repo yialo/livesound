@@ -23,11 +23,11 @@
     background-image: url("../img/promo-slide--4-background.jpg");
   }
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     --promo-slide-padding-top: 225px;
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     --promo-slide-padding-top: 275px;
   }
 }
@@ -50,11 +50,11 @@
   text-transform: uppercase;
   color: white;
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     @include font(700, 28px, 42px);
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     margin-bottom: 10px;
     padding-left: 160px;
     padding-right: 80px;
@@ -72,11 +72,11 @@
   text-align: center;
   color: white;
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     @include font(400, 20px, 28px);
   }
 
-  @media (min-width: $min-laptop-width) {
+  @media (min-width: $large-min-width) {
     padding-left: 160px;
     padding-right: 60px;
 

@@ -20,7 +20,7 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.3);
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     min-height: 100px;
     max-height: 205px;
     padding-left: 50px;

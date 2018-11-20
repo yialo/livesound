@@ -4,9 +4,9 @@ mixin project-card(projectCardNumber, projectGroupName)
   div.project-card
     a.project-card__link(href="#")
       picture
-        source(media=mediaMinDesktopWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-desktop.jpg')
-        source(media=mediaMinLaptopWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-laptop.jpg')
-        source(media=mediaMinTabletWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-tablet.jpg')
+        source(media=viewportHugeMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-desktop.jpg')
+        source(media=viewportLargeMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-laptop.jpg')
+        source(media=viewportMediumMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-tablet.jpg')
         img.project-card__image(class='project-card__image--' + projectCardNumber src=projectCardImagePathPrefix + projectCardNumber + '-mobile.jpg' alt=projectGroupName)
       h3.project-card__caption
         span.project-card__caption-text= projectGroupName

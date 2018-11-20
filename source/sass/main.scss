@@ -1,0 +1,15 @@
+/* stylelint-disable */
+
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+
+@import "vendors/normalize.scss";
+
+@import "base/fonts.scss";
+@import "base/global.scss";
+
+@import "utilities/*.scss";
+
+@import "modules/*.scss";
+
+//TODO: добавить стили для состояний интерактивных элементов и активных пунктов

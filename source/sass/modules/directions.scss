@@ -10,7 +10,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $min-tablet-width) {
+  @media (min-width: $medium-min-width) {
     margin-bottom: 40px;
 
     @include font(400, 32px, 48px);
