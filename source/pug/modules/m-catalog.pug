@@ -3,13 +3,16 @@ mixin catalog()
     div.catalog__inner.aligner
       h2.visually-hidden
       ul.catalog__list
-        mixin catalog__item(catalogGroupCaption)
-          li.catalog__item
+        mixin catalog__item(catalogGroupCaption, activeIndicator)
+          - var activeClass = '';
+          if activeIndicator
+            - var activeClass = 'is-active';
+          li.catalog__item(class=activeClass)
             h3.catalog__item-caption= catalogGroupCaption
             div.catalog__item-content
               block
         +catalog__item('Акустические системы линейного массива')
-        +catalog__item('Активные акустические системы')
+        +catalog__item('Активные акустические системы', 'active')
           +catalog-volume()
         +catalog__item('Пассивные акустические системы')
         +catalog__item('Мониторы сценические')

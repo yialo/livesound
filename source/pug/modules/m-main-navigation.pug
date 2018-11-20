@@ -3,8 +3,8 @@ mixin main-navigation(pageName, position)
     ul.main-navigation__list
       mixin main-navigation__item(itemText, itemPath)
         if itemPath === pageName
-          li.main-navigation__item
-            a.main-navigation__link= itemText
+          li.main-navigation__item(class='is-current')
+            a.main-navigation__link(class='is-current')= itemText
         else
           li.main-navigation__item
             a.main-navigation__link(href=itemPath + '.html')= itemText

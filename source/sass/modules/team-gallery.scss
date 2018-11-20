@@ -34,10 +34,14 @@
 }
 
 .team-gallery__item {
+  height: 150px;
+
   outline: 1px solid red;
   outline-offset: -1px;
 
   @media (min-width: $medium-min-width) {
+    height: auto;
+
     &--1 {
       grid-area: photo-1;
     }

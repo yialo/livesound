@@ -1,0 +1,43 @@
+.catalog__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.catalog__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.catalog__item {
+  position: relative;
+  padding-right: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    transform-origin: center;
+    transform: rotate(45deg);
+    width: 17px;
+    height: 17px;
+    border-top: 1px solid $dark-gray;
+    border-right: 1px solid $dark-gray;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &.is-active::after {
+    transform: rotate(135deg);
+  }
+}
+
+.catalog__item-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font(700, 20px, 30px);
+}
