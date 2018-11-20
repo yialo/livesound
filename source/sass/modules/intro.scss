@@ -1,6 +1,6 @@
 .intro {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% -200px;
   background-size: 1920px 750px;
 
   &--about {
@@ -13,6 +13,10 @@
   padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: var(--page-header-bypass);
+  }
 }
 
 .intro__heading {
@@ -23,4 +27,8 @@
   text-align: center;
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: $medium-min-width) {
+    @include font(400, 42px, 63px);
+  }
 }
