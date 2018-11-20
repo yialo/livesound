@@ -21,6 +21,10 @@
   @media (min-width: $medium-min-width) {
     padding-top: var(--page-header-bypass);
   }
+
+  @media (min-width: $large-min-width) {
+    padding-bottom: 200px;
+  }
 }
 
 .intro__heading {
