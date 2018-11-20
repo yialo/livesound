@@ -44,8 +44,16 @@
 
 .page-main__intro {
   margin-bottom: 40px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 125px;
+  }
 }
 
 .page-main__history {
   margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
 }

@@ -31,4 +31,8 @@
   @media (min-width: $medium-min-width) {
     @include font(400, 42px, 63px);
   }
+
+  @media (min-width: $large-min-width) {
+    @include font(400, 60px, 72px);
+  }
 }
