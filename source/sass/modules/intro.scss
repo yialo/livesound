@@ -6,6 +6,10 @@
   &--about {
     background-image: url("../img/intro--about.jpg");
   }
+
+  &--partners {
+    background-image: url("../img/intro--partners.jpg");
+  }
 }
 
 .intro__inner {
@@ -28,11 +32,23 @@
   text-transform: uppercase;
   color: white;
 
+  .intro--partners & {
+    @include font(400, 24px, 36px);
+  }
+
   @media (min-width: $medium-min-width) {
     @include font(400, 42px, 63px);
+
+    .intro--partners & {
+      @include font(400, 42px, 63px);
+    }
   }
 
   @media (min-width: $large-min-width) {
     @include font(400, 60px, 72px);
+
+    .intro--partners & {
+      @include font(400, 60px, 72px);
+    }
   }
 }

@@ -45,12 +45,24 @@
 .page-main__intro {
   margin-bottom: 40px;
 
+  .page-main--partners & {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $large-min-width) {
     margin-bottom: 125px;
   }
 }
 
 .page-main__history {
+  margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
+}
+
+.page-main__acknowledgements {
   margin-bottom: 80px;
 
   @media (min-width: $large-min-width) {
