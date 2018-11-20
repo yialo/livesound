@@ -1,10 +1,15 @@
 mixin catalog-card(itemNumber, itemTitle)
   div.catalog-card
     div.catalog-card__column-1
-      img.catalog-card__image(
-        src='img/catalog-item-' + itemNumber + '.png'
-        alt='Активная акустическая система №' + itemNumber
-      )
+      picture
+        source(
+          media=viewportMediumMinWidth
+          srcset='img/catalog-card__image--' + itemNumber + '-medium.jpg'
+        )
+        img.catalog-card__image(
+          src='img/catalog-card__image--' + itemNumber + '-small.jpg'
+          alt='Активная акустическая система №' + itemNumber
+        )
     div.catalog-card__column-2
       h4.catalog-card__title= itemTitle
       dl.catalog-card__list

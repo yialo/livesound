@@ -3,3 +3,9 @@
   margin-bottom: 0;
   padding-left: 0;
 }
+
+.catalog-volume__item {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
