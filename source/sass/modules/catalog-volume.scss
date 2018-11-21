@@ -8,4 +8,16 @@
   &:not(:last-child) {
     margin-bottom: 60px;
   }
+
+  @media (min-width: $medium-min-width) {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
 }

@@ -56,4 +56,16 @@
   .is-active &::after {
     transform: translateY(-50%) rotate(135deg);
   }
+
+  @media (min-width: $medium-min-width) {
+    padding-left: 20px;
+    padding-right: 60px;
+
+    @include font(400, 35px, 40px);
+    text-transform: none;
+
+    &::after {
+      right: 32px;
+    }
+  }
 }

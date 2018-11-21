@@ -19,6 +19,11 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .main-navigation--footer & {
+      grid-column-gap: 40px;
+      grid-row-gap: 10px;
+    }
   }
 }
 
@@ -99,6 +104,10 @@
 
     .main-navigation--header &.is-current {
       background-color: transparent;
+    }
+
+    .main-navigation--footer & {
+      @include font(400, 16px, 24px);
     }
   }
 }
