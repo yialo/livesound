@@ -8,7 +8,7 @@ mixin catalog()
           if activeIndicator
             - var activeClass = 'is-active';
           li.catalog__item(class=activeClass)
-            h3.catalog__item-caption= catalogGroupCaption
+            h3.catalog__item-caption(tabindex="0")= catalogGroupCaption
             div.catalog__item-content
               block
         +catalog__item('Акустические системы линейного массива')
