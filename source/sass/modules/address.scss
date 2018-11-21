@@ -1,15 +1,38 @@
 .address {
   color: $light-gray;
 
+  &--contacts {
+    @include font(400, 18px, 30px);
+    text-align: center;
+    color: $dark-gray;
+  }
+
   &--footer {
     @include font(400, 16px, 30px);
     text-align: center;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--contacts {
+      padding-left: 50px;
+
+      @include font(400, 28px, 42px);
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    &--contacts {
+      padding-left: 0;
+      text-align: left;
+    }
   }
 }
 
 .address__legend {
   .address--contacts & {
     display: block;
+    color: $light-gray;
   }
 
   .address--footer & {

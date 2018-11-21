@@ -87,3 +87,9 @@
 .page-main__experience {
   margin-bottom: 70px;
 }
+
+.page-main--contacts {
+  @media (min-width: $large-min-width) {
+    margin-bottom: 50px;
+  }
+}

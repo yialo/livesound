@@ -1,0 +1,118 @@
+.contacts__inner {
+  @media (min-width: $large-min-width) {
+    width: 1220px;
+    display: flex;
+
+    @include margin-hor;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.contacts__column-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin-bottom: 30px;
+
+  @include margin-hor;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $medium-min-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 768px;
+  }
+
+  @media (min-width: $large-min-width) {
+    display: block;
+    width: 400px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.contacts__column-2 {
+  @media (min-width: $large-min-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__address {
+  order: 1;
+
+  @media (min-width: $medium-min-width) {
+    flex-grow: 1;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__socials {
+  margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    order: 1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__tels {
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 0;
+
+  @media (min-width: $medium-min-width) {
+    padding-right: 50px;
+    border-right: 1px solid #bfbfbf;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 30px;
+    padding-right: 0;
+    border-right-style: none;
+  }
+}
+
+.contacts__tel {
+  @include font(400, 24px, 36px);
+
+  @media (min-width: $medium-min-width) {
+    @include font(400, 28px, 42px);
+  }
+}
+
+.contacts__tip {
+  display: none;
+
+  @media (min-width: $large-min-width) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @include font(400, 28px, 42px);
+    color: $light-gray;
+  }
+}
+
+.contacts__map {
+  height: 280px;
+
+  @media (min-width: $large-min-width) {
+    height: auto;
+    flex-grow: 1;
+  }
+}

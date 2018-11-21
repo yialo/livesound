@@ -1,19 +1,19 @@
 mixin contacts()
   section.contacts
-    div.contacts__inner.aligner
+    div.contacts__inner
       h2.visually-hidden Контактная информация
-      div.contacts__layout
-        div.contacts__column-1
-          div.contacts__address
-            +address('contacts')
-          ul.contacts__tels
-            mixin contacts__tel(telNumberEnd, telNumberEndText)
-              li.contacts__tel
-                a.contacts__tel-link(href='tel:+7499256' + telNumberEnd)= '+7(499)256-' + telNumberEndText
-            +contacts__tel('5704', '57-04')
-            +contacts__tel('8540', '85-40')
-            +contacts__tel('6298', '62-98')
-          div.contacts__socials
-            +socials()
-        div.contacts__column-2
-          div.contacts__map#map
+      div.contacts__column-1
+        div.contacts__address
+          +address('contacts')
+        ul.contacts__tels
+          mixin contacts__tel(telNumberEnd, telNumberEndText)
+            li.contacts__tel
+              a.contacts__tel-link(href='tel:+7499256' + telNumberEnd)= '+7 (499) 256-' + telNumberEndText
+          +contacts__tel('5704', '57-04')
+          +contacts__tel('8540', '85-40')
+          +contacts__tel('6298', '62-98')
+        div.contacts__socials
+          +socials()
+      div.contacts__column-2
+        p.contacts__tip Мы на карте:
+        div.contacts__map#map
