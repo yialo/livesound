@@ -1,30 +1,92 @@
 .intro {
   background-repeat: no-repeat;
-  background-position: 50% -200px;
-  background-size: 1920px 750px;
+  background-position-x: 50%;
+  background-position-y: -150px;
+  background-size: 800px 750px;
 
   &--about {
-    background-image: url("../img/intro--about.jpg");
+    background-image: url("../img/intro--about-small.jpg");
   }
 
   &--partners {
-    background-image: url("../img/intro--partners.jpg");
+    background-image: url("../img/intro--partners-small.jpg");
   }
 
   &--projects {
-    background-image: url("../img/intro--projects.jpg");
+    background-image: url("../img/intro--projects-small.jpg");
   }
 
   &--team {
-    background-image: url("../img/intro--team.jpg");
+    background-image: url("../img/intro--team-small.jpg");
   }
 
   &--equipment {
-    background-image: url("../img/intro--equipment.jpg");
+    background-position-y: -200px;
+    background-image: url("../img/intro--equipment-small.jpg");
   }
 
   &--contacts {
-    background-image: url("../img/intro--contacts.jpg");
+    background-image: url("../img/intro--contacts-small.jpg");
+  }
+
+  @media (min-width: $medium-min-width) {
+    background-position-y: -300px;
+    background-size: 1230px 750px;
+
+    &--about {
+      background-image: url("../img/intro--about-medium.jpg");
+    }
+
+    &--partners {
+      background-position-y: -250px;
+      background-image: url("../img/intro--partners-medium.jpg");
+    }
+
+    &--projects {
+      background-image: url("../img/intro--projects-medium.jpg");
+    }
+
+    &--team {
+      background-image: url("../img/intro--team-medium.jpg");
+    }
+
+    &--equipment {
+      background-image: url("../img/intro--equipment-medium.jpg");
+    }
+
+    &--contacts {
+      background-position-y: -250px;
+      background-image: url("../img/intro--contacts-medium.jpg");
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    background-position-y: -200px;
+    background-size: 1920px 750px;
+
+    &--about {
+      background-image: url("../img/intro--about-large.jpg");
+    }
+
+    &--partners {
+      background-image: url("../img/intro--partners-large.jpg");
+    }
+
+    &--projects {
+      background-image: url("../img/intro--projects-large.jpg");
+    }
+
+    &--team {
+      background-image: url("../img/intro--team-large.jpg");
+    }
+
+    &--equipment {
+      background-image: url("../img/intro--equipment-large.jpg");
+    }
+
+    &--contacts {
+      background-image: url("../img/intro--contacts-large.jpg");
+    }
   }
 }
 

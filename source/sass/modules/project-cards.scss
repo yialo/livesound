@@ -9,7 +9,7 @@
 }
 
 .project-cards__item {
-  box-shadow: 0 0 3px 0 black;
+  box-shadow: 0 0 3px 0 $dark-gray;
 
   &:not(:last-child) {
     margin-bottom: 20px;

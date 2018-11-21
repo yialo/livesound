@@ -30,6 +30,7 @@
 
   @media (min-width: $medium-min-width) {
     order: 0;
+    align-items: flex-start;
     margin-bottom: 0;
   }
 }
