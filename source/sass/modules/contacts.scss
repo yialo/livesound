@@ -1,5 +1,8 @@
 .contacts__inner {
   @media (min-width: $large-min-width) {
+    --column-1-content-width: 400px;
+    --column-1-margin-right: 80px;
+    --column-1-full-width: calc(var(--column-1-content-width) + var(--column-1-margin-right));
     width: 1220px;
     display: flex;
 
@@ -29,19 +32,24 @@
   }
 
   @media (min-width: $large-min-width) {
+    flex-shrink: 0;
     display: block;
-    width: 400px;
+    width: var(--column-1-content-width);
     margin-bottom: 0;
     margin-left: 0;
-    margin-right: 100px;
+    margin-right: var(--column-1-margin-right);
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .contacts__column-2 {
+  width: 100%;
+  height: 280px;
+
   @media (min-width: $large-min-width) {
-    flex-grow: 1;
+    width: calc(100% - var(--column-1-full-width));
+    height: auto;
     display: flex;
     flex-direction: column;
   }
@@ -109,7 +117,8 @@
 }
 
 .contacts__map {
-  height: 280px;
+  width: 100%;
+  height: 100%;
 
   @media (min-width: $large-min-width) {
     height: auto;
