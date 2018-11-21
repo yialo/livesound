@@ -1,5 +1,5 @@
 .catalog__inner {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -11,35 +11,24 @@
 }
 
 .catalog__item {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 12px;
-    transform-origin: center;
-    transform: rotate(45deg);
-    width: 17px;
-    height: 17px;
-    border-top: 1px solid $dark-gray;
-    border-right: 1px solid $dark-gray;
-  }
+  padding-bottom: 20px;
+  border-bottom: 1px solid #707070;
 
   &:not(:last-child) {
     margin-bottom: 30px;
   }
 
-  &.is-active:not(:last-child) {
-    margin-bottom: 50px;
+  &.is-active {
+    border-bottom-style: none;
   }
 
-  &.is-active::after {
-    transform: rotate(135deg);
+  &.is-active:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
 
 .catalog__item-caption {
+  position: relative;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 40px;
@@ -47,7 +36,24 @@
   @include font(400, 16px, 30px);
   text-transform: uppercase;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(45deg);
+    width: 17px;
+    height: 17px;
+    border-top: 1px solid $dark-gray;
+    border-right: 1px solid $dark-gray;
+  }
+
   .is-active & {
     margin-bottom: 40px;
+  }
+
+  .is-active &::after {
+    transform: translateY(-50%) rotate(135deg);
   }
 }
