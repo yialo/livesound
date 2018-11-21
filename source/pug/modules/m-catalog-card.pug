@@ -12,29 +12,37 @@ mixin catalog-card(itemNumber, itemTitle)
         )
     div.catalog-card__column-2
       h4.catalog-card__title= itemTitle
-      dl.catalog-card__list
-        dt.catalog-card__name Частотный диапазон (-10 дБ)
-        dd.catalog-card__value
-          p.catalog-card__paragraph 55 Гц – 22 кГц<br>(заводская предустановка [FRONT])
-        dt.catalog-card__name Номинальная направленность (-6 дБ)
-        dd.catalog-card__value
-          p.catalog-card__paragraph 90° осесимметричная
-        dt.catalog-card__name Максимальный уровень звукового давления (SPL) 10 дБ, 1 м
-        dd.catalog-card__value
-          p.catalog-card__paragraph 125 дБ – [FILL]<br>заводская предустановка
-        dt.catalog-card__name Компоненты
-        dd.catalog-card__value
-          p.catalog-card__paragraph НЧ: 1 х 8” влагостойкий динамик
-          p.catalog-card__paragraph ВЧ: 1 x1" диафрагма (компрессионный драйвер)
-          p.catalog-card__paragraph Номинальное сопротивление: 8 Ом
-        dt.catalog-card__name Электрические характеристики
-        dd.catalog-card__value
-          p.catalog-card__paragraph Входной разъем: симметричный, макс. вх. уровень +12 дБu<br>(потенциометр чувствительности в позиции 0 дБ)
-          p.catalog-card__paragraph Цифровой сигнальный процессор (DSP):<br>дискретизация 24 бита / 48 кГц
-          p.catalog-card__paragraph Выходная мощность усилителя 1 x 500 Вт (4 Ом – НЧ секция),<br>1 x 250 Вт (8 Ом – ВЧ секция)
-        dt.catalog-card__name Вес
-        dd.catalog-card__value
-          p.catalog-card__paragraph 12,8 кг
-        dt.catalog-card__name Подключение
-        dd.catalog-card__value
-          p.catalog-card__paragraph 2 x XLR, 2 x PowerCon (входной, параллельный)
+      table.catalog__table
+        tbody.catalog__table-body
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Частотный диапазон (-10 дБ)
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph 55 Гц – 22 кГц<br>(заводская предустановка [FRONT])
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Номинальная направленность (-6 дБ)
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph 90° осесимметричная
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Максимальный уровень звукового давления (SPL) 10 дБ, 1 м
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph 125 дБ – [FILL]<br>заводская предустановка
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Компоненты
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph НЧ: 1 х 8” влагостойкий динамик
+              p.catalog-card__paragraph ВЧ: 1 x1" диафрагма (компрессионный драйвер)
+              p.catalog-card__paragraph Номинальное сопротивление: 8 Ом
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Электрические характеристики
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph Входной разъем: симметричный, макс. вх. уровень +12 дБ<br>(потенциометр чувствительности в позиции 0 дБ)
+              p.catalog-card__paragraph Цифровой сигнальный процессор (DSP):<br>дискретизация 24 бита / 48 кГц
+              p.catalog-card__paragraph Выходная мощность усилителя 1 x 500 Вт (4 Ом – НЧ секция),<br>1 x 250 Вт (8 Ом – ВЧ секция)
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Вес
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph 12,8 кг
+          tr.catalog__table-row
+            td.catalog__table-cell.catalog__table-cell--name Подключение
+            td.catalog__table-cell.catalog__table-cell--value
+              p.catalog-card__paragraph 2 x XLR, 2 x PowerCon (входной, параллельный)

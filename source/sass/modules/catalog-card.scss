@@ -10,20 +10,20 @@
   margin-bottom: 30px;
 
   @media (min-width: $medium-min-width) {
-    flex-grow: 1;
+    flex-shrink: 0;
+    width: 350px;
     margin-bottom: 0;
     margin-right: 20px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-right: 40px;
   }
 }
 
 .catalog-card__column-2 {
   @media (min-width: $medium-min-width) {
-    --catalog-details-block-width: 350px;
-    width: var(--catalog-details-block-width);
-  }
-
-  @media (min-width: $large-min-width) {
-    --catalog-details-block-width: 720px;
+    flex-grow: 1;
   }
 }
 
@@ -45,64 +45,80 @@
   }
 }
 
-.catalog-card__list {
-  margin-top: 0;
-  margin-bottom: 0;
+.catalog__table {
+  display: block;
+  border-collapse: collapse;
 
   @media (min-width: $large-min-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    display: table;
   }
 }
 
-.catalog-card__name {
-  margin-bottom: 10px;
-
-  @include font(400, 16px, 24px);
-  color: black;
+.catalog__table-body {
+  display: block;
 
   @media (min-width: $large-min-width) {
-    margin-bottom: 0;
-
-    @include font(400, 18px, 30px);
+    display: table-row-group;
   }
 }
 
-.catalog-card__value {
-  margin-left: 0;
+.catalog__table-row {
+  display: block;
+  padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
-
-  @include font(400, 16px, 24px);
-  color: #828282;
   border-bottom: 1px solid #707070;
 
-  &:not(:last-child) {
-    margin-bottom: 15px;
+  @media (min-width: $large-min-width) {
+    display: table-row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.catalog__table-cell {
+  display: block;
+
+  @include font(400, 16px, 24px);
+
+  &--name {
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  &--value {
+    padding-left: 20px;
+    color: #828282;
   }
 
   @media (min-width: $large-min-width) {
-    position: relative;
-    padding-bottom: 0;
+    display: table-cell;
+    vertical-align: text-top;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-    @include font(400, 18px, 30px);
-    text-align: right;
-    border-bottom-style: none;
+    &--name {
+      margin-bottom: 0;
+      padding-right: 10px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      right: 0;
-      width: var(--catalog-details-block-width);
-      height: 1px;
-      background-color: #707070;
+      @include font(400, 18px, 30px);
+    }
+
+    &--value {
+      padding-left: 0;
+      text-align: right;
     }
   }
 }
 
 .catalog-card__paragraph {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 0;
+  }
 }
