@@ -70,7 +70,6 @@
 
 .team-gallery__photo {
   display: block;
-  //TODO: delete data after photo inserting
-  width: 280px;
-  height: 100px;
+  width: 300px;
+  object-fit: contain;
 }

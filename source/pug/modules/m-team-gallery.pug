@@ -5,7 +5,7 @@ mixin team-gallery()
       ul.team-gallery__list
         mixin team-gallery__item(itemNumber)
           li.team-gallery__item(class='team-gallery__item--' + itemNumber)
-            img.team-gallery__photo(class='team-gallery__photo--' + itemNumber src='team-photo-' + itemNumber + '.jpg' alt='Наша команда, фото ' + itemNumber)
+            img.team-gallery__photo(class='team-gallery__photo--' + itemNumber src='img/team-gallery__photo--' + itemNumber + '.jpg' alt='Наша команда, фото ' + itemNumber)
         - var i = 1;
         while i <= 6
           +team-gallery__item(i++)
