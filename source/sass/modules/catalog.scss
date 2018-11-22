@@ -35,6 +35,7 @@
 
   @include font(400, 16px, 30px);
   text-transform: uppercase;
+  outline-style: none;
   cursor: pointer;
 
   &::after {
@@ -68,5 +69,13 @@
     &::after {
       right: 32px;
     }
+  }
+}
+
+.catalog__item-content {
+  display: none;
+
+  &.is-active {
+    display: block;
   }
 }
