@@ -1,30 +1,27 @@
 mixin history()
   section.history
-    div.history__inner
+    div.history__inner.js-slide-3
       h2.visually-hidden История компании
-      div.history__slider-wrapper
-        div.history__slider-controls
-          button.history__slider-control.history__slider-control--previous(type="button")
-            span.visually-hidden Предыдущий слайд
-          button.history__slider-control.history__slider-control--next(type="button")
-            span.visually-hidden Следующий слайд
-          div.history__date-wrapper
-            ul.history__date-list
-              mixin history__date-item(itemNumber, year)
-                li.history__date-item
-                  button.history__date-button(class='.history__slider-datewrapper--' + itemNumber, type="button")
-                    span.button-fix= year
-              +history__date-item(1, '2018')
-              +history__date-item(2, '2016')
-              +history__date-item(3, '2014')
-              +history__date-item(4, '2012')
-              +history__date-item(5, '2010')
-        div.history__slider
-          mixin history__item(paragraphText, isCurrent)
-            - var currentItemFlag = '';
-            if isCurrent
-              - var currentItemFlag = 'history__item--current';
-            div.history__item(class=currentItemFlag)
+      div.history__slider-controls
+        button.history__control-button.history__control-button--previous(type="button")
+          span.visually-hidden Предыдущий слайд
+        button.history__control-button.history__control-button--next(type="button")
+          span.visually-hidden Следующий слайд
+        div.history__date-slider
+          ul.history__date-list
+            mixin history__date-item(itemNumber, year, activityClass)
+              li.history__date-item
+                button.history__date-button(class='history__date-button--' + itemNumber type="button")
+                  span.button-fix= year
+            +history__date-item(1, '2018')
+            +history__date-item(2, '2016')
+            +history__date-item(3, '2014')
+            +history__date-item(4, '2012')
+            +history__date-item(5, '2010')
+      div.history__slider
+        ul.history__list
+          mixin history__item(paragraphText)
+            li.history__item
               p.history__content= paragraphText
           +history__item('История компании: 2018 год')
           +history__item('История компании: 2016 год')
