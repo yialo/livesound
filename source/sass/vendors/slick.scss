@@ -43,7 +43,7 @@
 }
 .slick-track {
     position: relative;
-    left: -50px;
+    left: 0;
     top: 0;
     display: block;
     margin-left: auto;
@@ -62,12 +62,21 @@
     .slick-loading & {
         visibility: hidden;
     }
+
+    @media (min-width: $medium-min-width) {
+      left: -75px;
+    }
+
+    @media (min-width: $large-min-width) {
+      left: -40px;
+    }
 }
+
 .slick-slide {
     float: left;
     height: 100%;
     min-height: 1px;
-    margin-right: 30px;
+    margin-right: 20px;
     [dir="rtl"] & {
         float: right;
     }
@@ -97,7 +106,12 @@
         height: auto;
         border: 1px solid transparent;
     }
+
+    @media (min-width: $medium-min-width) {
+      margin-right: 30px;
+    }
 }
+
 .slick-arrow.slick-hidden {
     display: none;
 }
