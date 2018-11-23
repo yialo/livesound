@@ -2,5 +2,21 @@ mixin acknowledgements()
   section.acknowledgements
     div.acknowledgements__inner.aligner
       h2.acknowledgements__heading Наши благодарности
-      div.acknowledgements__slider
-        //- TODO: добавить компонент через jQuery
+      mixin acknowledgements__item
+        div.acknowledgements__item(
+          class='.acknowledgements__item--' + i
+          )
+          img.acknowledgements__image(
+            src='img/acknowledgements__image--' + i + '-large.png'
+            alt='Благодарность №' + i
+          )
+      div.acknowledgements__slider-wrapper
+        button.acknowledgements__slider-control.acknowledgements__slider-control--previous(type="button")
+          span.visually-hidden Предыдущий слайд
+        button.acknowledgements__slider-control.acknowledgements__slider-control--next(type="button")
+          span.visually-hidden Следующий слайд
+        div.acknowledgements__slider
+          - var i = 0;
+          while i <= 6
+            +acknowledgements__item(i++)
+

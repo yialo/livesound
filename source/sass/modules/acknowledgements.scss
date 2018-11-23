@@ -19,3 +19,32 @@
     @include font(400, 36px, 52px);
   }
 }
+
+.acknowledgements__slider-wrapper {
+  position: relative;
+}
+
+.acknowledgements__slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 41px;
+  height: 66px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-style: none;
+  outline-style: none;
+  cursor: pointer;
+
+  &--previous {
+    left: 20px;
+    background-image: url("../img/acknowledgements__slider-control--previous.png");
+  }
+
+  &--next {
+    right: 20px;
+    background-image: url("../img/acknowledgements__slider-control--next.png");
+  }
+}
