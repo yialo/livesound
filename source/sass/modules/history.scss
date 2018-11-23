@@ -1,9 +1,17 @@
 .history__inner {
-  width: 840px;
+  width: $small-min-width;
 
   @include margin-hor;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $medium-min-width) {
+    width: $medium-min-width;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 840px;
+  }
 }
 
 .history__slider-controls {
@@ -25,21 +33,35 @@
   cursor: pointer;
 
   &--previous {
-    left: -150px;
+    left: 20px;
     background-image: url("../img/history__slider-control--previous.svg");
   }
 
   .history__inner.js-slide-1 &--previous {
-    display: none;
+    opacity: 0.25;
+    outline-style: none;
+    cursor: default;
   }
 
   &--next {
-    right: -150px;
+    right: 20px;
     background-image: url("../img/history__slider-control--next.svg");
   }
 
   .history__inner.js-slide-5 &--next {
-    display: none;
+    opacity: 0.25;
+    outline-style: none;
+    cursor: default;
+  }
+
+  @media (min-width: $large-min-width) {
+    &--previous {
+      left: -150px;
+    }
+
+    &--next {
+      right: -150px;
+    }
   }
 }
 
