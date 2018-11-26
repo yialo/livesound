@@ -1,4 +1,5 @@
 .project-cards {
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -25,6 +26,6 @@
   }
 
   @media (min-width: $large-min-width) {
-    width: 393px;
+    width: 400px;
   }
 }
