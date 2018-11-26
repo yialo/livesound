@@ -110,4 +110,10 @@
       @include font(400, 16px, 24px);
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    .main-navigation--header & {
+      @include font(400, 24px, 36px);
+    }
+  }
 }

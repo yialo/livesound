@@ -40,4 +40,8 @@
   left: 0;
   bottom: 30px;
   width: 100%;
+
+  @media (min-width: $huge-min-width) {
+    bottom: 82px;
+  }
 }

@@ -9,6 +9,12 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
+
+  @media (min-width: $huge-min-width) {
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+  }
 }
 
 .socials__link {

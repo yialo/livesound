@@ -8,6 +8,10 @@
   @media (min-width: $large-min-width) {
     --page-header-bypass: 275px;
   }
+
+  @media (min-width: $huge-min-width) {
+    --page-header-bypass: 397px;
+  }
 }
 
 html {

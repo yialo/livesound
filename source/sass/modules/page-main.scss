@@ -15,7 +15,7 @@
   }
 
   &--equipment {
-    background-image: url("../img/equipment-background-small.png");
+    background-image: url("../img/equipment-background-small.jpg");
   }
 
   @media (min-width: $medium-min-width) {
@@ -32,7 +32,7 @@
     }
 
     &--equipment {
-      background-image: url("../img/equipment-background-medium.png");
+      background-image: url("../img/equipment-background-medium.jpg");
     }
   }
 
@@ -53,7 +53,7 @@
     }
 
     &--equipment {
-      background-image: url("../img/equipment-background-large.png");
+      background-image: url("../img/equipment-background-large.jpg");
       background-position-y: 100%;
     }
   }
@@ -64,6 +64,10 @@
 
   @media (min-width: $large-min-width) {
     margin-bottom: 110px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 108px;
   }
 }
 

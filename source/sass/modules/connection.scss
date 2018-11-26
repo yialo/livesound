@@ -12,6 +12,13 @@
       align-items: flex-end;
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    &--header {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
 }
 
 .connection__tel {
@@ -27,6 +34,15 @@
       margin-right: 40px;
 
       @include font(400, 32px, 48px);
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    .connection--header & {
+      margin-bottom: 15px;
+      margin-right: 0;
+
+      @include font(400, 24px, 36px);
     }
   }
 }
