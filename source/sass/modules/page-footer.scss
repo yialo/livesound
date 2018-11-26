@@ -19,6 +19,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media (min-width: $large-min-width) {
+    justify-content: flex-start;
+    padding-top: 50px;
+    background-image: url("../img/footer-background-icon.png");
+    background-repeat: no-repeat;
+    background-position: 700px 50px;
+  }
 }
 
 .page-footer__column-1 {
@@ -32,6 +40,10 @@
     order: 0;
     align-items: flex-start;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-right: 100px;
   }
 }
 
@@ -48,6 +60,10 @@
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-left: auto;
   }
 }
 
