@@ -28,4 +28,8 @@
   @media (min-width: $large-min-width) {
     width: 400px;
   }
+
+  @media (min-width: $huge-min-width) {
+    width: 610px;
+  }
 }

@@ -22,6 +22,10 @@
 
     @include font(400, 36px, 52px);
   }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 98px;
+  }
 }
 
 .advantages__list {
@@ -37,6 +41,12 @@
 
   @media (min-width: $large-min-width) {
     justify-content: space-between;
+  }
+
+  @media (min-width: $huge-min-width) {
+    width: 1140px;
+
+    @include margin-hor;
   }
 }
 
@@ -81,6 +91,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: $huge-min-width) {
+    width: 260px;
+  }
 }
 
 .advantages__caption {
@@ -89,6 +103,10 @@
 
   @include font(400, 22px, 52px);
   text-align: center;
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 7px;
+  }
 }
 
 .advantages__description {

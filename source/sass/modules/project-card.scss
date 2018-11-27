@@ -15,6 +15,7 @@
   align-items: center;
   width: 100%;
   max-height: 158px;
+  overflow: hidden;
   margin-top: 0;
   margin-bottom: 0;
   padding: 20px;
@@ -30,10 +31,20 @@
     max-height: 225px;
     padding-right: 150px;
   }
+
+  @media (min-width: $huge-min-width) {
+    min-height: 130px;
+    max-height: 343px;
+  }
 }
 
 .project-card__caption-text {
   @include font(400, 20px, 28px);
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: $huge-min-width) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }

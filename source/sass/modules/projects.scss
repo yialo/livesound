@@ -14,6 +14,12 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  @media (min-width: $huge-min-width) {
+    width: $huge-min-width;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .projects__heading {
@@ -34,5 +40,9 @@
     margin-bottom: 65px;
 
     @include font(400, 36px, 52px);
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 60px;
   }
 }
