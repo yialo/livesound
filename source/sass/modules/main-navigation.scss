@@ -25,6 +25,12 @@
       grid-row-gap: 10px;
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    .main-navigation--footer & {
+      grid-column-gap: 25px;
+    }
+  }
 }
 
 .main-navigation__item {

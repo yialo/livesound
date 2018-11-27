@@ -12,6 +12,10 @@
   @media (min-width: $large-min-width) {
     width: 840px;
   }
+
+  @media (min-width: $huge-min-width) {
+    width: 1000px;
+  }
 }
 
 .history__slider-controls {
@@ -80,6 +84,10 @@
     &--next {
       right: -150px;
     }
+  }
+
+  @media (min-width: $huge-min-width) {
+    top: 70px;
   }
 }
 
@@ -460,6 +468,118 @@
       &--5 {
         @include font(400, 65px, 65px);
         color: #1d1d1d;
+      }
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    .history__inner.js-slide-1 & {
+      &--1 {
+        @include font(400, 75px, 75px);
+      }
+
+      &--2 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--3 {
+        @include font(400, 55px, 55px);
+      }
+
+      &--4 {
+        @include font(400, 45px, 45px);
+      }
+
+      &--5 {
+        @include font(400, 40px, 40px);
+      }
+    }
+
+    .history__inner.js-slide-2 & {
+      &--1 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--2 {
+        @include font(400, 75px, 75px);
+      }
+
+      &--3 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--4 {
+        @include font(400, 55px, 55px);
+      }
+
+      &--5 {
+        @include font(400, 45px, 45px);
+      }
+    }
+
+    .history__inner.js-slide-3 & {
+      &--1 {
+        @include font(400, 55px, 55px);
+      }
+
+      &--2 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--3 {
+        @include font(400, 75px, 75px);
+      }
+
+      &--4 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--5 {
+        @include font(400, 55px, 55px);
+      }
+    }
+
+    .history__inner.js-slide-4 & {
+      &--1 {
+        @include font(400, 45px, 45px);
+      }
+
+      &--2 {
+        @include font(400, 55px, 55px);
+      }
+
+      &--3 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--4 {
+        @include font(400, 75px, 75px);
+      }
+
+      &--5 {
+        @include font(400, 65px, 65px);
+      }
+    }
+
+    .history__inner.js-slide-5 & {
+      &--1 {
+        @include font(400, 40px, 40px);
+      }
+
+      &--2 {
+        @include font(400, 45px, 45px);
+      }
+
+      &--3 {
+        @include font(400, 55px, 55px);
+      }
+
+      &--4 {
+        @include font(400, 65px, 65px);
+      }
+
+      &--5 {
+        @include font(400, 75px, 75px);
       }
     }
   }

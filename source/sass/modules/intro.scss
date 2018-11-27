@@ -88,6 +88,10 @@
       background-image: url("../img/intro--contacts-large.jpg");
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    background-position-y: 0;
+  }
 }
 
 .intro__inner {

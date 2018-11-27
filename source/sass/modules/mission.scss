@@ -14,6 +14,11 @@
     padding-left: 240px;
     padding-right: 240px;
   }
+
+  @media (min-width: $huge-min-width) {
+    padding-left: 420px;
+    padding-right: 420px;
+  }
 }
 
 .mission__heading {

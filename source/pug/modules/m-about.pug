@@ -6,6 +6,7 @@ mixin about()
         div.about__column-1
           a.about__video-link(href="#")
             picture
+              source(media=viewportHugeMinWidth srcset='img/about-video-huge.png')
               source(media=viewportLargeMinWidth srcset='img/about-video-laptop.png')
               img.about__image(src="img/about-video-mobile.png" alt="Видео о нашей компании")
         div.about__column-2

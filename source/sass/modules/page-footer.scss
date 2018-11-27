@@ -27,6 +27,12 @@
     background-repeat: no-repeat;
     background-position: 700px 50px;
   }
+
+  @media (min-width: $huge-min-width) {
+    padding-left: 337px;
+    padding-right: 342px;
+    background-position-x: 990px;
+  }
 }
 
 .page-footer__column-1 {
@@ -44,6 +50,10 @@
 
   @media (min-width: $large-min-width) {
     margin-right: 100px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-right: 95px;
   }
 }
 

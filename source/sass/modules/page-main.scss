@@ -91,9 +91,7 @@
   }
 
   @media (min-width: $huge-min-width) {
-    margin-bottom: 130px;
-
-    //TODO: уменьшить magrin-bottom на 30px после завершения pixelperfecting'а
+    margin-bottom: 100px;
   }
 }
 
@@ -107,6 +105,10 @@
   @media (min-width: $large-min-width) {
     margin-bottom: 100px;
   }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 123px;
+  }
 }
 
 .page-main__about {
@@ -114,6 +116,10 @@
 
   @media (min-width: $large-min-width) {
     margin-bottom: 120px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 105px;
   }
 }
 
