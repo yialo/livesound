@@ -6,6 +6,7 @@ mixin team-gallery()
         mixin team-gallery__item(itemNumber)
           li.team-gallery__item(class='team-gallery__item--' + itemNumber)
             picture
+              source(media=viewportHugeMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-huge.jpg')
               source(media=viewportLargeMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-large.jpg')
               source(media=viewportMediumMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-large.jpg')
               img.team-gallery__photo(class='team-gallery__photo--' + itemNumber src='img/team-gallery__photo--' + itemNumber + '-small.jpg' alt='Наша команда, фото ' + itemNumber)

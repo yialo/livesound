@@ -23,6 +23,12 @@
     grid-template-columns: repeat(3, auto);
     grid-gap: 10px 11px;
   }
+
+  @media (min-width: $huge-min-width) {
+    grid-template-rows: repeat(4, 394px);
+    grid-template-columns: repeat(3, 592px);
+    grid-gap: 12px;
+  }
 }
 
 .team-gallery__item {
@@ -101,6 +107,40 @@
     &--6 {
       width: 783px;
       height: 522px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    width: auto;
+    height: auto;
+    &--1 {
+      width: 1196px;
+      height: 800px;
+    }
+
+    &--2 {
+      width: 592px;
+      height: 394px;
+    }
+
+    &--3 {
+      width: 592px;
+      height: 394px;
+    }
+
+    &--4 {
+      width: 592px;
+      height: 394px;
+    }
+
+    &--5 {
+      width: 592px;
+      height: 394px;
+    }
+
+    &--6 {
+      width: 1196px;
+      height: 800px;
     }
   }
 }

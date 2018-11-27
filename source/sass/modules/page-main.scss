@@ -151,6 +151,12 @@
       margin-bottom: 70px;
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    .page-main--team & {
+      margin-bottom: 120px;
+    }
+  }
 }
 
 .page-main__history {
@@ -171,6 +177,10 @@
 
 .page-main__experience {
   margin-bottom: 70px;
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 100px;
+  }
 }
 
 .page-main--contacts {
