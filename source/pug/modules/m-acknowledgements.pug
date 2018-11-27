@@ -6,10 +6,15 @@ mixin acknowledgements()
         div.acknowledgements__item(
           class='.acknowledgements__item--' + i
           )
-          img.acknowledgements__image(
-            src='img/acknowledgements__image--' + i + '.png'
-            alt='Благодарность №' + i
-          )
+          picture
+            source(
+              media=viewportHugeMinWidth
+              srcset='img/acknowledgements__image--' + i + '-huge.png'
+            )
+            img.acknowledgements__image(
+              src='img/acknowledgements__image--' + i + '-small.png'
+              alt='Благодарность №' + i
+            )
       div.acknowledgements__slider-wrapper
         button.acknowledgements__slider-control.acknowledgements__slider-control--previous(type="button")
           span.visually-hidden Предыдущий слайд

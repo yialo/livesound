@@ -28,6 +28,13 @@
       padding-right: 0;
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    .partners--long & {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
 }
 
 .partners__heading {
@@ -104,6 +111,10 @@
       grid-template-columns: repeat(3, 1fr);
       width: 1146px;
     }
+
+    .partners--long & {
+      width: 1720px;
+    }
   }
 }
 
@@ -156,11 +167,6 @@
   }
 
   @media (min-width: $huge-min-width) {
-    //TODO: delete outline after alignment
-
-    outline: 1px solid blue;
-    outline-offset: -1px;
-
     padding-top: 41px;
     padding-bottom: 30px;
 

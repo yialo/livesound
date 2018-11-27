@@ -65,6 +65,12 @@
       left: -40px;
     }
   }
+
+  @media (min-width: $huge-min-width) {
+    &--acknowledgements {
+      left: -135px;
+    }
+  }
 }
 
 .slick-slide {
@@ -111,6 +117,12 @@
   @media (min-width: $medium-min-width) {
     &--acknowledgements {
       margin-right: 30px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    &--acknowledgements {
+      margin-right: 25px;
     }
   }
 }
