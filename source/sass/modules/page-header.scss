@@ -116,12 +116,11 @@
 
   @media (min-width: $large-min-width) {
     top: 180px;
-    left: 50px;
-    right: auto;
   }
 
   @media (min-width: $huge-min-width) {
     top: 210px;
     left: 70px;
+    right: auto;
   }
 }
