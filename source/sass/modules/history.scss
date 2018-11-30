@@ -100,10 +100,6 @@
   @media (min-width: $medium-min-width) {
     width: auto;
   }
-
-  @media (min-width: $large-min-width) {
-    overflow: visible;
-  }
 }
 
 .history__date-list {
@@ -142,9 +138,7 @@
 
   @media (min-width: $medium-min-width) {
     width: calc(500% / 3);
-  }
 
-  @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
     .history__inner.js-slide-1 & {
       transform: translateX(20%);
     }
@@ -168,6 +162,26 @@
 
   @media (min-width: $large-min-width) {
     width: 100%;
+
+    .history__inner.js-slide-1 & {
+      transform: translateX(40%);
+    }
+
+    .history__inner.js-slide-2 & {
+      transform: translateX(20%);
+    }
+
+    .history__inner.js-slide-3 & {
+      transform: translateX(0);
+    }
+
+    .history__inner.js-slide-4 & {
+      transform: translateX(-20%);
+    }
+
+    .history__inner.js-slide-5 & {
+      transform: translateX(-40%);
+    }
   }
 }
 
