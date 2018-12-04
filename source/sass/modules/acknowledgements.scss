@@ -1,3 +1,8 @@
+.acknowledgements__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .acknowledgements__heading {
   margin-top: 0;
   margin-bottom: 60px;
@@ -17,7 +22,7 @@
   }
 }
 
-.acknowledgements__slider-wrapper {
+.acknowledgements__slider-container {
   position: relative;
 }
 
@@ -54,4 +59,34 @@
       right: 20px;
     }
   }
+}
+
+.acknowledgements__slider {
+  overflow: hidden;
+}
+
+.acknowledgements__list {
+  display: flex;
+  width: 700%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  // &.js-slide-1 {
+  //   transform: translateX(0);
+  // }
+
+  &.js-slide-1 {
+    transform: translateX(calc(-100% / 7));
+  }
+}
+
+.acknowledgements__item {
+  width: calc(100% / 7);
+}
+
+.acknowledgements__image {
+  display: block;
+
+  @include margin-hor;
 }
