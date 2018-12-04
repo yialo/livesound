@@ -1,0 +1,15 @@
+mixin modal()
+  .modal
+    .modal__container
+      ul.modal__list
+        mixin modal__item(itemNumber)
+          li.modal__item(class=`modal__item--${itemNumber}`)
+            img.modal__image(
+              class=`modal__image--${itemNumber}`
+              src=''
+              alt=`Благодарность №${itemNumber}`
+            )
+        - var counter = 1;
+        while counter <= 7
+          +modal__item(counter)
+          - counter++;
