@@ -50,6 +50,11 @@
     background-image: url("../img/acknowledgements__slider-control--next.png");
   }
 
+  &.is-disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
   @media (min-width: $medium-min-width) {
     &--previous {
       left: 20px;

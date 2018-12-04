@@ -1,5 +1,63 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .js-show-modal & {
+    display: block;
+  }
+}
+
+.modal__container {
+  overflow: hidden;
+}
+
 .modal__list {
+  display: flex;
+  width: 700%;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+.modal__item {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  z-index: 4;
+  transform: translateX(-50%) scale(0);
+  width: 270px;
+  transition: transform 0.5s;
+
+  @for $i from 1 through 7 {
+    .js-show-modal--#{$i} &--#{$i} {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+}
+
+.modal__image {
+  @include margin-hor;
+  display: block;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  background-image: url("../img/menu-controls__button--close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.5);
 }

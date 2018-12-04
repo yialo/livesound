@@ -6,6 +6,7 @@ acknowledgementsControlNext.addEventListener('click', function() {
   if (acknowledgementsSlider.classList.contains('js-slide-1')) {
     acknowledgementsSlider.classList.remove('js-slide-1');
     acknowledgementsSlider.classList.add('js-slide-2');
+    acknowledgementsControlPrevious.classList.remove('is-disabled');
   } else if (acknowledgementsSlider.classList.contains('js-slide-2')) {
     acknowledgementsSlider.classList.remove('js-slide-2');
     acknowledgementsSlider.classList.add('js-slide-3');
@@ -21,19 +22,15 @@ acknowledgementsControlNext.addEventListener('click', function() {
   } else if (acknowledgementsSlider.classList.contains('js-slide-6')) {
     acknowledgementsSlider.classList.remove('js-slide-6');
     acknowledgementsSlider.classList.add('js-slide-7');
-  } else if (acknowledgementsSlider.classList.contains('js-slide-7')) {
-    acknowledgementsSlider.classList.remove('js-slide-7');
-    acknowledgementsSlider.classList.add('js-slide-1');
+    acknowledgementsControlNext.classList.add('is-disabled');
   }
 });
 
 acknowledgementsControlPrevious.addEventListener('click', function() {
-  if (acknowledgementsSlider.classList.contains('js-slide-1')) {
-    acknowledgementsSlider.classList.remove('js-slide-1');
-    acknowledgementsSlider.classList.add('js-slide-7');
-  } else if (acknowledgementsSlider.classList.contains('js-slide-2')) {
+  if (acknowledgementsSlider.classList.contains('js-slide-2')) {
     acknowledgementsSlider.classList.remove('js-slide-2');
     acknowledgementsSlider.classList.add('js-slide-1');
+    acknowledgementsControlPrevious.classList.add('is-disabled');
   } else if (acknowledgementsSlider.classList.contains('js-slide-3')) {
     acknowledgementsSlider.classList.remove('js-slide-3');
     acknowledgementsSlider.classList.add('js-slide-2');
@@ -49,5 +46,6 @@ acknowledgementsControlPrevious.addEventListener('click', function() {
   } else if (acknowledgementsSlider.classList.contains('js-slide-7')) {
     acknowledgementsSlider.classList.remove('js-slide-7');
     acknowledgementsSlider.classList.add('js-slide-6');
+    acknowledgementsControlNext.classList.remove('is-disabled');
   }
 });

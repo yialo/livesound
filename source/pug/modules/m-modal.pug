@@ -1,14 +1,16 @@
 mixin modal()
   .modal
+    .modal__overlay
     .modal__container
       ul.modal__list
         mixin modal__item(itemNumber)
           li.modal__item(class=`modal__item--${itemNumber}`)
             img.modal__image(
               class=`modal__image--${itemNumber}`
-              src=''
+              src=`img/modal__image--${itemNumber}-small.jpg`
               alt=`Благодарность №${itemNumber}`
-            )
+              )
+            button.modal__close-button(class=`modal__close-button--${itemNumber}` type='botton')
         - var i = 1;
         while i <= 7
           +modal__item(i)
