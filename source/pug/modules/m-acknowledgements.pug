@@ -23,6 +23,10 @@ mixin acknowledgements()
                       media=viewportHugeMinWidth
                       srcset=`img/acknowledgements__image--${itemNumber}-huge.png`
                     )
+                    source(
+                      media=viewportMediumMinWidth
+                      srcset=`img/acknowledgements__image--${itemNumber}-medium.png`
+                    )
                     img.acknowledgements__image(
                       src=`img/acknowledgements__image--${itemNumber}-small.png`
                       alt=`Благодарность №${itemNumber}`

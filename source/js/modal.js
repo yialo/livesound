@@ -98,3 +98,17 @@ modalCloseButton_7.addEventListener('click', function(evt) {
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--7');
 });
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27 && modalContainer.classList.contains('js-show-modal')) {
+    evt.preventDefault();
+    modalContainer.classList.remove('js-show-modal');
+    modalContainer.classList.remove('js-show-modal--1');
+    modalContainer.classList.remove('js-show-modal--2');
+    modalContainer.classList.remove('js-show-modal--3');
+    modalContainer.classList.remove('js-show-modal--4');
+    modalContainer.classList.remove('js-show-modal--5');
+    modalContainer.classList.remove('js-show-modal--6');
+    modalContainer.classList.remove('js-show-modal--7');
+  }
+});
