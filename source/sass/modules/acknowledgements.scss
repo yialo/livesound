@@ -71,13 +71,12 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  transition: transform 0.5s ease-out;
 
-  // &.js-slide-1 {
-  //   transform: translateX(0);
-  // }
-
-  &.js-slide-1 {
-    transform: translateX(calc(-100% / 7));
+  @for $i from 1 through 7 {
+    &.js-slide-#{$i} {
+      transform: translateX(calc(-100% * (#{$i} - 1) / 7));
+    }
   }
 }
 
