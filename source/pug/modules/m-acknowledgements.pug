@@ -21,7 +21,11 @@ mixin acknowledgements()
                   picture
                     source(
                       media=viewportHugeMinWidth
-                      srcset=`img/acknowledgements__image--${itemNumber}-huge.png`
+                      srcset=`img/acknowledgements__image--${itemNumber}-medium.png`
+                    )
+                    source(
+                      media=viewportLargeMinWidth
+                      srcset=`img/acknowledgements__image--${itemNumber}-large.png`
                     )
                     source(
                       media=viewportMediumMinWidth
