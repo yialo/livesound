@@ -13,10 +13,6 @@
   }
 }
 
-.modal__container {
-  overflow: hidden;
-}
-
 .modal__list {
   display: flex;
   width: 700%;
@@ -27,7 +23,7 @@
 
 .modal__item {
   position: fixed;
-  top: 30px;
+  top: 50px;
   left: 50%;
   z-index: 4;
   transform: translateX(-50%) scale(0);
@@ -38,6 +34,10 @@
     .js-show-modal--#{$i} &--#{$i} {
       transform: translateX(-50%) scale(1);
     }
+  }
+
+  @media (min-width: $medium-min-width) {
+    width: 718px;
   }
 }
 

@@ -1,3 +1,9 @@
+.page {
+  &.js-is-modal-visible {
+    overflow: scroll;
+  }
+}
+
 .page__header {
   position: absolute;
   z-index: 1;
