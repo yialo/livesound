@@ -1,8 +1,8 @@
 mixin modal()
   .modal
-    .modal__overlay
     .modal__container
       ul.modal__list
+        li.modal__overlay
         mixin modal__item(itemNumber)
           li.modal__item(class=`modal__item--${itemNumber}`)
             picture

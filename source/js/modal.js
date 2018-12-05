@@ -8,6 +8,7 @@ var
   modalCloseButton_5 = modalContainer.querySelector('.modal__close-button--5'),
   modalCloseButton_6 = modalContainer.querySelector('.modal__close-button--6'),
   modalCloseButton_7 = modalContainer.querySelector('.modal__close-button--7'),
+  overlay = modalContainer.querySelector('.modal__overlay');
   acknowledge_1 = document.querySelector('.acknowledgements__link--1'),
   acknowledge_2 = document.querySelector('.acknowledgements__link--2'),
   acknowledge_3 = document.querySelector('.acknowledgements__link--3'),
@@ -117,6 +118,20 @@ modalCloseButton_7.addEventListener('click', function(evt) {
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27 && modalContainer.classList.contains('js-show-modal')) {
     evt.preventDefault();
+    body.classList.remove('js-show-modal');
+    modalContainer.classList.remove('js-show-modal');
+    modalContainer.classList.remove('js-show-modal--1');
+    modalContainer.classList.remove('js-show-modal--2');
+    modalContainer.classList.remove('js-show-modal--3');
+    modalContainer.classList.remove('js-show-modal--4');
+    modalContainer.classList.remove('js-show-modal--5');
+    modalContainer.classList.remove('js-show-modal--6');
+    modalContainer.classList.remove('js-show-modal--7');
+  }
+});
+
+overlay.addEventListener('click', function() {
+  if(modalContainer.classList.contains('js-show-modal')) {
     body.classList.remove('js-show-modal');
     modalContainer.classList.remove('js-show-modal');
     modalContainer.classList.remove('js-show-modal--1');
