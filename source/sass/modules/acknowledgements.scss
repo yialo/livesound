@@ -45,6 +45,7 @@
   border-style: none;
   outline-style: none;
   cursor: pointer;
+  transition: opacity 0.5s;
 
   &--previous {
     left: 10px;

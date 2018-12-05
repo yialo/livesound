@@ -1,9 +1,6 @@
 var
   body = document.querySelector('.page'),
   modalContainer = document.querySelector('.modal'),
-
-  modalItem_1 = modalContainer.querySelector('.modal__item--1'),
-
   modalCloseButton_1 = modalContainer.querySelector('.modal__close-button--1'),
   modalCloseButton_2 = modalContainer.querySelector('.modal__close-button--2'),
   modalCloseButton_3 = modalContainer.querySelector('.modal__close-button--3'),
@@ -21,86 +18,98 @@ var
 
 acknowledge_1.addEventListener('click', function(evt) {
   evt.preventDefault();
-  body.classList.add('js-is-modal-visible');
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--1');
 });
 
 modalCloseButton_1.addEventListener('click', function(evt) {
   evt.preventDefault();
-  body.classList.remove('js-is-modal-visible');
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--1');
 });
 
 acknowledge_2.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--2');
 });
 
 modalCloseButton_2.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--2');
 });
 
 acknowledge_3.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--3');
 });
 
 modalCloseButton_3.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--3');
 });
 
 acknowledge_4.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--4');
 });
 
 modalCloseButton_4.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--4');
 });
 
 acknowledge_5.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--5');
 });
 
 modalCloseButton_5.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--5');
 });
 
 acknowledge_6.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--6');
 });
 
 modalCloseButton_6.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--6');
 });
 
 acknowledge_7.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal');
   modalContainer.classList.add('js-show-modal--7');
 });
 
 modalCloseButton_7.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal');
   modalContainer.classList.remove('js-show-modal--7');
 });
@@ -108,7 +117,7 @@ modalCloseButton_7.addEventListener('click', function(evt) {
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27 && modalContainer.classList.contains('js-show-modal')) {
     evt.preventDefault();
-    body.classList.remove('js-is-modal-visible');
+    body.classList.remove('js-show-modal');
     modalContainer.classList.remove('js-show-modal');
     modalContainer.classList.remove('js-show-modal--1');
     modalContainer.classList.remove('js-show-modal--2');

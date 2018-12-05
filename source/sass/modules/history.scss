@@ -39,6 +39,7 @@
   background-size: cover;
   border-style: none;
   cursor: pointer;
+  transition: opacity 0.5s;
 
   &--previous {
     left: 0;
