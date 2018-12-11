@@ -4,59 +4,34 @@
   background-position-y: -150px;
   background-size: 800px 750px;
 
-  &--about {
-    background-image: url("../img/intro--about-small.jpg");
-  }
+  $page-list: (about, projects, team, equipment, partners, contacts);
 
-  &--partners {
-    background-image: url("../img/intro--partners-small.jpg");
-  }
-
-  &--projects {
-    background-image: url("../img/intro--projects-small.jpg");
-  }
-
-  &--team {
-    background-image: url("../img/intro--team-small.jpg");
+  @each $value in $page-list {
+    &--#{$value} {
+      background-image: url("../img/intro--#{$value}-small.jpg");
+    }
   }
 
   &--equipment {
     background-position-y: -200px;
-    background-image: url("../img/intro--equipment-small.jpg");
-  }
-
-  &--contacts {
-    background-image: url("../img/intro--contacts-small.jpg");
   }
 
   @media (min-width: $medium-min-width) {
     background-position-y: -300px;
     background-size: 1230px 750px;
 
-    &--about {
-      background-image: url("../img/intro--about-medium.jpg");
+    @each $value in $page-list {
+      &--#{$value} {
+        background-image: url("../img/intro--#{$value}-medium.jpg");
+      }
     }
 
     &--partners {
       background-position-y: -250px;
-      background-image: url("../img/intro--partners-medium.jpg");
-    }
-
-    &--projects {
-      background-image: url("../img/intro--projects-medium.jpg");
-    }
-
-    &--team {
-      background-image: url("../img/intro--team-medium.jpg");
-    }
-
-    &--equipment {
-      background-image: url("../img/intro--equipment-medium.jpg");
     }
 
     &--contacts {
       background-position-y: -250px;
-      background-image: url("../img/intro--contacts-medium.jpg");
     }
   }
 
@@ -64,28 +39,10 @@
     background-position-y: -200px;
     background-size: 1920px 750px;
 
-    &--about {
-      background-image: url("../img/intro--about-large.jpg");
-    }
-
-    &--partners {
-      background-image: url("../img/intro--partners-large.jpg");
-    }
-
-    &--projects {
-      background-image: url("../img/intro--projects-large.jpg");
-    }
-
-    &--team {
-      background-image: url("../img/intro--team-large.jpg");
-    }
-
-    &--equipment {
-      background-image: url("../img/intro--equipment-large.jpg");
-    }
-
-    &--contacts {
-      background-image: url("../img/intro--contacts-large.jpg");
+    @each $value in $page-list {
+      &--#{$value} {
+        background-image: url("../img/intro--#{$value}-large.jpg");
+      }
     }
   }
 
@@ -128,28 +85,22 @@
   }
 
   @media (min-width: $medium-min-width) {
-    @include font(400, 42px, 63px);
-    letter-spacing: 2px;
-
-    .intro--partners & {
+    .intro & {
       @include font(400, 42px, 63px);
-    }
-
-    .intro--equipment & {
-      @include font(400, 42px, 63px);
+      letter-spacing: 2px;
     }
   }
 
   @media (min-width: $large-min-width) {
-    @include font(400, 60px, 72px);
-    letter-spacing: 3px;
-
-    .intro--partners & {
-      @include font(400, 60px, 72px);
+    .intro & {
+      @include font(400, 50px, 72px);
+      letter-spacing: 3px;
     }
+  }
 
-    .intro--equipment & {
-      @include font(400, 60px, 72px);
+  @media (min-width: $huge-min-width) {
+    .intro & {
+      font-size: 60px;
     }
   }
 }
