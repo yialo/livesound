@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $large-min-width) {
-    width: 840px;
+    width: 1180px;
   }
 
   @media (min-width: $huge-min-width) {
@@ -23,7 +23,10 @@
   margin-bottom: 30px;
 
   @media (min-width: $large-min-width) {
+    width: 840px;
     margin-bottom: 60px;
+
+    @include margin-hor;
   }
 }
 
@@ -76,14 +79,14 @@
   }
 
   @media (min-width: $large-min-width) {
-    top: 30px;
+    top: 5px;
 
     &--previous {
-      left: -150px;
+      left: -130px;
     }
 
     &--next {
-      right: -150px;
+      right: -130px;
     }
   }
 
