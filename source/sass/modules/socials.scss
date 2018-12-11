@@ -23,16 +23,22 @@
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   &--instagram {
-    background-image: url("../img/socials-instagram.png");
+    background-image: url("../img/socials-instagram.svg");
   }
 
   &--youtube {
-    background-image: url("../img/socials-youtube.png");
+    background-image: url("../img/socials-youtube.svg");
   }
 
   &--facebook {
-    background-image: url("../img/socials-facebook.png");
+    background-image: url("../img/socials-facebook.svg");
+  }
+
+  @media (min-width: $large-min-width) and (max-width: $large-max-width) {
+    width: 32px;
+    height: 32px;
   }
 }

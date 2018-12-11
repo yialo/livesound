@@ -39,7 +39,7 @@
 
   @media (min-width: $large-min-width) {
     .connection--header & {
-      @include font(400, 25px, 36px);
+      @include font(400, 25px, 32px);
     }
   }
 
