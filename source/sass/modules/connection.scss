@@ -37,12 +37,16 @@
     }
   }
 
+  @media (min-width: $large-min-width) {
+    .connection--header & {
+      @include font(400, 25px, 36px);
+    }
+  }
+
   @media (min-width: $huge-min-width) {
     .connection--header & {
       margin-bottom: 15px;
       margin-right: 0;
-
-      @include font(400, 24px, 36px);
     }
   }
 }
