@@ -1,10 +1,19 @@
 mixin socials()
   aside.socials
     ul.socials__list
-      mixin socials__item(serviceModifierName, serviceName)
+      mixin socials__item(socials_options)
         li.socials__item
-          a.socials__link(class='socials__link--' + serviceModifierName href="#")
-            span.visually-hidden= serviceName
-      +socials__item('instagram', 'Instagram')
-      +socials__item('youtube', 'YouTube')
-      +socials__item('facebook', 'Facebook')
+          a.socials__link(class='socials__link--' + socials_options.modifier href="#")
+            span.visually-hidden= socials_options.name
+      +socials__item({
+        name: 'instagram',
+        modifier: 'Instagram'
+      })
+      +socials__item({
+        name: 'youtube',
+        modifier: 'YouTube'
+      })
+      +socials__item({
+        name: 'facebook',
+        modifier: 'Facebook'
+      })
