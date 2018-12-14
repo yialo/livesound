@@ -1,6 +1,6 @@
 mixin promo-slide(promoSlideNumber, promoSlideTitle, promoSlideSubitle)
-  div.promo-slide(class='promo-slide--' + promoSlideNumber)
-    div.promo-slide__inner.aligner
+  .promo-slide(class='promo-slide--' + promoSlideNumber)
+    .promo-slide__inner.aligner
       h3.promo-slide__title= promoSlideTitle
       p.promo-slide__subtitle= promoSlideSubitle
       a.promo-slide__more-link(href="#")
