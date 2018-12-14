@@ -25,23 +25,23 @@
 @font-face {
   font-weight: 400;
   font-style: normal;
-  font-family: "Fira Sans Condensed";
-  font-display: swap;
-
-  src: local("Fira Sans Condensed"),
-    url("../fonts/firasanscondensed-regular.woff2"),
-    url("../fonts/firasanscondensed-regular.woff");
-}
-
-@font-face {
-  font-weight: 400;
-  font-style: normal;
   font-family: "Oswald";
   font-display: swap;
 
   src: local("Oswald"),
     url("../fonts/oswald-regular.woff2"),
     url("../fonts/oswald-regular.woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Ubuntu Condensed";
+  font-display: swap;
+
+  src: local("Ubuntu Condensed"),
+    url("../fonts/ubuntucondensed-regular.woff2"),
+    url("../fonts/ubuntucondensed-regular.woff");
 }
 
 @font-face {
@@ -69,10 +69,10 @@
 @font-face {
   font-weight: 400;
   font-style: normal;
-  font-family: "Ubuntu Condensed";
+  font-family: "Fira Sans Condensed";
   font-display: swap;
 
-  src: local("Ubuntu Condensed"),
-    url("../fonts/ubuntucondensed-regular.woff2"),
-    url("../fonts/ubuntucondensed-regular.woff");
+  src: local("Fira Sans Condensed"),
+    url("../fonts/firasanscondensed-regular.woff2"),
+    url("../fonts/firasanscondensed-regular.woff");
 }

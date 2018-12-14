@@ -74,7 +74,13 @@
     padding-left: 180px;
     padding-right: 100px;
 
-    @include font(700, 50px, 72px);
+    // @include font(700, 50px, 72px);
+
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.3em;
+    font-family: "Fira Sans Condensed", sans-serif;
+
     text-align: left;
   }
 
@@ -103,7 +109,13 @@
     padding-left: 180px;
     padding-right: 60px;
 
-    @include font(400, 40px, 60px);
+    // @include font(400, 40px, 60px);
+
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.3em;
+    font-family: "Fira Sans Condensed", sans-serif;
+
     text-align: left;
   }
 
