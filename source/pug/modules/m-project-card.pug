@@ -5,20 +5,16 @@ mixin project-card(projectCardNumber, projectGroupName)
     a.project-card__link(href="#")
       picture
         source(
-          media=viewportHugeMinWidth
-          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-huge.jpg`
-        )
-        source(
           media=viewportLargeMinWidth
-          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-laptop.jpg`
+          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-large.jpg`
         )
         source(
           media=viewportMediumMinWidth
-          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-tablet.jpg`
+          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-medium.jpg`
         )
         img.project-card__image(
           class=`project-card__image--${projectCardNumber}`
-          src=`${projectCardImagePathPrefix}${projectCardNumber}-mobile.jpg`
+          src=`${projectCardImagePathPrefix}${projectCardNumber}-small.jpg`
           alt=projectGroupName
         )
       h3.project-card__caption

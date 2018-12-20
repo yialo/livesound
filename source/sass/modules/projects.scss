@@ -1,48 +1,39 @@
-.projects__inner {
-  width: $small-min-width;
-
-  @include margin-hor;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (min-width: $medium-min-width) {
-    width: $medium-min-width;
-  }
-
-  @media (min-width: $large-min-width) {
-    width: $large-min-width;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  @media (min-width: $huge-min-width) {
-    width: $huge-min-width;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
 .projects__heading {
+  @include margin-hor;
+  width: $small-min-width;
   margin-top: 0;
   margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 28px;
   line-height: 42px;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $medium-min-width) {
+    width: $medium-min-width;
     margin-bottom: 40px;
     font-size: 32px;
     line-height: 48px;
   }
 
   @media (min-width: $large-min-width) {
+    width: $large-min-width;
     margin-bottom: 65px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 36px;
     line-height: 52px;
   }
 
   @media (min-width: $huge-min-width) {
+    width: $huge-min-width;
     margin-bottom: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
+}
+
+.projects__content {
+  max-width: 1920px;
 }

@@ -3,7 +3,7 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  @media (min-width: $medium-min-width) {
+  @media (min-width: $cards-2-col-min-width) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -12,24 +12,12 @@
 .project-cards__item {
   box-shadow: 0 0 3px 0 $dark-gray;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: $medium-min-width) {
+  @media (min-width: $cards-2-col-min-width) {
     width: 50%;
     box-shadow: none;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
   }
 
   @media (min-width: $large-min-width) {
-    width: 400px;
-  }
-
-  @media (min-width: $huge-min-width) {
-    width: 610px;
+    width: calc(100% / 3);
   }
 }
