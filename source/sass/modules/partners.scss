@@ -40,30 +40,34 @@
 .partners__heading {
   margin-top: 0;
   margin-bottom: 30px;
-
-  @include font(400, 28px, 42px);
+  font-size: 28px;
+  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
 
   .partners-small-heading & {
-    @include font(400, 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 60px;
-
-    @include font(400, 32px, 48px);
+    font-size: 32px;
+    line-height: 48px;
 
     .partners-small-heading & {
-      @include font(400, 32px, 48px);
+      font-size: 32px;
+      line-height: 48px;
     }
   }
 
   @media (min-width: $large-min-width) {
-    @include font(400, 36px, 52px);
+    font-size: 36px;
+    line-height: 52px;
 
     .partners-small-heading & {
-      @include font(400, 36px, 52px);
+      font-size: 36px;
+      line-height: 52px;
     }
   }
 

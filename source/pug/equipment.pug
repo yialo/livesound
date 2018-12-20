@@ -5,15 +5,15 @@ block title
 
 block body
   body.page.page--equipment
-    div.page__header
+    .page__header
       +page-header('equipment')
-    div.page__main
+    .page__main
       main.page-main.page-main--equipment
-        div.page-main__intro
+        .page-main__intro
           +intro('equipment', 'Оборудование')
-        div.page-main__catalog
+        .page-main__catalog
           +catalog()
-    div.page__footer
+    .page__footer
       +page-footer('equipment')
     include common/common-scripts.pug
     script(src="js/equipment-catalog.js")

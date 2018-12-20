@@ -1,13 +1,13 @@
 mixin history()
   section.history
-    div.history__inner.js-slide-3
+    .history__inner.js-slide-3
       h2.visually-hidden История компании
-      div.history__slider-controls
+      .history__slider-controls
         button.history__control-button.history__control-button--previous(type='button')
           span.visually-hidden Предыдущий слайд
         button.history__control-button.history__control-button--next(type='button')
           span.visually-hidden Следующий слайд
-        div.history__date-slider
+        .history__date-slider
           ul.history__date-list
             mixin history__date-item(itemNumber, year, activityClass)
               li.history__date-item
@@ -18,7 +18,7 @@ mixin history()
             +history__date-item(3, '2014')
             +history__date-item(4, '2016')
             +history__date-item(5, '2018')
-      div.history__slider
+      .history__slider
         ul.history__list
           mixin history__item(paragraphText)
             li.history__item

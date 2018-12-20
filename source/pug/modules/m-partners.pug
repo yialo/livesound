@@ -1,7 +1,7 @@
 mixin partners(listSize, heading, specialModifier)
   section.partners(class='partners--' + listSize + ' ' + specialModifier)
-    div.partners__inner.aligner
-      h2.partners__heading= heading
+    .partners__inner.aligner
+      h2.partners__heading.heading= heading
       ul.partners__list
         mixin partners__item(parnterImageName, partnerName)
           li.partners__item

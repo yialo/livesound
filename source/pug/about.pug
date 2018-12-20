@@ -5,17 +5,17 @@ block title
 
 block body
   body.page.page--about
-    div.page__header
+    .page__header
       +page-header('about')
-    div.page__main
+    .page__main
       main.page-main.page-main--about
-        div.page-main__intro
+        .page-main__intro
           +intro('about', 'О компании')
-        div.page-main__history
+        .page-main__history
           +history()
-        div.page-main__mission
+        .page-main__mission
           +mission()
-    div.page__footer
+    .page__footer
       +page-footer('about')
     script(src='js/about-slider.js')
     include common/common-scripts.pug

@@ -1,11 +1,11 @@
 mixin advantages()
   section.advantages
-    div.advantages__inner.aligner
-      h2.advantages__heading Преимущества
+    .advantages__inner.aligner
+      h2.advantages__heading.heading Преимущества
       ul.advantages__list
         - var i = 1;
         mixin advantages__item(heading, description)
-          li.advantages__item(class='advantages__item--' + i++)
+          li.advantages__item(class=`advantages__item--${i++}`)
             h3.advantages__caption= heading
             p.advantages__description!= description
         +advantages__item(

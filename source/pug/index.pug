@@ -5,24 +5,24 @@ block title
 
 block body
   body.page.page--index
-    div.page__header
+    .page__header
       +page-header('index')
-    div.page__main
+    .page__main
       main.page-main
         h1.visually-hidden Сайт компании Live Sound Agency
-        div.page-main__promo
+        .page-main__promo
           +promo()
-        div.page-main__advantages
+        .page-main__advantages
           +advantages()
-        div.page-main__directions
+        .page-main__directions
           +projects('Основные направления')
-        div.page-main__partners
+        .page-main__partners
           +partners('short', 'Оборудование от компаний-лидеров мирового рынка', 'partners-small-heading')
-        div.page-main__about
+        .page-main__about
           +about()
-        div.page-main__partners
+        .page-main__partners
           +partners('short', 'Партнеры', '')
-    div.page__footer
+    .page__footer
       +page-footer('index')
     script(src="js/promo-slider.js")
     include common/common-scripts.pug
