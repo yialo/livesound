@@ -20,7 +20,8 @@
   overflow: hidden;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: $medium-min-width) {
@@ -41,7 +42,7 @@
 }
 
 .project-card__caption-text {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   color: white;
