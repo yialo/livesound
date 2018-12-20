@@ -29,6 +29,6 @@
   font-display: swap;
 
   src: local("PT Sans Narrow"),
-    url("../fonts/pt_sans-narrow-web-regular.woff2"),
-    url("../fonts/pt_sans-narrow-web-regular.woff");
+    url("../fonts/pt_sans-narrow-regular.woff2") format("woff2"),
+    url("../fonts/pt_sans-narrow-regular.woff") format("woff");
 }

@@ -44,73 +44,72 @@
   padding-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: white;
+
+  @media (min-width: $medium-min-width) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 
   @media (min-width: $large-min-width) {
     max-height: 1080px;
     padding-left: 0;
     padding-right: 0;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   @media (min-width: $huge-min-width) {
     padding-bottom: 215px;
+    font-size: 60px;
+    line-height: 72px;
   }
 }
 
 .promo-slide__title {
-  @include font(400, 22px, 32px);
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: "PT Sans Narrow", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  color: white;
 
   @media (min-width: $medium-min-width) {
-    @include font(400, 40px, 50px);
     word-spacing: 10px;
   }
 
   @media (min-width: $large-min-width) {
-    @include font(400, 50px, 60px);
     margin-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 1.3em;
     text-align: left;
   }
 
   @media (min-width: $huge-min-width) {
-    @include font(400, 60px, 72px);
     padding-left: 328px;
     padding-right: 500px;
   }
 }
 
 .promo-slide__subtitle {
-  font-family: "PT Sans Narrow", sans-serif;
   margin-top: 0;
   margin-bottom: 20px;
-
-  @include font(400, 16px, 24px);
   text-align: center;
   color: white;
 
   @media (min-width: $medium-min-width) {
-    @include font(400, 36px, 42px);
     word-spacing: 5px;
   }
 
   @media (min-width: $large-min-width) {
-    @include font(400, 50px, 60px);
     padding-left: 20px;
     padding-right: 300px;
     text-align: left;
   }
 
   @media (min-width: $huge-min-width) {
-    @include font(400, 60px, 72px);
     padding-left: 328px;
     padding-right: 600px;
   }
