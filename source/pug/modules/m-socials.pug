@@ -1,10 +1,13 @@
-mixin socials()
-  aside.socials
+mixin socials(socials_options)
+  - var locationClass = '';
+  if (socials_options.blockId === 'contacts')
+    - locationClass = {class: `socials--${socials_options.blockId}`};
+  aside.socials&attributes(locationClass)
     ul.socials__list
-      mixin socials__item(socials_options)
+      mixin socials__item(socialsItem_options)
         li.socials__item
-          a.socials__link(class='socials__link--' + socials_options.modifier href="#")
-            span.visually-hidden= socials_options.name
+          a.socials__link(class=`socials__link--${socialsItem_options.modifier}` href='#')
+            span.visually-hidden= socialsItem_options.name
       +socials__item({
         modifier: 'instagram',
         name: 'Instagram'

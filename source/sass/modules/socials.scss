@@ -37,6 +37,20 @@
     background-image: url("../img/socials-facebook.svg");
   }
 
+  .socials--contacts & {
+    &--instagram {
+      background-image: url("../img/socials-instagram--contacts.svg");
+    }
+
+    &--youtube {
+      background-image: url("../img/socials-youtube--contacts.svg");
+    }
+
+    &--facebook {
+      background-image: url("../img/socials-facebook--contacts.svg");
+    }
+  }
+
   @media (min-width: $large-min-width) and (max-width: $large-max-width) {
     width: 32px;
     height: 32px;

@@ -39,7 +39,8 @@
 }
 
 .project-card__caption-text {
-  @include font(400, 20px, 28px);
+  font-size: 20px;
+  line-height: 28px;
   text-transform: uppercase;
   color: white;
 

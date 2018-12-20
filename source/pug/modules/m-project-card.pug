@@ -1,12 +1,25 @@
 - var projectCardImagePathPrefix = 'img/project-card__image--';
 
 mixin project-card(projectCardNumber, projectGroupName)
-  div.project-card
+  .project-card
     a.project-card__link(href="#")
       picture
-        source(media=viewportHugeMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-huge.jpg')
-        source(media=viewportLargeMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-laptop.jpg')
-        source(media=viewportMediumMinWidth srcset=projectCardImagePathPrefix + projectCardNumber + '-tablet.jpg')
-        img.project-card__image(class='project-card__image--' + projectCardNumber src=projectCardImagePathPrefix + projectCardNumber + '-mobile.jpg' alt=projectGroupName)
+        source(
+          media=viewportHugeMinWidth
+          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-huge.jpg`
+        )
+        source(
+          media=viewportLargeMinWidth
+          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-laptop.jpg`
+        )
+        source(
+          media=viewportMediumMinWidth
+          srcset=`${projectCardImagePathPrefix}${projectCardNumber}-tablet.jpg`
+        )
+        img.project-card__image(
+          class=`project-card__image--${projectCardNumber}`
+          src=`${projectCardImagePathPrefix}${projectCardNumber}-mobile.jpg`
+          alt=projectGroupName
+        )
       h3.project-card__caption
-        span.project-card__caption-text= projectGroupName
+        span.project-card__caption-text.heading= projectGroupName

@@ -1,9 +1,9 @@
 mixin contacts()
   section.contacts
-    div.contacts__inner
+    .contacts__inner
       h2.visually-hidden Контактная информация
-      div.contacts__column-1
-        div.contacts__address
+      .contacts__column-1
+        .contacts__address
           +address('contacts')
         ul.contacts__tels
           mixin contacts__tel(telNumberEnd, telNumberEndText)
@@ -12,8 +12,10 @@ mixin contacts()
           +contacts__tel('5704', '57-04')
           +contacts__tel('8540', '85-40')
           +contacts__tel('6298', '62-98')
-        div.contacts__socials
-          +socials()
-      div.contacts__column-2
+        .contacts__socials
+          +socials({
+            blockId: 'contacts'
+          })
+      .contacts__column-2
         p.contacts__tip Мы на карте:
-        div.contacts__map#map
+        .contacts__map#map
