@@ -3,43 +3,27 @@
   width: 100%;
   background-color: #1a1a2b;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 800px 1080px;
-
-  @for $i from 1 through 4 {
-    &--#{$i} {
-      background-image: url("../img/promo-slide--#{$i}-background-small.jpg");
-    }
-  }
+  background-position: bottom;
+  background-image: url("../img/promo-slide-background-small.jpg");
 
   @media (min-width: $medium-min-width) {
-    background-size: 1230px 1080px;
-
-    @for $i from 1 through 4 {
-      &--#{$i} {
-        background-image: url("../img/promo-slide--#{$i}-background-medium.jpg");
-      }
-    }
+    background-image: url("../img/promo-slide-background-medium.jpg");
   }
 
   @media (min-width: $large-min-width) {
-    background-size: 1920px 1080px;
-
-    @for $i from 1 through 4 {
-      &--#{$i} {
-        background-image: url("../img/promo-slide--#{$i}-background-large.jpg");
-      }
-    }
+    background-image: url("../img/promo-slide-background-large.jpg");
   }
 
   @media (min-width: $huge-min-width) {
-    background-position: top;
+    background-image: url("../img/promo-slide-background-huge.jpg");
   }
 }
 
 .promo-slide__inner {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  max-height: 1600px;
   padding-top: calc(var(--page-header-bypass) + 15px);
   padding-bottom: 100px;
   padding-left: 20px;
@@ -51,23 +35,31 @@
   color: white;
 
   @media (min-width: $medium-min-width) {
+    max-height: 2460px;
     font-size: 40px;
     line-height: 50px;
   }
 
   @media (min-width: $large-min-width) {
-    max-height: 1080px;
     padding-left: 0;
     padding-right: 0;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
   }
 
   @media (min-width: $huge-min-width) {
-    padding-bottom: 215px;
+    padding-bottom: 150px;
     font-size: 60px;
     line-height: 72px;
   }
+}
+
+.promo-slide__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .promo-slide__title {
@@ -95,7 +87,7 @@
 
 .promo-slide__subtitle {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-align: center;
   color: white;
 
@@ -116,10 +108,8 @@
 }
 
 .promo-slide__more-link {
-  display: block;
-  margin-top: auto;
-
   @include margin-hor;
+  display: block;
   width: 75px;
   height: 75px;
   background-image: url("../img/promo-slide-down-arrow.png");

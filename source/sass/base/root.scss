@@ -2,14 +2,14 @@
   --page-header-bypass: 265px;
 
   @media (min-width: $medium-min-width) {
-    --page-header-bypass: 225px;
+    --page-header-bypass: 200px;
   }
 
   @media (min-width: $large-min-width) {
-    --page-header-bypass: 275px;
+    --page-header-bypass: 220px;
   }
 
   @media (min-width: $huge-min-width) {
-    --page-header-bypass: 397px;
+    --page-header-bypass: 260px;
   }
 }
