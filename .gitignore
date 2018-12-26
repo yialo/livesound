@@ -19,6 +19,9 @@ Thumbs.db
 # Specification folder
 specification/
 
+#imgraw folder
+source/imgraw/
+
 # Node.js modules
 node_modules/
 npm-debug.*

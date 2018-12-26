@@ -67,34 +67,30 @@
 
   @media (min-width: $large-min-width) {
     flex-grow: 1;
+    align-self: center;
     position: static;
     left: auto;
     z-index: auto;
     display: block;
     width: auto;
     margin-left: auto;
-    padding-top: 15px;
-  }
-
-  @media (min-width: $huge-min-width) {
-    padding-top: 30px;
+    margin-right: 45px;
   }
 }
 
-.page-header__social {
+.page-header__socials {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 
   @media (min-width: $medium-min-width) {
+    align-items: center;
     margin-top: 0;
     margin-left: auto;
-    display: flex;
-    align-items: center;
   }
 
   @media (min-width: $large-min-width) {
-    position: absolute;
-    bottom: 18px;
-    right: 20px;
+    align-self: center;
   }
 
   @media (min-width: $huge-min-width) {

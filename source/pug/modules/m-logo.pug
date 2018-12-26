@@ -1,7 +1,7 @@
 mixin logo(logoPosition, pageName)
-  div.logo(class='logo--' + logoPosition)
+  .logo(class=`logo--${logoPosition}`)
     - var linkToIndex = {href: 'index.html'}
     if pageName === 'index'
       - var linkToIndex = ''
     a.logo__link&attributes(linkToIndex)
-      img.logo__image(src='img/logo-' + logoPosition + '.png' alt='Live Sound Agency')
+      img.logo__image(src=`img/logo-${logoPosition}.png` alt='Live Sound Agency')
