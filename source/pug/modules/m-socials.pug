@@ -1,5 +1,11 @@
 mixin socials(socials_options)
-  - var locationClass = '';
+  -
+    var socialNetworkNames = [
+      {'instagram': 'Instargam'},
+      {'youtube': 'Youtube'},
+      {'facebook': 'Facebook'}
+    ];
+    var locationClass = '';
   if (socials_options.blockId === 'contacts')
     - locationClass = {class: `socials--${socials_options.blockId}`};
   aside.socials&attributes(locationClass)
@@ -8,15 +14,9 @@ mixin socials(socials_options)
         li.socials__item
           a.socials__link(class=`socials__link--${socialsItem_options.modifier}` href='#')
             span.visually-hidden= socialsItem_options.name
-      +socials__item({
-        modifier: 'instagram',
-        name: 'Instagram'
-      })
-      +socials__item({
-        modifier: 'youtube',
-        name: 'YouTube'
-      })
-      +socials__item({
-        modifier: 'facebook',
-        name: 'Facebook'
-      })
+      each item in socialNetworkNames
+        each value, key in item
+          +socials__item({
+            modifier: key,
+            name: value
+          })

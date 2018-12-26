@@ -1,3 +1,9 @@
+$socialNewtorkNames: (
+  "instagram",
+  "youtube",
+  "facebook"
+);
+
 .socials__list {
   display: flex;
   margin-top: 0;
@@ -25,29 +31,17 @@
   background-position: center;
   background-size: cover;
 
-  &--instagram {
-    background-image: url("../img/socials-instagram.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/socials-youtube.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/socials-facebook.svg");
+  @each $value in $socialNewtorkNames {
+    &--#{$value} {
+      background-image: url("../img/socials-#{$value}.svg");
+    }
   }
 
   .socials--contacts & {
-    &--instagram {
-      background-image: url("../img/socials-instagram--contacts.svg");
-    }
-
-    &--youtube {
-      background-image: url("../img/socials-youtube--contacts.svg");
-    }
-
-    &--facebook {
-      background-image: url("../img/socials-facebook--contacts.svg");
+    @each $value in $socialNewtorkNames {
+      &--#{$value} {
+        background-image: url("../img/socials-#{$value}--contacts.svg");
+      }
     }
   }
 
