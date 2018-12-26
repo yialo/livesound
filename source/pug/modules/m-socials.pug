@@ -1,11 +1,11 @@
 mixin socials(socials_options)
   -
-    var socialNetworkNames = [
+    const socialNetworkNames = [
       {'instagram': 'Instargam'},
       {'youtube': 'Youtube'},
       {'facebook': 'Facebook'}
     ];
-    var locationClass = '';
+    let locationClass = '';
   if (socials_options.blockId === 'contacts')
     - locationClass = {class: `socials--${socials_options.blockId}`};
   aside.socials&attributes(locationClass)

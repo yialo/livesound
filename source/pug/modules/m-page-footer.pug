@@ -1,18 +1,22 @@
 mixin page-footer(pageName)
   footer.page-footer
-    div.page-footer__inner.aligner
-      div.page-footer__column-1
-        div.page-footer__address
+    .page-footer__inner.aligner
+      .page-footer__column-1
+        .page-footer__address
           +address('footer')
-        div.page-footer__logo
+        .page-footer__logo
           +logo('footer', pageName)
-        div.page-footer__copyright
+        .page-footer__copyright
           +copyright()
-      div.page-footer__column-2
-        div.page-footer__navigation
+      .page-footer__column-2
+        .page-footer__navigation
           +main-navigation(pageName, 'footer')
-      div.page-footer__column-3
-        div.page-footer__connection
-          +connection('connection--footer')
-      div.page-footer__creator
+      .page-footer__column-3
+        .page-footer__connection
+          a.page-footer__tel(href="tel:+74992565704") +7 (499) 256-57-04
+          .page-footer__socials
+            +socials({
+              modifier: ''
+            })
+      .page-footer__creator
         +creator()
