@@ -108,15 +108,17 @@
 
   @media (min-width: $medium-min-width) {
     top: 160px;
-    left: 70px;
+    left: 160px;
     right: auto;
   }
 
   @media (min-width: $large-min-width) {
     top: 180px;
+    left: 80px;
   }
 
   @media (min-width: $huge-min-width) {
     top: 210px;
+    left: 70px;
   }
 }
