@@ -2,23 +2,21 @@
   position: relative;
 
   &::before {
+    @include font(400, 14px, 19px);
     content: "RU";
     position: absolute;
     top: 2px;
     left: -25px;
-
-    @include font(400, 14px, 19px);
     letter-spacing: 1.2px;
     color: white;
   }
 
   &::after {
+    @include font(400, 14px, 19px);
     content: "EN";
     position: absolute;
     top: 2px;
     right: -25px;
-
-    @include font(400, 14px, 19px);
     letter-spacing: 1.2px;
     color: white;
   }
@@ -59,4 +57,3 @@
     right: 0;
   }
 }
-
