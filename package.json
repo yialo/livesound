@@ -1,10 +1,6 @@
 {
-  "name": "soundware",
-  "version": "1.0.0",
-  "description": "Soundware project website",
-  "main": "index.js",
   "author": "",
-  "license": "ISC",
+  "description": "Livesound project website",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^9.4.3",
@@ -25,18 +21,22 @@
     "imagemin-pngquant": "^6.0.1",
     "imagemin-zopfli": "^5.1.0",
     "pngquant": "^1.3.0",
-    "stylelint": "^9.9.0",
+    "stylelint": "9.10.1",
     "stylelint-config-htmlacademy": "^0.1.1"
   },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "soundware",
   "repository": {
     "type": "git",
     "url": "git+https://bitbucket.org/waytostart/soundware.git"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
-  }
+    "editorconfig": "editorconfig-cli",
+    "start": "npm run build && gulp serve",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "version": "1.0.0"
 }
