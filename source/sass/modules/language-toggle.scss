@@ -15,12 +15,20 @@
     color: rgba(255, 255, 255, 0.4);
   }
 
-  &--russian {
+  &:first-child {
     margin-right: 10px;
   }
 
   &.is-checked {
     position: relative;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: white;
+    }
 
     &::before {
       content: "";
@@ -34,6 +42,10 @@
 
   @media (min-width: $medium-min-width) {
     font-size: 14px;
+
+    &:first-child {
+      margin-right: 14px;
+    }
   }
 
   @media (min-width: $large-min-width) {
