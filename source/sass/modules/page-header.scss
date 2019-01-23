@@ -92,10 +92,12 @@
     align-items: center;
     margin-top: 0;
     margin-left: auto;
+    padding-top: 16px;
   }
 
   @media (min-width: $large-min-width) {
     align-self: center;
+    padding-top: 0;
   }
 
   @media (min-width: $huge-min-width) {
@@ -108,22 +110,15 @@
 .page-header__language-toggle {
   position: absolute;
   top: 100px;
-  right: 40px;
+  right: 30px;
   z-index: 1;
 
   @media (min-width: $medium-min-width) {
-    top: 160px;
-    left: 163px;
-    right: auto;
-  }
-
-  @media (min-width: $large-min-width) {
-    top: 180px;
-    left: 83px;
+    top: 20px;
+    right: 20px;
   }
 
   @media (min-width: $huge-min-width) {
-    top: 210px;
-    left: 73px;
+    right: 100px;
   }
 }
