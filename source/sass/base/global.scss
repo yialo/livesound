@@ -9,10 +9,9 @@ html {
 }
 
 body {
+  @include font();
   min-width: $small-min-width;
   margin: 0;
-
-  @include font;
   color: $dark-gray;
   background-color: white;
 }
@@ -20,6 +19,13 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
 }
 
 ul,
