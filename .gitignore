@@ -1,32 +1,6 @@
-Thumbs.db
-.DS_Store
-.idea
-*.ai
 *.log
-*.pdf
-*.psb
-*.psd
-*.sublime*
-*.code-workspace
-.vscode/
-
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
-
-# Specification folder
-specification/
-
-#imgraw folder
+build/
 source/imgraw/
-
-# Node.js modules
 node_modules/
 npm-debug.*
-
-# Build folder
-build/
-
-
+specification/

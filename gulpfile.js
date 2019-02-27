@@ -79,7 +79,7 @@ var minbitmap = function () {
     .pipe(minimage([
       pngquant({
         speed: 1,
-        quality: 80
+        quality: [0.8, 0.8]
       }),
       zopfli({
         more: true
