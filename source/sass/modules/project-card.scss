@@ -20,7 +20,7 @@
     duration: 1s;
   }
 
-  &:hover {
+  .project-card__link:hover & {
     transform: scale(1.1);
   }
 }
@@ -35,10 +35,14 @@
   max-height: 158px;
   min-height: 80px;
   overflow: hidden;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
   background-color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: $medium-min-width) {
