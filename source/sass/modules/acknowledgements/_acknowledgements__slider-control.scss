@@ -6,8 +6,10 @@
   width: 41px;
   height: 66px;
   padding: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
+  background: {
+    color: transparent;
+    repeat: no-repeat;
+  }
   border-style: none;
   outline-style: none;
   cursor: pointer;

@@ -1,7 +1,9 @@
 .advantages__item {
   padding-top: 100px;
-  background-repeat: no-repeat;
-  background-position: top;
+  background: {
+    position: top;
+    repeat: no-repeat;
+  }
 
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -26,8 +28,10 @@
   @media (min-width: $medium-min-width) {
     width: 50%;
     margin-top: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: {
+      left: 25px;
+      right: 25px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -36,8 +40,10 @@
 
   @media (min-width: $large-min-width) {
     width: 255px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: {
+      left: 0;
+      right: 0;
+    }
   }
 
   @media (min-width: $huge-min-width) {

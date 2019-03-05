@@ -3,7 +3,7 @@
   height: 100%;
 
   @media (min-width: $large-min-width) {
-    height: auto;
     flex-grow: 1;
+    height: auto;
   }
 }

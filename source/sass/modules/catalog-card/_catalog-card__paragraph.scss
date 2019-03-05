@@ -1,6 +1,8 @@
 .catalog-card__paragraph {
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin: {
+    top: 0;
+    bottom: 5px;
+  }
 
   &:last-child {
     margin-bottom: 0;

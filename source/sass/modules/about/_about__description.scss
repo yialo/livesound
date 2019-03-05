@@ -1,8 +1,9 @@
 .about__description {
-  margin-top: 0;
-  margin-bottom: 20px;
-
   @include font(400, 16px, 28px);
+  margin: {
+    top: 0;
+    bottom: 20px;
+  }
 
   @media (min-width: $medium-min-width) {
     @include font(400, 20px, 30px);

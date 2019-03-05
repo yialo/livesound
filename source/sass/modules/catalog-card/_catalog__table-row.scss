@@ -1,12 +1,16 @@
 .catalog__table-row {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
   border-bottom: 1px solid #707070;
 
   @media (min-width: $large-min-width) {
     display: table-row;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
   }
 }

@@ -2,7 +2,9 @@
   @media (min-width: $huge-min-width) {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 75px;
+    padding: {
+      top: 10px;
+      bottom: 75px;
+    }
   }
 }

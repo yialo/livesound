@@ -13,278 +13,72 @@
   }
 
   @media (min-width: $medium-min-width) {
-    .history__inner.js-slide-1 & {
-      &--1 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
+    @for $slide-number from 1 through 5 {
+      .history__inner.js-slide-#{$slide-number} & {
+        @for $number from 1 through 5 {
+          $font-size: if($number == $slide-number, 65px, 55px);
+          $color: if($number == $slide-number, #1d1d1d, #989898);
 
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-    }
-
-    .history__inner.js-slide-2 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--2 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-    }
-
-    .history__inner.js-slide-3 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-    }
-
-    .history__inner.js-slide-4 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-    }
-
-    .history__inner.js-slide-5 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
+          &--#{$number} {
+            @include font(400, $font-size, 1);
+            color: $color;
+          }
+        }
       }
     }
   }
 
   @media (min-width: $large-min-width) {
-    .history__inner.js-slide-1 & {
-      &--1 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
+    $history-slides-large: (
+      history-slide-1-large: (
+        (65px, #1d1d1d),
+        (55px, #989898),
+        (45px, rgba(152, 152, 152, 0.52)),
+        (40px, rgba(152, 152, 152, 0.42)),
+        (35px, rgba(152, 152, 152, 0.32)),
+      ),
+      history-slide-2-large: (
+        (55px, #989898),
+        (65px, #1d1d1d),
+        (55px, #989898),
+        (45px, rgba(152, 152, 152, 0.52)),
+        (40px, rgba(152, 152, 152, 0.42)),
+      ),
+      history-slide-3-large: (
+        (45px, rgba(152, 152, 152, 0.52)),
+        (55px, #989898),
+        (65px, #1d1d1d),
+        (55px, #989898),
+        (45px, rgba(152, 152, 152, 0.52)),
+      ),
+      history-slide-4-large: (
+        (40px, rgba(152, 152, 152, 0.42)),
+        (45px, rgba(152, 152, 152, 0.52)),
+        (55px, #989898),
+        (65px, #1d1d1d),
+        (55px, #989898),
+      ),
+      history-slide-5-large: (
+        (35px, rgba(152, 152, 152, 0.32)),
+        (40px, rgba(152, 152, 152, 0.42)),
+        (45px, rgba(152, 152, 152, 0.52)),
+        (55px, #989898),
+        (65px, #1d1d1d),
+      ),
+    );
 
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-
-      &--4 {
-        @include font(400, 40px, 40px);
-        color: rgba(152, 152, 152, 0.42);
-      }
-
-      &--5 {
-        @include font(400, 35px, 35px);
-        color: rgba(152, 152, 152, 0.32);
-      }
-    }
-
-    .history__inner.js-slide-2 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--2 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-
-      &--5 {
-        @include font(400, 40px, 40px);
-        color: rgba(152, 152, 152, 0.42);
-      }
-    }
-
-    .history__inner.js-slide-3 & {
-      &--1 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-
-      &--2 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--3 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-    }
-
-    .history__inner.js-slide-4 & {
-      &--1 {
-        @include font(400, 40px, 40px);
-        color: rgba(152, 152, 152, 0.42);
-      }
-
-      &--2 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--4 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-    }
-
-    .history__inner.js-slide-5 & {
-      &--1 {
-        @include font(400, 35px, 35px);
-        color: rgba(152, 152, 152, 0.32);
-      }
-
-      &--2 {
-        @include font(400, 40px, 40px);
-        color: rgba(152, 152, 152, 0.42);
-      }
-
-      &--3 {
-        @include font(400, 45px, 45px);
-        color: rgba(152, 152, 152, 0.52);
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-        color: #989898;
-      }
-
-      &--5 {
-        @include font(400, 65px, 65px);
-        color: #1d1d1d;
-      }
+    .test {
+      @debug($history-slides-large);
     }
   }
+
+  // TODO: доработать цикл
+
+  // .history__inner.js-slide-#{index($history-slides-large, $outer-item)} & {
+  //   @each $key, $outer-value in $outer-item {
+  //     @debug($outer-item);
+  //   }
+  // }
 
   @media (min-width: $huge-min-width) {
     .history__inner.js-slide-1 & {

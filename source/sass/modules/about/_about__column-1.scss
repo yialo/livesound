@@ -3,14 +3,18 @@
 
   @media (min-width: $medium-min-width) {
     float: right;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin: {
+      bottom: 20px;
+      left: 20px;
+    }
   }
 
   @media (min-width: $large-min-width) {
     float: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 45px;
+    margin: {
+      bottom: 0;
+      left: 0;
+      right: 45px;
+    }
   }
 }

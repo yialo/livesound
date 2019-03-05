@@ -1,8 +1,9 @@
 .copyright {
-  margin-top: 0;
-  margin-bottom: 0;
-
   @include font(400, 16px, 28px);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
   color: #464646;
 }
 

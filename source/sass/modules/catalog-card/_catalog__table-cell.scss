@@ -15,15 +15,16 @@
 
   @media (min-width: $large-min-width) {
     display: table-cell;
+    padding: {
+      top: 15px;
+      bottom: 15px;
+    }
     vertical-align: text-top;
-    padding-top: 15px;
-    padding-bottom: 15px;
 
     &--name {
+      @include font(400, 18px, 30px);
       margin-bottom: 0;
       padding-right: 10px;
-
-      @include font(400, 18px, 30px);
     }
 
     &--value {

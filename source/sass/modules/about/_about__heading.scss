@@ -1,10 +1,14 @@
 .about__heading {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: {
+    top: 0;
+    bottom: 20px;
+  }
   font-size: 32px;
   line-height: 48px;
-  text-align: center;
-  text-transform: uppercase;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 50px;

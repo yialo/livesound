@@ -3,9 +3,9 @@
   height: 280px;
 
   @media (min-width: $large-min-width) {
-    width: calc(100% - var(--column-1-full-width));
-    height: auto;
     display: flex;
     flex-direction: column;
+    width: calc(100% - var(--column-1-full-width));
+    height: auto;
   }
 }
