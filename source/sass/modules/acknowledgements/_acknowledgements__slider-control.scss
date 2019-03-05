@@ -1,0 +1,40 @@
+.acknowledgements__slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 41px;
+  height: 66px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-style: none;
+  outline-style: none;
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  &--previous {
+    left: 10px;
+    background-image: url("../img/acknowledgements__slider-control--previous.png");
+  }
+
+  &--next {
+    right: 10px;
+    background-image: url("../img/acknowledgements__slider-control--next.png");
+  }
+
+  &.is-disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--previous {
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
+  }
+}

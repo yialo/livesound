@@ -1,0 +1,15 @@
+.contacts__inner {
+  @media (min-width: $large-min-width) {
+    @include margin-hor();
+    --column-1-content-width: 400px;
+    --column-1-margin-right: 80px;
+    --column-1-full-width: calc(
+      var(--column-1-content-width)
+      + var(--column-1-margin-right)
+    );
+    display: flex;
+    width: 1220px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

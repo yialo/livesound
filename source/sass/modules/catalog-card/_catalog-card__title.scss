@@ -1,0 +1,13 @@
+.catalog-card__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include font(700, 20px, 28px);
+  color: black;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 40px;
+
+    @include font(700, 26px, 42px);
+  }
+}

@@ -1,0 +1,8 @@
+.catalog__table {
+  display: block;
+  border-collapse: collapse;
+
+  @media (min-width: $large-min-width) {
+    display: table;
+  }
+}

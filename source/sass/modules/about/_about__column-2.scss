@@ -1,0 +1,8 @@
+.about__column-2 {
+  @media (min-width: $huge-min-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 75px;
+  }
+}

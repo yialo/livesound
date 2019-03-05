@@ -1,0 +1,27 @@
+.acknowledgements__item {
+  width: calc(100% / 7);
+
+  @media (min-width: $medium-min-width) {
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 282px;
+
+    &:not(:last-child) {
+      margin-right: 167px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: calc(200px / 3);
+    }
+  }
+}

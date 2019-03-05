@@ -1,0 +1,34 @@
+.history__list {
+  display: flex;
+  width: 500%;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+  transition: {
+    property: transform;
+    duration: 0.6s;
+    timing-function: ease-out;
+  }
+
+  .history__inner.js-slide-1 & {
+    transform: translateX(0);
+  }
+
+  .history__inner.js-slide-2 & {
+    transform: translateX(-20%);
+  }
+
+  .history__inner.js-slide-3 & {
+    transform: translateX(-40%);
+  }
+
+  .history__inner.js-slide-4 & {
+    transform: translateX(-60%);
+  }
+
+  .history__inner.js-slide-5 & {
+    transform: translateX(-80%);
+  }
+}

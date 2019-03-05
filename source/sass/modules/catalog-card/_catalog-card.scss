@@ -1,0 +1,5 @@
+.catalog-card {
+  @media (min-width: $medium-min-width) {
+    display: flex;
+  }
+}

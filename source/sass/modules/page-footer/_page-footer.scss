@@ -1,0 +1,12 @@
+.page-footer {
+  background: {
+    color: #252424;
+    image: url("../img/page-footer-background-mobile.png");
+    position: center;
+    repeat: no-repeat;
+  }
+
+  @media (min-width: $medium-min-width) {
+    background-image: url("../img/page-footer-background-tablet.png");
+  }
+}

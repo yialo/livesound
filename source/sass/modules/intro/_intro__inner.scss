@@ -1,0 +1,14 @@
+.intro__inner {
+  padding-top: calc(var(--page-header-bypass) + 60px);
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: var(--page-header-bypass);
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-bottom: 200px;
+  }
+}

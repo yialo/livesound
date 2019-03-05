@@ -1,0 +1,25 @@
+.page-footer__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+
+  @media (min-width: $medium-min-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: flex-start;
+    padding-top: 50px;
+    background-image: url("../img/footer-background-icon.png");
+    background-repeat: no-repeat;
+    background-position: 700px 50px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding-left: 337px;
+    padding-right: 342px;
+    background-position-x: 990px;
+  }
+}

@@ -1,0 +1,9 @@
+.contacts__socials {
+  margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    order: 1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

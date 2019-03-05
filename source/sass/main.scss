@@ -1,15 +1,41 @@
-/* stylelint-disable */
-
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
-
-@import "vendors/normalize.scss";
-@import "vendors/slick.scss";
-
-@import "base/root.scss";
-@import "base/fonts.scss";
-@import "base/global.scss";
-
-@import "utilities/*.scss";
-
-@import "modules/*.scss";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "vendors/normalize";
+@import "vendors/slick";
+@import "base/root";
+@import "base/fonts";
+@import "base/global";
+@import "utilities/*";
+@import "modules/about/*";
+@import "modules/acknowledgements/*";
+@import "modules/address/*";
+@import "modules/advantages/*";
+@import "modules/catalog/*";
+@import "modules/catalog-card/*";
+@import "modules/catalog-volume/*";
+@import "modules/contacts/*";
+@import "modules/copyright/*";
+@import "modules/creator/*";
+@import "modules/experience/*";
+@import "modules/history/*";
+@import "modules/intro/*";
+@import "modules/language-toggle/*";
+@import "modules/logo/*";
+@import "modules/main-navigation/*";
+@import "modules/menu-controls/*";
+@import "modules/mission/*";
+@import "modules/modal/*";
+@import "modules/page/*";
+@import "modules/page-footer/*";
+@import "modules/page-header/*";
+@import "modules/page-main/*";
+@import "modules/partners/*";
+@import "modules/project-card/*";
+@import "modules/project-cards/*";
+@import "modules/projects/*";
+@import "modules/promo/*";
+@import "modules/promo-slide/*";
+@import "modules/slider-controls/*";
+@import "modules/socials/*";
+@import "modules/supremacy/*";
+@import "modules/team-gallery/*";

@@ -1,0 +1,7 @@
+.page-footer__column-2 {
+  margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 0;
+  }
+}

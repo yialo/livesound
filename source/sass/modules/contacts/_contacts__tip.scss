@@ -1,0 +1,12 @@
+.contacts__tip {
+  display: none;
+
+  @media (min-width: $large-min-width) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @include font(400, 28px, 42px);
+    color: $light-gray;
+  }
+}

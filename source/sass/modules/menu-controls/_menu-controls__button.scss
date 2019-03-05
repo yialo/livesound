@@ -1,0 +1,39 @@
+.menu-controls__button {
+  display: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-size: cover;
+  border-style: none;
+  cursor: pointer;
+
+  &.is-visible {
+    display: block;
+  }
+
+  &--open {
+    width: 60px;
+    height: 30px;
+    background-image: url("../img/menu-controls__button--open.svg");
+    background-position-x: left;
+  }
+
+  &--close {
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/menu-controls__button--close.svg");
+    background-position-x: right;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--close {
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    &.is-visible {
+      display: none;
+    }
+  }
+}

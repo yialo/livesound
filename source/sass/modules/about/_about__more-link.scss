@@ -1,0 +1,24 @@
+.about__more-link {
+  display: block;
+
+  @include font(400, 16px, 28px);
+  text-decoration: underline;
+  color: $azure;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (min-width: $medium-min-width) {
+    @include font(400, 20px, 30px);
+  }
+
+  @media (min-width: $large-min-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-top: auto;
+    font-size: 18px;
+  }
+}

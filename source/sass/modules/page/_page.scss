@@ -1,0 +1,9 @@
+.page {
+  &.js-show-modal {
+    overflow: hidden;
+
+    @media (min-width: $large-min-width) {
+      margin-right: 15px;
+    }
+  }
+}
