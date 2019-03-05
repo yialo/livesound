@@ -1,0 +1,18 @@
+.team-gallery__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @media (min-width: $medium-min-width) {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px 11px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    grid-template-rows: repeat(4, 394px);
+    grid-template-columns: repeat(3, 592px);
+    grid-gap: 12px;
+  }
+}

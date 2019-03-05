@@ -1,0 +1,20 @@
+.promo-slide {
+  display: flex;
+  width: 100%;
+  background-color: #1a1a2b;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url("../img/promo-slide-background-small.jpg");
+
+  @media (min-width: $medium-min-width) {
+    background-image: url("../img/promo-slide-background-medium.jpg");
+  }
+
+  @media (min-width: $large-min-width) {
+    background-image: url("../img/promo-slide-background-large.jpg");
+  }
+
+  @media (min-width: $huge-min-width) {
+    background-image: url("../img/promo-slide-background-huge.jpg");
+  }
+}

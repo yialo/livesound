@@ -1,5 +1,5 @@
 .projects__heading {
-  @include margin-hor;
+  @include margin-hor();
   width: $small-min-width;
   margin-top: 0;
   margin-bottom: 20px;
@@ -32,8 +32,4 @@
     padding-left: 5px;
     padding-right: 5px;
   }
-}
-
-.projects__content {
-  max-width: 1920px;
 }

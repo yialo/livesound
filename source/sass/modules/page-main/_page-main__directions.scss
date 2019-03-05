@@ -1,0 +1,11 @@
+.page-main__directions {
+  margin-bottom: 60px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 100px;
+  }
+}

@@ -1,29 +1,10 @@
-$socialNewtorkNames: (
-  "instagram",
-  "youtube",
-  "facebook"
-);
-
-.socials__list {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.socials__item {
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  @media (min-width: $huge-min-width) {
-    &:not(:last-child) {
-      margin-right: 17px;
-    }
-  }
-}
-
 .socials__link {
+  $socialNewtorkNames: (
+    "instagram",
+    "youtube",
+    "facebook"
+  );
+
   display: block;
   width: 40px;
   height: 40px;

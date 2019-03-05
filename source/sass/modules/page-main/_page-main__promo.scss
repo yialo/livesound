@@ -1,0 +1,11 @@
+.page-main__promo {
+  margin-bottom: 50px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 110px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 108px;
+  }
+}
