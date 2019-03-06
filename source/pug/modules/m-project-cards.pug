@@ -10,5 +10,6 @@ mixin project-cards()
     ];
   ul.project-cards
     each item, index in PROJECT_CARDS
-      li.project-cards__item
+      li(class=['project-cards__item', 'project-cards__item--regular'])
         +project-card(index + 1, item)
+      li(class=['project-cards__item', 'project-cards__item--gallery'])
