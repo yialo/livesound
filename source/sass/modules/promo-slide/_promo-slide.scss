@@ -1,11 +1,15 @@
 .promo-slide {
-  display: flex;
   width: 100%;
   background: {
     color: #1a1a2b;
     image: url("../img/promo-slide-background-small.jpg");
     position: bottom;
     repeat: no-repeat;
+  }
+
+  &--2 {
+    position: relative;
+    z-index: 0;
   }
 
   @media (min-width: $medium-min-width) {

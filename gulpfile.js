@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use strict';
 
 // Variables
@@ -113,6 +115,11 @@ var copybitmap = function () {
     .pipe(gulp.dest('./build/img/'));
 }
 
+var copyvideo = function () {
+  return gulp.src('./source/video/*')
+    .pipe(gulp.dest('./build/video'));
+};
+
 var scripts = function () {
   return gulp.src('./source/js/*.js')
     .pipe(minjs())
@@ -157,7 +164,7 @@ var serve = function () {
 
 // Gulp tasks
 
-gulp.task('build', gulp.series(cleanbuild, copyfonts, copysvg, copybitmap, scripts, style, html));
+gulp.task('build', gulp.series(cleanbuild, copyfonts, copysvg, copybitmap, copyvideo, scripts, style, html));
 gulp.task('serve', serve);
 
 gulp.task('imagemin', gulp.parallel(minsvg, minbitmap));
