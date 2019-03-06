@@ -1,5 +1,5 @@
 .history__date-button {
-  @include font(400, 48px, 48px);
+  @include font(400, 48px, 1);
   display: block;
   padding: 0;
   color: #1d1d1d;
@@ -20,7 +20,7 @@
           $color: if($number == $slide-number, #1d1d1d, #989898);
 
           &--#{$number} {
-            @include font(400, $font-size, 1);
+            font-size: $font-size;
             color: $color;
           }
         }
@@ -29,165 +29,87 @@
   }
 
   @media (min-width: $large-min-width) {
+    $slide-size-1-large: (35px, rgba(152, 152, 152, 0.32));
+    $slide-size-2-large: (40px, rgba(152, 152, 152, 0.42));
+    $slide-size-3-large: (45px, rgba(152, 152, 152, 0.52));
+    $slide-size-4-large: (55px, #989898);
+    $slide-size-5-large: (65px, #1d1d1d);
+
     $history-slides-large: (
       history-slide-1-large: (
-        (65px, #1d1d1d),
-        (55px, #989898),
-        (45px, rgba(152, 152, 152, 0.52)),
-        (40px, rgba(152, 152, 152, 0.42)),
-        (35px, rgba(152, 152, 152, 0.32)),
+        $slide-size-5-large,
+        $slide-size-4-large,
+        $slide-size-3-large,
+        $slide-size-2-large,
+        $slide-size-1-large,
       ),
       history-slide-2-large: (
-        (55px, #989898),
-        (65px, #1d1d1d),
-        (55px, #989898),
-        (45px, rgba(152, 152, 152, 0.52)),
-        (40px, rgba(152, 152, 152, 0.42)),
+        $slide-size-4-large,
+        $slide-size-5-large,
+        $slide-size-4-large,
+        $slide-size-3-large,
+        $slide-size-2-large,
       ),
       history-slide-3-large: (
-        (45px, rgba(152, 152, 152, 0.52)),
-        (55px, #989898),
-        (65px, #1d1d1d),
-        (55px, #989898),
-        (45px, rgba(152, 152, 152, 0.52)),
+        $slide-size-3-large,
+        $slide-size-4-large,
+        $slide-size-5-large,
+        $slide-size-4-large,
+        $slide-size-3-large,
       ),
       history-slide-4-large: (
-        (40px, rgba(152, 152, 152, 0.42)),
-        (45px, rgba(152, 152, 152, 0.52)),
-        (55px, #989898),
-        (65px, #1d1d1d),
-        (55px, #989898),
+        $slide-size-2-large,
+        $slide-size-3-large,
+        $slide-size-4-large,
+        $slide-size-5-large,
+        $slide-size-4-large,
       ),
       history-slide-5-large: (
-        (35px, rgba(152, 152, 152, 0.32)),
-        (40px, rgba(152, 152, 152, 0.42)),
-        (45px, rgba(152, 152, 152, 0.52)),
-        (55px, #989898),
-        (65px, #1d1d1d),
+        $slide-size-1-large,
+        $slide-size-2-large,
+        $slide-size-3-large,
+        $slide-size-4-large,
+        $slide-size-5-large,
       ),
     );
 
-    .test {
-      @debug($history-slides-large);
+    @for $i from 1 through length($history-slides-large) {
+      .history__inner.js-slide-#{$i} & {
+        $slide: nth(nth($history-slides-large, $i), 2);
+
+        @for $j from 1 through length($slide) {
+          $font-size: nth(nth($slide, $j), 1);
+          $color: nth(nth($slide, $j), 2);
+
+          &--#{$j} {
+            font-size: $font-size;
+            color: $color;
+          }
+        }
+      }
     }
   }
 
-  // TODO: доработать цикл
-
-  // .history__inner.js-slide-#{index($history-slides-large, $outer-item)} & {
-  //   @each $key, $outer-value in $outer-item {
-  //     @debug($outer-item);
-  //   }
-  // }
-
   @media (min-width: $huge-min-width) {
-    .history__inner.js-slide-1 & {
-      &--1 {
-        @include font(400, 75px, 75px);
-      }
+    $history-slides-huge: (
+      history-slide-1-huge: (75px 65px 55px 45px 40px),
+      history-slide-2-huge: (65px 75px 65px 55px 45px),
+      history-slide-3-huge: (55px 65px 75px 65px 55px),
+      history-slide-4-huge: (45px 55px 65px 75px 65px),
+      history-slide-5-huge: (40px 45px 55px 65px 75px),
+    );
 
-      &--2 {
-        @include font(400, 65px, 65px);
-      }
+    @for $i from 1 through length($history-slides-huge) {
+      $slide: nth(nth($history-slides-huge, $i), 2);
 
-      &--3 {
-        @include font(400, 55px, 55px);
-      }
+      .history__inner.js-slide-#{$i} & {
+        @for $j from 1 through length($slide) {
+          $font-size: nth($slide, $j);
 
-      &--4 {
-        @include font(400, 45px, 45px);
-      }
-
-      &--5 {
-        @include font(400, 40px, 40px);
-      }
-    }
-
-    .history__inner.js-slide-2 & {
-      &--1 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--2 {
-        @include font(400, 75px, 75px);
-      }
-
-      &--3 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--4 {
-        @include font(400, 55px, 55px);
-      }
-
-      &--5 {
-        @include font(400, 45px, 45px);
-      }
-    }
-
-    .history__inner.js-slide-3 & {
-      &--1 {
-        @include font(400, 55px, 55px);
-      }
-
-      &--2 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--3 {
-        @include font(400, 75px, 75px);
-      }
-
-      &--4 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--5 {
-        @include font(400, 55px, 55px);
-      }
-    }
-
-    .history__inner.js-slide-4 & {
-      &--1 {
-        @include font(400, 45px, 45px);
-      }
-
-      &--2 {
-        @include font(400, 55px, 55px);
-      }
-
-      &--3 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--4 {
-        @include font(400, 75px, 75px);
-      }
-
-      &--5 {
-        @include font(400, 65px, 65px);
-      }
-    }
-
-    .history__inner.js-slide-5 & {
-      &--1 {
-        @include font(400, 40px, 40px);
-      }
-
-      &--2 {
-        @include font(400, 45px, 45px);
-      }
-
-      &--3 {
-        @include font(400, 55px, 55px);
-      }
-
-      &--4 {
-        @include font(400, 65px, 65px);
-      }
-
-      &--5 {
-        @include font(400, 75px, 75px);
+          &--#{$j} {
+            font-size: $font-size;
+          }
+        }
       }
     }
   }
