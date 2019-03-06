@@ -4,7 +4,8 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "acorn": "^6.1.1"
+    "acorn": "^6.1.1",
+    "braces": "^2.3.2"
   },
   "description": "Livesound project website",
   "devDependencies": {
