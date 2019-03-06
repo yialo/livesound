@@ -4,22 +4,31 @@
   padding: 25px 20px;
 
   @media (min-width: $medium-min-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex: {
+      direction: row;
+      wrap: wrap;
+    }
     justify-content: space-between;
   }
 
   @media (min-width: $large-min-width) {
     justify-content: flex-start;
     padding-top: 50px;
-    background-image: url("../img/footer-background-icon.png");
-    background-repeat: no-repeat;
-    background-position: 700px 50px;
+    background: {
+      image: url("../img/footer-background-icon.png");
+      position: {
+        x: 700px;
+        y: 50px;
+      }
+      repeat: no-repeat;
+    }
   }
 
   @media (min-width: $huge-min-width) {
-    padding-left: 337px;
-    padding-right: 342px;
+    padding: {
+      left: 337px;
+      right: 342px;
+    }
     background-position-x: 990px;
   }
 }

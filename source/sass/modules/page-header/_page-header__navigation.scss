@@ -23,8 +23,10 @@
     z-index: auto;
     display: block;
     width: auto;
-    margin-left: auto;
-    margin-right: 90px / $large-min-width * 100%;
+    margin: {
+      left: auto;
+      right: 90px / $large-min-width * 100%;
+    }
   }
 
   @media (min-width: $huge-min-width) {

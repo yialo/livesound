@@ -6,8 +6,10 @@
   transform: translateX(-50%);
   display: none;
   width: 270px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: {
+    top: 50px;
+    bottom: 50px;
+  }
   transition: transform 0.5s;
 
   @for $i from 1 through 7 {

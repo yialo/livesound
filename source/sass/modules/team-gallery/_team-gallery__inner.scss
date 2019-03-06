@@ -1,7 +1,9 @@
 .team-gallery__inner {
-  padding-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: {
+    bottom: 60px;
+    left: 20px;
+    right: 20px;
+  }
 
   @media (min-width: $medium-min-width) {
     padding-bottom: 90px;

@@ -1,8 +1,10 @@
 .promo__list {
   display: flex;
   width: 400%;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
   padding-left: 0;
 
   &.js-slide-1 {

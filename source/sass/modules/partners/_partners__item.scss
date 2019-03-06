@@ -1,6 +1,8 @@
 .partners__item {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid #e4e4e4;
@@ -36,8 +38,10 @@
     }
 
     .partners--short &:nth-child(3n+2) {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding: {
+        left: 60px;
+        right: 60px;
+      }
     }
 
     .partners--short &:nth-child(3n+1) {
@@ -47,8 +51,10 @@
   }
 
   @media (min-width: $huge-min-width) {
-    padding-top: 41px;
-    padding-bottom: 30px;
+    padding: {
+      top: 41px;
+      bottom: 30px;
+    }
 
     .partners--short &:nth-child(3n+1) {
       justify-content: center;

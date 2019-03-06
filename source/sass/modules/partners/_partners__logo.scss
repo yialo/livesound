@@ -1,7 +1,6 @@
 .partners__logo {
+  @include margin-hor();
   display: block;
-
-  @include margin-hor;
 
   @media (min-width: $medium-min-width) {
     @include margin-hor(0);

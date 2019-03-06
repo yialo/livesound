@@ -1,9 +1,11 @@
 .menu-controls__button {
   display: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position-y: top;
-  background-size: cover;
+  background: {
+    color: transparent;
+    position-y: top;
+    size: cover;
+    repeat: no-repeat;
+  }
   border-style: none;
   cursor: pointer;
 
@@ -14,15 +16,19 @@
   &--open {
     width: 60px;
     height: 30px;
-    background-image: url("../img/menu-controls__button--open.svg");
-    background-position-x: left;
+    background: {
+      image: url("../img/menu-controls__button--open.svg");
+      position-x: left;
+    }
   }
 
   &--close {
     width: 32px;
     height: 32px;
-    background-image: url("../img/menu-controls__button--close.svg");
-    background-position-x: right;
+    background: {
+      image: url("../img/menu-controls__button--close.svg");
+      position-x: right;
+    }
   }
 
   @media (min-width: $medium-min-width) {

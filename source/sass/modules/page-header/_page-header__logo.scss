@@ -4,8 +4,10 @@
   }
 
   @media (min-width: $large-min-width) {
-    margin-left: 0;
-    margin-right: 90px / $large-min-width * 100%;
+    margin: {
+      left: 0;
+      right: (90px / $large-min-width * 100%);
+    }
   }
 
   @media (min-width: $huge-min-width) {

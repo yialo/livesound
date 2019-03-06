@@ -1,6 +1,8 @@
 .project-cards {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
   padding-left: 0;
 
   @media (min-width: $cards-2-col-min-width) {

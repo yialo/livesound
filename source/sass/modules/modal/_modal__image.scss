@@ -1,4 +1,4 @@
 .modal__image {
-  @include margin-hor;
+  @include margin-hor();
   display: block;
 }
