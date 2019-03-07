@@ -80,6 +80,7 @@ mixin project-cards()
           a.project-card__link(
             href=`img/project-gallery--${i}-1.jpg`,
             data-lightbox=`projects-${i}`,
+            data-headline=group,
             data-title=captions[0],
             data-alt=captions[0],
           )
@@ -105,6 +106,7 @@ mixin project-cards()
             a.project-cards__link(
               href=`img/project-gallery--${i}-${j}.jpg`,
               data-lightbox=`projects-${i}`,
+              data-headline=group,
               data-title=title,
               data-alt=title,
             )

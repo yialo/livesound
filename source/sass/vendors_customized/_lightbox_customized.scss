@@ -13,3 +13,16 @@
 .lb-data .lb-close {
   background-image: url("../img/lightbox-close.png");
 }
+
+.lb-headlineContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.lb-headline {
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #cccccc;
+}
