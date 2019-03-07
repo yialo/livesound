@@ -1,6 +1,6 @@
 mixin promo-slide(promoSlideNumber, promoSlideTitle, promoSlideSubitle)
   .promo-slide(class=`promo-slide--${promoSlideNumber}`)
-    if promoSlideNumber === 2
+    if promoSlideNumber === 1
       .promo-slide__video-wrapper
         video.promo-slide__video(autoplay)
           source(src='video/test-video.mp4', type='video/mp4')
