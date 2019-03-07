@@ -7,6 +7,7 @@
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const flatten = require('gulp-flatten');
+const gifsicle = require('imagemin-gifsicle');
 const gulp = require('gulp');
 const jpegtran = require('imagemin-jpegtran');
 const mincss = require('gulp-csso');
@@ -85,9 +86,10 @@ const minsvg = function mimimizeSvgImages() {
 
 const minbitmap = function minimizeBitmapImages() {
   return gulp
-    .src('./source/imgraw/*.{jpg,png}')
+    .src('./source/imgraw/*.{gif,jpg,png}')
     .pipe(
       minimage([
+        gifsicle(),
         jpegtran({ progressive: true }),
         mozjpeg({ quality: 90 }),
         pngquant({ speed: 1, quality: [0.8, 0.8] }),
@@ -116,7 +118,7 @@ const copysvg = function copySvgImagesToBuildFolder() {
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
   return gulp
-    .src('./source/bitmaps/**/*.{jpg,png}')
+    .src('./source/bitmaps/**/*.{gif,jpg,png}')
     .pipe(flatten())
     .pipe(gulp.dest('./build/img/'));
 };
@@ -188,7 +190,7 @@ const watchSvg = function watchForSvgFiles() {
 const watchBitmaps = function watchForBitmapFiles() {
   return gulp
     .watch(
-      './source/bitmaps/**/*.{jpg,png}',
+      './source/bitmaps/**/*.{gif,jpg,png}',
       gulp.series(copybitmaps, reload),
     );
 };
