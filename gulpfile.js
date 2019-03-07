@@ -100,7 +100,7 @@ const minbitmap = function minimizeBitmapImages() {
 };
 
 const cleanbuild = function deleteFormerBuildFolder() {
-  return del('./dist/');
+  return del('./build/');
 };
 
 const copyfonts = function copyFontFilesToBuildFolder() {
