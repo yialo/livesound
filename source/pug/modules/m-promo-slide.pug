@@ -3,7 +3,7 @@ mixin promo-slide(promoSlideNumber, promoSlideTitle, promoSlideSubitle)
     if promoSlideNumber === 2
       .promo-slide__video-wrapper
         video.promo-slide__video(autoplay)
-          source(src='../video/test-video.mp4', type='video/mp4')
+          source(src='video/test-video.mp4', type='video/mp4')
     .promo-slide__inner.aligner
       .promo-slide__content
         h3.promo-slide__title= promoSlideTitle
