@@ -3,6 +3,9 @@ extends common/template-page.pug
 block title
   | Главная | Live Sound Agency
 
+block jquery-preload
+  include common/jquery-preload
+
 block body
   body.page.page--index
     .page__header
@@ -26,5 +29,4 @@ block body
       +page-footer('index')
     include common/common-scripts.pug
     script(src='js/promo-slider.js')
-    script(src='js/jquery-3.3.1.js')
-    script(src='js/lightbox_customized.js')
+    include common/project-card-scripts.pug
