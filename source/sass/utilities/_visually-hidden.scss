@@ -1,12 +1,18 @@
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-  white-space: nowrap;
-  clip-path: inset(100%);
+  @at-root {
+    &:not(:focus):not(:active),
+    input[type="checkbox"]#{&},
+    input[type="radio"]#{&} {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      white-space: nowrap;
+      border: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(100%);
+    }
+  }
 }
