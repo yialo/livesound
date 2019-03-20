@@ -1,26 +1,26 @@
 mixin advantages()
+  -
+    const ADVANTAGES_ITEMS = [
+      ['Опыт', 'Лидирующая звуковая компания России с 1990 года'],
+      [
+        'Профессионализм',
+        'Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала',
+      ],
+      [
+        'Качество',
+        'Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, SHURE)',
+      ],
+      [
+        'Надежность',
+        'Выполняем райдер любого артиста (от российской сцены до мировой звезды)',
+      ],
+    ];
   section.advantages
     .advantages__inner.aligner
       h2.advantages__heading.heading Преимущества
       ul.advantages__list
-        - var i = 1;
-        mixin advantages__item(heading, description)
-          li.advantages__item(class=`advantages__item--${i++}`)
+        each item, index in ADVANTAGES_ITEMS
+          - const [heading, description] = item;
+          li(class=['advantages__item', `advantages__item--${index + 1}`])
             h3.advantages__caption= heading
             p.advantages__description!= description
-        +advantages__item(
-          'Опыт',
-          'Лидирующая звуковая компания России с 1990 года'
-        )
-        +advantages__item(
-          'Профессионализм',
-          'Лучшие инженеры. Внутренняя система обучения и повышения квалификации технического персонала'
-        )
-        +advantages__item(
-          'Качество',
-          'Современное оборудование от компаний-лидеров мирового рынка (L-Acoustics, Yamaha, <span class="advantages__string">Shure</span>)'
-        )
-        +advantages__item(
-          'Надежность',
-          'Выполняем райдер любого артиста (от российской сцены до мировой звезды)'
-        )

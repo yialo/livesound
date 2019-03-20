@@ -1,15 +1,25 @@
 mixin team-gallery()
+  -
+    const TEAM_GALLERY_SOURCES = [
+      [viewportHugeMinWidth, 'huge'],
+      [viewportLargeMinWidth, 'large'],
+      [viewportMediumMinWidth, 'medium'],
+    ];
   section.team-gallery
     div.team-gallery__inner.aligner
       h2.visually-hidden Фотографии наших сотрудников
       ul.team-gallery__list
-        mixin team-gallery__item(itemNumber)
-          li.team-gallery__item(class='team-gallery__item--' + itemNumber)
+        - for (let i = 1; i <= 6; i += 1)
+          li(class=['team-gallery__item', `team-gallery__item--${i}`])
             picture.team-gallery__wrapper
-              source(media=viewportHugeMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-huge.jpg')
-              source(media=viewportLargeMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-large.jpg')
-              source(media=viewportMediumMinWidth srcset='img/team-gallery__photo--' + itemNumber + '-large.jpg')
-              img.team-gallery__photo(class='team-gallery__photo--' + itemNumber src='img/team-gallery__photo--' + itemNumber + '-small.jpg' alt='Наша команда, фото ' + itemNumber)
-        - var i = 1;
-        while i <= 6
-          +team-gallery__item(i++)
+              each source in TEAM_GALLERY_SOURCES
+                - const [viewport, modifier] = source;
+                source(
+                  media=viewport,
+                  srcset=`img/team-gallery__photo--${i}-${modifier}.jpg`,
+                )
+              img(
+                class=['team-gallery__photo', `team-gallery__photo--${i}`],
+                src=`img/team-gallery__photo--${i}-small.jpg`,
+                alt=`Наша команда, фото ${i}`,
+              )

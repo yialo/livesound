@@ -20,11 +20,27 @@ mixin promo()
     ];
   section.promo
     h2.visually-hidden Промо-блок
-    div.promo__slider
-      ul.promo__list.js-slide-1
+    .promo__slider
+      .promo__list
         each item, index in PROMO_ITEMS
-          - const [title, subtitle] = item;
-          li.promo__item
-            +promo-slide(index + 1, title, subtitle)
-    div(class="promo__slider-controls")
-      +slider-controls()
+          -
+            const number = index + 1;
+            const [title, subtitle] = item;
+          .promo__item
+            div(class=['promo-slide', `promo-slide--${number}`])
+              //- if number === 1
+              //-   .promo-slide__video-wrapper
+              //-     video.promo-slide__video(autoplay)
+              //-       source(src='video/test-video.mp4', type='video/mp4')
+              .promo-slide__inner.aligner
+                .promo-slide__content
+                  h3.promo-slide__title= title
+                  p.promo-slide__subtitle= subtitle
+                a.promo-slide__more-link(
+                  href='#',
+                  aria-label='Узнать подробности',
+                )
+    .promo__slider-controls
+      .slider-controls
+        .aligner
+          .slider-controls__inner

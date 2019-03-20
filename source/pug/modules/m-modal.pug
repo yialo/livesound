@@ -3,20 +3,22 @@ mixin modal()
     .modal__container
       ul.modal__list
         li.modal__overlay
-        mixin modal__item(itemNumber)
-          li.modal__item(class=`modal__item--${itemNumber}`)
-            picture
+        - for (let i = 1; i <= 7; i += 1)
+          li(class=['modal__item', `modal__item--${i}`])
+            picture.modal__image-wrapper
               source(
-                media=viewportMediumMinWidth
-                srcset=`img/modal__image--${itemNumber}-medium.jpg`
+                media=viewportMediumMinWidth,
+                srcset=`img/modal__image--${i}-medium.jpg`,
               )
-              img.modal__image(
-                class=`modal__image--${itemNumber}`
-                src=`img/modal__image--${itemNumber}-small.jpg`
-                alt=`Благодарность №${itemNumber}`
-                )
-            button.modal__close-button(class=`modal__close-button--${itemNumber}` type='botton')
-        - var i = 1;
-        while i <= 7
-          +modal__item(i)
-          - i++;
+              img(
+                class=['modal__image', `modal__image--${i}`],
+                src=`img/modal__image--${i}-small.jpg`,
+                alt=`Благодарность №${i}`,
+              )
+            button(
+              class=[
+                'modal__close-button',
+                `modal__close-button--${i}`,
+              ],
+              type='botton',
+            )

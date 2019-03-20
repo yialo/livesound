@@ -1,0 +1,36 @@
+/* stylelint-disable */
+
+.slider-controls .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  button {
+    display: block;
+    width: 23px;
+    height: 23px;
+    font-size: 0;
+    background-color: transparent;
+    border: {
+      width: 1px;
+      style: solid;
+      color: #f8f8f8;
+      radius: 50%;
+    }
+    cursor: pointer;
+  }
+
+  .slick-active button {
+    background-color: white;
+  }
+}

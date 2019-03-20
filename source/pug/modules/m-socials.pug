@@ -1,22 +1,18 @@
-mixin socials(socials_options)
-  -
-    const socialNetworkNames = [
-      {'instagram': 'Instargam'},
-      {'youtube': 'Youtube'},
-      {'facebook': 'Facebook'}
-    ];
-    let locationClass = '';
-  if (socials_options.blockId === 'contacts')
-    - locationClass = {class: `socials--${socials_options.blockId}`};
-  aside.socials&attributes(locationClass)
+mixin socials(blockId=null)
+  - const SOCIALS_ITEMS = ['instagram', 'youtube', 'facebook'];
+  aside(class=[
+    'socials',
+    blockId === 'contacts' ? `socials--${blockId}` : null,
+  ])
     ul.socials__list
-      mixin socials__item(socialsItem_options)
+      each item in SOCIALS_ITEMS
+        - const label = item.slice(0, 1).toUpperCase().concat(item.slice(1));
         li.socials__item
-          a.socials__link(class=`socials__link--${socialsItem_options.modifier}` href='#')
-            span.visually-hidden= socialsItem_options.name
-      each item in socialNetworkNames
-        each value, key in item
-          +socials__item({
-            modifier: key,
-            name: value
-          })
+          a(
+            class=[
+              'socials__link',
+              `socials__link--${item}`,
+            ],
+            href='#',
+            aria-label=label,
+          )
