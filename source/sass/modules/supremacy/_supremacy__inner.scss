@@ -1,0 +1,32 @@
+.supremacy__inner {
+  padding: {
+    top: 80px;
+    bottom: 100px;
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    padding: {
+      top: 100px;
+      bottom: 120px;
+      left: 120px;
+      right: 120px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding: {
+      top: 150px;
+      left: 500px;
+      right: 500px;
+    }
+  }
+}

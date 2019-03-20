@@ -1,0 +1,12 @@
+.history__slider {
+  @include margin-hor();
+  overflow: hidden;
+
+  @media (min-width: $medium-min-width) {
+    width: 488px;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: auto;
+  }
+}

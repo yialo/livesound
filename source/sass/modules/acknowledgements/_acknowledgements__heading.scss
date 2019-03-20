@@ -1,0 +1,26 @@
+.acknowledgements__heading {
+  margin: {
+    top: 0;
+    bottom: 60px;
+  }
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+  font-size: 28px;
+  line-height: 42px;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+
+  @media (min-width: $medium-min-width) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $large-min-width) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+}

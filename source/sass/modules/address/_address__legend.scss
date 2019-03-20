@@ -1,0 +1,10 @@
+.address__legend {
+  .address--contacts & {
+    display: block;
+    color: $light-gray;
+  }
+
+  .address--footer & {
+    display: none;
+  }
+}

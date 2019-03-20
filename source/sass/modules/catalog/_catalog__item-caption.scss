@@ -1,0 +1,50 @@
+.catalog__item-caption {
+  position: relative;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-right: 40px;
+
+  @include font(400, 16px, 30px);
+  text-transform: uppercase;
+  outline-style: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(45deg);
+    width: 17px;
+    height: 17px;
+    border: {
+      top: 1px solid $dark-gray;
+      right: 1px solid $dark-gray;
+    }
+  }
+
+  .is-active & {
+    margin-bottom: 40px;
+  }
+
+  .is-active &::after {
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  @media (min-width: $medium-min-width) {
+    padding: {
+      left: 20px;
+      right: 60px;
+    }
+
+    @include font(400, 35px, 40px);
+    text-transform: none;
+
+    &::after {
+      right: 32px;
+    }
+  }
+}

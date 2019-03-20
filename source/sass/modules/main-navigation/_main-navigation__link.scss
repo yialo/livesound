@@ -1,0 +1,60 @@
+.main-navigation__link {
+  .main-navigation--header & {
+    @include font(400, 18px, 20px);
+    display: block;
+    padding: 15px 20px;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    color: white;
+    background-color: #1a1a2b;
+
+    &:hover {
+      background-color: #29294c;
+    }
+  }
+
+  .main-navigation--header &.is-current {
+    background-color: #29293c;
+  }
+
+  .main-navigation--footer & {
+    @include font(400, 14px, 21px);
+    color: $light-gray;
+  }
+
+  @media (min-width: $medium-min-width) {
+    .main-navigation--header & {
+      @include font(400, 20px, 30px);
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    .main-navigation--header & {
+      display: inline;
+      padding: 0;
+      font: {
+        weight: 400;
+        size: 24px;
+        family: "PT Sans Narrow", "Arial", sans-serif;
+      }
+      line-height: 32px;
+      text-transform: none;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .main-navigation--header &.is-current {
+      background-color: transparent;
+    }
+
+    .main-navigation--footer & {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

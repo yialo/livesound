@@ -1,0 +1,35 @@
+.catalog__table-cell {
+  display: block;
+
+  @include font(400, 16px, 24px);
+
+  &--name {
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  &--value {
+    padding-left: 20px;
+    color: #828282;
+  }
+
+  @media (min-width: $large-min-width) {
+    display: table-cell;
+    padding: {
+      top: 15px;
+      bottom: 15px;
+    }
+    vertical-align: text-top;
+
+    &--name {
+      @include font(400, 18px, 30px);
+      margin-bottom: 0;
+      padding-right: 10px;
+    }
+
+    &--value {
+      padding-left: 0;
+      text-align: right;
+    }
+  }
+}

@@ -1,15 +1,11 @@
-/* stylelint-disable */
-
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
-
-@import "vendors/normalize.scss";
-@import "vendors/slick.scss";
-
-@import "base/root.scss";
-@import "base/fonts.scss";
-@import "base/global.scss";
-
-@import "utilities/*.scss";
-
-@import "modules/*.scss";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "vendors/normalize";
+@import "vendors/slick";
+@import "vendors/lightbox";
+@import "vendors_customized/*";
+@import "base/root";
+@import "base/fonts";
+@import "base/global";
+@import "utilities/*";
+@import "modules/**/*";

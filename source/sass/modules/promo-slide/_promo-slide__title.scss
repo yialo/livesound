@@ -1,0 +1,31 @@
+.promo-slide__title {
+  margin: {
+    top: 0;
+    bottom: 20px;
+  }
+  font-weight: 400;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+
+  @media (min-width: $medium-min-width) {
+    word-spacing: 10px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 10px;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+    text-align: left;
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding: {
+      left: 328px;
+      right: 500px;
+    }
+  }
+}

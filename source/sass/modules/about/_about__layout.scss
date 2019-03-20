@@ -1,0 +1,5 @@
+.about__layout {
+  @media (min-width: $large-min-width) {
+    display: flex;
+  }
+}

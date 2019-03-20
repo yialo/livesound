@@ -1,0 +1,14 @@
+.catalog-card__paragraph {
+  margin: {
+    top: 0;
+    bottom: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,12 @@
+.project-cards__item {
+  box-shadow: 0 0 3px 0 $dark-gray;
+
+  @media (min-width: $cards-2-col-min-width) {
+    width: 50%;
+    box-shadow: none;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: calc(100% / 3);
+  }
+}

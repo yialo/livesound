@@ -1,0 +1,58 @@
+.intro {
+  background: {
+    position-x: 50%;
+    position-y: -150px;
+    size: 800px 750px;
+    repeat: no-repeat;
+  }
+
+  $page-list: (about, projects, team, equipment, partners, contacts,);
+
+  @each $value in $page-list {
+    &--#{$value} {
+      background-image: url("../img/intro--#{$value}-small.jpg");
+    }
+  }
+
+  &--equipment {
+    background-position-y: -200px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    background: {
+      position-y: -300px;
+      size: 1230px 750px;
+    }
+
+    @each $value in $page-list {
+      &--#{$value} {
+        background-image: url("../img/intro--#{$value}-medium.jpg");
+      }
+    }
+
+    &--partners {
+      background-position-y: -250px;
+    }
+
+    &--contacts {
+      background-position-y: -250px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    background: {
+      position-y: -200px;
+      size: 1920px 750px;
+    }
+
+    @each $value in $page-list {
+      &--#{$value} {
+        background-image: url("../img/intro--#{$value}-large.jpg");
+      }
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    background-position-y: 0;
+  }
+}

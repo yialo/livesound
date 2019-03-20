@@ -1,19 +1,30 @@
 mixin catalog()
+  -
+    const CATALOG_ITEMS = [
+      'Акустические системы линейного массива',
+      'Активные акустические системы',
+      'Пассивные акустические системы',
+      'Мониторы сценические',
+      'Усилители',
+      'Цифровые микшерные пульты',
+      'Аналоговые микшерные пульты',
+      'Радиосистемы',
+      'Системы мониторинга In-Ear',
+    ];
+    const CATALOG_CARDS = [
+      'L-acoustics 108P',
+      'Meyer Sound UPA 1P',
+      'RCF ART 322-A',
+    ];
   section.catalog
     div.catalog__inner.aligner
       h2.visually-hidden
       ul.catalog__list
-        mixin catalog__item(catalogGroupCaption)
+        each item in CATALOG_ITEMS
           li.catalog__item
-            h3.catalog__item-caption(tabindex="0")= catalogGroupCaption
+            h3.catalog__item-caption(tabindex='0')= item
             div.catalog__item-content
-              +catalog-volume()
-        +catalog__item('Акустические системы линейного массива')
-        +catalog__item('Активные акустические системы')
-        +catalog__item('Пассивные акустические системы')
-        +catalog__item('Мониторы сценические')
-        +catalog__item('Усилители')
-        +catalog__item('Цифровые микшерные пульты')
-        +catalog__item('Аналоговые микшерные пульты')
-        +catalog__item('Радиосистемы')
-        +catalog__item('Системы мониторинга In-Ear')
+              ul.catalog-volume
+                each card, index in CATALOG_CARDS
+                  li.catalog-volume__item
+                    +catalog-card(index + 1, card)

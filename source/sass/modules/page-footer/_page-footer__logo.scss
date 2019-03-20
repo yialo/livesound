@@ -1,0 +1,7 @@
+.page-footer__logo {
+  margin-bottom: 10px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 20px;
+  }
+}

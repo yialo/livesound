@@ -1,0 +1,35 @@
+.page-header__navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 240px;
+
+  &.is-visible {
+    display: block;
+  }
+
+  @media (min-width: $medium-min-width) {
+    left: 90px;
+    width: 400px;
+  }
+
+  @media (min-width: $large-min-width) {
+    flex-grow: 1;
+    align-self: center;
+    position: static;
+    left: auto;
+    z-index: auto;
+    display: block;
+    width: auto;
+    margin: {
+      left: auto;
+      right: 90px / $large-min-width * 100%;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-right: 0;
+  }
+}

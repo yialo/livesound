@@ -1,0 +1,12 @@
+.page-header__menu-controls {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  z-index: 1;
+
+  @media (min-width: $medium-min-width) {
+    top: 50px;
+    left: 20px;
+    right: auto;
+  }
+}

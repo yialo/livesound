@@ -1,0 +1,12 @@
+.advantages__description {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+
+  @include font(400, 18px, 22px);
+
+  @media (min-width: $medium-min-width) {
+    text-align: center;
+  }
+}

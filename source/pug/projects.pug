@@ -3,6 +3,9 @@ extends common/template-page.pug
 block title
   | Проекты | Live Sound Agency
 
+block jquery-preload
+  include common/jquery-preload
+
 block body
   body.page.page--projects
     .page__header
@@ -18,3 +21,4 @@ block body
     .page__footer
       +page-footer('projects')
     include common/common-scripts.pug
+    include common/project-card-scripts.pug

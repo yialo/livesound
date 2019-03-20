@@ -1,26 +1,32 @@
 mixin partners(listSize, heading, specialModifier)
-  section.partners(class='partners--' + listSize + ' ' + specialModifier)
+  -
+    const PARTNERS_DATA = {
+      'short': [
+        ['lacoustics', 'L-Acoustics'],
+        ['yamaha', 'Yamaha'],
+        ['shure', 'SHURE'],
+        ['lacoustics', 'L-Acoustics'],
+        ['yamaha', 'Yamaha'],
+        ['shure', 'SHURE'],
+      ],
+      'long': [
+        ['yamaha', 'Yamaha'],
+        ['lacoustics', 'L-Acoustics'],
+        ['yamaha', 'Yamaha'],
+        ['brandday', 'День Бренда'],
+        ['shure', 'SHURE'],
+        ['mango', 'Mango'],
+        ['lacoustics', 'L-Acoustics'],
+        ['omega', 'Omega'],
+        ['shure', 'SHURE'],
+        ['shure-alt', 'SHURE'],
+      ],
+    };
+  section(class=['partners', `partners--${listSize}`, specialModifier])
     .partners__inner.aligner
       h2.partners__heading.heading= heading
       ul.partners__list
-        mixin partners__item(parnterImageName, partnerName)
+        each item in PARTNERS_DATA[listSize]
+          - const [path, alt] = item;
           li.partners__item
-            img.partners__logo(src='img/partners-' + parnterImageName + '.png' alt=partnerName)
-        if listSize === 'short'
-          +partners__item('lacoustics', 'L-Acoustics')
-          +partners__item('yamaha', 'Yamaha')
-          +partners__item('shure', 'SHURE')
-          +partners__item('lacoustics', 'L-Acoustics')
-          +partners__item('yamaha', 'Yamaha')
-          +partners__item('shure', 'SHURE')
-        if listSize === 'long'
-          +partners__item('yamaha', 'Yamaha')
-          +partners__item('lacoustics', 'L-Acoustics')
-          +partners__item('yamaha', 'Yamaha')
-          +partners__item('brandday', 'День Бренда')
-          +partners__item('shure', 'SHURE')
-          +partners__item('mango', 'Mango')
-          +partners__item('lacoustics', 'L-Acoustics')
-          +partners__item('omega', 'Omega')
-          +partners__item('shure', 'SHURE')
-          +partners__item('shure-alt', 'SHURE')
+            img.partners__logo(src=`img/partners-${path}.png`, alt=alt)

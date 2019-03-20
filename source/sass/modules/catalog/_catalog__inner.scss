@@ -1,0 +1,18 @@
+.catalog__inner {
+  padding: {
+    bottom: 80px;
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-bottom: 140px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding: {
+      left: 330px;
+      right: 330px;
+    }
+  }
+}

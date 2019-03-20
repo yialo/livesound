@@ -1,0 +1,24 @@
+.supremacy__heading {
+  margin: {
+    top: 0;
+    bottom: 30px;
+  }
+  font-size: 24px;
+  line-height: 40px;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 60px;
+    font-size: 36px;
+    line-height: 52px;
+  }
+}

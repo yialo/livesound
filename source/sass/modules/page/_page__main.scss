@@ -1,0 +1,11 @@
+.page__main {
+  .page--index & {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $large-min-width) {
+    .page--index & {
+      margin-bottom: 135px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.advantages__heading {
+  margin: {
+    top: 0;
+    bottom: 20px;
+  }
+  font-size: 28px;
+  line-height: 42px;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 60px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 100px;
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 98px;
+  }
+}

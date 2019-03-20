@@ -1,0 +1,8 @@
+.acknowledgements__image {
+  @include margin-hor();
+  display: block;
+
+  @media (min-width: $medium-min-width) {
+    @include margin-hor(0);
+  }
+}

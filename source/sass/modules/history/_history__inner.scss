@@ -1,0 +1,20 @@
+.history__inner {
+  @include margin-hor();
+  width: $small-min-width;
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    width: $medium-min-width;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 1180px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    width: 1000px;
+  }
+}

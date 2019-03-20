@@ -1,0 +1,12 @@
+.project-cards {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+
+  @media (min-width: $cards-2-col-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

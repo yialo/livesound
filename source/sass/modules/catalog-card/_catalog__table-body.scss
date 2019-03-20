@@ -1,0 +1,7 @@
+.catalog__table-body {
+  display: block;
+
+  @media (min-width: $large-min-width) {
+    display: table-row-group;
+  }
+}

@@ -1,0 +1,8 @@
+.history__content {
+  @include font(400, 18px, 30px);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  text-align: center;
+}

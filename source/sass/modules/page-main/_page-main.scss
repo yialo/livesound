@@ -1,0 +1,70 @@
+.page-main {
+  background: {
+    position: bottom;
+    repeat: no-repeat;
+  }
+
+  &--about {
+    background-image: url("../img/about-background-small.png");
+  }
+
+  &--projects {
+    background-image: url("../img/projects-background-small.png");
+  }
+
+  &--team {
+    background-image: url("../img/team-background-small.png");
+  }
+
+  &--equipment {
+    background-image: url("../img/equipment-background-small.jpg");
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--about {
+      background-image: url("../img/about-background-medium.png");
+    }
+
+    &--projects {
+      background-image: url("../img/projects-background-medium.png");
+    }
+
+    &--team {
+      background-image: url("../img/team-background-medium.png");
+    }
+
+    &--equipment {
+      background-image: url("../img/equipment-background-medium.jpg");
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    &--about {
+      background: {
+        image: url("../img/about-background-large.png");
+        position-y: calc(100% + 300px);
+      }
+    }
+
+    &--projects {
+      background: {
+        image: url("../img/projects-background-large.png");
+        position-y: calc(100% + 100px);
+      }
+    }
+
+    &--team {
+      background: {
+        image: url("../img/team-background-large.png");
+        position-y: 100%;
+      }
+    }
+
+    &--equipment {
+      background: {
+        image: url("../img/equipment-background-large.jpg");
+        position-y: 100%;
+      }
+    }
+  }
+}

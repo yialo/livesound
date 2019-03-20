@@ -1,0 +1,22 @@
+.advantages__list {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+
+  @media (min-width: $medium-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $huge-min-width) {
+    @include margin-hor();
+    width: 1140px;
+  }
+}

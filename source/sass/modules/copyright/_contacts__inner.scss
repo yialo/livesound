@@ -1,0 +1,12 @@
+.copyright {
+  @include font(400, 16px, 28px);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  color: #464646;
+}
+
+.copyright__string {
+  color: $light-gray;
+}

@@ -1,0 +1,44 @@
+.history__date-list {
+  @mixin history__date-list-shift($initial-shift-x) {
+    @for $i from 1 through 5 {
+      $x-shift: $initial-shift-x + (-20% * ($i - 1));
+
+      @if $x-shift == 0% {
+        $x-shift: str-slice(#{$x-shift}, 1, 1);
+      }
+
+      .history__inner.js-slide-#{$i} & {
+        transform: translateX($x-shift);
+      }
+    }
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500%;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+  transition: {
+    property: transform;
+    duration: 0.6s;
+    timing-function: ease-out;
+  }
+
+  @media (max-width: $small-max-width) {
+    @include history__date-list-shift(0);
+  }
+
+  @media (min-width: $medium-min-width) {
+    @include history__date-list-shift(20%);
+    width: calc(500% / 3);
+  }
+
+  @media (min-width: $large-min-width) {
+    @include history__date-list-shift(40%);
+    width: 100%;
+  }
+}

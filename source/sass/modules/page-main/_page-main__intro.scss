@@ -1,0 +1,39 @@
+.page-main__intro {
+  margin-bottom: 40px;
+
+  .page-main--partners & {
+    margin-bottom: 0;
+  }
+
+  .page-main--team & {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    .page-main--team & {
+      margin-bottom: 90px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 125px;
+
+    .page-main--projects & {
+      margin-bottom: 90px;
+    }
+
+    .page-main--contacts & {
+      margin-bottom: 70px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    .page-main--team & {
+      margin-bottom: 120px;
+    }
+
+    .page-main--equipment & {
+      margin-bottom: 140px;
+    }
+  }
+}

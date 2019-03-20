@@ -1,0 +1,7 @@
+.page-main__acknowledgements {
+  margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
+}

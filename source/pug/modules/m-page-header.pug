@@ -1,13 +1,41 @@
 mixin page-header(pageName)
+  -
+    const MENU_CONTROLS_BUTTONS = [['open', 'Показать'], ['close', 'Скрыть']];
+    const LANGUAGE_TOGGLE_DATA = [
+      ['russian', 'RU', 'русскую'],
+      ['english', 'EN', 'английскую'],
+    ];
   header.page-header
     .page-header__inner.aligner
       .page-header__menu-controls
-        +menu-controls()
+        nav.menu-controls
+          each item in MENU_CONTROLS_BUTTONS
+            - const [modifier, label] = item;
+            button(
+              class=[
+                'menu-controls__button',
+                `menu-controls__button--${modifier}`,
+                modifier === 'open' ? 'is-visible' : null,
+              ],
+              type='button',
+              aria-label=`${label} главное меню`,
+            )
       .page-header__logo
         +logo('header', pageName)
       .page-header__navigation
         +main-navigation(pageName, 'header')
       .page-header__socials
-        +socials('connection--header')
+        +socials()
       .page-header__language-toggle
-        +language-toggle()
+        .language-toggle
+          each item in LANGUAGE_TOGGLE_DATA
+            - const [modifier, content, label] = item;
+            a(
+              class=[
+                'language-toggle__link',
+                `language-toggle__link--${modifier}`,
+                modifier === 'RU' ? 'is-checked' : null,
+              ],
+              aria-label=`Переключиться на ${label} версию`
+            )
+              span.language-toggle__string(aria-hidden='true')= content

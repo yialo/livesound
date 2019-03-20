@@ -1,0 +1,20 @@
+.about__column-1 {
+  margin-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    float: right;
+    margin: {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    float: none;
+    margin: {
+      bottom: 0;
+      left: 0;
+      right: 45px;
+    }
+  }
+}

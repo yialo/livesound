@@ -1,0 +1,27 @@
+.experience__inner {
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    padding: {
+      left: 120px;
+      right: 120px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding: {
+      left: 420px;
+      right: 420px;
+    }
+  }
+}

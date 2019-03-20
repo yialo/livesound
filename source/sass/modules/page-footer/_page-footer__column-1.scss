@@ -1,0 +1,21 @@
+.page-footer__column-1 {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    order: 0;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-right: 100px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-right: 95px;
+  }
+}

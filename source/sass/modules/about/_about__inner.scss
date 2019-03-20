@@ -1,0 +1,13 @@
+.about__inner {
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    padding: {
+      left: 130px;
+      right: 130px;
+    }
+  }
+}

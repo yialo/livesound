@@ -1,14 +1,46 @@
 mixin promo()
+  -
+    const PROMO_ITEMS = [
+      [
+        'Текст слайда №1',
+        'Подпись слайда №1',
+      ],
+      [
+        'Профессиональное вуковое оборудование',
+        'Техническое сопровождение мероприятий',
+      ],
+      [
+        'Текст слайда №3',
+        'Высота блока слайдера равна высоте самого высокого из слайдов.',
+      ],
+      [
+        'Текст слайда №4',
+        'В этом случае не будет скачков блока слайдера по высоте при смене слайдов.',
+      ],
+    ];
   section.promo
     h2.visually-hidden Промо-блок
-    div.promo__slider
-      ul.promo__list.js-slide-2
-        mixin promo__item(promoItemNumber, promoSlideTitle, promoSlideSubitle)
-          li.promo__item
-            +promo-slide(promoItemNumber, promoSlideTitle, promoSlideSubitle)
-        +promo__item(1, 'Текст слайда №1', 'Подпись слайда №1')
-        +promo__item(2, 'Профессиональное звуковое оборудование', 'Техническое сопровождение мероприятий')
-        +promo__item(3, 'Текст слайда №3', 'Высота блока слайдера равна высоте самого высокого из слайдов.')
-        +promo__item(4, 'Текст слайда №4', 'В этом случае не будет скачков блока слайдера по высоте при смене слайдов.')
-    div(class="promo__slider-controls")
-      +slider-controls()
+    .promo__slider
+      .promo__list
+        each item, index in PROMO_ITEMS
+          -
+            const number = index + 1;
+            const [title, subtitle] = item;
+          .promo__item
+            div(class=['promo-slide', `promo-slide--${number}`])
+              //- if number === 1
+              //-   .promo-slide__video-wrapper
+              //-     video.promo-slide__video(autoplay)
+              //-       source(src='video/test-video.mp4', type='video/mp4')
+              .promo-slide__inner.aligner
+                .promo-slide__content
+                  h3.promo-slide__title= title
+                  p.promo-slide__subtitle= subtitle
+                a.promo-slide__more-link(
+                  href='#',
+                  aria-label='Узнать подробности',
+                )
+    .promo__slider-controls
+      .slider-controls
+        .aligner
+          .slider-controls__inner

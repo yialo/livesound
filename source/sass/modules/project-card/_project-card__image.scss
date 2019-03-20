@@ -1,0 +1,14 @@
+.project-card__image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transition: {
+    property: transform;
+    timing-function: ease-out;
+    duration: 1s;
+  }
+
+  .project-card__link:hover & {
+    transform: scale(1.1);
+  }
+}

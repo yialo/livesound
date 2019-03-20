@@ -1,0 +1,17 @@
+.promo-slide__more-link {
+  @include margin-hor();
+  display: block;
+  width: 75px;
+  height: 75px;
+  background: {
+    image: url("../img/promo-slide-down-arrow.png");
+    position: 50% calc(50% + 3px);
+    repeat: no-repeat;
+  }
+  border: {
+    width: 2px;
+    style: solid;
+    color: rgba(255, 255, 255, 0.15);
+    radius: 50%;
+  }
+}

@@ -1,17 +1,24 @@
 mixin main-navigation(pageName, position)
-  nav.main-navigation(class='main-navigation--' + position)
+  -
+    const MAIN_NAVIGATION_ITEMS = [
+      ['Главная', 'index'],
+      ['О компании', 'about'],
+      ['Проекты', 'projects'],
+      ['Команда', 'team'],
+      ['Оборудование', 'equipment'],
+      ['Клиенты/Партнеры', 'partners'],
+      ['Контакты', 'contacts'],
+    ];
+  nav(class=['main-navigation', `main-navigation--${position}`])
     ul.main-navigation__list
-      mixin main-navigation__item(itemText, itemPath)
-        if itemPath === pageName
-          li.main-navigation__item(class='is-current')
-            a.main-navigation__link(class='is-current')= itemText
-        else
-          li.main-navigation__item
-            a.main-navigation__link(href=itemPath + '.html')= itemText
-      +main-navigation__item('Главная', 'index')
-      +main-navigation__item('О компании', 'about')
-      +main-navigation__item('Проекты', 'projects')
-      +main-navigation__item('Команда', 'team')
-      +main-navigation__item('Оборудование', 'equipment')
-      +main-navigation__item('Клиенты/Партнеры', 'partners')
-      +main-navigation__item('Контакты', 'contacts')
+      each item in MAIN_NAVIGATION_ITEMS
+        -
+          const [text, modifier] = item;
+          const currentItemClass = (modifier === pageName)
+            ? 'is-current'
+            : null;
+        li.main-navigation__item(class=currentItemClass)
+          a.main-navigation__link(
+            class=currentItemClass,
+            href=`${modifier}.html`,
+          )= text

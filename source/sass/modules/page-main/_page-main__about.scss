@@ -1,0 +1,11 @@
+.page-main__about {
+  margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: $huge-min-width) {
+    margin-bottom: 105px;
+  }
+}
