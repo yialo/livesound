@@ -4,4 +4,4 @@ node_modules/
 npm-debug.*
 specification/
 
-test-video.mp4
+build/test-video.mp4
