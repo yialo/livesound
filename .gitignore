@@ -3,3 +3,5 @@ source/imgraw/
 node_modules/
 npm-debug.*
 specification/
+
+test-video.mp4
