@@ -1,45 +1,19 @@
 .advantages__item {
-  padding-top: 100px;
-  background: {
-    position: top;
-    repeat: no-repeat;
-  }
+  margin-bottom: 40px;
 
-  &:not(:last-child) {
-    margin-bottom: 40px;
-  }
-
-  &--1 {
-    background-image: url("../img/advantages-1.png");
-  }
-
-  &--2 {
-    background-image: url("../img/advantages-2.png");
-  }
-
-  &--3 {
-    background-image: url("../img/advantages-3.png");
-  }
-
-  &--4 {
-    background-image: url("../img/advantages-4.png");
+  &--last {
+    margin-bottom: 0;
   }
 
   @media (min-width: $medium-min-width) {
+    @include margin-hor(25px);
     width: 50%;
     margin-top: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
   @media (min-width: $large-min-width) {
     width: 255px;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   @media (min-width: $huge-min-width) {

@@ -1,0 +1,21 @@
+.advantages-item {
+  padding-top: 100px;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @for $i from 1 through 4 {
+    &--#{$i} {
+      background-image: url("../img/advantages-#{$i}.png");
+    }
+  }
+
+  @media (min-width: $medium-min-width) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

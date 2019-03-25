@@ -4,6 +4,8 @@
   padding-left: 0;
 
   @media (min-width: $medium-min-width) {
+    @include margin-hor(-25);
+    @include padding-hor(50px);
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;

@@ -21,6 +21,13 @@ mixin advantages()
       ul.advantages__list
         each item, index in ADVANTAGES_ITEMS
           - const [heading, description] = item;
-          li(class=['advantages__item', `advantages__item--${index + 1}`])
-            h3.advantages__caption= heading
-            p.advantages__description!= description
+          li(class=[
+            'advantages__item',
+             index === ADVANTAGES_ITEMS.length - 1 ? 'advantages__item--last' : null,
+          ])
+            div(class=[
+              'advantages-item',
+              `advantages-item--${index + 1}`,
+            ])
+            h3.advantages-item__caption= heading
+            p.advantages-item__description!= description
