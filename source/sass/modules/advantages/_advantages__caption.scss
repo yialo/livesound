@@ -1,8 +1,6 @@
 .advantages__caption {
-  margin: {
-    top: 0;
-    bottom: 20px;
-  }
+  margin-top: 0;
+  margin-bottom: 20px;
 
   @include font(400, 22px, 52px);
   text-align: center;

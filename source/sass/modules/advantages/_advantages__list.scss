@@ -1,8 +1,6 @@
 .advantages__list {
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   @media (min-width: $medium-min-width) {
@@ -12,7 +10,7 @@
   }
 
   @media (min-width: $large-min-width) {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   @media (min-width: $huge-min-width) {

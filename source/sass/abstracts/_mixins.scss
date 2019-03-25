@@ -9,3 +9,8 @@
   margin-left: $mh;
   margin-right: $mh;
 }
+
+@mixin padding-hor($ph: 15px) {
+  margin-left: $ph;
+  margin-right: $ph;
+}

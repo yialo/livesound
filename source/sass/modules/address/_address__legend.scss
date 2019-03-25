@@ -7,4 +7,10 @@
   .address--footer & {
     display: none;
   }
+
+  @media (min-width: $large-min-width) {
+    .address--contacts & {
+      margin-bottom: 20px;
+    }
+  }
 }
