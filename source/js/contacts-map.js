@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 ymaps.ready(init);
 
 function init() {

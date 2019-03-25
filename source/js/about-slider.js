@@ -1,13 +1,15 @@
-var historySlider = document.querySelector('.history__inner');
-var sliderButtonPrevious = historySlider.querySelector('.history__control-button--previous');
-var sliderButtonNext = historySlider.querySelector('.history__control-button--next');
-var historyDateButton_1 = historySlider.querySelector('.history__date-button--1');
-var historyDateButton_2 = historySlider.querySelector('.history__date-button--2');
-var historyDateButton_3 = historySlider.querySelector('.history__date-button--3');
-var historyDateButton_4 = historySlider.querySelector('.history__date-button--4');
-var historyDateButton_5 = historySlider.querySelector('.history__date-button--5');
+'use strict';
 
-sliderButtonPrevious.addEventListener('click', function() {
+const historySlider = document.querySelector('.history__inner');
+const sliderButtonPrevious = historySlider.querySelector('.history__control-button--previous');
+const sliderButtonNext = historySlider.querySelector('.history__control-button--next');
+const historyDateButton1 = historySlider.querySelector('.history__date-button--1');
+const historyDateButton2 = historySlider.querySelector('.history__date-button--2');
+const historyDateButton3 = historySlider.querySelector('.history__date-button--3');
+const historyDateButton4 = historySlider.querySelector('.history__date-button--4');
+const historyDateButton5 = historySlider.querySelector('.history__date-button--5');
+
+sliderButtonPrevious.addEventListener('click', () => {
   if (historySlider.classList.contains('js-slide-5')) {
     historySlider.classList.remove('js-slide-1');
     historySlider.classList.remove('js-slide-2');
@@ -35,7 +37,7 @@ sliderButtonPrevious.addEventListener('click', function() {
   }
 });
 
-sliderButtonNext.addEventListener('click', function() {
+sliderButtonNext.addEventListener('click', () => {
   if (historySlider.classList.contains('js-slide-4')) {
     historySlider.classList.remove('js-slide-1');
     historySlider.classList.remove('js-slide-2');
@@ -63,7 +65,7 @@ sliderButtonNext.addEventListener('click', function() {
   }
 });
 
-historyDateButton_1.addEventListener('click', function() {
+historyDateButton1.addEventListener('click', () => {
   historySlider.classList.add('js-slide-1');
   historySlider.classList.remove('js-slide-2');
   historySlider.classList.remove('js-slide-3');
@@ -71,7 +73,7 @@ historyDateButton_1.addEventListener('click', function() {
   historySlider.classList.remove('js-slide-5');
 });
 
-historyDateButton_2.addEventListener('click', function() {
+historyDateButton2.addEventListener('click', () => {
   historySlider.classList.remove('js-slide-1');
   historySlider.classList.add('js-slide-2');
   historySlider.classList.remove('js-slide-3');
@@ -79,7 +81,7 @@ historyDateButton_2.addEventListener('click', function() {
   historySlider.classList.remove('js-slide-5');
 });
 
-historyDateButton_3.addEventListener('click', function() {
+historyDateButton3.addEventListener('click', () => {
   historySlider.classList.remove('js-slide-1');
   historySlider.classList.remove('js-slide-2');
   historySlider.classList.add('js-slide-3');
@@ -87,7 +89,7 @@ historyDateButton_3.addEventListener('click', function() {
   historySlider.classList.remove('js-slide-5');
 });
 
-historyDateButton_4.addEventListener('click', function() {
+historyDateButton4.addEventListener('click', () => {
   historySlider.classList.remove('js-slide-1');
   historySlider.classList.remove('js-slide-2');
   historySlider.classList.remove('js-slide-3');
@@ -95,7 +97,7 @@ historyDateButton_4.addEventListener('click', function() {
   historySlider.classList.remove('js-slide-5');
 });
 
-historyDateButton_5.addEventListener('click', function() {
+historyDateButton5.addEventListener('click', () => {
   historySlider.classList.remove('js-slide-1');
   historySlider.classList.remove('js-slide-2');
   historySlider.classList.remove('js-slide-3');

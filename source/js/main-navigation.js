@@ -1,27 +1,29 @@
-var mainMenu = document.querySelector('.page-header__navigation');
-var mainMenuButtonOpen = document.querySelector('.menu-controls__button--open');
-var mainMenuButtonClose = document.querySelector('.menu-controls__button--close');
+'use strict';
 
-var menuVisibilityToggle = function (button) {
+const mainMenu = document.querySelector('.page-header__navigation');
+const mainMenuButtonOpen = document.querySelector('.menu-controls__button--open');
+const mainMenuButtonClose = document.querySelector('.menu-controls__button--close');
+
+const menuVisibilityToggle = function toggleNavigationMenuVisibility(button) {
   mainMenu.classList.toggle('is-visible');
   mainMenuButtonOpen.classList.toggle('is-visible');
   mainMenuButtonClose.classList.toggle('is-visible');
   button.focus();
-}
+};
 
-mainMenuButtonOpen.addEventListener('click', function (evt) {
+mainMenuButtonOpen.addEventListener('click', (evt) => {
   evt.preventDefault();
   menuVisibilityToggle(mainMenuButtonClose);
 });
 
-mainMenuButtonClose.addEventListener('click', function (evt) {
+mainMenuButtonClose.addEventListener('click', (evt) => {
   evt.preventDefault();
   menuVisibilityToggle(mainMenuButtonOpen);
 });
 
-window.addEventListener('keydown', function(evt) {
+window.addEventListener('keydown', (evt) => {
   if ((evt.keyCode === 27) && (mainMenu.classList.contains('is-visible'))) {
-      evt.preventDefault();
-      menuVisibilityToggle(mainMenuButtonOpen);
+    evt.preventDefault();
+    menuVisibilityToggle(mainMenuButtonOpen);
   }
 });

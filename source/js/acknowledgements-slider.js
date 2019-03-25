@@ -1,8 +1,12 @@
-var
-  acknowledgementsControlPrevious = document.querySelector('.acknowledgements__slider-control--previous'),
-  acknowledgementsControlNext = document.querySelector('.acknowledgements__slider-control--next'),acknowledgementsSlider = document.querySelector('.acknowledgements__list');
+'use strict';
 
-acknowledgementsControlNext.addEventListener('click', function() {
+const acknowledgementsControlPrevious = document
+  .querySelector('.acknowledgements__slider-control--previous');
+const acknowledgementsControlNext = document
+  .querySelector('.acknowledgements__slider-control--next');
+const acknowledgementsSlider = document.querySelector('.acknowledgements__list');
+
+acknowledgementsControlNext.addEventListener('click', () => {
   if (acknowledgementsSlider.classList.contains('js-slide-1')) {
     acknowledgementsSlider.classList.remove('js-slide-1');
     acknowledgementsSlider.classList.add('js-slide-2');
@@ -26,7 +30,7 @@ acknowledgementsControlNext.addEventListener('click', function() {
   }
 });
 
-acknowledgementsControlPrevious.addEventListener('click', function() {
+acknowledgementsControlPrevious.addEventListener('click', () => {
   if (acknowledgementsSlider.classList.contains('js-slide-2')) {
     acknowledgementsSlider.classList.remove('js-slide-2');
     acknowledgementsSlider.classList.add('js-slide-1');
