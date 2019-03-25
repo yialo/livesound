@@ -5,12 +5,23 @@
   line-height: $lh;
 }
 
+@mixin margin-ver($mv: auto) {
+  margin-top: $mv;
+  margin-bottom: $mv;
+}
+
 @mixin margin-hor($mh: auto) {
   margin-left: $mh;
   margin-right: $mh;
 }
 
-@mixin padding-hor($ph: 15px) {
-  margin-left: $ph;
-  margin-right: $ph;
+@mixin padding-ver($pv: 10px) {
+  padding-top: $pv;
+  padding-bottom: $pv;
 }
+
+@mixin padding-hor($ph: 10px) {
+  padding-left: $ph;
+  padding-right: $ph;
+}
+

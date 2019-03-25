@@ -1,6 +1,6 @@
 'use strict';
 
-const mainMenu = document.querySelector('.page-header__navigation');
+const mainMenu = document.querySelector('.page-header__popup');
 const mainMenuButtonOpen = document.querySelector('.menu-controls__button--open');
 const mainMenuButtonClose = document.querySelector('.menu-controls__button--close');
 

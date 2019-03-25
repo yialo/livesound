@@ -1,0 +1,6 @@
+.advantages__content {
+  @media (min-width: $medium-min-width) {
+    @include padding-ver(30px);
+    @include padding-hor(10px);
+  }
+}

@@ -1,0 +1,19 @@
+.page-header__popup {
+  @media (max-width: $medium-max-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    width: 240px;
+
+    &.is-visible {
+      display: block;
+    }
+
+    @media (min-width: $medium-min-width) {
+      left: 90px;
+      width: 400px;
+    }
+  }
+}

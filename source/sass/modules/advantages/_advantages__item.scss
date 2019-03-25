@@ -6,9 +6,9 @@
   }
 
   @media (min-width: $medium-min-width) {
-    @include margin-hor(25px);
+    @include padding-ver(30px);
+    @include padding-hor(10px);
     width: 50%;
-    margin-top: 60px;
     margin-bottom: 0;
   }
 
