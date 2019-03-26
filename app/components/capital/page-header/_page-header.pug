@@ -16,9 +16,9 @@ header.page-header
             aria-label=`${label} главное меню`,
           )
     div(class=setModifiers('page-header__nest', ['logo']))
-      +logo('header', $pageId)
+      +logo('header')
     div(class=setModifiers('page-header__nest', ['navigation'])).page-header__popup
-      +main-navigation($pageId, 'header')
+      +main-navigation('header')
     div(class=setModifiers('page-header__nest', ['socials']))
       +socials()
     div(class=setModifiers('page-header__nest', ['language-toggle']))

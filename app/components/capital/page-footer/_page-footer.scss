@@ -3,7 +3,7 @@
     color: #252424;
     image: url("../img/page-footer-background-mobile.png");
     position: center;
-    repeat: no-repeat;
+    repeat: repeat-y;
   }
 
   @media (min-width: $medium-min-width) {

@@ -1,9 +1,0 @@
-.page-footer__connection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (min-width: $medium-min-width) {
-    align-items: flex-end;
-  }
-}

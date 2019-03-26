@@ -9,16 +9,13 @@ const menuVisibilityToggle = function toggleNavigationMenuVisibility(button) {
   button.focus();
 };
 
-// const showMenu = function showMainMenu() {
-//   c;
-// };
+const showMenu = function showMainMenu() {
+  menuVisibilityToggle(mainMenuButtonCloser);
+};
 
-// const hideMenu = function showMainMenu() {
-//   menuVisibilityToggle(mainMenuButtonOpener);
-// };
-
-const showMenu = menuVisibilityToggle(mainMenuButtonCloser);
-const hideMenu = menuVisibilityToggle(mainMenuButtonOpener);
+const hideMenu = function showMainMenu() {
+  menuVisibilityToggle(mainMenuButtonOpener);
+};
 
 mainMenuButtonOpener.addEventListener('click', () => {
   showMenu();

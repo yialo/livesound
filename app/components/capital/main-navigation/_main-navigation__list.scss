@@ -12,7 +12,9 @@
   }
 
   @media (min-width: $medium-min-width) {
-    grid-column-gap: 20px;
+    .main-navigation--footer & {
+      grid-column-gap: 20px;
+    }
   }
 
   @media (min-width: $large-min-width) {

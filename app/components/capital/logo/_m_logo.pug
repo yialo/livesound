@@ -1,7 +1,7 @@
-mixin logo(logoPosition, pageName)
-  div(class=['logo', `logo--${logoPosition}`])
-    a.logo__link(href=(pageName === 'index' ? null : 'index.html'))
+mixin logo(logoLocation)
+  div(class=setModifiers('logo', [logoLocation]))
+    a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
       img.logo__image(
-        src=`img/logo-${logoPosition}.png`,
+        src=`img/logo-${logoLocation}.png`,
         alt='Live Sound Agency',
       )

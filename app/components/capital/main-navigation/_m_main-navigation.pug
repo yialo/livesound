@@ -1,4 +1,4 @@
-mixin main-navigation(pageName, position)
+mixin main-navigation(navLocation)
   -
     const MAIN_NAVIGATION_ITEMS = [
       ['Главная', 'index'],
@@ -9,16 +9,14 @@ mixin main-navigation(pageName, position)
       ['Клиенты/Партнеры', 'partners'],
       ['Контакты', 'contacts'],
     ];
-  nav(class=['main-navigation', `main-navigation--${position}`])
+  nav(class=setModifiers('main-navigation', [navLocation]))
     ul.main-navigation__list
       each item in MAIN_NAVIGATION_ITEMS
         -
           const [text, modifier] = item;
-          const currentItemClass = (modifier === pageName)
-            ? 'is-current'
-            : null;
+          const isCurrent = (modifier === $pageId);
         li.main-navigation__item(class=currentItemClass)
           a.main-navigation__link(
-            class=currentItemClass,
-            href=`${modifier}.html`,
+            class=(isCurrent ? 'is-current' : null),
+            href=(isCurrent ? null : `${modifier}.html`),
           )= text
