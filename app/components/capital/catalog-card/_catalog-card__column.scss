@@ -1,0 +1,26 @@
+.catalog-card__column {
+  &--1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--1 {
+      flex-shrink: 0;
+      width: 350px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    &--2 {
+      flex-grow: 1;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    &--1 {
+      margin-right: 40px;
+    }
+  }
+}

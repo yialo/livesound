@@ -1,19 +1,15 @@
 .modal__list {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
-  z-index: 3;
-  overflow: {
-    x: hidden;
-    y: scroll;
-  }
   display: none;
   width: 100%;
   min-height: 100%;
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   .js-show-modal & {

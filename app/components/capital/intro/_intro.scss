@@ -1,10 +1,8 @@
 .intro {
-  background: {
-    position-x: 50%;
-    position-y: -150px;
-    size: 800px 750px;
-    repeat: no-repeat;
-  }
+  background-position-x: 50%;
+  background-position-y: -150px;
+  background-size: 800px 750px;
+  background-repeat: no-repeat;
 
   $page-list: (about, projects, team, equipment, partners, contacts,);
 
@@ -19,10 +17,8 @@
   }
 
   @media (min-width: $medium-min-width) {
-    background: {
-      position-y: -300px;
-      size: 1230px 750px;
-    }
+    background-position-y: -300px;
+    background-size: 1230px 750px;
 
     @each $value in $page-list {
       &--#{$value} {
@@ -40,10 +36,8 @@
   }
 
   @media (min-width: $large-min-width) {
-    background: {
-      position-y: -200px;
-      size: 1920px 750px;
-    }
+    background-position-y: -200px;
+    background-size: 1920px 750px;
 
     @each $value in $page-list {
       &--#{$value} {

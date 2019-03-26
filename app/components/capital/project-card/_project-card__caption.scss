@@ -1,4 +1,6 @@
 .project-card__caption {
+  @include margin-ver(0);
+  @include padding-hor(20px);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -8,14 +10,6 @@
   max-height: 158px;
   min-height: 80px;
   overflow: hidden;
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
-  padding: {
-    left: 20px;
-    right: 20px;
-  }
   background-color: rgba(0, 0, 0, 0.3);
 
   @media (min-width: $medium-min-width) {

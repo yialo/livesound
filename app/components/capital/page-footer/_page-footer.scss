@@ -1,10 +1,8 @@
 .page-footer {
-  background: {
-    color: #252424;
-    image: url("../img/page-footer-background-mobile.png");
-    position: center;
-    repeat: repeat-y;
-  }
+  background-color: #252424;
+  background-image: url("../img/page-footer-background-mobile.png");
+  background-position: center;
+  background-repeat: repeat-y;
 
   @media (min-width: $medium-min-width) {
     background-image: url("../img/page-footer-background-tablet.png");

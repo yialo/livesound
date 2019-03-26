@@ -1,8 +1,8 @@
 .acknowledgements__slider-control {
   position: absolute;
+  z-index: 1;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
   width: 41px;
   height: 66px;
   padding: 0;

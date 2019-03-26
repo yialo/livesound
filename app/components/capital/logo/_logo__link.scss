@@ -2,12 +2,10 @@
   display: block;
 
   .logo--header & {
-    width: 173px;
-    height: 94px;
+    @include size(173px, 94px);
   }
 
   .logo--footer & {
-    width: 133px;
-    height: 83px;
+    @include size(133px, 83px);
   }
 }

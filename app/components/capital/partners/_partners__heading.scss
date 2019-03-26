@@ -1,14 +1,10 @@
 .partners__heading {
-  margin: {
-    top: 0;
-    bottom: 30px;
-  }
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 42px;
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
 
   .partners-small-heading & {
     font-size: 20px;

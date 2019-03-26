@@ -17,10 +17,7 @@ section.history
       each item in HISTORY_BUTTONS
         - const [modifier, text] = item;
         button(
-          class=[
-            'history__control-button',
-            `history__control-button--${modifier}`,
-          ],
+          class=setModifiers('history__control-button', [modifier]),
           type='button',
           aria-label=`${text} слайд`,
         )
@@ -28,13 +25,7 @@ section.history
         ul.history__date-list
           - for (let i = 1, year = 2010; i <= 5; i += 1, year += 2)
             li.history__date-item
-              button(
-                class=[
-                  'history__date-button',
-                  `history__date-button--${i}`,
-                ],
-              type='button',
-              )
+              button(class=setModifiers('history__date-button', [i]), type='button')
                 span.button-fix= year
     .history__slider
       ul.history__list

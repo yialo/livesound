@@ -1,31 +1,19 @@
 .mission__inner {
-  padding: {
-    bottom: 100px;
-    left: 20px;
-    right: 20px;
-  }
+  @include padding-hor(20px);
+  padding-bottom: 100px;
 
   @media (min-width: $medium-min-width) {
-    padding: {
-      bottom: 180px;
-      left: 120px;
-      right: 120px;
-    }
+    @include padding-hor(120px);
+    padding-bottom: 180px;
   }
 
   @media (min-width: $large-min-width) {
-    padding: {
-      bottom: 150px;
-      left: 20px;
-      right: 20px;
-    }
+    @include padding-hor(20px);
+    padding-bottom: 150px;
   }
 
   @media (min-width: $huge-min-width) {
-    padding: {
-      bottom: 240px;
-      left: 420px;
-      right: 420px;
-    }
+    @include padding-hor(420px);
+    padding-bottom: 240px;
   }
 }

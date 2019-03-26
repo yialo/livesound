@@ -1,9 +1,7 @@
 .partners__list {
   align-self: center;
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   @media (min-width: $medium-min-width) {
@@ -14,14 +12,10 @@
     }
 
     .partners--long & {
-      grid: {
-        template: {
-          columns: 1fr 1fr;
-          rows: repeat(5, 1fr);
-        }
-        auto-flow: column;
-        column-gap: 20px;
-      }
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: column;
+      grid-column-gap: 20px;
     }
   }
 
@@ -31,14 +25,10 @@
     }
 
     .partners--long & {
-      grid: {
-        template: {
-          columns: repeat(5, 1fr);
-          rows: 1fr 1fr;
-        }
-        auto-flow: row;
-        column-gap: 0;
-      }
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-flow: row;
+      grid-column-gap: 0;
     }
   }
 

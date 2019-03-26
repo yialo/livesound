@@ -1,4 +1,4 @@
-.catalog__table-cell {
+.catalog-card__table-cell {
   display: block;
 
   @include font(400, 16px, 24px);
@@ -15,10 +15,8 @@
 
   @media (min-width: $large-min-width) {
     display: table-cell;
-    padding: {
-      top: 15px;
-      bottom: 15px;
-    }
+    padding-top: 15px;
+    padding-bottom: 15px;
     vertical-align: text-top;
 
     &--name {

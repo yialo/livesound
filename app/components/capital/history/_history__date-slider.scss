@@ -1,7 +1,7 @@
 .history__date-slider {
   @include margin-hor();
-  overflow: hidden;
   width: 160px;
+  overflow: hidden;
 
   @media (min-width: $medium-min-width) {
     width: auto;

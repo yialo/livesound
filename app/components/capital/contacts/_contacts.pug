@@ -2,19 +2,17 @@ section.contacts
   - const CONTACTS_TELS = ['5704', '8540', '6298'];
   .contacts__inner
     h2.visually-hidden Контактная информация
-    .contacts__column-1
+    div(class=setModifiers('contacts__column', [1]))
       .contacts__address
         +address('contacts')
       ul.contacts__tels
         each string in CONTACTS_TELS
-          -
-            const hyphenedString = string.slice(0, 2)
-              .concat('-', string.slice(2));
+          - const hyphenedString = string.slice(0, 2).concat('-', string.slice(2));
           li.contacts__tel
             a.contacts__tel-link(href=`tel:+7499256${string}`)
               | +7 (499) 256-#{hyphenedString}
       .contacts__socials
         +socials()
-    .contacts__column-2
+    div(class=setModifiers('contacts__column', [2]))
       p.contacts__tip Мы на карте:
       .contacts__map#map

@@ -1,20 +1,16 @@
 .menu-controls__button {
-  background: {
-    color: transparent;
-    position-y: top;
-    size: cover;
-    repeat: no-repeat;
-  }
+  background-color: transparent;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-style: none;
   cursor: pointer;
 
   &--open {
     width: 60px;
     height: 30px;
-    background: {
-      image: url("../img/menu-controls__button--open.svg");
-      position-x: left;
-    }
+    background-image: url("../img/menu-controls__button--open.svg");
+    background-position-x: left;
 
     .is-visible & {
       display: none;
@@ -25,10 +21,8 @@
     display: none;
     width: 32px;
     height: 32px;
-    background: {
-      image: url("../img/menu-controls__button--close.svg");
-      position-x: right;
-    }
+    background-image: url("../img/menu-controls__button--close.svg");
+    background-position-x: right;
 
     .is-visible & {
       display: block;

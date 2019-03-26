@@ -22,7 +22,7 @@ mixin partners(listSize, heading, specialModifier)
         ['shure-alt', 'SHURE'],
       ],
     };
-  section(class=['partners', `partners--${listSize}`, specialModifier])
+  section(class=[setModifiers('partners', [listSize]), specialModifier])
     .partners__inner.aligner
       h2.partners__heading.heading= heading
       ul.partners__list

@@ -1,7 +1,7 @@
 mixin catalog-card(cardNumber, itemTitle)
   include _d_catalog-card
   .catalog-card
-    .catalog-card__column-1
+    div(class=setModifiers('catalog-card__column', [1]))
       picture.catalog-card__image-wrapper
         source(
           media=$VIEWPORT_MIN_WIDTH_MEDIUM,
@@ -11,15 +11,14 @@ mixin catalog-card(cardNumber, itemTitle)
           src=`img/catalog-card__image--${cardNumber}-small.jpg`,
           alt=`Активная акустическая система №${cardNumber}`
         )
-    .catalog-card__column-2
+    div(class=setModifiers('catalog-card__column', [2]))
       h4.catalog-card__title= itemTitle
-      table.catalog__table
-        tbody.catalog__table-body
+      table.catalog-card__table
+        tbody.catalog-card__table-body
           each item in CATALOG_CARD_DATA
             - const [term, list] = item;
-            tr.catalog__table-row
-              td(class=['catalog__table-cell', 'catalog__table-cell--name'])
-                = term
-              td(class=['catalog__table-cell', 'catalog__table-cell--value'])
+            tr.catalog-card__table-row
+              td(class=setModifiers('catalog-card__table-cell', ['name']))= term
+              td(class=setModifiers('catalog-card__table-cell', ['value']))
                 each value in list
                   p.catalog-card__paragraph!= value

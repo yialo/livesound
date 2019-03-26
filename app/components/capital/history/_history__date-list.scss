@@ -17,16 +17,12 @@
   justify-content: center;
   align-items: center;
   width: 500%;
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
-  transition: {
-    property: transform;
-    duration: 0.6s;
-    timing-function: ease-out;
-  }
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
 
   @media (max-width: $small-max-width) {
     @include history__date-list-shift(0);

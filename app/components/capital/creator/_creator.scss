@@ -1,12 +1,8 @@
 .creator {
   @include font(400, 9px, 15px);
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
   color: $light-gray;
 }

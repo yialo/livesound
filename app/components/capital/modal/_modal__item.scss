@@ -1,15 +1,12 @@
 .modal__item {
+  @include margin-ver(50px);
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 50%;
-  z-index: 1;
   transform: translateX(-50%);
   display: none;
   width: 270px;
-  margin: {
-    top: 50px;
-    bottom: 50px;
-  }
   transition: transform 0.5s;
 
   @for $i from 1 through 7 {

@@ -1,9 +1,9 @@
 .page-header__popup {
   @media (max-width: $medium-max-width) {
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
-    z-index: 2;
     display: none;
     width: 240px;
 

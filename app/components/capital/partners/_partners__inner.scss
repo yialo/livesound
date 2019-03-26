@@ -1,42 +1,21 @@
 .partners__inner {
+  @include padding-hor(20px);
   display: flex;
   flex-direction: column;
-  padding: {
-    left: 20px;
-    right: 20px;
-  }
 
   .partners--long & {
-    padding: {
-      top: 40px;
-      bottom: 40px;
-    }
+    @include padding-ver(40px);
   }
 
   @media (min-width: $medium-min-width) {
     .partners--long & {
-      padding: {
-        top: 80px;
-        bottom: 80px;
-      }
+      @include padding-ver(80px);
     }
   }
 
   @media (min-width: $large-min-width) {
     .partners--long & {
-      padding: {
-        left: 0;
-        right: 0;
-      }
-    }
-  }
-
-  @media (min-width: $huge-min-width) {
-    .partners--long & {
-      padding: {
-        top: 80px;
-        bottom: 80px;
-      }
+      @include padding-hor(0);
     }
   }
 }

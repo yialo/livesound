@@ -7,10 +7,8 @@
   border-style: none;
   outline-style: none;
   cursor: pointer;
-  transition: {
-    property: font-size, color;
-    duration: 0.2s;
-  }
+  transition-property: font-size, color;
+  transition-duration: 0.2s;
 
   @media (min-width: $medium-min-width) {
     @for $slide-number from 1 through 5 {
