@@ -1,29 +1,36 @@
 'use strict';
 
-const mainMenu = document.querySelector('.page-header__popup');
-const mainMenuButtonOpen = document.querySelector('.menu-controls__button--open');
-const mainMenuButtonClose = document.querySelector('.menu-controls__button--close');
+const pageHeader = document.querySelector('.page-header');
+const mainMenuButtonOpener = pageHeader.querySelector('.menu-controls__button--open');
+const mainMenuButtonCloser = pageHeader.querySelector('.menu-controls__button--close');
 
 const menuVisibilityToggle = function toggleNavigationMenuVisibility(button) {
-  mainMenu.classList.toggle('is-visible');
-  mainMenuButtonOpen.classList.toggle('is-visible');
-  mainMenuButtonClose.classList.toggle('is-visible');
+  pageHeader.classList.toggle('is-visible');
   button.focus();
 };
 
-mainMenuButtonOpen.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  menuVisibilityToggle(mainMenuButtonClose);
+// const showMenu = function showMainMenu() {
+//   c;
+// };
+
+// const hideMenu = function showMainMenu() {
+//   menuVisibilityToggle(mainMenuButtonOpener);
+// };
+
+const showMenu = menuVisibilityToggle(mainMenuButtonCloser);
+const hideMenu = menuVisibilityToggle(mainMenuButtonOpener);
+
+mainMenuButtonOpener.addEventListener('click', () => {
+  showMenu();
 });
 
-mainMenuButtonClose.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  menuVisibilityToggle(mainMenuButtonOpen);
+mainMenuButtonCloser.addEventListener('click', () => {
+  hideMenu();
 });
 
 window.addEventListener('keydown', (evt) => {
-  if ((evt.keyCode === 27) && (mainMenu.classList.contains('is-visible'))) {
+  if ((evt.keyCode === 27) && (pageHeader.classList.contains('is-visible'))) {
     evt.preventDefault();
-    menuVisibilityToggle(mainMenuButtonOpen);
+    hideMenu();
   }
 });

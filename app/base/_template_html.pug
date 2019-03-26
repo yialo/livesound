@@ -23,7 +23,8 @@ html(lang="ru")
       )
     include ../components/capital/head/_head-_fonts
     link(rel='stylesheet', href='css/main.min.css')
-    link(rel='preload', href='js/slick.js', as='script')
+    if $pageId === 'index'
+      link(rel='preload', href='js/slick.js', as='script')
   body(class=setModifiers('page', [$pageId]))
     .page__header
       include ../components/capital/page-header/_page-header

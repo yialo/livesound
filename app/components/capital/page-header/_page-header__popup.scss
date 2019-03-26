@@ -7,7 +7,7 @@
     display: none;
     width: 240px;
 
-    &.is-visible {
+    .is-visible & {
       display: block;
     }
 

@@ -44,9 +44,13 @@
   }
 
   @media (min-width: $large-min-width) {
+    &--menu-controls {
+      display: none;
+    }
+
     &--logo {
       margin-left: 0;
-      margin-right: (90px / $large-min-width * 100%);
+      margin-right: 40px;
     }
 
     &--navigation {
@@ -58,7 +62,7 @@
       display: block;
       width: auto;
       margin-left: auto;
-      margin-right: 90px / $large-min-width * 100%;
+      margin-right: 40px;
     }
 
     &--socials {

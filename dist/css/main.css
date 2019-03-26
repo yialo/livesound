@@ -2297,31 +2297,30 @@ input[type="radio"].visually-hidden {
       grid-column-gap: 25px; } }
 
 .menu-controls__button {
-  display: none;
   background-color: transparent;
   background-position-y: top;
   background-size: cover;
   background-repeat: no-repeat;
   border-style: none;
   cursor: pointer; }
-  .menu-controls__button.is-visible {
-    display: block; }
   .menu-controls__button--open {
     width: 60px;
     height: 30px;
     background-image: url("../img/menu-controls__button--open.svg");
     background-position-x: left; }
+    .is-visible .menu-controls__button--open {
+      display: none; }
   .menu-controls__button--close {
+    display: none;
     width: 32px;
     height: 32px;
     background-image: url("../img/menu-controls__button--close.svg");
     background-position-x: right; }
+    .is-visible .menu-controls__button--close {
+      display: block; }
   @media (min-width: 768px) {
     .menu-controls__button--close {
       margin-left: 10px; } }
-  @media (min-width: 1220px) {
-    .menu-controls__button.is-visible {
-      display: none; } }
 
 .mission__heading {
   margin-top: 0;
@@ -2666,9 +2665,11 @@ input[type="radio"].visually-hidden {
     right: 20px; } }
 
 @media (min-width: 1220px) {
+  .page-header__nest--menu-controls {
+    display: none; }
   .page-header__nest--logo {
     margin-left: 0;
-    margin-right: 7.37705%; }
+    margin-right: 40px; }
   .page-header__nest--navigation {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -2681,7 +2682,7 @@ input[type="radio"].visually-hidden {
     display: block;
     width: auto;
     margin-left: auto;
-    margin-right: 7.37705%; }
+    margin-right: 40px; }
   .page-header__nest--socials {
     -ms-flex-item-align: center;
         align-self: center;
@@ -2711,7 +2712,7 @@ input[type="radio"].visually-hidden {
     z-index: 2;
     display: none;
     width: 240px; }
-    .page-header__popup.is-visible {
+    .is-visible .page-header__popup {
       display: block; } }
   @media (max-width: 1219px) and (min-width: 768px) {
     .page-header__popup {
