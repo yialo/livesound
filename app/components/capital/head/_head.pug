@@ -1,0 +1,9 @@
+head
+  meta(charset="utf-8")
+  title #{$pageTitle} | #{$SITE_TITLE}
+  include _head_general_meta
+  include _head_fonts
+  link(rel="stylesheet" href="css/main.min.css")
+  block head-scripts
+    script(src='js/picturefill.js')
+    script(src='js/main-navigation.js')

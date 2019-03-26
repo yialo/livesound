@@ -1,0 +1,23 @@
+footer.page-footer
+  .page-footer__inner.aligner
+    .page-footer__column-1
+      .page-footer__address
+        +address('footer')
+      .page-footer__logo
+        +logo('footer', $pageId)
+      .page-footer__copyright
+        p.copyright= '© 2016 '
+          span.copyright__string Live-sound agency
+    .page-footer__column-2
+      .page-footer__navigation
+        +main-navigation($pageId, 'footer')
+      .page-footer__widget
+        aside.widget
+    .page-footer__column-3
+      .page-footer__connection
+        a.page-footer__tel(href='tel:+74992565704') +7 (499) 256-57-04
+        .page-footer__socials
+          +socials()
+    .page-footer__creator
+      p.creator
+        a.creator__legend(href='https://www.waytostart.ru/') Создание сайта веб-студия WayToStart

@@ -1,0 +1,15 @@
+include _import_data
+
+block page-id
+
+-
+  const $pageTitle = $PAGES[$pageId];
+  const $projectCardsContained = ['index', 'projects'].includes($pageId);
+
+include _import_functions
+include _import_mixins
+
+doctype html
+html(lang="ru")
+  include ../components/capital/head/_head
+  include ../components/capital/page/_page

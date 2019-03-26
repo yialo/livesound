@@ -1,0 +1,18 @@
+extends _template_html
+
+append head-scripts
+  if $projectCardsContained
+    link(
+      rel='preload',
+      href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+      as='script',
+    )
+  block page-head-scripts
+
+append body-scripts
+  if $projectCardsContained
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
+    script(src='js/lightbox_customized.js')
+  block page-body-scripts

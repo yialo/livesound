@@ -2,4 +2,4 @@
 source/imgraw/
 node_modules/
 npm-debug.*
-specification/
+spec/

@@ -1,0 +1,12 @@
+extends ../base/_template_page
+
+block page-id
+  - const $pageId = 'projects';
+
+block page-main
+  .page-main__intro
+    +intro('projects', 'Проекты')
+  .page-main__projects
+    +projects('Реализованные проекты')
+  .page-main__supremacy
+    include ../components/capital/supremacy/_supremacy

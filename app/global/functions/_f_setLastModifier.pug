@@ -1,0 +1,5 @@
+-
+  const setLastModifier = function setLastListitemBemModifier(blockname, list, itemNumber, isBLocknameNeeded=true) {
+    const modForLast = (itemNumber === list.length ? ['last'] : []);
+    return setModifiers(blockname, modForLast, isBLocknameNeeded);
+  };

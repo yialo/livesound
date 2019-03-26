@@ -1,0 +1,4 @@
+@mixin padding-hor($ph: 10px) {
+  padding-left: $ph;
+  padding-right: $ph;
+}

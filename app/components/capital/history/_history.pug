@@ -1,0 +1,43 @@
+section.history
+  -
+    const HISTORY_ITEMS = [
+      'История компании: 2010 год',
+      'История компании: 2012 год',
+      'Компания была основана в Москве в 1990 году в ДК Московского Авиационного Института. С самого начала компания работала в нескольких направлениях звукового рынка: стадионные концерты «рок-н-ролльщиков» (ДДТ, Наутилус, Аквариум), эстрада (Алла Пугачева, Лайма Вайкуле, Валерий Леонтьев, Олег Газманов), дискотеки и элитные ночные клубы (Арлекино, Пентхаус).',
+      'История компании: 2016 год',
+      'История компании: 2018 год',
+    ];
+    const HISTORY_BUTTONS = [
+      ['previous', 'Предыдущий'],
+      ['next', 'Следующий'],
+    ];
+  .history__inner.js-slide-3
+    h2.visually-hidden История компании
+    .history__slider-controls
+      each item in HISTORY_BUTTONS
+        - const [modifier, text] = item;
+        button(
+          class=[
+            'history__control-button',
+            `history__control-button--${modifier}`,
+          ],
+          type='button',
+          aria-label=`${text} слайд`,
+        )
+      .history__date-slider
+        ul.history__date-list
+          - for (let i = 1, year = 2010; i <= 5; i += 1, year += 2)
+            li.history__date-item
+              button(
+                class=[
+                  'history__date-button',
+                  `history__date-button--${i}`,
+                ],
+              type='button',
+              )
+                span.button-fix= year
+    .history__slider
+      ul.history__list
+        each item in HISTORY_ITEMS
+          li.history__item
+            p.history__content= item

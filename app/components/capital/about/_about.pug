@@ -1,0 +1,29 @@
+section.about
+  -
+    const ABOUT_DESCRIPTIONS = [
+      'Live Sound Agency одна из немногих компаний, которые стояли у истоков создания современного «звукового» бизнеса в России. За 25-летнюю историю мы никогда не отказывались от самой сложной и ответственной работы.',
+      'Год за годом набирали бесценный практический опыт, совершенствовали технологии, обучали персонал. И сегодня у нас есть, что предложить Вам.',
+      'Это крупнейший звукоусилительный комплекс в России, самый широкий выбор современного высокотехнологичного оборудования, профессиональный персонал. А самое главное — хороший звук на вашем мероприятии.',
+    ];
+  .about__inner.aligner
+    h2.about__heading.heading О компании
+    .about__layout
+      .about__column-1
+        a.about__video-link(href="#")
+          picture
+            source(
+              media=$VIEWPORT_MIN_WIDTH_HUGE,
+              srcset='img/about-video-huge.png',
+            )
+            source(
+              media=$VIEWPORT_MIN_WIDTH_LARGE,
+              srcset='img/about-video-laptop.png',
+            )
+            img.about__image(
+              src='img/about-video-mobile.png',
+              alt='Видео о нашей компании',
+            )
+      .about__column-2
+        each sentence in ABOUT_DESCRIPTIONS
+          p.about__description= sentence
+        a.about__more-link(href='#') Узнать больше

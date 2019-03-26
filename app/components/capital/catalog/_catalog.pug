@@ -1,0 +1,29 @@
+section.catalog
+  -
+    const CATALOG_ITEMS = [
+      'Акустические системы линейного массива',
+      'Активные акустические системы',
+      'Пассивные акустические системы',
+      'Мониторы сценические',
+      'Усилители',
+      'Цифровые микшерные пульты',
+      'Аналоговые микшерные пульты',
+      'Радиосистемы',
+      'Системы мониторинга In-Ear',
+    ];
+    const CATALOG_CARDS = [
+      'L-acoustics 108P',
+      'Meyer Sound UPA 1P',
+      'RCF ART 322-A',
+    ];
+  .catalog__inner.aligner
+    h2.visually-hidden
+    ul.catalog__list
+      each item in CATALOG_ITEMS
+        li.catalog__item
+          h3.catalog__item-caption(tabindex='0')= item
+          .catalog__item-content
+            ul.catalog-volume
+              each card, index in CATALOG_CARDS
+                li.catalog-volume__item
+                  +catalog-card(index + 1, card)

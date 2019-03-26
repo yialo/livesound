@@ -1,0 +1,13 @@
+extends ../base/_template_page
+
+block page-id
+  - const $pageId = 'equipment';
+
+block page-main
+  .page-main__intro
+    +intro('equipment', 'Оборудование')
+  .page-main__catalog
+    include ../components/capital/catalog/_catalog
+
+block page-body-scripts
+  script(src="js/equipment-catalog.js")
