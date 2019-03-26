@@ -3,10 +3,8 @@
     @include font(400, 18px, 20px);
     display: block;
     padding: 15px 20px;
-    text: {
-      align: center;
-      transform: uppercase;
-    }
+    text-align: center;
+    text-transform: uppercase;
     color: white;
     background-color: #1a1a2b;
 
@@ -34,12 +32,10 @@
     .main-navigation--header & {
       display: inline;
       padding: 0;
-      font: {
-        weight: 400;
-        size: 24px;
-        family: "PT Sans Narrow", "Arial", sans-serif;
-      }
+      font-weight: 400;
+      font-size: 24px;
       line-height: 32px;
+      font-family: "pt_sans_narrow", "arial", sans-serif;
       text-transform: none;
       background-color: transparent;
 

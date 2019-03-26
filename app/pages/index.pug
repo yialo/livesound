@@ -1,4 +1,4 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'index';
@@ -20,7 +20,3 @@ block page-main
     include ../components/capital/about/_about
   .page-main__partners
     +partners('short', 'Партнеры', '')
-
-block page-body-scripts
-  script(src='js/slick.js')
-  script(src='js/promo-slider.js')

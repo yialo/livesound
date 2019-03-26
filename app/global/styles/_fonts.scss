@@ -1,34 +1,35 @@
-@font-face {
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Arial";
-  font-display: swap;
+$font-properties: (
+  arial: (
+    font-weights: (400 "Arial Regular" "Arial-Regular", 700 "Arial Bold" "Arial-Bold",),
+    font-styles: normal,
+  ),
+  pt_sans_narrow: (
+    font-weights: (400 "PT Sans Narrow" "PTSans-Narrow",),
+    font-styles: normal,
+  ),
+);
 
-  src: local("Arial Regular"),
-    local("Arial-Regular"),
-    url("../fonts/arial-regular.woff2") format("woff2"),
-    url("../fonts/arial-regular.woff") format("woff");
-}
+@each $font-family, $font-family-properties in $font-properties {
+  @each $font-weight in map-get($font-family-properties, font-weights) {
+    $font-weight-value: nth($font-weight, 1);
+    $font-title-os: nth($font-weight, 2);
+    $font-title-postscript: nth($font-weight, 3);
 
-@font-face {
-  font-weight: 700;
-  font-style: normal;
-  font-family: "Arial";
-  font-display: swap;
+    @each $font-style in map-get($font-family-properties, font-styles) {
+      @font-face {
+        $font-file-name: #{$font-family}-#{$font-weight-value}-#{$font-style};
 
-  src: local("Arial Bold"),
-    local("Arial-Bold"),
-    url("../fonts/arial-bold.woff2") format("woff2"),
-    url("../fonts/arial-bold.woff") format("woff");
-}
+        font-style: $font-style;
+        font-weight: $font-weight-value;
+        font-family: $font-family;
+        font-display: swap;
 
-@font-face {
-  font-weight: 400;
-  font-style: normal;
-  font-family: "PT Sans Narrow";
-  font-display: swap;
-
-  src: local("PT Sans Narrow"),
-    url("../fonts/pt_sans-narrow-regular.woff2") format("woff2"),
-    url("../fonts/pt_sans-narrow-regular.woff") format("woff");
+        src:
+          local($font-title-os),
+          local($font-title-postscript),
+          url("../fonts/#{$font-file-name}.woff2") format("woff2"),
+          url("../fonts/#{$font-file-name}.woff") format("woff");
+      }
+    }
+  }
 }

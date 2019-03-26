@@ -1,15 +1,10 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'about';
 
 block page-main
-  .page-main__intro
-    +intro('about', 'О компании')
   .page-main__history
     include ../components/capital/history/_history
   .page-main__mission
     include ../components/capital/mission/_mission
-
-block page-body-scripts
-  script(src='js/about-slider.js')

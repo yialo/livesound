@@ -1,11 +1,9 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'projects';
 
 block page-main
-  .page-main__intro
-    +intro('projects', 'Проекты')
   .page-main__projects
     +projects('Реализованные проекты')
   .page-main__supremacy

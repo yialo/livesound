@@ -1,18 +1,12 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'partners';
 
 block page-main
-  .page-main__intro
-    +intro('partners', 'Клиенты/Партнеры')
   .page-main__partners
     +partners('long', 'Наши партнеры', '')
   .page-main__acknowledgements
     include ../components/capital/acknowledgements/_acknowledgements
   .page-main__partners
     +partners('long', 'Нам доверяют', '')
-
-block page-body-scripts
-  script(src='js/acknowledgements-slider.js')
-  script(src='js/modal.js')

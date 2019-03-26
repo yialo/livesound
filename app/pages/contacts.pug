@@ -1,14 +1,8 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'partners';
 
 block page-main
-  .page-main__intro
-    +intro('contacts', 'Контакты')
   .page-main__contacts
     include ../components/capital/contacts/_contacts
-
-block page-body-scripts
-  script(src="https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU" type="text/javascript")
-  script(src="js/contacts-map.js")

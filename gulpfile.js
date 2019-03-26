@@ -22,7 +22,7 @@ const sassglob = require('gulp-sass-glob');
 const server = require('browser-sync').create();
 const zopfli = require('imagemin-zopfli');
 
-// Vinyl variables
+// Vinyl data and methods
 
 const imageProcessingPaths = {
   input: './spec/img-processing/input/',
@@ -30,11 +30,25 @@ const imageProcessingPaths = {
 };
 const bitmapExts = '{gif,jpg,png}';
 const fontExts = '{woff,woff2}';
-const jsPaths = [
+
+const getSrc = function getSourcePathsForCopy(srcFolder, extSet) {
+  const globalPath = `./app/global/${srcFolder}/*.${extSet}`;
+  const componentsPath = `./app/components/**/${srcFolder}/**/*.${extSet}`;
+  return [globalPath, componentsPath];
+};
+
+const bitmapsSrc = getSrc('bitmaps', bitmapExts);
+const faviconstSrc = './app/global/favicons/*';
+const fontsSrc = `./app/global/fonts/*.${fontExts}`;
+const jsSrc = [
   './app/scripts/*.js',
   './app/vendors/*.js',
   './app/vendors_customized/*.js',
 ];
+const svgSrc = getSrc('svg', 'svg');
+const videoSrc = getSrc('video', 'mp4');
+const cssSrc = './app/base/main.scss';
+const pugSrc = './app/pages/*.pug';
 
 // Task functions
 
@@ -116,53 +130,44 @@ const cleanbuild = function deleteFormerBuildFolder() {
 };
 
 const copyvideo = function copyVideoFilesToBuildFolder() {
-  return gulp.src([
-    './app/global/video/*.mp4',
-    './app/components/**/video/*.mp4',
-  ])
+  return gulp.src(videoSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/video/'));
 };
 
 const copyfavicons = function copyFaviconsToBuildFolder() {
-  return gulp.src('./app/global/favicons/*')
+  return gulp.src(faviconstSrc)
     .pipe(gulp.dest('./dist/favicons/'));
 };
 
 const copyfonts = function copyFontFilesToBuildFolder() {
   return gulp
-    .src(`./app/global/fonts/*.${fontExts}`)
+    .src(fontsSrc)
     .pipe(gulp.dest('./dist/fonts/'));
 };
 
 const copysvg = function copySvgImagesToBuildFolder() {
-  return gulp.src([
-    './app/global/svg/**/.svg',
-    './app/components/**/svg/**/*.svg',
-  ])
+  return gulp.src(svgSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
 };
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
-  return gulp.src([
-    `./app/global/bitmaps/**/*.${bitmapExts}`,
-    `./app/components/**/bitmaps/**/*.${bitmapExts}`,
-  ])
+  return gulp.src(bitmapsSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
 };
 
 const scripts = function launchJsCompiler() {
   return gulp
-    .src(jsPaths)
+    .src(jsSrc)
     .pipe(minjs())
     .pipe(gulp.dest('./dist/js/'));
 };
 
 const style = function launchCssCompiler() {
   return gulp
-    .src('./app/base/main.scss')
+    .src(cssSrc)
     .pipe(plumber())
     .pipe(sassglob())
     .pipe(sass())
@@ -176,7 +181,7 @@ const style = function launchCssCompiler() {
 
 const html = function launchHtmlCompiler() {
   return gulp
-    .src('./app/pages/*.pug')
+    .src(pugSrc)
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
@@ -189,6 +194,7 @@ const reload = function reloadBrowserSync(done) {
 };
 
 const serve = function launchBrowserSync(done) {
+  const streamWatchBase = './app/**/*.';
   server.init({
     cors: true,
     notify: false,
@@ -196,30 +202,25 @@ const serve = function launchBrowserSync(done) {
     server: { baseDir: './dist/' },
   });
   done();
-  gulp.watch('./app/**/*.pug', html);
-  gulp.watch('./app/**/*.scss', style);
+  gulp.watch(`${streamWatchBase}pug`, html);
+  gulp.watch(`${streamWatchBase}scss`, style);
 };
 
 const watchJs = function watchForJavascriptFiles() {
-  return gulp.watch(jsPaths, gulp.series(scripts, reload));
+  return gulp.watch(jsSrc, gulp.series(scripts, reload));
 };
 
 const watchSvg = function watchForSvgFiles() {
-  return gulp.watch(
-    ['./app/global/svg/**/*.svg', './app/components/**/svg/**/*.svg'],
-    gulp.series(copysvg, reload),
-  );
+  return gulp.watch(svgSrc, gulp.series(copysvg, reload));
 };
 
 const watchBitmaps = function watchForBitmapFiles() {
   return gulp
-    .watch(
-      [
-        `./app/global/bitmaps/**/*.${bitmapExts}`,
-        `./app/components/**/bitmaps/**/*.${bitmapExts}`,
-      ],
-      gulp.series(copybitmaps, reload),
-    );
+    .watch(bitmapsSrc, gulp.series(copybitmaps, reload));
+};
+
+const watchFonts = function watchForFontFiles() {
+  return gulp.watch(fontsSrc, gulp.series(copyfonts, reload));
 };
 
 // Gulp tasks
@@ -234,7 +235,7 @@ gulp.task(
   'copyassets',
   gulp.parallel(copyfonts, copyfavicons, 'imagecopy', copyvideo),
 );
-gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps));
+gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps, watchFonts));
 gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
 gulp.task('serve', gulp.series(serve, 'watchForAll'));
 

@@ -1,11 +1,9 @@
-extends ../base/_template_page
+extends ../base/_template_html
 
 block page-id
   - const $pageId = 'team';
 
 block page-main
-  .page-main__intro
-    +intro('team', 'Команда')
   .page-main__experience
     include ../components/capital/experience/_experience
   .page-main__team-gallery

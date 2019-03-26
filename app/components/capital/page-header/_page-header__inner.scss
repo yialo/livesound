@@ -11,17 +11,13 @@
   }
 
   @media (min-width: $large-min-width) {
-    padding: {
-      left: 40px;
-      right: 40px;
-    }
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: $huge-min-width) {
     width: $huge-min-width;
-    padding: {
-      left: 10px;
-      right: 100px;
-    }
+    padding-left: 10px;
+    padding-right: 100px;
   }
 }
