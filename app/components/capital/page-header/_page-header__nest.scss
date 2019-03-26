@@ -50,19 +50,13 @@
 
     &--logo {
       margin-left: 0;
-      margin-right: 40px;
+      margin-right: 0;
     }
 
     &--navigation {
+      @include margin-hor(30px);
       flex-grow: 1;
       align-self: center;
-      position: static;
-      left: auto;
-      z-index: auto;
-      display: block;
-      width: auto;
-      margin-left: auto;
-      margin-right: 40px;
     }
 
     &--socials {
@@ -76,18 +70,12 @@
   }
 
   @media (min-width: $huge-min-width) {
-    &--logo {
-      margin-right: 140px;
-    }
-
     &--navigation {
-      margin-right: 0;
+      @include margin-hor(140px);
     }
 
     &--socials {
-      position: static;
       align-items: stretch;
-      margin-left: 140px;
     }
 
     &--language-toggle {

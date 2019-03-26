@@ -1,19 +1,13 @@
 .main-navigation__list {
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   .main-navigation--footer & {
     display: grid;
-    grid: {
-      template: {
-        rows: repeat(4, auto);
-        columns: repeat(2, auto);
-      }
-      auto-flow: column;
-    }
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-auto-flow: column;
     justify-content: space-around;
   }
 
@@ -23,19 +17,24 @@
 
   @media (min-width: $large-min-width) {
     .main-navigation--header & {
+      @include margin-hor();
       display: flex;
       justify-content: space-between;
+      min-width: 790px;
+      max-width: 1100px;
     }
 
     .main-navigation--footer & {
-      grid: {
-        row-gap: 10px;
-        column-gap: 40px;
-      }
+      grid-row-gap: 10px;
+      grid-column-gap: 40px;
     }
   }
 
   @media (min-width: $huge-min-width) {
+    .main-navigation--header & {
+      max-width: none;
+    }
+
     .main-navigation--footer & {
       grid-column-gap: 25px;
     }
