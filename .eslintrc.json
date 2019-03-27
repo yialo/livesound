@@ -8,7 +8,7 @@
   "parserOptions": {
     "sourceType": "script"
   },
-  "plugins": ["import", "pug"],
+  "plugins": ["import"],
   "rules": {
     "max-len": [
       "error",
