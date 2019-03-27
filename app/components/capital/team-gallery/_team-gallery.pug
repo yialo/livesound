@@ -5,11 +5,11 @@ section.team-gallery
       [$VIEWPORT_MIN_WIDTH_LARGE, 'large'],
       [$VIEWPORT_MIN_WIDTH_MEDIUM, 'medium'],
     ];
-  .team-gallery__inner.aligner
+  .aligner.team-gallery__inner
     h2.visually-hidden Фотографии наших сотрудников
     ul.team-gallery__list
       - for (let i = 1; i <= 6; i += 1)
-        li(class=['team-gallery__item', `team-gallery__item--${i}`])
+        li(class=setModifiers('team-gallery__item', [i]))
           picture.team-gallery__wrapper
             each source in TEAM_GALLERY_SOURCES
               - const [viewport, modifier] = source;
@@ -18,7 +18,7 @@ section.team-gallery
                 srcset=`img/team-gallery__photo--${i}-${modifier}.jpg`,
               )
             img(
-              class=['team-gallery__photo', `team-gallery__photo--${i}`],
+              class=setModifiers('team-gallery__photo', [i]),
               src=`img/team-gallery__photo--${i}-small.jpg`,
               alt=`Наша команда, фото ${i}`,
             )

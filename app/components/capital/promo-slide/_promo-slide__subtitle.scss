@@ -1,8 +1,5 @@
 .promo-slide__subtitle {
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+  @include margin-ver(0);
   font-weight: 400;
   text-align: center;
   color: white;
@@ -12,17 +9,13 @@
   }
 
   @media (min-width: $large-min-width) {
-    padding: {
-      left: 20px;
-      right: 300px;
-    }
+    padding-left: 20px;
+    padding-right: 300px;
     text-align: left;
   }
 
   @media (min-width: $huge-min-width) {
-    padding: {
-      left: 328px;
-      right: 600px;
-    }
+    padding-left: 328px;
+    padding-right: 600px;
   }
 }

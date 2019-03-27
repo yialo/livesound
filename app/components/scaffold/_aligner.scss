@@ -1,7 +1,6 @@
 .aligner {
+  @include margin-hor();
   width: $small-min-width;
-
-  @include margin-hor;
 
   @media (min-width: $medium-min-width) {
     width: $medium-min-width;

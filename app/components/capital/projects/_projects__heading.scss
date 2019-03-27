@@ -1,20 +1,13 @@
 .projects__heading {
   @include margin-hor();
+  @include padding-hor(20px);
   width: $small-min-width;
-  margin: {
-    top: 0;
-    bottom: 20px;
-  }
-  padding: {
-    left: 20px;
-    right: 20px;
-  }
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 28px;
   line-height: 42px;
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $medium-min-width) {
     width: $medium-min-width;
@@ -24,22 +17,16 @@
   }
 
   @media (min-width: $large-min-width) {
+    @include padding-hor(10px);
     width: $large-min-width;
     margin-bottom: 65px;
-    padding: {
-      left: 10px;
-      right: 10px;
-    }
     font-size: 36px;
     line-height: 52px;
   }
 
   @media (min-width: $huge-min-width) {
+    @include padding-hor(5px);
     width: $huge-min-width;
     margin-bottom: 60px;
-    padding: {
-      left: 5px;
-      right: 5px;
-    }
   }
 }
