@@ -42,17 +42,22 @@
 
   @media (min-width: $large-min-width) {
     &--1 {
-      margin-right: 100px;
+      order: 0;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 25%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    &--2 {
+      width: 55%;
     }
 
     &--3 {
+      justify-content: flex-end;
+      width: 20%;
       margin-left: auto;
-    }
-  }
-
-  @media (min-width: $huge-min-width) {
-    &--1 {
-      margin-right: 95px;
     }
   }
 }
