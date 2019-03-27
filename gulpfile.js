@@ -223,6 +223,10 @@ const watchFonts = function watchForFontFiles() {
   return gulp.watch(fontsSrc, gulp.series(copyfonts, reload));
 };
 
+const watchFavicons = function watchForFaviconFiles() {
+  return gulp.watch(faviconstSrc, gulp.series(copyfavicons, reload));
+};
+
 // Gulp tasks
 
 gulp.task('svgmin', minsvg);
@@ -235,7 +239,7 @@ gulp.task(
   'copyassets',
   gulp.parallel(copyfonts, copyfavicons, 'imagecopy', copyvideo),
 );
-gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps, watchFonts));
+gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps, watchFonts, watchFavicons));
 gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
 gulp.task('serve', gulp.series(serve, 'watchForAll'));
 
