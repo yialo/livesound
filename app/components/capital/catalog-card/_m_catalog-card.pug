@@ -1,4 +1,5 @@
-mixin catalog-card(cardNumber, itemTitle)
+mixin catalog-card()
+  - const { 'card-number': cardNumber, 'item-title': itemTitle } = attributes;
   include _d_catalog-card
   .catalog-card
     div(class=setModifiers('catalog-card__column', [1]))

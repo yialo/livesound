@@ -1,7 +1,8 @@
-mixin logo(logoLocation)
-  div(class=setModifiers('logo', [logoLocation]))
+mixin logo()
+  - const location = attributes.location;
+  div(class=setModifiers('logo', [location]))
     a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
       img.logo__image(
-        src=`img/logo-${logoLocation}.png`,
+        src=`img/logo-${location}.png`,
         alt='Live Sound Agency',
       )

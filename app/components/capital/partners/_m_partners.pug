@@ -1,5 +1,6 @@
-mixin partners(listSize, heading, specialModifier)
+mixin partners()
   -
+    const { heading, 'special-modifier': specialModifier = '' } = attributes;
     const PARTNERS_DATA = {
       'short': [
         ['lacoustics', 'L-Acoustics'],
@@ -22,9 +23,10 @@ mixin partners(listSize, heading, specialModifier)
         ['shure-alt', 'SHURE'],
       ],
     };
+    const listSize = ($pageId === 'index' ? 'short' : 'long');
   section(class=[setModifiers('partners', [listSize]), specialModifier])
-    .partners__inner.aligner
-      h2.partners__heading.heading= heading
+    .aligner.partners__inner
+      h2.heading.partners__heading= heading
       ul.partners__list
         each item in PARTNERS_DATA[listSize]
           - const [path, alt] = item;

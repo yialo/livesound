@@ -26,4 +26,4 @@ section.catalog
             ul.catalog-volume
               each card, index in CATALOG_CARDS
                 li.catalog-volume__item
-                  +catalog-card(index + 1, card)
+                  +catalog-card(card-number=index + 1, item-title=card)

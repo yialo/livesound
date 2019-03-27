@@ -2,15 +2,15 @@ footer.page-footer
   .aligner.page-footer__inner
     div(class=setModifiers('page-footer__column', [1]))
       div(class=setModifiers('page-footer__nest', ['address']))
-        +address('footer')
+        +address()(location='footer')
       div(class=setModifiers('page-footer__nest', ['logo']))
-        +logo('footer')
+        +logo()(location='footer')
       div(class=setModifiers('page-footer__nest', ['copyright']))
         p.copyright= '© 2016 '
           span.copyright__string Live-sound agency
     div(class=setModifiers('page-footer__column', [2]))
       div(class=setModifiers('page-footer__nest', ['navigation']))
-        +main-navigation('footer')
+        include ../footer-navigation/_footer-navigation
       div(class=setModifiers('page-footer__nest', ['widget']))
         aside.widget
           .widget__inner

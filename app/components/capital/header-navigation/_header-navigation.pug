@@ -1,0 +1,13 @@
+nav.header-navigation
+  ul.header-navigation__list
+    each text, modifier in $PAGES
+      - const isCurrent = (modifier === $pageId);
+      li.header-navigation__item
+        p.navigation-item(class=(isCurrent ? 'current' : null))
+          a(
+            class=[
+              'navigation-item__link',
+              modifier === 'contacts' ? 'navigation-item__link--last' : null,
+            ],
+            href=(isCurrent ? null : `${modifier}.html`),
+          )= text

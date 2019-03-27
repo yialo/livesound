@@ -10,13 +10,13 @@ block page-main
   .page-main__advantages
     include ../components/capital/advantages/_advantages
   .page-main__directions
-    +projects('Основные направления')
+    +projects()
   .page-main__partners
-    +partners(
-      'short',
-      'Оборудование от компаний-лидеров мирового рынка', 'partners-small-heading'
+    +partners()(
+      heading='Оборудование от компаний-лидеров мирового рынка',
+      special-modifier='partners-small-heading',
     )
   .page-main__about
     include ../components/capital/about/_about
   .page-main__partners
-    +partners('short', 'Партнеры', '')
+    +partners()(heading='Партнеры')

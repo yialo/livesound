@@ -1,0 +1,19 @@
+.navigation-item {
+  @include margin-ver(0);
+
+  @media (min-width: $large-min-width) {
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+      }
+    }
+  }
+}

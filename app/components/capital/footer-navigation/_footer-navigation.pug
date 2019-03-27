@@ -1,0 +1,12 @@
+nav.footer-navigation
+  ul.footer-navigation__list
+    each text, modifier in $PAGES
+      - const isCurrent = (modifier === $pageId);
+      li.footer-navigation__item
+        a(
+          class=setModifiers(
+            'footer-navigation__link',
+            [isCurrent ? 'current_true' : 'current_false']
+          ),
+          href=(isCurrent ? null : `${modifier}.html`),
+        )= text

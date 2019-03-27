@@ -4,7 +4,7 @@ section.contacts
     h2.visually-hidden Контактная информация
     div(class=setModifiers('contacts__column', [1]))
       .contacts__address
-        +address('contacts')
+        +address()(location='contacts')
       ul.contacts__tels
         each string in CONTACTS_TELS
           - const hyphenedString = string.slice(0, 2).concat('-', string.slice(2));
