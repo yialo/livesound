@@ -9,20 +9,15 @@ section.about
     h2.heading.about__heading О компании
     .about__layout
       div(class=setModifiers('about__column',  [1]))
-        a.about__video-link(href='#')
-          picture.about__image-wrapper
-            source(
-              media=$VIEWPORT_MIN_WIDTH_HUGE,
-              srcset='img/about-video-huge.png',
-            )
-            source(
-              media=$VIEWPORT_MIN_WIDTH_LARGE,
-              srcset='img/about-video-laptop.png',
-            )
-            img.about__image(
-              src='img/about-video-mobile.png',
-              alt='Видео о нашей компании',
-            )
+        .about__video-wrapper
+          iframe.about__video(
+            src='https://www.youtube.com/embed/Jn4mIZtCeSQ',
+            width='280',
+            height='177',
+            frameborder='0',
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+            allowfullscreen,
+          )
       div(class=setModifiers('about__column',  [2]))
         each sentence in ABOUT_DESCRIPTIONS
           p.about__description= sentence
