@@ -564,6 +564,36 @@ html.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
+@-webkit-keyframes animateCSS-fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes animateCSS-fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+.animatecss-fadeinup {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-name: animateCSS-fadeInUp;
+          animation-name: animateCSS-fadeInUp;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; }
+
 .lb-cancel {
   background-image: url("../img/lightbox-loading.gif"); }
 
