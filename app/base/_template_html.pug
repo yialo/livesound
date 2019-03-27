@@ -11,56 +11,7 @@ include _import_mixins
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title #{$pageTitle} | #{$SITE_TITLE}
-    include ../components/capital/head/_head-_general_meta
-    if $projectCardsContained
-      link(
-        rel='preload',
-        href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-        as='script',
-      )
-    include ../components/capital/head/_head-_fonts
-    link(rel='stylesheet', href='css/main.min.css')
-    if $pageId === 'index'
-      link(rel='preload', href='js/slick.js', as='script')
-    include ../components/capital/head/_head-_favicons
+  include ../components/capital/head/_head
   body(class=setModifiers('page', [$pageId]))
-    .page__header
-      include ../components/capital/page-header/_page-header
-    .page__main
-      main(class=setModifiers('page-main', [$pageId]))
-        if $pageId !== 'index'
-          .page-main__intro
-            header(class=setModifiers('intro', [$pageId]))
-              .aligner.intro__inner
-                h1.intro__heading.heading= $pageTitle
-        block page-main
-    .page__footer
-      include ../components/capital/page-footer/_page-footer
-    if $pageId === 'partners'
-      .page__modal
-        include ../components/capital/modal/_modal
-    script(src='js/picturefill.js')
-    script(src='js/main-navigation.js')
-    if $projectCardsContained
-      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-      script.
-        window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
-      script(src='js/lightbox_customized.js')
-    case $pageId
-      when 'index'
-        script(src='js/slick.js')
-        script(src='js/promo-slider.js')
-        script(src='js/index-section-fadeinup.js')
-      when 'about'
-        script(src='js/about-slider.js')
-      when 'partners'
-        script(src='js/acknowledgements-slider.js')
-        script(src='js/modal.js')
-      when 'equipment'
-        script(src="js/equipment-catalog.js")
-      when 'contacts'
-        script(src="https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU" type="text/javascript")
-        script(src="js/contacts-map.js")
+    include ../components/capital/page/_page_Content
+    include ../components/capital/page/_page_Scripts
