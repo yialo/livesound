@@ -3,6 +3,8 @@ script(src='js/main-navigation.js')
 if $projectCardsContained
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
   script.
+    /* eslint-disable */
+    'use strict';
     window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
   script(src='js/lightbox_customized.js')
 case $pageId
@@ -16,7 +18,10 @@ case $pageId
     script(src='js/acknowledgements-slider.js')
     script(src='js/modal.js')
   when 'equipment'
-    script(src="js/equipment-catalog.js")
+    script(src='js/equipment-catalog.js')
   when 'contacts'
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU" type="text/javascript")
-    script(src="js/contacts-map.js")
+    script(
+      src='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU',
+      type='text/javascript',
+    )
+    script(src='js/contacts-map.js')
