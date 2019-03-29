@@ -4,11 +4,10 @@ head
   include _head_General-meta
   include _head_Fonts
   include _head_Favicons
-  if $projectCardsContained
+  if $needJquery
     link(
       rel='preload',
       href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
       as='script',
     )
   link(rel='stylesheet', href='css/main.min.css')
-  block head-preload-distinct

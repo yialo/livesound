@@ -4,6 +4,7 @@ block page-id
 
 -
   const $pageTitle = $PAGES[$pageId];
+  const $needJquery = ['index', 'about', 'projects'].includes($pageId);
   const $projectCardsContained = ['index', 'projects'].includes($pageId);
 
 include _import_functions
