@@ -51,7 +51,7 @@
   @media (min-width: $large-min-width) {
     &.prev-prev {
       z-index: 1;
-      transform: translateY(-50%) translateX(-200%) scale(0.3);
+      transform: translateY(-50%) translateX(-260%) scale(0.3);
       opacity: 0.5;
     }
 
@@ -61,7 +61,7 @@
 
     &.next-next {
       z-index: 1;
-      transform: translateY(-50%) translateX(-150%) scale(0.3);
+      transform: translateY(-50%) translateX(160%) scale(0.3);
       opacity: 0.5;
     }
 

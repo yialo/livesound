@@ -641,15 +641,15 @@ html.lb-disable-scrolling {
   @media (min-width: 1220px) {
     .cascade-slider__item.prev-prev {
       z-index: 1;
-      -webkit-transform: translateY(-50%) translateX(-200%) scale(0.3);
-              transform: translateY(-50%) translateX(-200%) scale(0.3);
+      -webkit-transform: translateY(-50%) translateX(-260%) scale(0.3);
+              transform: translateY(-50%) translateX(-260%) scale(0.3);
       opacity: 0.5; }
     .cascade-slider__item.prev {
       z-index: 3; }
     .cascade-slider__item.next-next {
       z-index: 1;
-      -webkit-transform: translateY(-50%) translateX(-150%) scale(0.3);
-              transform: translateY(-50%) translateX(-150%) scale(0.3);
+      -webkit-transform: translateY(-50%) translateX(160%) scale(0.3);
+              transform: translateY(-50%) translateX(160%) scale(0.3);
       opacity: 0.5; }
     .cascade-slider__item.next {
       z-index: 3; } }
