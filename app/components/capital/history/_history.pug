@@ -8,33 +8,33 @@ section.history
       'История компании: 2018 год',
     ];
     const HISTORY_BUTTONS = [
-      ['previous', 'Предыдущий'],
+      ['prev', 'Предыдущий'],
       ['next', 'Следующий'],
     ];
-  .history__inner.js-slide-3
+  .history__inner
     h2.visually-hidden История компании
-    .history__slider-controls
-      each item in HISTORY_BUTTONS
-        - const [modifier, text] = item;
-        button(
-          class=setModifiers('history__control-button', [modifier]),
-          type='button',
-          aria-label=`${text} слайд`,
-        )
-      .history__date-slider
-        ul.history__date-list
-          - for (let i = 1, year = 2010; i <= 5; i += 1, year += 2)
-            li.history__date-item
-              button(class=setModifiers('history__date-button', [i]), type='button')
-                span.button-fix= year
-    .history__slider
-      .cascade-slider__container(id='cascade-slider')
+    .history__date-slider
+      .cascade-slider(id='cascade-slider')
         .cascade-slider__slides
-          each item in HISTORY_ITEMS
+          - for (let i = 1, year = 2018; i <= 5; i += 1, year -= 2)
             .cascade-slider__item
-              p.history__content= item
+              p.history__year= year
+        each item in HISTORY_BUTTONS
+          - const [modifier, text] = item;
+          button(
+            class=setModifiers('cascade-slider__arrow', [modifier]),
+            type='button',
+            data-action=modifier,
+            aria-label=`${text} слайд`,
+          )
+    .history__slider
+      ul.history__list
+        each item in HISTORY_ITEMS
+          li.history__item
+            p.history__content= item
 
-      //- ul.history__list
-      //-   each item in HISTORY_ITEMS
-      //-     li.history__item
-      //-       p.history__content= item
+        //- ul.history__date-list
+        //-   - for (let i = 1, year = 2010; i <= 5; i += 1, year += 2)
+        //-     li.history__date-item
+        //-       button(class=setModifiers('history__date-button', [i]), type='button')
+        //-         span.button-fix= year
