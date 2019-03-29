@@ -13,11 +13,11 @@ section.history
     ];
   .history__inner
     h2.visually-hidden История компании
-    .history__date-slider
+    .history__dates
       .cascade-slider(id='cascade-slider')
-        .cascade-slider__slides
+        ul.cascade-slider__slides
           - for (let i = 1, year = 2018; i <= 5; i += 1, year -= 2)
-            .cascade-slider__item
+            li.cascade-slider__item
               p.history__year= year
         each item in HISTORY_BUTTONS
           - const [modifier, text] = item;

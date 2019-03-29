@@ -4,11 +4,12 @@
   width: $small-min-width;
 
   @media (min-width: $medium-min-width) {
-    width: $medium-min-width;
+    @include padding-hor(0);
+    width: 488px;
   }
 
   @media (min-width: $large-min-width) {
-    width: 1180px;
+    width: 780px;
   }
 
   @media (min-width: $huge-min-width) {
