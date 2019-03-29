@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 (function($) {
   $.fn.cascadeSlider = function(opt) {
     var $this = this,
-      itemClass = opt.itemClass || 'cascade-slider_item',
-      arrowClass = opt.arrowClass || 'cascade-slider_arrow',
+      itemClass = opt.itemClass || 'cascade-slider__item',
+      arrowClass = opt.arrowClass || 'cascade-slider__arrow',
       $item = $this.find('.' + itemClass),
       $arrow = $this.find('.' + arrowClass),
       itemCount = $item.length;
@@ -29,37 +31,37 @@
         }
       }
 
-      $('.cascade-slider_dot').removeClass('cur');
-      //$('.cascade-slider_dot').next().addClass('cur');
+      $('.cascade-slider__dot').removeClass('cur');
+      //$('.cascade-slider__dot').next().addClass('cur');
     });
 
     // add data attributes
     for (var i = 0; i < itemCount; i++) {
-      $('.cascade-slider_item').each(function(i) {
+      $('.cascade-slider__item').each(function(i) {
         $(this).attr('data-slide-number', [i]);
       });
     }
 
     // dots
-    $('.cascade-slider_dot').bind('click', function(){
+    $('.cascade-slider__dot').bind('click', function(){
       // add class to current dot on click
-      $('.cascade-slider_dot').removeClass('cur');
+      $('.cascade-slider__dot').removeClass('cur');
       $(this).addClass('cur');
 
       var index = $(this).index();
 
-      $('.cascade-slider_item').removeClass('now prev next');
-      var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
+      $('.cascade-slider__item').removeClass('now prev next');
+      var slide = $('.cascade-slider__slides').find('[data-slide-number=' + index + ']');
       slide.prev().addClass('prev');
       slide.addClass('now');
       slide.next().addClass('next');
 
       if(slide.next().length == 0) {
-        $('.cascade-slider_item:first-child').addClass('next');
+        $('.cascade-slider__item:first-child').addClass('next');
       }
 
       if(slide.prev().length == 0) {
-        $('.cascade-slider_item:last-child').addClass('prev');
+        $('.cascade-slider__item:last-child').addClass('prev');
       }
     });
 

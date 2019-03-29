@@ -28,7 +28,13 @@ section.history
               button(class=setModifiers('history__date-button', [i]), type='button')
                 span.button-fix= year
     .history__slider
-      ul.history__list
-        each item in HISTORY_ITEMS
-          li.history__item
-            p.history__content= item
+      .cascade-slider__container(id='cascade-slider')
+        .cascade-slider__slides
+          each item in HISTORY_ITEMS
+            .cascade-slider__item
+              p.history__content= item
+
+      //- ul.history__list
+      //-   each item in HISTORY_ITEMS
+      //-     li.history__item
+      //-       p.history__content= item
