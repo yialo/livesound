@@ -3,8 +3,8 @@
 (function($) {
   $.fn.cascadeSlider = function(opt) {
     var $this = this,
-      itemClass = opt.itemClass || 'cascade-slider__item',
-      arrowClass = opt.arrowClass || 'cascade-slider__arrow',
+      itemClass = 'cascade-slider__item',
+      arrowClass = 'cascade-slider__arrow',
       $item = $this.find(`.${itemClass}`),
       $arrow = $this.find(`.${arrowClass}`),
       itemCount = $item.length;
@@ -30,9 +30,6 @@
           changeIndex(nowIndex - 1);
         }
       }
-
-      // $('.cascade-slider__dot').removeClass('cur');
-      // $('.cascade-slider__dot').next().addClass('cur');
     });
 
     // add data attributes
@@ -41,29 +38,6 @@
         $(this).attr('data-slide-number', [i]);
       });
     }
-
-    // dots
-    $('.cascade-slider__dot').bind('click', function(){
-      // add class to current dot on click
-      $('.cascade-slider__dot').removeClass('cur');
-      $(this).addClass('cur');
-
-      var index = $(this).index();
-
-      $('.cascade-slider__item').removeClass('now prev next');
-      var slide = $('.cascade-slider__slides').find('[data-slide-number=' + index + ']');
-      slide.prev().addClass('prev');
-      slide.addClass('now');
-      slide.next().addClass('next');
-
-      if(slide.next().length === 0) {
-        $('.cascade-slider__item:first-child').addClass('next');
-      }
-
-      if(slide.prev().length === 0) {
-        $('.cascade-slider__item:last-child').addClass('prev');
-      }
-    });
 
     function changeIndex(nowIndex) {
       // clean all classes

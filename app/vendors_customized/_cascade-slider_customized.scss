@@ -50,12 +50,12 @@
   border-style: none;
 
   &--prev {
-    left: 0;
+    right: 0;
     background-image: url("../img/history__slider-control--previous.svg");
   }
 
   &--next {
-    right: 0;
+    left: 0;
     background-image: url("../img/history__slider-control--next.svg");
   }
 }

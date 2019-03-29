@@ -644,10 +644,10 @@ html.lb-disable-scrolling {
   background-repeat: no-repeat;
   border-style: none; }
   .cascade-slider__arrow--prev {
-    left: 0;
+    right: 0;
     background-image: url("../img/history__slider-control--previous.svg"); }
   .cascade-slider__arrow--next {
-    right: 0;
+    left: 0;
     background-image: url("../img/history__slider-control--next.svg"); }
 
 .lb-cancel {
@@ -1759,267 +1759,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
   text-align: center; }
 
-.history__control-button {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
-  .history__control-button--previous {
-    left: 0;
-    background-image: url("../img/history__slider-control--previous.svg"); }
-  .history__inner.js-slide-1 .history__control-button--previous {
-    opacity: 0.25;
-    outline-style: none;
-    cursor: default; }
-  .history__control-button--next {
-    right: 0;
-    background-image: url("../img/history__slider-control--next.svg"); }
-  .history__inner.js-slide-5 .history__control-button--next {
-    opacity: 0.25;
-    outline-style: none;
-    cursor: default; }
-  @media (min-width: 768px) {
-    .history__control-button {
-      top: 80px; }
-      .history__control-button--previous {
-        left: 20px; }
-      .history__control-button--next {
-        right: 20px; } }
-  @media (min-width: 1220px) {
-    .history__control-button {
-      top: 5px; }
-      .history__control-button--previous {
-        left: -130px; }
-      .history__control-button--next {
-        right: -130px; } }
-  @media (min-width: 1840px) {
-    .history__control-button {
-      top: 70px; } }
-
-.history__date-button {
-  font-weight: 400;
-  font-family: "arial", sans-serif;
-  font-size: 48px;
-  line-height: 1;
-  display: block;
-  padding: 0;
-  color: #1d1d1d;
-  background-color: transparent;
-  border-style: none;
-  outline-style: none;
-  cursor: pointer;
-  -webkit-transition-property: font-size, color;
-  transition-property: font-size, color;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s; }
-  @media (min-width: 768px) {
-    .history__inner.js-slide-1 .history__date-button--1 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-1 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-1 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-1 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-1 .history__date-button--5 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--1 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--2 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-2 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--5 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--1 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--3 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-3 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--5 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-4 .history__date-button--1 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-4 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-4 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-4 .history__date-button--4 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-4 .history__date-button--5 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--1 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--5 {
-      font-size: 65px;
-      color: #1d1d1d; } }
-  @media (min-width: 1220px) {
-    .history__inner.js-slide-1 .history__date-button--1 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-1 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-1 .history__date-button--3 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-1 .history__date-button--4 {
-      font-size: 40px;
-      color: rgba(152, 152, 152, 0.42); }
-    .history__inner.js-slide-1 .history__date-button--5 {
-      font-size: 35px;
-      color: rgba(152, 152, 152, 0.32); }
-    .history__inner.js-slide-2 .history__date-button--1 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--2 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-2 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-2 .history__date-button--4 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-2 .history__date-button--5 {
-      font-size: 40px;
-      color: rgba(152, 152, 152, 0.42); }
-    .history__inner.js-slide-3 .history__date-button--1 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-3 .history__date-button--2 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--3 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-3 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-3 .history__date-button--5 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-4 .history__date-button--1 {
-      font-size: 40px;
-      color: rgba(152, 152, 152, 0.42); }
-    .history__inner.js-slide-4 .history__date-button--2 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-4 .history__date-button--3 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-4 .history__date-button--4 {
-      font-size: 65px;
-      color: #1d1d1d; }
-    .history__inner.js-slide-4 .history__date-button--5 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--1 {
-      font-size: 35px;
-      color: rgba(152, 152, 152, 0.32); }
-    .history__inner.js-slide-5 .history__date-button--2 {
-      font-size: 40px;
-      color: rgba(152, 152, 152, 0.42); }
-    .history__inner.js-slide-5 .history__date-button--3 {
-      font-size: 45px;
-      color: rgba(152, 152, 152, 0.52); }
-    .history__inner.js-slide-5 .history__date-button--4 {
-      font-size: 55px;
-      color: #989898; }
-    .history__inner.js-slide-5 .history__date-button--5 {
-      font-size: 65px;
-      color: #1d1d1d; } }
-  @media (min-width: 1840px) {
-    .history__inner.js-slide-1 .history__date-button--1 {
-      font-size: 75px; }
-    .history__inner.js-slide-1 .history__date-button--2 {
-      font-size: 65px; }
-    .history__inner.js-slide-1 .history__date-button--3 {
-      font-size: 55px; }
-    .history__inner.js-slide-1 .history__date-button--4 {
-      font-size: 45px; }
-    .history__inner.js-slide-1 .history__date-button--5 {
-      font-size: 40px; }
-    .history__inner.js-slide-2 .history__date-button--1 {
-      font-size: 65px; }
-    .history__inner.js-slide-2 .history__date-button--2 {
-      font-size: 75px; }
-    .history__inner.js-slide-2 .history__date-button--3 {
-      font-size: 65px; }
-    .history__inner.js-slide-2 .history__date-button--4 {
-      font-size: 55px; }
-    .history__inner.js-slide-2 .history__date-button--5 {
-      font-size: 45px; }
-    .history__inner.js-slide-3 .history__date-button--1 {
-      font-size: 55px; }
-    .history__inner.js-slide-3 .history__date-button--2 {
-      font-size: 65px; }
-    .history__inner.js-slide-3 .history__date-button--3 {
-      font-size: 75px; }
-    .history__inner.js-slide-3 .history__date-button--4 {
-      font-size: 65px; }
-    .history__inner.js-slide-3 .history__date-button--5 {
-      font-size: 55px; }
-    .history__inner.js-slide-4 .history__date-button--1 {
-      font-size: 45px; }
-    .history__inner.js-slide-4 .history__date-button--2 {
-      font-size: 55px; }
-    .history__inner.js-slide-4 .history__date-button--3 {
-      font-size: 65px; }
-    .history__inner.js-slide-4 .history__date-button--4 {
-      font-size: 75px; }
-    .history__inner.js-slide-4 .history__date-button--5 {
-      font-size: 65px; }
-    .history__inner.js-slide-5 .history__date-button--1 {
-      font-size: 40px; }
-    .history__inner.js-slide-5 .history__date-button--2 {
-      font-size: 45px; }
-    .history__inner.js-slide-5 .history__date-button--3 {
-      font-size: 55px; }
-    .history__inner.js-slide-5 .history__date-button--4 {
-      font-size: 65px; }
-    .history__inner.js-slide-5 .history__date-button--5 {
-      font-size: 75px; } }
-
 .history__date-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2191,6 +1930,24 @@ input[type="radio"].visually-hidden {
   @media (min-width: 1220px) {
     .history__slider {
       width: auto; } }
+
+.history__year {
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 400;
+  font-family: "arial", sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  color: #1d1d1d; }
+  @media (min-width: 768px) {
+    .history__year {
+      font-size: 55px; } }
+  @media (min-width: 1220px) {
+    .history__year {
+      font-size: 65px; } }
+  @media (min-width: 1840px) {
+    .history__year {
+      font-size: 75px; } }
 
 .intro__heading {
   margin-top: 0;
