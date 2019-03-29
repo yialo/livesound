@@ -3,6 +3,9 @@ extends ../base/_template_html
 block page-id
   - const $pageId = 'index';
 
+block head-preload-distinct
+  link(rel='preload', href='js/slick.js', as='script')
+
 block page-main
   h1.visually-hidden Сайт компании Live Sound Agency
   .page-main__promo
@@ -20,3 +23,8 @@ block page-main
     include ../components/capital/about/_about
   div(class=setModifiers('page-main__partners', ['last']))
     +partners()(heading='Партнеры')
+
+block page-scripts-distinct
+  script(src='js/slick.js')
+  script(src='js/promo-slider.js')
+  script(src='js/index-section-fadeinup.js')

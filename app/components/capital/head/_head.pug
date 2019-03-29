@@ -10,7 +10,5 @@ head
       href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
       as='script',
     )
-
   link(rel='stylesheet', href='css/main.min.css')
-  if $pageId === 'index'
-    link(rel='preload', href='js/slick.js', as='script')
+  block head-preload-distinct
