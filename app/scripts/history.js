@@ -84,3 +84,5 @@
     }
   };
 })(jQuery);
+
+$('#cascade-slider').cascadeSlider();
