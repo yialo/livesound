@@ -1,6 +1,6 @@
 .history__slider {
   @include margin-hor();
-  overflow: hidden;
+  overflow-x: hidden;
 
   @include media-breakpoint-from(medium) {
     width: 488px;
