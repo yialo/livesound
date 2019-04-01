@@ -1209,10 +1209,7 @@ input[type="radio"].visually-hidden {
       margin-bottom: 0; } }
   @media (min-width: 1220px) {
     .advantages__item {
-      width: 255px; } }
-  @media (min-width: 1840px) {
-    .advantages__item {
-      width: 260px; } }
+      width: 25%; } }
 
 .advantages__list {
   margin-top: 0;

@@ -13,10 +13,6 @@
   }
 
   @include media-breakpoint-from(large) {
-    width: 255px;
-  }
-
-  @include media-breakpoint-from(huge) {
-    width: 260px;
+    width: 25%;
   }
 }
