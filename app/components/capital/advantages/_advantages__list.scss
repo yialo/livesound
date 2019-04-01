@@ -3,17 +3,17 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     display: flex;
     flex-wrap: wrap;
     margin: -30px -10px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     justify-content: center;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @include margin-hor();
     width: 1140px;
   }

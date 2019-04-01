@@ -1,7 +1,7 @@
 .page-main__history {
   margin-bottom: 80px;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 120px;
   }
 }

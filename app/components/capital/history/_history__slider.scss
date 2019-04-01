@@ -2,11 +2,11 @@
   @include margin-hor();
   overflow: hidden;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     width: 488px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     width: auto;
   }
 }

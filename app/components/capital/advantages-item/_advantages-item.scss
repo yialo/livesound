@@ -9,12 +9,12 @@
     }
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     padding-left: 0;
     padding-right: 0;
   }

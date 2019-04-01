@@ -5,7 +5,7 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--1 {
       flex-shrink: 0;
       width: 350px;
@@ -18,7 +18,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--1 {
       margin-right: 40px;
     }

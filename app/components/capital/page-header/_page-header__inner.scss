@@ -1,22 +1,22 @@
 .page-header__inner {
   @include margin-hor();
   position: relative;
-  width: $small-min-width;
+  width: get-breakpoint(small);
   padding: 30px 20px 20px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     display: flex;
     width: auto;
     padding-top: 20px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  @media (min-width: $huge-min-width) {
-    width: $huge-min-width;
+  @include media-breakpoint-from(huge) {
+    width: get-breakpoint(huge);
     padding-left: 10px;
     padding-right: 100px;
   }

@@ -2,7 +2,7 @@
   &.js-show-modal {
     overflow: hidden;
 
-    @media (min-width: $large-min-width) {
+    @include media-breakpoint-from(large) {
       margin-right: 15px;
     }
   }

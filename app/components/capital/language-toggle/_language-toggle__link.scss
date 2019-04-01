@@ -36,7 +36,7 @@
     }
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     font-size: 14px;
 
     &:first-child {
@@ -44,7 +44,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     font-size: 12px;
   }
 }

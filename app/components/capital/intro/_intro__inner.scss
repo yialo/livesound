@@ -4,11 +4,11 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     padding-top: var(--page-header-bypass);
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     padding-bottom: 200px;
   }
 }

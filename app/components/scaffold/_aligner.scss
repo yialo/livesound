@@ -1,16 +1,16 @@
 .aligner {
   @include margin-hor();
-  width: $small-min-width;
+  width: get-breakpoint(small);
 
-  @media (min-width: $medium-min-width) {
-    width: $medium-min-width;
+  @include media-breakpoint-from(medium) {
+    width: get-breakpoint(medium);
   }
 
-  @media (min-width: $large-min-width) {
-    width: $large-min-width;
+  @include media-breakpoint-from(large) {
+    width: get-breakpoint(large);
   }
 
-  @media (min-width: $huge-min-width) {
-    width: $huge-min-width;
+  @include media-breakpoint-from(huge) {
+    width: get-breakpoint(huge);
   }
 }

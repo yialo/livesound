@@ -1,7 +1,7 @@
 .catalog-card__table-body {
   display: block;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     display: table-row-group;
   }
 }

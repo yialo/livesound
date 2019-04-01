@@ -1,7 +1,7 @@
 .about__inner {
   @include padding-hor(20px);
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @include padding-hor(130px);
   }
 }

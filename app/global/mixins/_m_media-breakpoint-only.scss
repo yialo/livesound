@@ -1,0 +1,8 @@
+@mixin media-breakpoint-only($breakpoint-name) {
+  $breakpoint-bottom: get-breakpoint($breakpoint-name);
+  $breakpoint-top: get-next-breakpoint($breakpoint-name) - 0.02px;
+
+  @media (min-width: $breakpoint-bottom) and (max-width: $breakpoint-top) {
+    @content;
+  }
+}

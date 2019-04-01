@@ -1,7 +1,7 @@
 .promo-slide__video-wrapper {
   display: none;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     position: absolute;
     z-index: -1;
     top: 0;

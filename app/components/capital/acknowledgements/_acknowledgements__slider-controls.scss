@@ -1,5 +1,5 @@
 .acknowledgements__slider-controls {
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     display: none;
   }
 }

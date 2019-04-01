@@ -3,13 +3,13 @@
     margin-bottom: 60px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &:not(:last-child) {
       margin-bottom: 80px;
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &:not(:last-child) {
       margin-bottom: 100px;
     }

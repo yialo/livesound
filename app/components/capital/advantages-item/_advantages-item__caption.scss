@@ -5,7 +5,7 @@
   @include font(400, 22px, 52px);
   text-align: center;
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     margin-bottom: 7px;
   }
 }

@@ -4,17 +4,17 @@
   text-align: center;
   color: white;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     word-spacing: 5px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     padding-left: 20px;
     padding-right: 300px;
     text-align: left;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     padding-left: 328px;
     padding-right: 600px;
   }

@@ -3,7 +3,7 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--1 {
       float: right;
       margin-bottom: 20px;
@@ -11,7 +11,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--1 {
       float: none;
       margin-bottom: 0;
@@ -20,7 +20,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     &--2 {
       display: flex;
       flex-direction: column;

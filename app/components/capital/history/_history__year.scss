@@ -3,15 +3,15 @@
   @include font(400, 48px, 1);
   color: #1d1d1d;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     font-size: 55px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     font-size: 65px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     font-size: 75px;
   }
 }

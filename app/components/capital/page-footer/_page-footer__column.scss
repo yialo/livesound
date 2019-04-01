@@ -15,7 +15,7 @@
     margin-bottom: 20px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--1 {
       flex-wrap: wrap;
       justify-content: center;
@@ -40,7 +40,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--1 {
       order: 0;
       flex-wrap: nowrap;

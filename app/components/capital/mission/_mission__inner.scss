@@ -2,17 +2,17 @@
   @include padding-hor(20px);
   padding-bottom: 100px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     @include padding-hor(120px);
     padding-bottom: 180px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include padding-hor(20px);
     padding-bottom: 150px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @include padding-hor(420px);
     padding-bottom: 240px;
   }

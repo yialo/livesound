@@ -1,5 +1,5 @@
 .page-main--contacts {
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 50px;
   }
 }

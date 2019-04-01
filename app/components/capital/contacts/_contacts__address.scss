@@ -1,11 +1,11 @@
 .contacts__address {
   order: 1;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     flex-grow: 1;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 30px;
   }
 }

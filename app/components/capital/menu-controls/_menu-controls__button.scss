@@ -29,7 +29,7 @@
     }
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--close {
       margin-left: 10px;
     }

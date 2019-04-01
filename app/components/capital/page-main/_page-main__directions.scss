@@ -1,11 +1,11 @@
 .page-main__directions {
   margin-bottom: 60px;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 100px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     margin-bottom: 100px;
   }
 }

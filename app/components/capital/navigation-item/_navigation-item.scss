@@ -1,7 +1,7 @@
 .navigation-item {
   @include margin-ver(0);
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--current {
       position: relative;
 

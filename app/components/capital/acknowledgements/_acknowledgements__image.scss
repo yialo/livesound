@@ -2,7 +2,7 @@
   @include margin-hor();
   display: block;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     @include margin-hor(0);
   }
 }

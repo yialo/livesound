@@ -19,7 +19,7 @@
     right: 30px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--menu-controls {
       top: 50px;
       left: 20px;
@@ -43,7 +43,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--menu-controls {
       display: none;
     }
@@ -69,7 +69,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     &--navigation {
       @include margin-hor(140px);
     }

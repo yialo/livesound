@@ -3,7 +3,7 @@
     margin-bottom: 50px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .page--index & {
       margin-bottom: 135px;
     }

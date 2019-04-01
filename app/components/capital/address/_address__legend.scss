@@ -8,7 +8,7 @@
     display: none;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .address--contacts & {
       margin-bottom: 20px;
     }

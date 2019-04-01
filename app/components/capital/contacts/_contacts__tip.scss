@@ -1,7 +1,7 @@
 .contacts__tip {
   display: none;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include font(400, 28px, 42px);
     display: block;
     margin-top: 0;

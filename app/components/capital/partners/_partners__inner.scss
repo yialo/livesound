@@ -7,13 +7,13 @@
     @include padding-ver(40px);
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     .partners--long & {
       @include padding-ver(80px);
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .partners--long & {
       @include padding-hor(0);
     }

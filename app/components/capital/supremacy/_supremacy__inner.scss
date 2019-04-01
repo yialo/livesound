@@ -1,15 +1,15 @@
 .supremacy__inner {
   padding: 80px 20px 100px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     padding: 100px 120px 120px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include padding-hor(20px);
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @include padding-hor(500px);
     padding-top: 150px;
   }

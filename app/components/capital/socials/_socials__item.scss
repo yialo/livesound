@@ -3,7 +3,7 @@
     margin-right: 10px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     &:not(:last-child) {
       margin-right: 17px;
     }

@@ -4,7 +4,7 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     display: grid;
 
     .partners--short & {
@@ -19,7 +19,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .partners--short & {
       grid-template-columns: repeat(3, auto);
     }
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     .partners--short & {
       grid-template-columns: repeat(3, 1fr);
       width: 1146px;

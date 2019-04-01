@@ -1,18 +1,18 @@
 .history__inner {
   @include margin-hor();
   @include padding-hor(20px);
-  width: $small-min-width;
+  width: get-breakpoint(small);
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     @include padding-hor(0);
     width: 488px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     width: 780px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     width: 1000px;
   }
 }

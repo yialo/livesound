@@ -1,5 +1,5 @@
 .contacts__inner {
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include margin-hor();
     --column-1-content-width: 400px;
     --column-1-margin-right: 80px;

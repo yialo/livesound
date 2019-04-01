@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 30px;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include margin-hor();
     width: 840px;
     margin-bottom: 60px;

@@ -3,18 +3,18 @@
   flex-direction: column;
   padding: 25px 20px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     justify-content: flex-start;
     padding-top: 50px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     padding-left: 337px;
     padding-right: 342px;
   }

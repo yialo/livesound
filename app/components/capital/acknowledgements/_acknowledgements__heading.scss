@@ -8,12 +8,12 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     font-size: 32px;
     line-height: 48px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     font-size: 36px;
     line-height: 52px;
   }

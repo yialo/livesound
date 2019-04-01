@@ -6,16 +6,16 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     margin-bottom: 50px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     font-size: 36px;
     line-height: 52px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     margin-bottom: 63px;
   }
 }

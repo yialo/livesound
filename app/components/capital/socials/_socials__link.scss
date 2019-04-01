@@ -22,7 +22,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) and (max-width: $large-max-width) {
+  @include media-breakpoint-only(large) {
     width: 32px;
     height: 32px;
   }

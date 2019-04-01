@@ -28,7 +28,7 @@
     cursor: default;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--previous {
       left: 20px;
     }

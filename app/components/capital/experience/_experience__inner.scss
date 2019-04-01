@@ -2,17 +2,17 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     padding-left: 120px;
     padding-right: 120px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     padding-left: 420px;
     padding-right: 420px;
   }

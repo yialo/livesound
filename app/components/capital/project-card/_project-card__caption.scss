@@ -12,18 +12,18 @@
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.3);
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     min-height: 100px;
     max-height: 205px;
     padding-left: 50px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     max-height: 225px;
     padding-right: 150px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     min-height: 130px;
     max-height: 343px;
   }

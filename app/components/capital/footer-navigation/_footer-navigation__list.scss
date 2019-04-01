@@ -8,16 +8,16 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     grid-column-gap: 20px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     grid-row-gap: 10px;
     grid-column-gap: 40px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     grid-column-gap: 25px;
   }
 }

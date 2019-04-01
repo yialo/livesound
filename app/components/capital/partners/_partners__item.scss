@@ -5,7 +5,7 @@
     border-bottom: 1px solid #e4e4e4;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     @include padding-hor(10px);
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .partners--short &:nth-child(3n) {
       justify-content: flex-end;
       padding-left: 60px;
@@ -44,7 +44,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     padding-top: 41px;
     padding-bottom: 30px;
 

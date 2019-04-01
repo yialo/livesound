@@ -9,19 +9,19 @@
   font-family: "pt_sans_narrow", "arial", sans-serif;
   color: white;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     max-height: 2460px;
     font-size: 40px;
     line-height: 50px;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include padding-hor(0);
     font-size: 40px;
     line-height: 60px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     padding-bottom: 150px;
     font-size: 60px;
     line-height: 72px;

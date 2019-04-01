@@ -10,7 +10,7 @@ html {
 
 body {
   @include font();
-  min-width: $small-min-width;
+  min-width: get-breakpoint(small);
   margin: 0;
   color: $dark-gray;
   background-color: white;

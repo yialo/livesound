@@ -20,12 +20,14 @@
           "debug",
           "each",
           "else",
+          "error",
           "for",
           "function",
           "if",
           "include",
           "mixin",
-          "return"
+          "return",
+          "warn"
         ]
       }
     ],

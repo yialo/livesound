@@ -9,15 +9,15 @@
     text-decoration: none;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     @include font(400, 20px, 30px);
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     font-size: 16px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     margin-top: auto;
     font-size: 18px;
   }

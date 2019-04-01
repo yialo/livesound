@@ -12,7 +12,7 @@
     }
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     width: 1784px;
 
     @for $i from 1 through 7 {
@@ -22,7 +22,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     width: 2094px;
 
     @for $i from 1 through 7 {
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @for $i from 1 through 7 {
       &.js-slide-#{$i} {
         transform: translateX(0);

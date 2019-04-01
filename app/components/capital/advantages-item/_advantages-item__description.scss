@@ -4,7 +4,7 @@
 
   @include font(400, 18px, 22px);
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     text-align: center;
   }
 }

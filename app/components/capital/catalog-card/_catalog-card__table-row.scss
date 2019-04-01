@@ -3,7 +3,7 @@
   display: block;
   border-bottom: 1px solid #707070;
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include padding-ver(0);
     display: table-row;
   }

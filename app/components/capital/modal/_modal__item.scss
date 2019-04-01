@@ -16,7 +16,7 @@
     }
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     width: 718px;
   }
 }

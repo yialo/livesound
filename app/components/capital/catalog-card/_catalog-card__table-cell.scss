@@ -13,7 +13,7 @@
     color: #828282;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     display: table-cell;
     padding-top: 15px;
     padding-bottom: 15px;

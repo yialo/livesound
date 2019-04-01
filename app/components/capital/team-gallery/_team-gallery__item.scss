@@ -7,7 +7,7 @@
     margin-bottom: 20px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     $item-grid-areas: (
       "1 / 1 / 3 / 4",
       "1 / 3 / 2 / 4",
@@ -31,7 +31,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @for $i from 1 through 6 {
       &--#{$i} {
         width: if(is-small($i), 384px, 783px);
@@ -39,7 +39,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @for $i from 1 through 6 {
       &--#{$i} {
         width: if(is-small($i), 592px, 1196px);

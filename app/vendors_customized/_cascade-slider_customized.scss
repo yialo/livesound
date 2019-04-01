@@ -36,7 +36,7 @@
     z-index: 5;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &.prev {
       transform: translateY(-50%) translateX(75%) scale(0.6);
       opacity: 0.75;
@@ -48,7 +48,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &.prev-prev {
       z-index: 1;
       transform: translateY(-50%) translateX(160%) scale(0.3);

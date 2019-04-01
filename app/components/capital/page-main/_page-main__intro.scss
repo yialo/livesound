@@ -9,13 +9,13 @@
     margin-bottom: 60px;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     .page-main--team & {
       margin-bottom: 90px;
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 125px;
 
     .page-main--projects & {
@@ -27,7 +27,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     .page-main--team & {
       margin-bottom: 120px;
     }

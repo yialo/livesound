@@ -10,15 +10,15 @@
     z-index: 0;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     background-image: url("../img/promo-slide-background-medium.jpg");
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     background-image: url("../img/promo-slide-background-large.jpg");
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     background-image: url("../img/promo-slide-background-huge.jpg");
   }
 }

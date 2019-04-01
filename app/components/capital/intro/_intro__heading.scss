@@ -8,7 +8,7 @@
   text-transform: uppercase;
   color: white;
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     .intro & {
       font-size: 42px;
       line-height: 63px;
@@ -16,7 +16,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     .intro & {
       font-size: 50px;
       line-height: 72px;
@@ -24,7 +24,7 @@
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     .intro & {
       font-size: 60px;
     }

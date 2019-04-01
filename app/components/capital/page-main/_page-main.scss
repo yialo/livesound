@@ -18,7 +18,7 @@
     background-image: url("../img/equipment-background-small.jpg");
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--about {
       background-image: url("../img/about-background-medium.png");
     }
@@ -36,7 +36,7 @@
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--about {
       background-image: url("../img/about-background-large.png");
       background-position-y: calc(100% + 300px);

@@ -7,12 +7,12 @@
 
   @include about__video-Size(280px);
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     @include about__video-Size(500px);
     margin-top: 8px;
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     @include about__video-Size(800px);
   }
 }

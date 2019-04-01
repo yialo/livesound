@@ -54,19 +54,19 @@
     visibility: hidden;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--acknowledgements {
       left: -75px;
     }
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     &--acknowledgements {
       left: -40px;
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     &--acknowledgements {
       left: -135px;
     }
@@ -114,13 +114,13 @@
     border: 1px solid transparent;
   }
 
-  @media (min-width: $medium-min-width) {
+  @include media-breakpoint-from(medium) {
     &--acknowledgements {
       margin-right: 30px;
     }
   }
 
-  @media (min-width: $huge-min-width) {
+  @include media-breakpoint-from(huge) {
     &--acknowledgements {
       margin-right: 25px;
     }

@@ -6,7 +6,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $large-min-width) {
+  @include media-breakpoint-from(large) {
     margin-bottom: 0;
   }
 }
