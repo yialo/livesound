@@ -20,6 +20,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const sassglob = require('gulp-sass-glob');
 const server = require('browser-sync').create();
+const htmlValidator = require('gulp-w3c-html-validator');
 const zopfli = require('imagemin-zopfli');
 
 // Vinyl data and methods
@@ -188,6 +189,13 @@ const html = function launchHtmlCompiler() {
     .pipe(server.stream());
 };
 
+const validateHtml = function validateHtmlOutputFiles() {
+  return gulp
+    .src('./dist/*.html')
+    .pipe(htmlValidator())
+    .pipe(htmlValidator.reporter());
+};
+
 const reload = function reloadBrowserSync(done) {
   server.reload();
   done();
@@ -235,6 +243,7 @@ gulp.task('bitmapmin', minbitmap);
 gulp.task('bitmapcopy', copybitmaps);
 gulp.task('imagemin', gulp.parallel('svgmin', 'bitmapmin'));
 gulp.task('imagecopy', gulp.parallel('svgcopy', 'bitmapcopy'));
+gulp.task('validate', validateHtml);
 gulp.task(
   'copyassets',
   gulp.parallel(copyfonts, copyfavicons, 'imagecopy', copyvideo),
