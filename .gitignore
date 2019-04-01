@@ -1,5 +1,4 @@
 *.log
-source/imgraw/
 node_modules/
 npm-debug.*
 spec/

@@ -1835,16 +1835,6 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex; }
 
-.history__slider-controls {
-  position: relative;
-  margin-bottom: 30px; }
-  @media (min-width: 1220px) {
-    .history__slider-controls {
-      margin-left: auto;
-      margin-right: auto;
-      width: 840px;
-      margin-bottom: 60px; } }
-
 .history__slider {
   margin-left: auto;
   margin-right: auto;
