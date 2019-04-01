@@ -1,9 +1,7 @@
 .acknowledgements__list {
+  @include list();
   display: flex;
   width: 700%;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
   transition: transform 0.5s ease-out;
 
   @for $i from 1 through 7 {

@@ -1,8 +1,6 @@
 .partners__list {
+  @include list();
   align-self: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
 
   @include media-breakpoint-from(medium) {
     display: grid;

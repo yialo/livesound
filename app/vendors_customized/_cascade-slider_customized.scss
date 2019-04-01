@@ -6,8 +6,7 @@
 }
 
 .cascade-slider__slides {
-  @include margin-ver(0);
-  padding-left: 0;
+  @include list();
 }
 
 .cascade-slider__item {

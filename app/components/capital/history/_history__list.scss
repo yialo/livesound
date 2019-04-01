@@ -1,9 +1,7 @@
 .history__list {
+  @include list();
   display: flex;
   width: 500%;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
   transition-property: transform;
   transition-duration: 0.6s;
   transition-timing-function: ease-out;
