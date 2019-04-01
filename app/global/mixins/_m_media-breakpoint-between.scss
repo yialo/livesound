@@ -1,0 +1,13 @@
+@mixin media-breakpoint-between($bottom-breakpoint-name, $top-breakpoint-name) {
+  $bottom-breakpoint: get-breakpoint($bottom-breakpoint-name);
+  $top-breakpoint-initial: get-breakpoint($top-breakpoint-name);
+  $top-breakpoint: $top-breakpoint-initial - 0.02px;
+
+  @if ($bottom-breakpoint >= $top-breakpoint-initial) {
+    @error "Please check order of arguments passed.";
+  }
+
+  @media (min-width: $bottom-breakpoint) and (max-width: $top-breakpoint) {
+    @content;
+  }
+}

@@ -7,9 +7,9 @@
 
   @if $next-breakpoint-index > $breakpoints-length {
     @error "Next breakpoint is not exist.";
-  } @else {
-    $next-breakpoint: nth($breakpoints-list, $next-breakpoint-index);
-
-    @return $next-breakpoint;
   }
+
+  $next-breakpoint: nth($breakpoints-list, $next-breakpoint-index);
+
+  @return $next-breakpoint;
 }
