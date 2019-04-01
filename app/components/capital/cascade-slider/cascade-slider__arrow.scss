@@ -1,0 +1,22 @@
+.cascade-slider__arrow {
+  @include size(50px, 50px);
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: none;
+
+  &--prev {
+    right: -60px;
+    background-image: url("../img/history__slider-control--previous.svg");
+  }
+
+  &--next {
+    left: -60px;
+    background-image: url("../img/history__slider-control--next.svg");
+  }
+}
