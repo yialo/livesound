@@ -27,11 +27,6 @@ section.promo
           const [title, subtitle] = item;
         .promo__item
           div(class=['promo-slide', `promo-slide--${number}`])
-            //- FIXME:
-            //- if number === 1
-            //-   .promo-slide__video-wrapper
-            //-     video.promo-slide__video(autoplay)
-            //-       source(src='video/test-video.mp4', type='video/mp4')
             .promo-slide__inner.aligner
               .promo-slide__content
                 h3.promo-slide__title= title
