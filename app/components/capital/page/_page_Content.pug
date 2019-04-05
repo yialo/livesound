@@ -1,14 +1,14 @@
-.page__header
+header.page__header
   include ../page-header/_page-header.pug
-.page__main
-  main(class=setModifiers('page-main', [$pageId]))
+main.page__main
+  div(class=setModifiers('page-main', [$pageId]))
     if $pageId !== 'index'
       header.page-main__intro
         div(class=setModifiers('intro', [$pageId]))
           .aligner.intro__inner
             h1.intro__heading.heading= $pageTitle
     block page-main
-.page__footer
+footer.page__footer
   include ../page-footer/_page-footer.pug
 if $pageId === 'partners'
   .page__modal

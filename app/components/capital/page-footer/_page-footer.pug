@@ -1,4 +1,4 @@
-footer.page-footer
+.page-footer
   .aligner.page-footer__inner
     div(class=setModifiers('page-footer__column', [1]))
       div(class=setModifiers('page-footer__nest', ['address']))
@@ -7,7 +7,7 @@ footer.page-footer
         +logo()(location='footer')
       div(class=setModifiers('page-footer__nest', ['copyright']))
         p.copyright= '© 2016 '
-          span.copyright__string Live-sound agency
+          span.copyright__string= $SITE_TITLE
     div(class=setModifiers('page-footer__column', [2]))
       div(class=setModifiers('page-footer__nest', ['navigation']))
         include ../footer-navigation/_footer-navigation.pug

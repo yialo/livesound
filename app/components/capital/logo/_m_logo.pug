@@ -4,5 +4,5 @@ mixin logo()
     a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
       img.logo__image(
         src=`img/logo-${location}.png`,
-        alt='Live Sound Agency',
+        alt=$SITE_TITLE,
       )
