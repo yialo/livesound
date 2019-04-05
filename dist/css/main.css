@@ -2583,7 +2583,7 @@ input[type="radio"].visually-hidden {
   .page-main--team {
     background-image: url("../img/team-background-small.png"); }
   .page-main--equipment {
-    background-image: url("../img/equipment-background-small.jpg"); }
+    background-image: url("../img/equipment-background-small.png"); }
   @media (min-width: 768px) {
     .page-main--about {
       background-image: url("../img/about-background-medium.png"); }
@@ -2592,65 +2592,22 @@ input[type="radio"].visually-hidden {
     .page-main--team {
       background-image: url("../img/team-background-medium.png"); }
     .page-main--equipment {
-      background-image: url("../img/equipment-background-medium.jpg"); } }
+      background-image: url("../img/equipment-background-medium.png"); } }
   @media (min-width: 1220px) {
-    .page-main--about {
-      background-image: url("../img/about-background-large.png");
-      background-position-y: calc(100% + 300px); }
-    .page-main--projects {
-      background-image: url("../img/projects-background-large.png");
-      background-position-y: calc(100% + 100px); }
-    .page-main--team {
-      background-image: url("../img/team-background-large.png");
+    .page-main {
       background-position-y: 100%; }
-    .page-main--equipment {
-      background-image: url("../img/equipment-background-large.jpg");
-      background-position-y: 100%; } }
-
-.page-main__about {
-  margin-bottom: 80px; }
-  @media (min-width: 1220px) {
-    .page-main__about {
-      margin-bottom: 120px; } }
-  @media (min-width: 1840px) {
-    .page-main__about {
-      margin-bottom: 105px; } }
-
-.page-main__acknowledgements {
-  margin-bottom: 80px; }
-  @media (min-width: 1220px) {
-    .page-main__acknowledgements {
-      margin-bottom: 120px; } }
-
-.page-main__advantages {
-  margin-bottom: 60px; }
-  @media (min-width: 1220px) {
-    .page-main__advantages {
-      margin-bottom: 120px; } }
-  @media (min-width: 1840px) {
-    .page-main__advantages {
-      margin-bottom: 129px; } }
-
-.page-main__directions {
-  margin-bottom: 60px; }
-  @media (min-width: 1220px) {
-    .page-main__directions {
-      margin-bottom: 100px; } }
-  @media (min-width: 1840px) {
-    .page-main__directions {
-      margin-bottom: 100px; } }
-
-.page-main__experience {
-  margin-bottom: 70px; }
-  @media (min-width: 1840px) {
-    .page-main__experience {
-      margin-bottom: 100px; } }
-
-.page-main__history {
-  margin-bottom: 80px; }
-  @media (min-width: 1220px) {
-    .page-main__history {
-      margin-bottom: 120px; } }
+      .page-main--about {
+        background-image: url("../img/about-background-large.png"); }
+      .page-main--projects {
+        background-image: url("../img/projects-background-large.png"); }
+      .page-main--team {
+        background-image: url("../img/team-background-large.png"); }
+      .page-main--equipment {
+        background-image: url("../img/equipment-background-large.png"); }
+      .page-main--about {
+        background-position-y: calc(100% + 300px); }
+      .page-main--projects {
+        background-position-y: calc(100% + 100px); } }
 
 .page-main__intro {
   margin-bottom: 40px; }
@@ -2674,24 +2631,35 @@ input[type="radio"].visually-hidden {
     .page-main--equipment .page-main__intro {
       margin-bottom: 140px; } }
 
-.page-main__partners {
+.page-main__nest {
   margin-bottom: 80px; }
-  .page-main__partners:last-child {
-    margin-bottom: 0; }
+  .page-main__nest--advantages {
+    margin-bottom: 60px; }
+  .page-main__nest--directions {
+    margin-bottom: 60px; }
+  .page-main__nest--experience {
+    margin-bottom: 70px; }
+  .page-main__nest--promo {
+    margin-bottom: 50px; }
   @media (min-width: 1220px) {
-    .page-main__partners {
-      margin-bottom: 100px; } }
+    .page-main__nest {
+      margin-bottom: 120px; }
+      .page-main__nest--directions {
+        margin-bottom: 100px; }
+      .page-main__nest--partnres-first {
+        margin-bottom: 100px; }
+      .page-main__nest--promo {
+        margin-bottom: 100px; } }
   @media (min-width: 1840px) {
-    .page-main__partners {
-      margin-bottom: 123px; } }
-
-.page-main__promo {
-  margin-bottom: 50px; }
-  @media (min-width: 1220px) {
-    .page-main__promo {
-      margin-bottom: 110px; } }
-  @media (min-width: 1840px) {
-    .page-main__promo {
+    .page-main__nest--about {
+      margin-bottom: 105px; }
+    .page-main__nest--advantages {
+      margin-bottom: 129px; }
+    .page-main__nest--experience {
+      margin-bottom: 100px; }
+    .page-main__nest--partners-first {
+      margin-bottom: 123px; }
+    .page-main__nest--promo {
       margin-bottom: 108px; } }
 
 .partners--long {

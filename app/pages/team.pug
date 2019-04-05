@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'team';
 
 block page-main
-  section.page-main__experience
+  section(class=setModifiers('page-main__nest', ['experience']))
     include ../components/capital/experience/_experience.pug
-  section.page-main__team-gallery
+  section(class=setModifiers('page-main__nest', ['team-gallery']))
     include ../components/capital/team-gallery/_team-gallery.pug

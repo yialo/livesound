@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'equipment';
 
 block page-main
-  section.page-main__catalog
+  div(class=setModifiers('page-main__nest', ['catalog']))
     include ../components/capital/catalog/_catalog.pug
 
 block page-scripts-distinct

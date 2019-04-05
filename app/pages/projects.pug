@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'projects';
 
 block page-main
-  section.page-main__projects
+  section(class=setModifiers('page-main__nest', ['projects']))
     +projects()
-  section.page-main__supremacy
+  section(class=setModifiers('page-main__nest', ['supremacy']))
     include ../components/capital/supremacy/_supremacy.pug

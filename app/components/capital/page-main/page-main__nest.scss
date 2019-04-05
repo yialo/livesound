@@ -1,0 +1,29 @@
+#{$this}__nest {
+  @mixin set-margin-bottom($media) {
+    $_nests: (
+      base: (advantages: 60, directions: 60, experience: 70, promo: 50,),
+      large: (directions: 100, partnres-first: 100, promo: 100,),
+      huge: (about: 105, advantages: 129, experience: 100, partners-first: 123, promo: 108,),
+    );
+
+    @each $modifier, $margin-bottom in map-get($_nests, $media) {
+      &--#{$modifier} {
+        margin-bottom: #{$margin-bottom}px;
+      }
+    }
+  }
+
+  margin-bottom: 80px;
+
+  @include set-margin-bottom(base);
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 120px;
+
+    @include set-margin-bottom(large);
+  }
+
+  @include media-breakpoint-from(huge) {
+    @include set-margin-bottom(huge);
+  }
+}

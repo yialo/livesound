@@ -5,20 +5,20 @@ block page-id
 
 block page-main
   h1.visually-hidden Сайт компании #{$SITE_TITLE}
-  section.page-main__promo
+  section(class=setModifiers('page-main__nest', ['promo']))
     include ../components/capital/promo/_promo.pug
-  section.page-main__advantages
+  section(class=setModifiers('page-main__nest', ['advantages']))
     include ../components/capital/advantages/_advantages.pug
-  section.page-main__directions
+  section(class=setModifiers('page-main__nest', ['directions']))
     +projects()
-  section(class=setModifiers('page-main__partners', ['first']))
+  section(class=setModifiers('page-main__nest', ['partners-first']))
     +partners()(
       heading='Оборудование от компаний-лидеров мирового рынка',
       special-modifier='partners__small-heading',
     )
-  section.page-main__about
+  section(class=setModifiers('page-main__nest', ['about']))
     include ../components/capital/about/_about.pug
-  section(class=setModifiers('page-main__partners', ['last']))
+  section(class=setModifiers('page-main__nest', ['partners-last']))
     +partners()(heading='Партнеры')
 
 block page-scripts-distinct

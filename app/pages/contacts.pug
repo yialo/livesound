@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'contacts';
 
 block page-main
-  section.page-main__contacts
+  div(class=setModifiers('page-main__nest', ['contacts']))
     include ../components/capital/contacts/_contacts.pug
 
 block page-scripts-distinct

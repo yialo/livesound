@@ -4,9 +4,9 @@ block page-id
   - const $pageId = 'about';
 
 block page-main
-  section.page-main__history
+  section(class=setModifiers('page-main__nest', ['history']))
     include ../components/capital/history/_history.pug
-  section.page-main__mission
+  section(class=setModifiers('page-main__nest', ['mission']))
     include ../components/capital/mission/_mission.pug
 
 block page-scripts-distinct

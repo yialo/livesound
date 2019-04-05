@@ -4,11 +4,11 @@ block page-id
   - const $pageId = 'partners';
 
 block page-main
-  section.page-main__partners
+  section(class=setModifiers('page-main__nest', ['partners-first']))
     +partners()(heading='Наши партнеры')
-  section.page-main__acknowledgements
+  section(class=setModifiers('page-main__nest', ['acknowledgements']))
     include ../components/capital/acknowledgements/_acknowledgements.pug
-  section.page-main__partners
+  section(class=setModifiers('page-main__nest', ['partners-last']))
     +partners()(heading='Нам доверяют')
 
 block page-scripts-distinct
