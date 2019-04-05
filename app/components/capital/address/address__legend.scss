@@ -1,0 +1,16 @@
+#{$this}__legend {
+  #{$this}--contacts & {
+    display: block;
+    color: $color-gray-light;
+  }
+
+  #{$this}--footer & {
+    display: none;
+  }
+
+  @include media-breakpoint-from(large) {
+    #{$this}--contacts & {
+      margin-bottom: 20px;
+    }
+  }
+}

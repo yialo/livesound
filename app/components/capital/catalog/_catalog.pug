@@ -21,8 +21,8 @@ section.catalog
     ul.catalog__list
       each item in CATALOG_ITEMS
         li.catalog__item
-          h3.catalog__item-caption(tabindex='0')= item
-          .catalog__item-content
+          h3.catalog__caption(tabindex='0')= item
+          .catalog__content
             ul.catalog-volume
               each card, index in CATALOG_CARDS
                 li.catalog-volume__item

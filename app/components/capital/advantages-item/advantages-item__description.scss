@@ -1,0 +1,10 @@
+#{$this}__description {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font(400, 18px, 22px);
+
+  @include media-breakpoint-from(medium) {
+    text-align: center;
+  }
+}

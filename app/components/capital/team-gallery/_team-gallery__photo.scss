@@ -1,8 +1,0 @@
-.team-gallery__photo {
-  @include size(100%, 100%);
-  box-shadow: 0 0 3px 0 $dark-gray;
-
-  @include media-breakpoint-from(medium) {
-    box-shadow: none;
-  }
-}

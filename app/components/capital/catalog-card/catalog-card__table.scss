@@ -1,0 +1,8 @@
+#{$this}__table {
+  display: block;
+  border-collapse: collapse;
+
+  @include media-breakpoint-from(large) {
+    display: table;
+  }
+}

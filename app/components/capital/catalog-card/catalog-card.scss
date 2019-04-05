@@ -1,0 +1,7 @@
+$this: ".catalog-card";
+
+#{$this} {
+  @include media-breakpoint-from(medium) {
+    display: flex;
+  }
+}

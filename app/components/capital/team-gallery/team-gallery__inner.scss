@@ -1,0 +1,12 @@
+#{$this}__inner {
+  @include padding-hor(20px);
+  padding-bottom: 60px;
+
+  @include media-breakpoint-from(medium) {
+    padding-bottom: 90px;
+  }
+
+  @include media-breakpoint-from(large) {
+    padding-bottom: 117px;
+  }
+}

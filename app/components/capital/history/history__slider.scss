@@ -1,0 +1,12 @@
+#{$this}__slider {
+  @include margin-hor();
+  overflow-x: hidden;
+
+  @include media-breakpoint-from(medium) {
+    width: 488px;
+  }
+
+  @include media-breakpoint-from(large) {
+    width: auto;
+  }
+}

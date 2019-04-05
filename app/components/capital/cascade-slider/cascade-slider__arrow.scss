@@ -1,4 +1,4 @@
-.cascade-slider__arrow {
+#{$this}__arrow {
   @include size(50px, 50px);
   position: absolute;
   z-index: 5;

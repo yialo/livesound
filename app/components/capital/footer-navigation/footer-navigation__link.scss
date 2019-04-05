@@ -1,0 +1,14 @@
+#{$this}__link {
+  @include font(400, 14px, 21px);
+  color: $color-gray-light;
+
+  @include media-breakpoint-from(medium) {
+    font-size: 18px;
+    line-height: 48px;
+  }
+
+  @include media-breakpoint-from(large) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,39 @@
+#{$this}__intro {
+  margin-bottom: 40px;
+
+  #{$this}--partners & {
+    margin-bottom: 0;
+  }
+
+  #{$this}--team & {
+    margin-bottom: 60px;
+  }
+
+  @include media-breakpoint-from(medium) {
+    #{$this}--team & {
+      margin-bottom: 90px;
+    }
+  }
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 125px;
+
+    #{$this}--projects & {
+      margin-bottom: 90px;
+    }
+
+    #{$this}--contacts & {
+      margin-bottom: 70px;
+    }
+  }
+
+  @include media-breakpoint-from(huge) {
+    #{$this}--team & {
+      margin-bottom: 120px;
+    }
+
+    #{$this}--equipment & {
+      margin-bottom: 140px;
+    }
+  }
+}

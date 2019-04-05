@@ -1,0 +1,11 @@
+#{$this}__caption {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include font(400, 22px, 52px);
+  text-align: center;
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 7px;
+  }
+}

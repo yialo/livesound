@@ -1,0 +1,11 @@
+#{$this}__promo {
+  margin-bottom: 50px;
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 110px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 108px;
+  }
+}

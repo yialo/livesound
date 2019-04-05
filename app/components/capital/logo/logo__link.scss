@@ -1,0 +1,11 @@
+#{$this} {
+  display: block;
+
+  #{$this}--header & {
+    @include size(173px, 94px);
+  }
+
+  #{$this}--footer & {
+    @include size(133px, 83px);
+  }
+}

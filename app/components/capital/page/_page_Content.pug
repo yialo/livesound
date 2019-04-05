@@ -3,8 +3,8 @@
 .page__main
   main(class=setModifiers('page-main', [$pageId]))
     if $pageId !== 'index'
-      .page-main__intro
-        header(class=setModifiers('intro', [$pageId]))
+      header.page-main__intro
+        div(class=setModifiers('intro', [$pageId]))
           .aligner.intro__inner
             h1.intro__heading.heading= $pageTitle
     block page-main

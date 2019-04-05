@@ -1,0 +1,9 @@
+#{$this}__map {
+  width: 100%;
+  height: 100%;
+
+  @include media-breakpoint-from(large) {
+    flex-grow: 1;
+    height: auto;
+  }
+}

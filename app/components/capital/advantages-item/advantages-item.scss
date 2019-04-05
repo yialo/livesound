@@ -1,0 +1,23 @@
+$this: ".advantages-item";
+
+#{$this} {
+  padding-top: 100px;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @for $i from 1 through 4 {
+    &--#{$i} {
+      background-image: url("../img/advantages-#{$i}.png");
+    }
+  }
+
+  @include media-breakpoint-from(medium) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include media-breakpoint-from(large) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

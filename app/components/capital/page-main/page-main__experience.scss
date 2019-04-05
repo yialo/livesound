@@ -1,0 +1,7 @@
+#{$this}__experience {
+  margin-bottom: 70px;
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,10 @@
+#{$this}__slider-controls {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+
+  @include media-breakpoint-from(huge) {
+    bottom: 82px;
+  }
+}

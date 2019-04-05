@@ -1,0 +1,29 @@
+#{$this}__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 1600px;
+  padding: calc(var(--page-header-bypass) + 15px) 20px 100px;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "pt_sans_narrow", "arial", sans-serif;
+  color: white;
+
+  @include media-breakpoint-from(medium) {
+    max-height: 2460px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @include media-breakpoint-from(large) {
+    @include padding-hor(0);
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    padding-bottom: 150px;
+    font-size: 60px;
+    line-height: 72px;
+  }
+}

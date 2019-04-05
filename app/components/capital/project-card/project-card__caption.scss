@@ -1,0 +1,30 @@
+#{$this}__caption {
+  @include margin-ver(0);
+  @include padding-hor(20px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-height: 158px;
+  min-height: 80px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  @include media-breakpoint-from(medium) {
+    min-height: 100px;
+    max-height: 205px;
+    padding-left: 50px;
+  }
+
+  @include media-breakpoint-from(large) {
+    max-height: 225px;
+    padding-right: 150px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    min-height: 130px;
+    max-height: 343px;
+  }
+}

@@ -1,0 +1,19 @@
+#{$this}__popup {
+  @include media-breakpoint-to(large) {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 240px;
+
+    .is-visible & {
+      display: block;
+    }
+
+    @include media-breakpoint-from(medium) {
+      left: 90px;
+      width: 400px;
+    }
+  }
+}

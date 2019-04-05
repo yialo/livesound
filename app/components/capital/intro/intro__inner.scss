@@ -1,0 +1,14 @@
+#{$this}__inner {
+  padding-top: calc(var(--page-header-bypass) + 60px);
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include media-breakpoint-from(medium) {
+    padding-top: var(--page-header-bypass);
+  }
+
+  @include media-breakpoint-from(large) {
+    padding-bottom: 200px;
+  }
+}

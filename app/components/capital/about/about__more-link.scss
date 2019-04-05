@@ -1,0 +1,24 @@
+#{$this}__more-link {
+  display: block;
+
+  @include font(400, 16px, 28px);
+  text-decoration: underline;
+  color: #009fe3;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-from(medium) {
+    @include font(400, 20px, 30px);
+  }
+
+  @include media-breakpoint-from(large) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    margin-top: auto;
+    font-size: 18px;
+  }
+}

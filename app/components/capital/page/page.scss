@@ -1,0 +1,11 @@
+$this: ".page";
+
+#{$this} {
+  &.js-show-modal {
+    overflow: hidden;
+
+    @include media-breakpoint-from(large) {
+      margin-right: 15px;
+    }
+  }
+}

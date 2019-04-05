@@ -1,0 +1,11 @@
+#{$this}__title {
+  @include font(700, 20px, 28px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: black;
+
+  @include media-breakpoint-from(large) {
+    @include font(700, 26px, 42px);
+    margin-bottom: 40px;
+  }
+}

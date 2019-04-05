@@ -1,0 +1,27 @@
+#{$this}__item {
+  width: calc(100% / 7);
+
+  @include media-breakpoint-from(medium) {
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+  }
+
+  @include media-breakpoint-from(large) {
+    width: 282px;
+
+    &:not(:last-child) {
+      margin-right: 167px;
+    }
+  }
+
+  @include media-breakpoint-from(huge) {
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: calc(200px / 3);
+    }
+  }
+}

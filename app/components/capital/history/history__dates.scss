@@ -1,0 +1,10 @@
+#{$this}__dates {
+  @include margin-hor();
+  @include padding-hor(60px);
+  margin-bottom: 24px;
+
+  @include media-breakpoint-from(medium) {
+    @include padding-hor(0);
+    width: auto;
+  }
+}

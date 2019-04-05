@@ -1,0 +1,15 @@
+#{$this}__main {
+  #{$this}--index & {
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-from(large) {
+    #{$this}--index & {
+      margin-bottom: 135px;
+    }
+
+    #{$this}--contacts & {
+      margin-bottom: 50px;
+    }
+  }
+}

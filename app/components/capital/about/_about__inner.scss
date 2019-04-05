@@ -1,7 +1,0 @@
-.about__inner {
-  @include padding-hor(20px);
-
-  @include media-breakpoint-from(huge) {
-    @include padding-hor(130px);
-  }
-}

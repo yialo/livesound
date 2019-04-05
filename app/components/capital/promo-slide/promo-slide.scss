@@ -1,0 +1,21 @@
+$this: ".promo-slide";
+
+#{$this} {
+  width: 100%;
+  background-color: #1a1a2b;
+  background-image: url("../img/promo-slide-background-small.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-from(medium) {
+    background-image: url("../img/promo-slide-background-medium.jpg");
+  }
+
+  @include media-breakpoint-from(large) {
+    background-image: url("../img/promo-slide-background-large.jpg");
+  }
+
+  @include media-breakpoint-from(huge) {
+    background-image: url("../img/promo-slide-background-huge.jpg");
+  }
+}

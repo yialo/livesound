@@ -1,0 +1,36 @@
+$this: ".address";
+
+#{$this} {
+  color: $color-gray-light;
+
+  &--contacts {
+    @include font(400, 18px, 30px);
+    text-align: center;
+    color: $color-gray-dark;
+  }
+
+  &--footer {
+    @include font(400, 16px, 30px);
+    text-align: center;
+  }
+
+  @include media-breakpoint-from(medium) {
+    &--contacts {
+      padding-left: 50px;
+
+      @include font(400, 28px, 42px);
+      text-align: right;
+    }
+
+    &--footer {
+      text-align: left;
+    }
+  }
+
+  @include media-breakpoint-from(large) {
+    &--contacts {
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+}

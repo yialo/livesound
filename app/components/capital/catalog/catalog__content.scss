@@ -1,0 +1,7 @@
+#{$this}__content {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

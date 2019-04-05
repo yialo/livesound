@@ -1,0 +1,15 @@
+#{$this}__partners {
+  margin-bottom: 80px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 100px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 123px;
+  }
+}

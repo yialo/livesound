@@ -1,0 +1,22 @@
+#{$this}__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-breakpoint-from(medium) {
+    word-spacing: 10px;
+  }
+
+  @include media-breakpoint-from(large) {
+    @include padding-hor(20px);
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  @include media-breakpoint-from(huge) {
+    padding-left: 328px;
+    padding-right: 500px;
+  }
+}

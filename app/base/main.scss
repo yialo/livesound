@@ -1,13 +1,66 @@
-@import "../global/data/*.scss";
-@import "../global/functions/*.scss";
-@import "../global/mixins/*.scss";
-@import "../vendors/normalize.scss";
-@import "../vendors/slick.scss";
-@import "../vendors/lightbox.scss";
-@import "../vendors_customized/*.scss";
-@import "../global/styles/root.scss";
-@import "../global/styles/fonts.scss";
-@import "../global/styles/animations.scss";
-@import "../global/styles/tags.scss";
-@import "../components/scaffold/**/*.scss";
-@import "../components/capital/**/*.scss";
+@import
+  "~normalize.css",
+  "~slick-carousel/slick/slick.scss";
+
+@import
+  "../vendors/lightbox.scss";
+
+@import
+  "../global/data/*.scss",
+  "../global/functions/*.scss",
+  "../global/mixins/*.scss";
+
+@import
+  "../vendors_customized/*.scss";
+
+@import
+  "../global/styles/root.scss",
+  "../global/styles/fonts.scss",
+  "../global/styles/animations.scss",
+  "../global/styles/tags.scss";
+
+@import
+  "../components/scaffold/*.scss";
+
+@import
+  "../components/capital/about/_i_about.scss",
+  "../components/capital/acknowledgements/_i_acknowledgements.scss",
+  "../components/capital/address/_i_address.scss",
+  "../components/capital/advantages/_i_advantages.scss",
+  "../components/capital/advantages-item/_i_advantages-item.scss",
+  "../components/capital/cascade-slider/_i_cascade-slider.scss",
+  "../components/capital/catalog/_i_catalog.scss",
+  "../components/capital/catalog-card/_i_catalog-card.scss",
+  "../components/capital/catalog-volume/_i_catalog-volume.scss",
+  "../components/capital/contacts/_i_contacts.scss",
+  "../components/capital/copyright/_i_copyright.scss",
+  "../components/capital/creator/_i_creator.scss",
+  "../components/capital/experience/_i_experience.scss",
+  "../components/capital/footer-navigation/_i_footer-navigation.scss",
+  "../components/capital/header-navigation/_i_header-navigation.scss",
+  "../components/capital/history/_i_history.scss",
+  "../components/capital/intro/_i_intro.scss",
+  "../components/capital/language-toggle/_i_language-toggle.scss",
+  "../components/capital/logo/_i_logo.scss",
+  "../components/capital/menu-controls/_i_menu-controls.scss",
+  "../components/capital/mission/_i_mission.scss",
+  "../components/capital/modal/_i_modal.scss",
+  "../components/capital/navigation-item/_i_navigation-item.scss",
+  "../components/capital/page/_i_page.scss",
+  "../components/capital/page-footer/_i_page-footer.scss",
+  "../components/capital/page-header/_i_page-header.scss",
+  "../components/capital/page-main/_i_page-main.scss",
+  "../components/capital/partners/_i_partners.scss",
+  "../components/capital/project-card/_i_project-card.scss",
+  "../components/capital/project-cards/_i_project-cards.scss",
+  "../components/capital/projects/_i_projects.scss",
+  "../components/capital/promo/_i_promo.scss",
+  "../components/capital/promo-slide/_i_promo-slide.scss",
+  "../components/capital/socials/_i_socials.scss",
+  "../components/capital/supremacy/_i_supremacy.scss",
+  "../components/capital/team-gallery/_i_team-gallery.scss",
+  "../components/capital/widget/_i_widget.scss";
+
+/// TODO:
+/// 1). move head to global
+/// 2). change sections in main

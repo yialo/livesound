@@ -1,0 +1,18 @@
+#{$this}__video-wrapper {
+  @mixin about__video-Size($wrapper-width: 280px) {
+    $wrapper-height: $wrapper-width * 9 / 16;
+
+    @include size($wrapper-width, $wrapper-height);
+  }
+
+  @include about__video-Size(280px);
+
+  @include media-breakpoint-from(large) {
+    @include about__video-Size(500px);
+    margin-top: 8px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    @include about__video-Size(800px);
+  }
+}

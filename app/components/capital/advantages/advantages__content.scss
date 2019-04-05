@@ -1,0 +1,6 @@
+#{$this}__content {
+  @include media-breakpoint-from(medium) {
+    @include padding-ver(30px);
+    @include padding-hor(10px);
+  }
+}

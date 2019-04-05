@@ -1,8 +1,0 @@
-.acknowledgements__image {
-  @include margin-hor();
-  display: block;
-
-  @include media-breakpoint-from(medium) {
-    @include margin-hor(0);
-  }
-}

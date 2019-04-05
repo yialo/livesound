@@ -1,0 +1,7 @@
+#{$this}__table-body {
+  display: block;
+
+  @include media-breakpoint-from(large) {
+    display: table-row-group;
+  }
+}

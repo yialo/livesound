@@ -1,0 +1,9 @@
+#{$this}__socials {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-from(medium) {
+    order: 1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

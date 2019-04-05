@@ -1,0 +1,18 @@
+#{$this}__inner {
+  @include margin-hor();
+  @include padding-hor(20px);
+  width: get-breakpoint(small);
+
+  @include media-breakpoint-from(medium) {
+    @include padding-hor(0);
+    width: 488px;
+  }
+
+  @include media-breakpoint-from(large) {
+    width: 780px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    width: 1000px;
+  }
+}

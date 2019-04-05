@@ -1,0 +1,18 @@
+#{$this}__item {
+  margin-bottom: 40px;
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-from(medium) {
+    @include padding-ver(30px);
+    @include padding-hor(10px);
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-from(large) {
+    width: 25%;
+  }
+}

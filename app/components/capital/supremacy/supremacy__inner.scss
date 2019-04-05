@@ -1,0 +1,16 @@
+#{$this}__inner {
+  padding: 80px 20px 100px;
+
+  @include media-breakpoint-from(medium) {
+    padding: 100px 120px 120px;
+  }
+
+  @include media-breakpoint-from(large) {
+    @include padding-hor(20px);
+  }
+
+  @include media-breakpoint-from(huge) {
+    @include padding-hor(500px);
+    padding-top: 150px;
+  }
+}

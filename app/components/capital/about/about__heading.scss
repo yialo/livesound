@@ -1,0 +1,21 @@
+#{$this}__heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-breakpoint-from(medium) {
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-from(large) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 63px;
+  }
+}

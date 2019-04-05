@@ -1,0 +1,11 @@
+#{$this}__advantages {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 120px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    margin-bottom: 129px;
+  }
+}

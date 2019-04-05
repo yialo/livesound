@@ -1,0 +1,19 @@
+#{$this}__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include media-breakpoint-from(medium) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  @include media-breakpoint-from(large) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    padding-left: 420px;
+    padding-right: 420px;
+  }
+}

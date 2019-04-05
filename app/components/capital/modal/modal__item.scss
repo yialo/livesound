@@ -1,0 +1,22 @@
+#{$this}__item {
+  @include margin-ver(50px);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 270px;
+  transition: transform 0.5s;
+
+  @for $i from 1 through 7 {
+    .js-show-modal--#{$i} &--#{$i} {
+      transform: translateX(-50%) scale(1);
+      display: block;
+    }
+  }
+
+  @include media-breakpoint-from(medium) {
+    width: 718px;
+  }
+}

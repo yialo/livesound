@@ -1,0 +1,8 @@
+#{$this}__photo {
+  @include size(100%, 100%);
+  box-shadow: 0 0 3px 0 $color-gray-dark;
+
+  @include media-breakpoint-from(medium) {
+    box-shadow: none;
+  }
+}

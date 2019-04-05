@@ -53,24 +53,6 @@
   .slick-loading & {
     visibility: hidden;
   }
-
-  @include media-breakpoint-from(medium) {
-    &--acknowledgements {
-      left: -75px;
-    }
-  }
-
-  @include media-breakpoint-from(large) {
-    &--acknowledgements {
-      left: -40px;
-    }
-  }
-
-  @include media-breakpoint-from(huge) {
-    &--acknowledgements {
-      left: -135px;
-    }
-  }
 }
 
 .slick-slide {
@@ -82,9 +64,7 @@
     float: right;
   }
 
-  &--acknowledgements {
-    margin-right: 20px;
-  }
+
 
   img {
     display: block;
@@ -112,18 +92,6 @@
     display: block;
     height: auto;
     border: 1px solid transparent;
-  }
-
-  @include media-breakpoint-from(medium) {
-    &--acknowledgements {
-      margin-right: 30px;
-    }
-  }
-
-  @include media-breakpoint-from(huge) {
-    &--acknowledgements {
-      margin-right: 25px;
-    }
   }
 }
 

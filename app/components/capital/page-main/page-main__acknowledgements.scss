@@ -1,0 +1,7 @@
+#{$this}__acknowledgements {
+  margin-bottom: 80px;
+
+  @include media-breakpoint-from(large) {
+    margin-bottom: 120px;
+  }
+}

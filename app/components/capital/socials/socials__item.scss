@@ -1,0 +1,11 @@
+#{$this}__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @include media-breakpoint-from(huge) {
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+  }
+}

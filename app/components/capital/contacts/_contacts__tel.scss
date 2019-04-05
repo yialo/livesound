@@ -1,7 +1,0 @@
-.contacts__tel {
-  @include font(400, 24px, 36px);
-
-  @include media-breakpoint-from(medium) {
-    @include font(400, 28px, 42px);
-  }
-}

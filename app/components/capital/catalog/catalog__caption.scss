@@ -1,0 +1,45 @@
+#{$this}__caption {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 40px;
+
+  @include font(400, 16px, 30px);
+  text-transform: uppercase;
+  outline-style: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(45deg);
+    width: 17px;
+    height: 17px;
+
+    @each $position in (top, right,) {
+      border-#{$position}: 1px solid $color-gray-dark;
+    }
+  }
+
+  .is-active & {
+    margin-bottom: 40px;
+  }
+
+  .is-active &::after {
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  @include media-breakpoint-from(medium) {
+    @include font(400, 35px, 40px);
+    padding-left: 20px;
+    padding-right: 60px;
+    text-transform: none;
+
+    &::after {
+      right: 32px;
+    }
+  }
+}

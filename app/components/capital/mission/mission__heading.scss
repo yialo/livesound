@@ -1,0 +1,18 @@
+#{$this}__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-breakpoint-from(medium) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @include media-breakpoint-from(large) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+}

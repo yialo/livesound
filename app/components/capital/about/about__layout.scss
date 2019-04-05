@@ -1,0 +1,5 @@
+#{$this}__layout {
+  @include media-breakpoint-from(large) {
+    display: flex;
+  }
+}

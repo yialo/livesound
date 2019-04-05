@@ -12,7 +12,7 @@ body {
   @include font();
   min-width: get-breakpoint(small);
   margin: 0;
-  color: $dark-gray;
+  color: $color-gray-dark;
   background-color: white;
 }
 

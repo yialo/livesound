@@ -1,0 +1,12 @@
+$this: ".page-footer";
+
+#{$this} {
+  background-color: #252424;
+  background-image: url("../img/page-footer-background-mobile.png");
+  background-position: center;
+  background-repeat: repeat-y;
+
+  @include media-breakpoint-from(medium) {
+    background-image: url("../img/page-footer-background-tablet.png");
+  }
+}

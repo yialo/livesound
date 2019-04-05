@@ -1,0 +1,29 @@
+#{$this}__link {
+  $socialNewtorkNames: (instagram, youtube, facebook,);
+
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @each $value in $socialNewtorkNames {
+    &--#{$value} {
+      background-image: url("../img/socials-#{$value}.svg");
+    }
+  }
+
+  #{$this}--contacts & {
+    @each $value in $socialNewtorkNames {
+      &--#{$value} {
+        background-image: url("../img/socials-#{$value}--contacts.svg");
+      }
+    }
+  }
+
+  @include media-breakpoint-only(large) {
+    width: 32px;
+    height: 32px;
+  }
+}
