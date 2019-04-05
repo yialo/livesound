@@ -12,7 +12,7 @@
     $cardsList.width(`calc(100% * ${itemCount})`);
     $cards.width(`calc(100% / ${itemCount})`);
 
-    const defaultIndex = 2;
+    const defaultIndex = $cards.length - 1;
 
     $cards.eq(defaultIndex).css({
       transform: `translateX(-${100 * defaultIndex}%)`,
