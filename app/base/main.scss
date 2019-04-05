@@ -3,7 +3,7 @@
   "~slick-carousel/slick/slick.scss";
 
 @import
-  "../vendors/lightbox.scss";
+  "../vendors/_lightbox.scss";
 
 @import
   "../global/data/*.scss",
@@ -14,10 +14,10 @@
   "../vendors_customized/*.scss";
 
 @import
-  "../global/styles/root.scss",
-  "../global/styles/fonts.scss",
-  "../global/styles/animations.scss",
-  "../global/styles/tags.scss";
+  "../global/styles/_root.scss",
+  "../global/styles/_fonts.scss",
+  "../global/styles/_animations.scss",
+  "../global/styles/_tags.scss";
 
 @import
   "../components/scaffold/*.scss";
