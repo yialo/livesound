@@ -1,24 +1,24 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'index';
 
 block page-main
   h1.visually-hidden Сайт компании Live Sound Agency
-  .page-main__promo
-    include ../components/capital/promo/_promo
-  .page-main__advantages
-    include ../components/capital/advantages/_advantages
-  .page-main__directions
+  section.page-main__promo
+    include ../components/capital/promo/_promo.pug
+  section.page-main__advantages
+    include ../components/capital/advantages/_advantages.pug
+  section.page-main__directions
     +projects()
-  div(class=setModifiers('page-main__partners', ['first']))
+  section(class=setModifiers('page-main__partners', ['first']))
     +partners()(
       heading='Оборудование от компаний-лидеров мирового рынка',
       special-modifier='partners__small-heading',
     )
-  .page-main__about
-    include ../components/capital/about/_about
-  div(class=setModifiers('page-main__partners', ['last']))
+  section.page-main__about
+    include ../components/capital/about/_about.pug
+  section(class=setModifiers('page-main__partners', ['last']))
     +partners()(heading='Партнеры')
 
 block page-scripts-distinct

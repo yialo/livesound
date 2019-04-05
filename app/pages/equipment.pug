@@ -1,11 +1,11 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'equipment';
 
 block page-main
-  .page-main__catalog
-    include ../components/capital/catalog/_catalog
+  section.page-main__catalog
+    include ../components/capital/catalog/_catalog.pug
 
 block page-scripts-distinct
   script(src='js/equipment-catalog.js')

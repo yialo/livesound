@@ -24,7 +24,7 @@ mixin partners()
       ],
     };
     const listSize = ($pageId === 'index' ? 'short' : 'long');
-  section(class=[setModifiers('partners', [listSize]), specialModifier])
+  div(class=[setModifiers('partners', [listSize]), specialModifier])
     .aligner.partners__inner
       h2.heading.partners__heading= heading
       ul.partners__list

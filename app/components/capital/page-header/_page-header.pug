@@ -17,8 +17,11 @@ header.page-header
           )
     div(class=setModifiers('page-header__nest', ['logo']))
       +logo()(location='header')
-    div(class=setModifiers('page-header__nest', ['navigation'])).page-header__popup
-      include ../header-navigation/_header-navigation
+    div(class=[
+      setModifiers('page-header__nest', ['navigation']),
+      'page-header__popup',
+    ])
+      include ../header-navigation/_header-navigation.pug
     div(class=setModifiers('page-header__nest', ['socials']))
       +socials()
     div(class=setModifiers('page-header__nest', ['language-toggle']))
@@ -30,6 +33,6 @@ header.page-header
               setModifiers('language-toggle__link', [modifier]),
               modifier === 'RU' ? 'is-checked' : null,
             ],
-            aria-label=`Переключиться на ${label} версию`
+            aria-label=`Переключиться на ${label} версию`,
           )
             span.language-toggle__string(aria-hidden='true')= content

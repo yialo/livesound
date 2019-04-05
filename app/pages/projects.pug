@@ -1,10 +1,10 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'projects';
 
 block page-main
-  .page-main__projects
+  section.page-main__projects
     +projects()
-  .page-main__supremacy
-    include ../components/capital/supremacy/_supremacy
+  section.page-main__supremacy
+    include ../components/capital/supremacy/_supremacy.pug

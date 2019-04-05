@@ -1,14 +1,14 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'partners';
 
 block page-main
-  .page-main__partners
+  section.page-main__partners
     +partners()(heading='Наши партнеры')
-  .page-main__acknowledgements
-    include ../components/capital/acknowledgements/_acknowledgements
-  .page-main__partners
+  section.page-main__acknowledgements
+    include ../components/capital/acknowledgements/_acknowledgements.pug
+  section.page-main__partners
     +partners()(heading='Нам доверяют')
 
 block page-scripts-distinct

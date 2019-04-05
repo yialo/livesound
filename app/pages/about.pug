@@ -1,13 +1,13 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'about';
 
 block page-main
-  .page-main__history
-    include ../components/capital/history/_history
-  .page-main__mission
-    include ../components/capital/mission/_mission
+  section.page-main__history
+    include ../components/capital/history/_history.pug
+  section.page-main__mission
+    include ../components/capital/mission/_mission.pug
 
 block page-scripts-distinct
   script(src='js/history.js')

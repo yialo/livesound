@@ -1,5 +1,5 @@
 .page__header
-  include ../page-header/_page-header
+  include ../page-header/_page-header.pug
 .page__main
   main(class=setModifiers('page-main', [$pageId]))
     if $pageId !== 'index'
@@ -9,7 +9,7 @@
             h1.intro__heading.heading= $pageTitle
     block page-main
 .page__footer
-  include ../page-footer/_page-footer
+  include ../page-footer/_page-footer.pug
 if $pageId === 'partners'
   .page__modal
-    include ../modal/_modal
+    include ../modal/_modal.pug

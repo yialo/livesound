@@ -1,4 +1,4 @@
-include _import_data
+include _import_data.pug
 
 block page-id
 
@@ -7,12 +7,12 @@ block page-id
   const $needJquery = ['index', 'about', 'projects'].includes($pageId);
   const $projectCardsContained = ['index', 'projects'].includes($pageId);
 
-include _import_functions
-include _import_mixins
+include _import_functions.pug
+include _import_mixins.pug
 
 doctype html
 html(lang='ru')
-  include ../components/capital/head/_head
+  include ../global/head/_head.pug
   body(class=setModifiers('page', [$pageId]))
-    include ../components/capital/page/_page_Content
-    include ../components/capital/page/_page_Scripts
+    include ../components/capital/page/_page_Content.pug
+    include ../components/capital/page/_page_Scripts.pug

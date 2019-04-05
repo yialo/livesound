@@ -1,6 +1,6 @@
 mixin catalog-card()
   - const { 'card-number': cardNumber, 'item-title': itemTitle } = attributes;
-  include _d_catalog-card
+  include _d_catalog-card.pug
   .catalog-card
     div(class=setModifiers('catalog-card__column', [1]))
       picture.catalog-card__image-wrapper

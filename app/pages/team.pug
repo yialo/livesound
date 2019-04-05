@@ -1,10 +1,10 @@
-extends ../base/_template_html
+extends ../base/_template_html.pug
 
 block page-id
   - const $pageId = 'team';
 
 block page-main
-  .page-main__experience
-    include ../components/capital/experience/_experience
-  .page-main__team-gallery
-    include ../components/capital/team-gallery/_team-gallery
+  section.page-main__experience
+    include ../components/capital/experience/_experience.pug
+  section.page-main__team-gallery
+    include ../components/capital/team-gallery/_team-gallery.pug
