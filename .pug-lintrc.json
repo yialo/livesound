@@ -21,7 +21,7 @@
     }
   ],
   "disallowSpecificTags": null,
-  "disallowStringConcatenation": "aggressive",
+  "disallowStringConcatenation": true,
   "disallowStringInterpolation": null,
   "disallowTagInterpolation": null,
   "disallowTemplateString": null,
