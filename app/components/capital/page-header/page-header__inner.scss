@@ -11,13 +11,13 @@
   }
 
   @include media-breakpoint-from(large) {
-    padding-left: 40px;
-    padding-right: 40px;
+    @include padding-hor(calc(4000% / 1203));
+    max-width: none;
   }
 
   @include media-breakpoint-from(huge) {
-    width: get-breakpoint(huge);
-    padding-left: 10px;
+    max-width: get-breakpoint(huge);
+    padding-left: 40px;
     padding-right: 100px;
   }
 }

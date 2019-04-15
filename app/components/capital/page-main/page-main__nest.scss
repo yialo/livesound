@@ -1,4 +1,4 @@
-#{$this}__nest {
+.#{$this}__nest {
   @mixin set-margin-bottom($media) {
     $_nests: (
       base: (advantages: 60, directions: 60, experience: 70, promo: 50, contacts: 0),

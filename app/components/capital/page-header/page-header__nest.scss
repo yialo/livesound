@@ -50,12 +50,12 @@
 
     &--logo {
       margin-left: 0;
-      margin-right: 0;
+      margin-right: auto;
     }
 
     &--navigation {
-      @include margin-hor(30px);
-      flex-grow: 1;
+      @include margin-hor(auto);
+      width: calc(83400% / 1203);
       align-self: center;
     }
 
