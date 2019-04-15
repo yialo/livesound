@@ -24,6 +24,7 @@
       top: 50px;
       left: 20px;
       right: auto;
+      transition: top, transform 0.25s;
 
       .is-scrolled & {
         top: 50%;

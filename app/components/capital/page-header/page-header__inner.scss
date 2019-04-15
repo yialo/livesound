@@ -8,6 +8,7 @@
     display: flex;
     width: auto;
     padding-top: 20px;
+    transition: padding 0.25s;
 
     .is-scrolled & {
       padding-top: 0;

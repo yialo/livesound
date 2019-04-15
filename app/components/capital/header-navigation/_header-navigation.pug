@@ -3,7 +3,7 @@ nav.header-navigation
     each text, modifier in $PAGES
       - const isCurrent = (modifier === $pageId);
       li.header-navigation__item
-        p.navigation-item(class=(isCurrent ? 'current' : null))
+        p.navigation-item(class=(isCurrent ? 'navigation-item--current' : null))
           a(
             class=[
               'navigation-item__link',
