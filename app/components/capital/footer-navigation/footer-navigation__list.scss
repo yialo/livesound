@@ -1,4 +1,4 @@
-#{$this}__list {
+.#{$this}__list {
   @include list();
   display: grid;
   grid-template-rows: repeat(4, auto);

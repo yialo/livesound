@@ -1,4 +1,4 @@
-#{$this}__slider-controls {
+.#{$this}__slider-controls {
   @include media-breakpoint-from(huge) {
     display: none;
   }

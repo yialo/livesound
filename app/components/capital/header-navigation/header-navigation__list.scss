@@ -1,4 +1,4 @@
-#{$this}__list {
+.#{$this}__list {
   @include list();
 
   @include media-breakpoint-from(large) {
