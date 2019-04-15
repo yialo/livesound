@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".promo__list").slick({autoplay:!0,autoplaySpeed:3e3,infinite:!0,arrows:!1,dots:!0,appendDots:$(".slider-controls__inner")})});
