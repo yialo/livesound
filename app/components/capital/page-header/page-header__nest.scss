@@ -24,10 +24,19 @@
       top: 50px;
       left: 20px;
       right: auto;
+
+      .is-scrolled & {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &--logo {
       margin-left: 80px;
+
+      .is-scrolled & {
+        transform: scale(0);
+      }
     }
 
     &--socials {
@@ -35,11 +44,19 @@
       margin-top: 0;
       margin-left: auto;
       padding-top: 16px;
+
+      .is-scrolled & {
+        padding-top: 0;
+      }
     }
 
     &--language-toggle {
       top: 20px;
       right: 20px;
+
+      .is-scrolled & {
+        transform: scale(0);
+      }
     }
   }
 
@@ -55,7 +72,7 @@
 
     &--navigation {
       @include margin-hor(auto);
-      width: calc(83400% / 1203);
+      width: calc(85000% / 1203);
       align-self: center;
     }
 
