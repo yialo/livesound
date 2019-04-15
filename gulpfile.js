@@ -44,8 +44,8 @@ const faviconstSrc = './app/global/favicons/*';
 const fontsSrc = `./app/global/fonts/*.${fontExts}`;
 const jsSrc = [
   './app/scripts/*.js',
-  './app/vendors/*.js',
-  './app/vendors_customized/*.js',
+  './app/vendor/*.js',
+  './app/vendor_customized/*.js',
 ];
 const svgSrc = getSrc('svg', 'svg');
 const videoSrc = getSrc('video', 'mp4');

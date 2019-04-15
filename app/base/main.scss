@@ -1,9 +1,7 @@
 @import
   "~normalize.css",
-  "~slick-carousel/slick/slick.scss";
-
-@import
-  "../vendors/_lightbox.scss";
+  "~slick-carousel/slick/slick.scss",
+  "~lightbox2/dist/css/lightbox.css";
 
 @import
   "../global/data/*.scss",
@@ -11,7 +9,7 @@
   "../global/mixins/*.scss";
 
 @import
-  "../vendors_customized/*.scss";
+  "../vendor_customized/*.scss";
 
 @import
   "../global/styles/_root.scss",
