@@ -13,10 +13,14 @@
   }
 
   @include media-breakpoint-from(medium) {
-    @include font(400, 28px, 42px);
-    text-align: right;
+    &--contacts {
+      font-size: 28px;
+      line-height: 42px;
+      text-align: right;
+    }
 
     &--footer {
+      font-size: 20px;
       text-align: left;
     }
   }

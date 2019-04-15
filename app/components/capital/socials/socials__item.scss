@@ -1,4 +1,4 @@
-#{$this}__item {
+.#{$this}__item {
   &:not(:last-child) {
     margin-right: 10px;
   }
