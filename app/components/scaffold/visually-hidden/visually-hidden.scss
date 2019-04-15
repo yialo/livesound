@@ -1,4 +1,4 @@
-#{$this} {
+.#{$this} {
   @at-root {
     &:not(:focus):not(:active),
     input[type="checkbox"]#{&},
