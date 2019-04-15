@@ -1,4 +1,4 @@
-#{$this} {
+.#{$this} {
   color: $color-gray-light;
 
   &--contacts {
@@ -13,12 +13,8 @@
   }
 
   @include media-breakpoint-from(medium) {
-    &--contacts {
-      padding-left: 50px;
-
-      @include font(400, 28px, 42px);
-      text-align: right;
-    }
+    @include font(400, 28px, 42px);
+    text-align: right;
 
     &--footer {
       text-align: left;
@@ -27,7 +23,6 @@
 
   @include media-breakpoint-from(large) {
     &--contacts {
-      padding-left: 0;
       text-align: left;
     }
   }

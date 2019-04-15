@@ -1,4 +1,4 @@
-#{$this}__inner {
+.#{$this}__inner {
   @include margin-hor();
   position: relative;
   width: get-breakpoint(small);

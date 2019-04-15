@@ -1,4 +1,4 @@
-#{$this}__tel {
+.#{$this}__tel {
   @include font(400, 24px, 36px);
 
   @include media-breakpoint-from(medium) {

@@ -1,16 +1,16 @@
 .#{$this} {
   @include margin-hor();
-  width: get-breakpoint(small);
+  max-width: get-breakpoint(small);
 
   @include media-breakpoint-from(medium) {
-    width: get-breakpoint(medium);
+    max-width: get-breakpoint(medium);
   }
 
   @include media-breakpoint-from(large) {
-    width: get-breakpoint(large);
+    max-width: get-breakpoint(large);
   }
 
   @include media-breakpoint-from(huge) {
-    width: get-breakpoint(huge);
+    max-width: get-breakpoint(huge);
   }
 }
