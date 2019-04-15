@@ -1,19 +1,48 @@
-// 'use strict';
+'use strict';
 
-// const pageHeader = document.querySelector('.page-header');
+const pageHeader = document.querySelector('.page-header');
+const mainMenuButtonOpener = pageHeader.querySelector('.menu-controls__button--open');
+const mainMenuButtonCloser = pageHeader.querySelector('.menu-controls__button--close');
 
-// const checkHeaderTopOffset = function checkOffsetTopOfBlock() {
-//   const scrollShift = window.innerHeight;
-//   const scrolledTop = pageHeader.scrollTop;
-//   if (scrolledTop >= section.offsetTop - scrollShift) {
-//     section.classList.add('animatecss-fadeinup');
-//   } else {
-//     section.classList.remove('animatecss-fadeinup');
-//   }
-// };
+const checkSHift = function checkHeaderVerticalShift() {
+  const scrolledTop = document.documentElement.scrollTop;
+  if (scrolledTop >= 100) {
+    pageHeader.classList.add('is-scrolled');
+  } else {
+    pageHeader.classList.remove('is-scrolled');
+  }
+};
 
-// if (document.offsetWidth >= 768) {
+const menuVisibilityToggle = function toggleNavigationMenuVisibility(button) {
+  pageHeader.classList.toggle('is-visible');
+  button.focus();
+};
 
-// }
+const showMenu = function showMainMenu() {
+  menuVisibilityToggle(mainMenuButtonCloser);
+};
 
-// TODO: create this
+const hideMenu = function showMainMenu() {
+  menuVisibilityToggle(mainMenuButtonOpener);
+};
+
+window.addEventListener('scroll', () => {
+  if (window.innerWidth >= 768) {
+    checkSHift();
+  }
+});
+
+mainMenuButtonOpener.addEventListener('click', () => {
+  showMenu();
+});
+
+mainMenuButtonCloser.addEventListener('click', () => {
+  hideMenu();
+});
+
+window.addEventListener('keydown', (evt) => {
+  if ((evt.keyCode === 27) && (pageHeader.classList.contains('is-visible'))) {
+    evt.preventDefault();
+    hideMenu();
+  }
+});

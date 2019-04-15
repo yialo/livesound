@@ -13,7 +13,7 @@ mixin page-header()
     div(class=[setModifiers('page-header__nest', [modifier]), classNames])
       block
 
-  .page-header.is-scrolled
+  .page-header
     .aligner.page-header__inner
       +page-header__nest('menu-controls')
         nav.menu-controls
