@@ -11,7 +11,7 @@
 }
 
 .animatecss-fadeinup {
-  @include media-breakpoint-from(medium) {
+  @include media-breakpoint-from(large) {
     transform-origin: bottom;
     animation-name: animateCSS-fadeInUp;
     animation-duration: 1.25s;

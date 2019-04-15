@@ -1,0 +1,5 @@
+.#{$this} {
+  @include margin-ver(0);
+  @include font(400, 24px, 36px);
+  color: white;
+}

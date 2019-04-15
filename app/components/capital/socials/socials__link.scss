@@ -1,4 +1,4 @@
-#{$this}__link {
+.#{$this}__link {
   $socialNewtorkNames: (instagram, youtube, facebook,);
 
   display: block;
@@ -10,14 +10,14 @@
 
   @each $value in $socialNewtorkNames {
     &--#{$value} {
-      background-image: url("../img/socials-#{$value}.svg");
+      background-image: url("../img/#{$this}-#{$value}.svg");
     }
   }
 
-  #{$this}--contacts & {
+  .#{$this}--contacts & {
     @each $value in $socialNewtorkNames {
       &--#{$value} {
-        background-image: url("../img/socials-#{$value}--contacts.svg");
+        background-image: url("../img/#{$this}-#{$value}--contacts.svg");
       }
     }
   }

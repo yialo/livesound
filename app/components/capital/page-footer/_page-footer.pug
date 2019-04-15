@@ -1,24 +1,29 @@
 .page-footer
+  mixin page-footer__column(modifier)
+    div(class=setModifiers('page-footer__column', [modifier]))
+      block
+  mixin page-footer__nest(modifier)
+    div(class=setModifiers('page-footer__nest', [modifier]))
+      block
+
   .aligner.page-footer__inner
-    div(class=setModifiers('page-footer__column', [1]))
-      div(class=setModifiers('page-footer__nest', ['address']))
+    +page-footer__column(1)
+      +page-footer__nest('address')
         +address()(location='footer')
-      div(class=setModifiers('page-footer__nest', ['logo']))
+      +page-footer__nest('logo')
         +logo()(location='footer')
-      div(class=setModifiers('page-footer__nest', ['copyright']))
-        p.copyright= '© 2016 '
-          span.copyright__string= $SITE_TITLE
-    div(class=setModifiers('page-footer__column', [2]))
-      div(class=setModifiers('page-footer__nest', ['navigation']))
-        include ../footer-navigation/_footer-navigation.pug
-      div(class=setModifiers('page-footer__nest', ['widget']))
-        aside.widget
-          .widget__inner
-    div(class=setModifiers('page-footer__column', [3]))
-      div(class=setModifiers('page-footer__nest', ['connection']))
-        a.page-footer__tel(href='tel:+74992565704') +7 (499) 256-57-04
+      +page-footer__nest('copyright')
+        +copyright()
+    +page-footer__column(2)
+      +page-footer__nest('navigation')
+        +footer-navigation()
+      +page-footer__nest('widget')
+        +widget()
+    +page-footer__column(3)
+      +page-footer__nest('connection')
+        .page-footer__tel
+          +tel()
         .page-footer__socials
           +socials()
     .page-footer__creator
-      p.creator
-        a.creator__legend(href='https://www.waytostart.ru/') Создание сайта веб-студия WayToStart
+      +creator()
