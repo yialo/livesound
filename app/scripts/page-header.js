@@ -6,7 +6,7 @@ const mainMenuButtonCloser = pageHeader.querySelector('.menu-controls__button--c
 
 const checkSHift = function checkHeaderVerticalShift() {
   const scrolledTop = document.documentElement.scrollTop;
-  if (scrolledTop >= 100) {
+  if (scrolledTop >= 150) {
     pageHeader.classList.add('is-scrolled');
   } else {
     pageHeader.classList.remove('is-scrolled');

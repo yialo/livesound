@@ -11,8 +11,7 @@
     transition: padding 0.25s;
 
     .is-scrolled & {
-      padding-top: 0;
-      padding-bottom: 0;
+      @include padding-ver(10px);
     }
   }
 

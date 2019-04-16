@@ -34,9 +34,11 @@
 
     &--logo {
       margin-left: 80px;
+      transition: opacity 0.25s;
 
       .is-scrolled & {
-        transform: scale(0);
+        @include visually-hide();
+        opacity: 0;
       }
     }
 
@@ -45,6 +47,7 @@
       margin-top: 0;
       margin-left: auto;
       padding-top: 16px;
+      transition: padding-top 0.25s;
 
       .is-scrolled & {
         padding-top: 0;
