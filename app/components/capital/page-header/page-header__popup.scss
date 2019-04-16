@@ -1,4 +1,4 @@
-#{$this}__popup {
+.#{$this}__popup {
   @include media-breakpoint-to(large) {
     position: absolute;
     z-index: 2;

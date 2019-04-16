@@ -1,10 +1,13 @@
 'use strict';
 
 const pageMain = document.querySelector('.page-main');
-const advantagesBlock = pageMain.querySelector('.page-main__advantages');
-const directionsBlock = pageMain.querySelector('.page-main__directions');
-const partnersBlocks = pageMain.querySelectorAll('.page-main__partners');
-const aboutBlock = pageMain.querySelector('.page-main__about');
+const advantagesBlock = pageMain.querySelector('.page-main__nest--advantages');
+const directionsBlock = pageMain.querySelector('.page-main__nest--directions');
+const partnersFristBlocks = pageMain
+  .querySelector('.page-main__nest--partners-first');
+const aboutBlock = pageMain.querySelector('.page-main__nest--about');
+const partnersLastBlocks = pageMain
+  .querySelector('.page-main__nest--partners-last');
 
 const checkOffsetTop = function checkOffsetTopOfBlock(section) {
   const scrollShift = window.innerHeight;
@@ -19,8 +22,7 @@ const checkOffsetTop = function checkOffsetTopOfBlock(section) {
 window.addEventListener('scroll', () => {
   checkOffsetTop(advantagesBlock);
   checkOffsetTop(directionsBlock);
-  partnersBlocks.forEach((block) => {
-    checkOffsetTop(block);
-  });
+  checkOffsetTop(partnersFristBlocks);
   checkOffsetTop(aboutBlock);
+  checkOffsetTop(partnersLastBlocks);
 });

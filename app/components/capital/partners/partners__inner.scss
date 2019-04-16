@@ -1,20 +1,20 @@
-#{$this}__inner {
+.#{$this}__inner {
   @include padding-hor(20px);
   display: flex;
   flex-direction: column;
 
-  #{$this}--long & {
+  .#{$this}--long & {
     @include padding-ver(40px);
   }
 
   @include media-breakpoint-from(medium) {
-    #{$this}--long & {
+    .#{$this}--long & {
       @include padding-ver(80px);
     }
   }
 
   @include media-breakpoint-from(large) {
-    #{$this}--long & {
+    .#{$this}--long & {
       @include padding-hor(0);
     }
   }

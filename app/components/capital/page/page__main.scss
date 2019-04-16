@@ -1,14 +1,14 @@
-#{$this}__main {
-  #{$this}--index & {
+.#{$this}__main {
+  .#{$this}--index & {
     margin-bottom: 50px;
   }
 
   @include media-breakpoint-from(large) {
-    #{$this}--index & {
+    .#{$this}--index & {
       margin-bottom: 135px;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       margin-bottom: 50px;
     }
   }

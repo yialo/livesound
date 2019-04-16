@@ -5,10 +5,8 @@
 
 @import
   "~normalize.css",
-  "~slick-carousel/slick/slick.scss";
-
-@import
-  "../vendors/_lightbox.scss";
+  "~slick-carousel/slick/slick.scss",
+  "~lightbox2/dist/css/lightbox.css";
 
 @import
   "../vendors_customized/*.scss";
@@ -62,4 +60,5 @@
   "../components/capital/socials/*.scss",
   "../components/capital/supremacy/*.scss",
   "../components/capital/team-gallery/*.scss",
+  "../components/capital/tel/*.scss",
   "../components/capital/widget/*.scss";

@@ -1,4 +1,4 @@
-#{$this}__inner {
+.#{$this}__inner {
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
@@ -6,7 +6,6 @@
   @include media-breakpoint-from(medium) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   @include media-breakpoint-from(large) {

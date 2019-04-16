@@ -1,7 +1,6 @@
-#{$this}__heading {
+.#{$this}__heading {
   @include margin-hor();
   @include padding-hor(20px);
-  width: get-breakpoint(small);
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 28px;
@@ -10,7 +9,6 @@
   text-transform: uppercase;
 
   @include media-breakpoint-from(medium) {
-    width: get-breakpoint(medium);
     margin-bottom: 40px;
     font-size: 32px;
     line-height: 48px;
@@ -18,7 +16,6 @@
 
   @include media-breakpoint-from(large) {
     @include padding-hor(10px);
-    width: get-breakpoint(large);
     margin-bottom: 65px;
     font-size: 36px;
     line-height: 52px;
@@ -26,7 +23,6 @@
 
   @include media-breakpoint-from(huge) {
     @include padding-hor(5px);
-    width: get-breakpoint(huge);
     margin-bottom: 60px;
   }
 }

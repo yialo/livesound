@@ -1,10 +1,10 @@
-#{$this}__column {
+.#{$this}__column {
   &--1 {
     @include margin-hor();
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 320px;
+    max-width: get-breakpoint(small);
     margin-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
@@ -21,7 +21,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: stretch;
-      width: 768px;
+      max-width: get-breakpoint(medium);
     }
   }
 
@@ -30,6 +30,7 @@
       flex-shrink: 0;
       display: block;
       width: var(--column-1-content-width);
+      max-width: none;
       margin-bottom: 0;
       margin-left: 0;
       margin-right: var(--column-1-margin-right);

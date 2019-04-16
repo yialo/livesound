@@ -1,4 +1,4 @@
-#{$this}__slider-control {
+.#{$this}__slider-control {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -15,12 +15,12 @@
 
   &--previous {
     left: 10px;
-    background-image: url("../img/acknowledgements__slider-control--previous.png");
+    background-image: url("../img/#{$this}__slider-control--previous.png");
   }
 
   &--next {
     right: 10px;
-    background-image: url("../img/acknowledgements__slider-control--next.png");
+    background-image: url("../img/#{$this}__slider-control--next.png");
   }
 
   &.is-disabled {

@@ -1,5 +1,5 @@
 *.js
-app/vendors/
-app/vendors_customized/
+app/vendor/
+app/vendor_customized/
 dist/
 node_modules/

@@ -1,4 +1,4 @@
-#{$this}__table-body {
+.#{$this}__table-body {
   display: block;
 
   @include media-breakpoint-from(large) {

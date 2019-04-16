@@ -1,4 +1,4 @@
-#{$this}__tip {
+.#{$this}__tip {
   display: none;
 
   @include media-breakpoint-from(large) {

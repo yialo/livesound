@@ -1,5 +1,5 @@
 header.page__header
-  include ../page-header/_page-header.pug
+  +page-header()
 main.page__main
   div(class=setModifiers('page-main', [$pageId]))
     if $pageId !== 'index'

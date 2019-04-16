@@ -1,4 +1,4 @@
-#{$this}__nest {
+.#{$this}__nest {
   &--menu-controls {
     position: absolute;
     z-index: 1;
@@ -24,10 +24,22 @@
       top: 50px;
       left: 20px;
       right: auto;
+      transition: top, transform $_animation-duration;
+
+      .is-scrolled & {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &--logo {
       margin-left: 80px;
+      transition: opacity $_animation-duration;
+
+      .is-scrolled & {
+        @include visually-hide();
+        opacity: 0;
+      }
     }
 
     &--socials {
@@ -35,11 +47,20 @@
       margin-top: 0;
       margin-left: auto;
       padding-top: 16px;
+      transition: padding-top $_animation-duration;
+
+      .is-scrolled & {
+        padding-top: 0;
+      }
     }
 
     &--language-toggle {
       top: 20px;
       right: 20px;
+
+      .is-scrolled & {
+        transform: scale(0);
+      }
     }
   }
 
@@ -50,12 +71,12 @@
 
     &--logo {
       margin-left: 0;
-      margin-right: 0;
+      margin-right: auto;
     }
 
     &--navigation {
-      @include margin-hor(30px);
-      flex-grow: 1;
+      @include margin-hor(auto);
+      width: calc(85000% / 1203);
       align-self: center;
     }
 

@@ -1,15 +1,15 @@
-#{$this}__legend {
-  #{$this}--contacts & {
+.#{$this}__legend {
+  .#{$this}--contacts & {
     display: block;
     color: $color-gray-light;
   }
 
-  #{$this}--footer & {
+  .#{$this}--footer & {
     display: none;
   }
 
   @include media-breakpoint-from(large) {
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       margin-bottom: 20px;
     }
   }

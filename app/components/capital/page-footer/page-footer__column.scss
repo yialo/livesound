@@ -1,4 +1,4 @@
-#{$this}__column {
+.#{$this}__column {
   &--1 {
     order: 1;
     display: flex;
@@ -20,10 +20,10 @@
       flex-wrap: wrap;
       justify-content: center;
       align-content: space-between;
-      width: calc(100% * 2 / 3);
+      width: auto;
       height: 120px;
       margin-bottom: 0;
-      padding-right: 64px;
+      margin-right: auto;
     }
 
     &--2 {
@@ -35,7 +35,7 @@
       order: 1;
       display: flex;
       justify-content: center;
-      width: calc(100% / 3);
+      width: calc(100% 3 / 7);
       margin-bottom: 0;
     }
   }
@@ -45,6 +45,7 @@
       order: 0;
       flex-wrap: nowrap;
       justify-content: flex-start;
+      align-items: stretch;
       width: 25%;
       height: auto;
       margin-right: 0;
