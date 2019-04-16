@@ -8,7 +8,7 @@
     display: flex;
     width: auto;
     padding-top: 20px;
-    transition: padding 0.25s;
+    transition: padding $_animation-duration;
 
     .is-scrolled & {
       @include padding-ver(10px);

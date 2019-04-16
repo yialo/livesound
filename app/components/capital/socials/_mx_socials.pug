@@ -1,6 +1,6 @@
 mixin socials()
   - const SOCIALS_ITEMS = ['instagram', 'youtube', 'facebook'];
-  aside(class=['socials', ($pageId === 'contacts' ? 'socials--contacts' : null)])
+  div(class=['socials', ($pageId === 'contacts' ? 'socials--contacts' : null)])
     ul.socials__list
       each item in SOCIALS_ITEMS
         - const label = item.slice(0, 1).toUpperCase().concat(item.slice(1));

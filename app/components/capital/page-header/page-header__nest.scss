@@ -24,7 +24,7 @@
       top: 50px;
       left: 20px;
       right: auto;
-      transition: top, transform 0.25s;
+      transition: top, transform $_animation-duration;
 
       .is-scrolled & {
         top: 50%;
@@ -34,7 +34,7 @@
 
     &--logo {
       margin-left: 80px;
-      transition: opacity 0.25s;
+      transition: opacity $_animation-duration;
 
       .is-scrolled & {
         @include visually-hide();
@@ -47,7 +47,7 @@
       margin-top: 0;
       margin-left: auto;
       padding-top: 16px;
-      transition: padding-top 0.25s;
+      transition: padding-top $_animation-duration;
 
       .is-scrolled & {
         padding-top: 0;
