@@ -47,7 +47,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/waytostart/soundware.git"
+    "url": "git+https://github.com/yialo/livesound.git"
   },
   "scripts": {
     "build": "gulp build",
