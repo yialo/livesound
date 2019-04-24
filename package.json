@@ -7,13 +7,13 @@
   "description": "Livesound project website",
   "devDependencies": {
     "autoprefixer": "9.5.1",
-    "browser-sync": "2.26.3",
+    "browser-sync": "2.26.4",
     "del": "4.1.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-html": "5.0.3",
-    "eslint-plugin-import": "2.17.1",
-    "gulp": "4.0.0",
+    "eslint-plugin-import": "2.17.2",
+    "gulp": "4.0.1",
     "gulp-csso": "3.0.1",
     "gulp-flatten": "0.4.0",
     "gulp-htmlmin": "5.0.1",
@@ -30,13 +30,13 @@
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "7.0.0",
     "imagemin-zopfli": "6.0.0",
-    "lightbox2": "2.10.0",
+    "lightbox2": "2.11.0",
     "node-sass-magic-importer": "5.3.1",
     "normalize.css": "8.0.1",
     "pug-lint": "2.5.0",
     "slick-carousel": "1.8.1",
-    "stylelint": "10.0.0",
-    "stylelint-scss": "3.5.4"
+    "stylelint": "10.0.1",
+    "stylelint-scss": "3.6.0"
   },
   "engines": {
     "node": "10.15.0"
@@ -53,7 +53,7 @@
     "build": "gulp build",
     "eslint": "eslint \"app/js/**/*.js\"",
     "start": "npm run build && gulp serve",
-    "stylelint": "stylelint \"app/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"app/**/*.scss\" --syntax scss",
     "test": "npm run stylelint && npm run eslint"
   },
   "version": "1.0.0"
